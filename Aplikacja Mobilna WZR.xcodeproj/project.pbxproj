@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		233577B122DA99E30043AE98 /* ParseGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233577B022DA99E30043AE98 /* ParseGroups.swift */; };
 		2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2922DA760000340B3A /* AppDelegate.swift */; };
-		2364EA2C22DA760000340B3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2B22DA760000340B3A /* ViewController.swift */; };
+		2364EA2C22DA760000340B3A /* WelcomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2B22DA760000340B3A /* WelcomeScreenController.swift */; };
 		2364EA2F22DA760000340B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA2D22DA760000340B3A /* Main.storyboard */; };
 		2364EA3222DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA3022DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodeld */; };
 		2364EA3422DA760000340B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3322DA760000340B3A /* Assets.xcassets */; };
 		2364EA3722DA760000340B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3522DA760000340B3A /* LaunchScreen.storyboard */; };
+		2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4422DA7B9D00340B3A /* TimeTableController.swift */; };
+		2364EA4722DA8BB500340B3A /* DownloadGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4622DA8BB500340B3A /* DownloadGroups.swift */; };
+		36BBD2484C9C7AB8AE71FEEC /* Pods_Aplikacja_Mobilna_WZR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D482D4A6BBC0752467BD61 /* Pods_Aplikacja_Mobilna_WZR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14D482D4A6BBC0752467BD61 /* Pods_Aplikacja_Mobilna_WZR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aplikacja_Mobilna_WZR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		233577B022DA99E30043AE98 /* ParseGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseGroups.swift; sourceTree = "<group>"; };
 		2364EA2622DA760000340B3A /* Aplikacja Mobilna WZR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aplikacja Mobilna WZR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2364EA2922DA760000340B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2364EA2B22DA760000340B3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2364EA2B22DA760000340B3A /* WelcomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenController.swift; sourceTree = "<group>"; };
 		2364EA2E22DA760000340B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2364EA3122DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aplikacja_Mobilna_WZR.xcdatamodel; sourceTree = "<group>"; };
 		2364EA3322DA760000340B3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2364EA3622DA760000340B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2364EA3822DA760000340B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2364EA4422DA7B9D00340B3A /* TimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableController.swift; sourceTree = "<group>"; };
+		2364EA4622DA8BB500340B3A /* DownloadGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadGroups.swift; sourceTree = "<group>"; };
+		512F58E691B2510F01633AEB /* Pods-Aplikacja Mobilna WZR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aplikacja Mobilna WZR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR.debug.xcconfig"; sourceTree = "<group>"; };
+		6DF9A489728DB95CC77F354B /* Pods-Aplikacja Mobilna WZR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aplikacja Mobilna WZR.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36BBD2484C9C7AB8AE71FEEC /* Pods_Aplikacja_Mobilna_WZR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		233577B222DAB2530043AE98 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				2364EA4622DA8BB500340B3A /* DownloadGroups.swift */,
+				233577B022DA99E30043AE98 /* ParseGroups.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
 		2364EA1D22DA760000340B3A = {
 			isa = PBXGroup;
 			children = (
 				2364EA2822DA760000340B3A /* Aplikacja Mobilna WZR */,
 				2364EA2722DA760000340B3A /* Products */,
+				F419EA94C5F278C489A283CA /* Pods */,
+				8B3D7BC3596FC83B208B2C81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +78,66 @@
 		2364EA2822DA760000340B3A /* Aplikacja Mobilna WZR */ = {
 			isa = PBXGroup;
 			children = (
-				2364EA2922DA760000340B3A /* AppDelegate.swift */,
-				2364EA2B22DA760000340B3A /* ViewController.swift */,
-				2364EA2D22DA760000340B3A /* Main.storyboard */,
-				2364EA3322DA760000340B3A /* Assets.xcassets */,
-				2364EA3522DA760000340B3A /* LaunchScreen.storyboard */,
+				2364EA4122DA762600340B3A /* Model */,
+				2364EA4022DA762400340B3A /* View */,
+				2364EA3F22DA762200340B3A /* Controller */,
+				2364EA3E22DA761F00340B3A /* Other */,
 				2364EA3822DA760000340B3A /* Info.plist */,
 				2364EA3022DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodeld */,
 			);
 			path = "Aplikacja Mobilna WZR";
+			sourceTree = "<group>";
+		};
+		2364EA3E22DA761F00340B3A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2364EA3322DA760000340B3A /* Assets.xcassets */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2364EA3F22DA762200340B3A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2364EA2922DA760000340B3A /* AppDelegate.swift */,
+				2364EA2B22DA760000340B3A /* WelcomeScreenController.swift */,
+				2364EA4422DA7B9D00340B3A /* TimeTableController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2364EA4022DA762400340B3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2364EA2D22DA760000340B3A /* Main.storyboard */,
+				2364EA3522DA760000340B3A /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2364EA4122DA762600340B3A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				233577B222DAB2530043AE98 /* Groups */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B3D7BC3596FC83B208B2C81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14D482D4A6BBC0752467BD61 /* Pods_Aplikacja_Mobilna_WZR.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F419EA94C5F278C489A283CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				512F58E691B2510F01633AEB /* Pods-Aplikacja Mobilna WZR.debug.xcconfig */,
+				6DF9A489728DB95CC77F354B /* Pods-Aplikacja Mobilna WZR.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2364EA3B22DA760000340B3A /* Build configuration list for PBXNativeTarget "Aplikacja Mobilna WZR" */;
 			buildPhases = (
+				233623A5C6219E48FD10E600 /* [CP] Check Pods Manifest.lock */,
 				2364EA2222DA760000340B3A /* Sources */,
 				2364EA2322DA760000340B3A /* Frameworks */,
 				2364EA2422DA760000340B3A /* Resources */,
+				D283CBB2D09A9DC2F5CBBB84 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +208,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		233623A5C6219E48FD10E600 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Aplikacja Mobilna WZR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D283CBB2D09A9DC2F5CBBB84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2364EA2222DA760000340B3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2364EA2C22DA760000340B3A /* ViewController.swift in Sources */,
+				2364EA2C22DA760000340B3A /* WelcomeScreenController.swift in Sources */,
+				233577B122DA99E30043AE98 /* ParseGroups.swift in Sources */,
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,
+				2364EA4722DA8BB500340B3A /* DownloadGroups.swift in Sources */,
 				2364EA3222DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodeld in Sources */,
+				2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +401,7 @@
 		};
 		2364EA3C22DA760000340B3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 512F58E691B2510F01633AEB /* Pods-Aplikacja Mobilna WZR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +420,7 @@
 		};
 		2364EA3D22DA760000340B3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DF9A489728DB95CC77F354B /* Pods-Aplikacja Mobilna WZR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
