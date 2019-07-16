@@ -16,21 +16,21 @@ class GroupsParser{
     
     
     
-    init(answerFunction: @escaping ([String])->[String]) {
+    init(url:String, answerFunction: @escaping ([String])->[String]) {
         self.answerFunction=answerFunction
-        WzrGroupsDownload.init(funcc: getData)
+        WebDataDownload.init(url: url, completionHandlerFunction: getData)
     }
     
     
     //functions:
     
     //funkcja "pobierająca" dane z "DownloadGroups":
-    func getData(Data:String){
+    private func getData(Data:String){
         parseData(html: Data)
     }
     
     //funkcja parsująca tak by z całej strony internetowej pozostały tylko te będące w "option", czyli w tym przypadku nazwy grup:
-    func parseData(html:String){
+    private func parseData(html:String){
         do {
             let doc: Document = try SwiftSoup.parse(html)
             let groups: Elements? = try doc.select("option")
@@ -42,7 +42,7 @@ class GroupsParser{
     }
     
     //funkcja zmieniająca stringa z wypisanymi wszystkimi grupami na tablicę:
-    func returnArray(string:String)-> [String]{
+    private func returnArray(string:String)-> [String]{
         var arrayGroups: [String] = []
         var temp: String = ""
         

@@ -12,7 +12,6 @@ class WelcomeScreenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        GroupsParser(answerFunction: answer)
         // Do any additional setup after loading the view.
     }
     

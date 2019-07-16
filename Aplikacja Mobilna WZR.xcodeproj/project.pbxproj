@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23242B9B22DE453700C4F132 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23242B9A22DE453700C4F132 /* Groups.swift */; };
 		233577B122DA99E30043AE98 /* ParseGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233577B022DA99E30043AE98 /* ParseGroups.swift */; };
 		2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2922DA760000340B3A /* AppDelegate.swift */; };
 		2364EA2C22DA760000340B3A /* WelcomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2B22DA760000340B3A /* WelcomeScreenController.swift */; };
@@ -15,12 +16,13 @@
 		2364EA3422DA760000340B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3322DA760000340B3A /* Assets.xcassets */; };
 		2364EA3722DA760000340B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3522DA760000340B3A /* LaunchScreen.storyboard */; };
 		2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4422DA7B9D00340B3A /* TimeTableController.swift */; };
-		2364EA4722DA8BB500340B3A /* DownloadGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4622DA8BB500340B3A /* DownloadGroups.swift */; };
+		2364EA4722DA8BB500340B3A /* DownloadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4622DA8BB500340B3A /* DownloadData.swift */; };
 		36BBD2484C9C7AB8AE71FEEC /* Pods_Aplikacja_Mobilna_WZR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D482D4A6BBC0752467BD61 /* Pods_Aplikacja_Mobilna_WZR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		14D482D4A6BBC0752467BD61 /* Pods_Aplikacja_Mobilna_WZR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aplikacja_Mobilna_WZR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23242B9A22DE453700C4F132 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		233577B022DA99E30043AE98 /* ParseGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseGroups.swift; sourceTree = "<group>"; };
 		2364EA2622DA760000340B3A /* Aplikacja Mobilna WZR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aplikacja Mobilna WZR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2364EA2922DA760000340B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +33,7 @@
 		2364EA3622DA760000340B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2364EA3822DA760000340B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2364EA4422DA7B9D00340B3A /* TimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableController.swift; sourceTree = "<group>"; };
-		2364EA4622DA8BB500340B3A /* DownloadGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadGroups.swift; sourceTree = "<group>"; };
+		2364EA4622DA8BB500340B3A /* DownloadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadData.swift; sourceTree = "<group>"; };
 		512F58E691B2510F01633AEB /* Pods-Aplikacja Mobilna WZR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aplikacja Mobilna WZR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR.debug.xcconfig"; sourceTree = "<group>"; };
 		6DF9A489728DB95CC77F354B /* Pods-Aplikacja Mobilna WZR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aplikacja Mobilna WZR.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,8 +53,8 @@
 		233577B222DAB2530043AE98 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
-				2364EA4622DA8BB500340B3A /* DownloadGroups.swift */,
 				233577B022DA99E30043AE98 /* ParseGroups.swift */,
+				23242B9A22DE453700C4F132 /* Groups.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -118,6 +120,7 @@
 		2364EA4122DA762600340B3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2364EA4622DA8BB500340B3A /* DownloadData.swift */,
 				233577B222DAB2530043AE98 /* Groups */,
 			);
 			path = Model;
@@ -255,9 +258,10 @@
 				2364EA2C22DA760000340B3A /* WelcomeScreenController.swift in Sources */,
 				233577B122DA99E30043AE98 /* ParseGroups.swift in Sources */,
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,
-				2364EA4722DA8BB500340B3A /* DownloadGroups.swift in Sources */,
+				2364EA4722DA8BB500340B3A /* DownloadData.swift in Sources */,
 				2364EA3222DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodeld in Sources */,
 				2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */,
+				23242B9B22DE453700C4F132 /* Groups.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        Groups() { (tempArray:[String]) in
+            print(tempArray)
+        }
         return true
     }
 
@@ -44,6 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
@@ -90,4 +95,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
 

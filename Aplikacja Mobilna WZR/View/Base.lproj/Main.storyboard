@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frS-P3-trZ">
-                                <rect key="frame" x="0.0" y="340" width="508" height="216"/>
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzn-hc-fbU">
                                 <rect key="frame" x="20" y="596" width="374" height="45"/>
@@ -139,23 +139,93 @@
             </objects>
             <point key="canvasLocation" x="741" y="390"/>
         </scene>
-        <!--Item-->
+        <!--Wykładowcy-->
         <scene sceneID="8dX-Zo-Xzz">
             <objects>
                 <viewController id="Gnl-vq-iI6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dpE-BL-LCT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fQc-Fu-omt" userLabel="Upper Stack View">
+                                <rect key="frame" x="10" y="49" width="394" height="30"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="37L-N6-lM8">
+                                        <rect key="frame" x="0.0" y="0.0" width="344" height="31"/>
+                                        <segments>
+                                            <segment title="Tydzień I"/>
+                                            <segment title="Tydzień II"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-TR-bDH">
+                                        <rect key="frame" x="364" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="0bo-cJ-NbS"/>
+                                            <constraint firstAttribute="width" constant="30" id="Vze-Qc-kjH"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="settings">
+                                            <color key="titleColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="settingsButtonPressed:" destination="VVq-mu-vAo" eventType="touchUpInside" id="n3U-xb-JuT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="oDf-9H-FiI"/>
+                                </constraints>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="43s-fe-LzB">
+                                <rect key="frame" x="0.0" y="94" width="414" height="29"/>
+                                <segments>
+                                    <segment title="Pon."/>
+                                    <segment title="Wt."/>
+                                    <segment title="Śr."/>
+                                    <segment title="Czw."/>
+                                    <segment title="Pt"/>
+                                </segments>
+                                <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TWU-gK-xYF">
+                                <rect key="frame" x="0.0" y="130" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TMS-u2-iVH">
+                                <rect key="frame" x="0.0" y="194" width="414" height="611"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TWU-gK-xYF" firstAttribute="leading" secondItem="uSR-qh-Rcp" secondAttribute="leading" id="0qG-iw-qT0"/>
+                            <constraint firstItem="43s-fe-LzB" firstAttribute="leading" secondItem="uSR-qh-Rcp" secondAttribute="leading" id="4Be-Ac-vBm"/>
+                            <constraint firstItem="TMS-u2-iVH" firstAttribute="top" secondItem="TWU-gK-xYF" secondAttribute="bottom" constant="8" id="6iD-GT-Jh3"/>
+                            <constraint firstItem="uSR-qh-Rcp" firstAttribute="trailing" secondItem="TMS-u2-iVH" secondAttribute="trailing" id="7vl-JC-jEz"/>
+                            <constraint firstItem="TWU-gK-xYF" firstAttribute="top" secondItem="43s-fe-LzB" secondAttribute="bottom" constant="8" id="DPQ-Id-uUx"/>
+                            <constraint firstItem="TWU-gK-xYF" firstAttribute="trailing" secondItem="uSR-qh-Rcp" secondAttribute="trailing" id="EZg-hc-aLL"/>
+                            <constraint firstAttribute="trailing" secondItem="TWU-gK-xYF" secondAttribute="trailing" id="EvY-fl-RV5"/>
+                            <constraint firstItem="fQc-Fu-omt" firstAttribute="leading" secondItem="uSR-qh-Rcp" secondAttribute="leading" constant="10" id="FAQ-hF-8vU"/>
+                            <constraint firstItem="43s-fe-LzB" firstAttribute="trailing" secondItem="uSR-qh-Rcp" secondAttribute="trailing" id="FO6-Bq-nuW"/>
+                            <constraint firstItem="fQc-Fu-omt" firstAttribute="top" secondItem="uSR-qh-Rcp" secondAttribute="top" constant="5" id="G00-qP-deJ"/>
+                            <constraint firstItem="TMS-u2-iVH" firstAttribute="leading" secondItem="uSR-qh-Rcp" secondAttribute="leading" id="KuJ-mO-oeZ"/>
+                            <constraint firstItem="uSR-qh-Rcp" firstAttribute="trailing" secondItem="fQc-Fu-omt" secondAttribute="trailing" constant="10" id="SdR-CF-8FC"/>
+                            <constraint firstItem="uSR-qh-Rcp" firstAttribute="bottom" secondItem="TMS-u2-iVH" secondAttribute="bottom" constant="8" id="hUa-9F-vUZ"/>
+                            <constraint firstItem="43s-fe-LzB" firstAttribute="top" secondItem="fQc-Fu-omt" secondAttribute="bottom" constant="15" id="qrv-H5-hs9"/>
+                            <constraint firstItem="43s-fe-LzB" firstAttribute="top" secondItem="fQc-Fu-omt" secondAttribute="bottom" constant="15" id="sCK-wy-9Gd"/>
+                            <constraint firstItem="TWU-gK-xYF" firstAttribute="leading" secondItem="uSR-qh-Rcp" secondAttribute="leading" id="zrJ-BQ-Wmp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="uSR-qh-Rcp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6fH-tc-6rS"/>
+                    <tabBarItem key="tabBarItem" title="Wykładowcy" id="6fH-tc-6rS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uy9-b3-nTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="741" y="1131"/>
         </scene>
-        <!--Item-->
+        <!--Ogłoszenia-->
         <scene sceneID="0tO-Du-TX4">
             <objects>
                 <viewController id="RQ8-sy-ySj" sceneMemberID="viewController">
@@ -165,7 +235,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8Rj-fR-tOz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="BEz-zU-JtU"/>
+                    <tabBarItem key="tabBarItem" title="Ogłoszenia" id="BEz-zU-JtU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QC8-Ei-0Of" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -178,6 +248,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="TJD-aJ-8GJ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eUi-Q5-i5S">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
