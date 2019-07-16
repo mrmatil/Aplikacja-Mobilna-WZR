@@ -12,11 +12,11 @@ import SwiftSoup
 class GroupsParser{
     
     //variables:
-    var answerFunction : ([String])->[String]
+    var answerFunction : ([String])->Void
     
     
     
-    init(url:String, answerFunction: @escaping ([String])->[String]) {
+    init(url:String, answerFunction: @escaping ([String])->Void) {
         self.answerFunction=answerFunction
         WebDataDownload.init(url: url, completionHandlerFunction: getData)
     }

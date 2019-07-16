@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WelcomeScreenController: UIViewController {
+class SettingsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class WelcomeScreenController: UIViewController {
 
 
 
-extension WelcomeScreenController: UIPickerViewDelegate, UIPickerViewDataSource{
+extension SettingsController: UIPickerViewDelegate, UIPickerViewDataSource{
     
     func enablePickerView(){
         groupsPickerView.dataSource=self

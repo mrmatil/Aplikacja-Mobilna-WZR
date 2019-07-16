@@ -24,7 +24,7 @@ class Groups{
         GroupsParser(url: URLAdresses["2 stopień"]!, answerFunction: masterListOfGroups)
     }
     
-    private func bachelorListOfGroups(array:[String])->[String]{
+    private func bachelorListOfGroups(array:[String]){
         var tempArray:[String]=[]
         for x in array{
             if x.starts(with: "S"){
@@ -37,10 +37,9 @@ class Groups{
 
         arrayOfBachelorGroups = tempArray
         arrayOfAll += tempArray
-        return tempArray
     }
     
-    private func masterListOfGroups(array:[String])->[String]{
+    private func masterListOfGroups(array:[String]){
         var tempArray:[String]=[]
         for x in array{
             if x.starts(with: "S"){
@@ -55,7 +54,6 @@ class Groups{
         
         arrayOfAll += tempArray
         completionHandler(arrayOfAll)
-        return tempArray
     }
 
 

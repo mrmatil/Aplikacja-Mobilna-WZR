@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		23242B9B22DE453700C4F132 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23242B9A22DE453700C4F132 /* Groups.swift */; };
-		233577B122DA99E30043AE98 /* ParseGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233577B022DA99E30043AE98 /* ParseGroups.swift */; };
+		233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233577B022DA99E30043AE98 /* GroupsParser.swift */; };
 		2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2922DA760000340B3A /* AppDelegate.swift */; };
-		2364EA2C22DA760000340B3A /* WelcomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2B22DA760000340B3A /* WelcomeScreenController.swift */; };
+		2364EA2C22DA760000340B3A /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2B22DA760000340B3A /* SettingsController.swift */; };
 		2364EA2F22DA760000340B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA2D22DA760000340B3A /* Main.storyboard */; };
 		2364EA3222DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA3022DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodeld */; };
 		2364EA3422DA760000340B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3322DA760000340B3A /* Assets.xcassets */; };
@@ -23,10 +23,10 @@
 /* Begin PBXFileReference section */
 		14D482D4A6BBC0752467BD61 /* Pods_Aplikacja_Mobilna_WZR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aplikacja_Mobilna_WZR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23242B9A22DE453700C4F132 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
-		233577B022DA99E30043AE98 /* ParseGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseGroups.swift; sourceTree = "<group>"; };
+		233577B022DA99E30043AE98 /* GroupsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsParser.swift; sourceTree = "<group>"; };
 		2364EA2622DA760000340B3A /* Aplikacja Mobilna WZR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aplikacja Mobilna WZR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2364EA2922DA760000340B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2364EA2B22DA760000340B3A /* WelcomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenController.swift; sourceTree = "<group>"; };
+		2364EA2B22DA760000340B3A /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		2364EA2E22DA760000340B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2364EA3122DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Aplikacja_Mobilna_WZR.xcdatamodel; sourceTree = "<group>"; };
 		2364EA3322DA760000340B3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		233577B222DAB2530043AE98 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
-				233577B022DA99E30043AE98 /* ParseGroups.swift */,
+				233577B022DA99E30043AE98 /* GroupsParser.swift */,
 				23242B9A22DE453700C4F132 /* Groups.swift */,
 			);
 			path = Groups;
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				2364EA2922DA760000340B3A /* AppDelegate.swift */,
-				2364EA2B22DA760000340B3A /* WelcomeScreenController.swift */,
+				2364EA2B22DA760000340B3A /* SettingsController.swift */,
 				2364EA4422DA7B9D00340B3A /* TimeTableController.swift */,
 			);
 			path = Controller;
@@ -255,8 +255,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2364EA2C22DA760000340B3A /* WelcomeScreenController.swift in Sources */,
-				233577B122DA99E30043AE98 /* ParseGroups.swift in Sources */,
+				2364EA2C22DA760000340B3A /* SettingsController.swift in Sources */,
+				233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */,
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,
 				2364EA4722DA8BB500340B3A /* DownloadData.swift in Sources */,
 				2364EA3222DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodeld in Sources */,
