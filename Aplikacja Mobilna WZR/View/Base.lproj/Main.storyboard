@@ -33,6 +33,9 @@
                                 <state key="normal" title="Powrót">
                                     <color key="titleColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5TH-JW-gej"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SGR-9s-nVs" userLabel="Language Stack View">
                                 <rect key="frame" x="20" y="380" width="374" height="28"/>
@@ -134,7 +137,6 @@
                                         </state>
                                         <connections>
                                             <action selector="settingsButtonPressed:" destination="VVq-mu-vAo" eventType="touchUpInside" id="g1S-3K-3tP"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="l8a-Sh-tFB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -174,6 +176,9 @@
                         <viewLayoutGuide key="safeArea" id="Ekd-R9-TTl"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Plan" id="z6N-fU-did"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSettings" id="0gH-k8-du5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr7-2Y-A8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

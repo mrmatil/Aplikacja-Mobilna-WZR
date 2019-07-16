@@ -12,6 +12,7 @@ class SettingsController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        enablePickerView()
         // Do any additional setup after loading the view.
     }
     
@@ -20,20 +21,21 @@ class SettingsController: UIViewController {
     
     
     //variables:
-    var tempArray:[String] = []
+    var tempArray:[String] = ["aaa","bbb","ccc"]
     var pick:String?
 
     
     //IBActions:
     @IBAction func okButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "WelcomeToTimetable", sender: self)
+        // zapisywanie dodać
+        self.dismiss(animated: true, completion: nil)
     }
     
-    func answer(array: [String])->[String]{
-        tempArray=array
-        enablePickerView()
-        return array
+    @IBAction func backButton(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
+    
+
 }
 
 

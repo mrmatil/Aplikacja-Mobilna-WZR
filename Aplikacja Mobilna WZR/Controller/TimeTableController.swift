@@ -19,7 +19,7 @@ class TimeTableController: UIViewController {
     
     //IBActions:
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "toSettings", sender: self)
     }
     
 
