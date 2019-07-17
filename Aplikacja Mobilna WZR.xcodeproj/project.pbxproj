@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23162BCD22DE89DF001A4D2D /* DownloadCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23162BCC22DE89DF001A4D2D /* DownloadCSV.swift */; };
+		23162BCF22DE9D04001A4D2D /* WelcomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23162BCE22DE9D04001A4D2D /* WelcomeScreenController.swift */; };
 		23242B9B22DE453700C4F132 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23242B9A22DE453700C4F132 /* Groups.swift */; };
 		233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233577B022DA99E30043AE98 /* GroupsParser.swift */; };
 		2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2922DA760000340B3A /* AppDelegate.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		14D482D4A6BBC0752467BD61 /* Pods_Aplikacja_Mobilna_WZR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aplikacja_Mobilna_WZR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23162BCC22DE89DF001A4D2D /* DownloadCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCSV.swift; sourceTree = "<group>"; };
+		23162BCE22DE9D04001A4D2D /* WelcomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenController.swift; sourceTree = "<group>"; };
 		23242B9A22DE453700C4F132 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		233577B022DA99E30043AE98 /* GroupsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsParser.swift; sourceTree = "<group>"; };
 		2364EA2622DA760000340B3A /* Aplikacja Mobilna WZR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aplikacja Mobilna WZR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23162BCB22DE898F001A4D2D /* TimeTables */ = {
+			isa = PBXGroup;
+			children = (
+				23162BCC22DE89DF001A4D2D /* DownloadCSV.swift */,
+			);
+			path = TimeTables;
+			sourceTree = "<group>";
+		};
 		233577B222DAB2530043AE98 /* Groups */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +116,7 @@
 				2364EA2922DA760000340B3A /* AppDelegate.swift */,
 				2364EA2B22DA760000340B3A /* SettingsController.swift */,
 				2364EA4422DA7B9D00340B3A /* TimeTableController.swift */,
+				23162BCE22DE9D04001A4D2D /* WelcomeScreenController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				2364EA4622DA8BB500340B3A /* DownloadData.swift */,
+				23162BCB22DE898F001A4D2D /* TimeTables */,
 				233577B222DAB2530043AE98 /* Groups */,
 			);
 			path = Model;
@@ -255,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23162BCD22DE89DF001A4D2D /* DownloadCSV.swift in Sources */,
+				23162BCF22DE9D04001A4D2D /* WelcomeScreenController.swift in Sources */,
 				2364EA2C22DA760000340B3A /* SettingsController.swift in Sources */,
 				233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */,
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,
