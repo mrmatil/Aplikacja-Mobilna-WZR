@@ -19,13 +19,15 @@ class DownloadCSV{
     init(completionHandler: @escaping ()->Void, groupsArray:[String]) {
         self.groupsArray=groupsArray
         self.completionHandler=completionHandler
-        xxx()
+        getCsvDataToDatabase()
     }
     
-    func xxx(){
+    func getCsvDataToDatabase(){
         print(groupsArray)
         for x in groupsArray{
-            var url:String = baseURL1+x+baseURL2
+            let url:String = baseURL1+x+baseURL2
+            ParseCSV(url: url, groupName: x)
+            
             // wywołanie klasy parsującej csv-ki, przekazanie jej url + nazwę grupy
             // wyrzucenie z niej tablic z potrzebnymi rzeczmi
             // dodanie go do CoreData + dodanie "x" jako nazwa grupy

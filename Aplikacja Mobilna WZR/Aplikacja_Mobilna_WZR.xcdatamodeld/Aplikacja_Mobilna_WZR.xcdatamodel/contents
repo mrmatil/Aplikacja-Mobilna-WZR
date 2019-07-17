@@ -3,7 +3,9 @@
     <entity name="Grupy" representedClassName="Grupy" syncable="YES" codeGenerationType="class">
         <attribute name="nazwaGrupy" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="PlanZajec" representedClassName="PlanZajec" syncable="YES"/>
     <elements>
-        <element name="Grupy" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="Grupy" positionX="-886.37109375" positionY="-800.28125" width="220.21484375" height="58"/>
+        <element name="PlanZajec" positionX="-837" positionY="-792" width="128" height="45"/>
     </elements>
 </model>

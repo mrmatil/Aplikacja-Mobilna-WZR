@@ -24,6 +24,7 @@ class Groups{
         GroupsParser(url: URLAdresses["2 stopień"]!, answerFunction: masterListOfGroups)
     }
     
+    //funkcja przekazująca nazwy grup licencjackich do wspólnej tablicy
     private func bachelorListOfGroups(array:[String]){
         var tempArray:[String]=[]
         for x in array{
@@ -39,6 +40,7 @@ class Groups{
         arrayOfAll += tempArray
     }
     
+    //funkcja przekazująca nazwy grup magisterskich do wspólnej tablicy + przesyłająca do completion handlera pełną tablicę
     private func masterListOfGroups(array:[String]){
         var tempArray:[String]=[]
         for x in array{

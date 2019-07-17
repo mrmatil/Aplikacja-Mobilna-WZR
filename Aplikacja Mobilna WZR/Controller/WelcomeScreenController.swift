@@ -12,6 +12,7 @@ class WelcomeScreenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //zrobić funkcję czy jest internet
         downloadsInitializer()
         // Do any additional setup after loading the view.
     }
@@ -20,6 +21,7 @@ class WelcomeScreenController: UIViewController {
         Groups() { (tempArray:[String]) in
 //            print(tempArray)
             //przesyłanie tempArray do BazyDanych
+            
             
             DownloadCSV(completionHandler: self.CSVDone, groupsArray: tempArray)
         }
