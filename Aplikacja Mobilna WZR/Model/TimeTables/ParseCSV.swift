@@ -18,9 +18,8 @@ class ParseCSV{
     init(url:String, groupName:String){
         self.url=url
         self.groupName=groupName
-        
-        DaysOfTheWeek(completionHandler: downloadData)
-    }
+        downloadData()
+        }
     
     func downloadData(){
         WebDataDownload(url: url) { (stringCSV:String) in
@@ -29,15 +28,22 @@ class ParseCSV{
     }
     
     func parsing(csv:String){
+
         do {
             let csv = try CSVReader(string: csv, hasHeaderRow: true)
             let headerRow = csv.headerRow!// header = ["Subject", "Start Date", "Start Time", "End Date", "End Time", "Description", "Location"]
-
-            
-            print(headerRow)
-//            while let row = csv.next(){
-//                print("\(row[0])")
-//            }
+            while let row = csv.next(){
+                // przesyłanie danych do do coreData
+                let group:String = groupName
+                let className:String = row[0]
+                let lecturer:String = row[5]
+                let startHour:String = row[2]
+                let endHour:String = row[4]
+                let typeOfWeek:Int = ParsingUtil.numberOfWeek(date: row[1], hour: row[2])
+                let nameOfTheDay:String = ParsingUtil.nameOfTheDay(date: row[1], hour: row[2])
+                print("Grupa: \(group), nazwa: \(className), prowadzący: \(lecturer), godzina rozpoczęcia: \(startHour), godzina zakończenia:\(endHour), typ tygodnia: \(typeOfWeek), nazwa dnia tygodnia: \(nameOfTheDay)")
+                // dodanie do CoreData
+            }
         } catch {
             print(error.localizedDescription)
         }

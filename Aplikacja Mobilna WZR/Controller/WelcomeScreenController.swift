@@ -22,7 +22,6 @@ class WelcomeScreenController: UIViewController {
 //            print(tempArray)
             //przesyłanie tempArray do BazyDanych
             
-            
             DownloadCSV(completionHandler: self.CSVDone, groupsArray: tempArray)
         }
     }

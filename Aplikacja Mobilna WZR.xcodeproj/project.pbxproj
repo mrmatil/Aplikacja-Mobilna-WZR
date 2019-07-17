@@ -20,7 +20,7 @@
 		2364EA3722DA760000340B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3522DA760000340B3A /* LaunchScreen.storyboard */; };
 		2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4422DA7B9D00340B3A /* TimeTableController.swift */; };
 		2364EA4722DA8BB500340B3A /* DownloadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4622DA8BB500340B3A /* DownloadData.swift */; };
-		23BAEAE922DF349D005E5F40 /* DaysOfTheWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BAEAE822DF349D005E5F40 /* DaysOfTheWeek.swift */; };
+		23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */; };
 		36BBD2484C9C7AB8AE71FEEC /* Pods_Aplikacja_Mobilna_WZR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D482D4A6BBC0752467BD61 /* Pods_Aplikacja_Mobilna_WZR.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,7 @@
 		2364EA3822DA760000340B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2364EA4422DA7B9D00340B3A /* TimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableController.swift; sourceTree = "<group>"; };
 		2364EA4622DA8BB500340B3A /* DownloadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadData.swift; sourceTree = "<group>"; };
-		23BAEAE822DF349D005E5F40 /* DaysOfTheWeek.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysOfTheWeek.swift; sourceTree = "<group>"; };
+		23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingCsvUtil.swift; sourceTree = "<group>"; };
 		512F58E691B2510F01633AEB /* Pods-Aplikacja Mobilna WZR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aplikacja Mobilna WZR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR.debug.xcconfig"; sourceTree = "<group>"; };
 		6DF9A489728DB95CC77F354B /* Pods-Aplikacja Mobilna WZR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aplikacja Mobilna WZR.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,7 +63,7 @@
 			children = (
 				23162BCC22DE89DF001A4D2D /* DownloadCSV.swift */,
 				23162BD022DEA301001A4D2D /* ParseCSV.swift */,
-				23BAEAE822DF349D005E5F40 /* DaysOfTheWeek.swift */,
+				23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */,
 			);
 			path = TimeTables;
 			sourceTree = "<group>";
@@ -280,8 +280,8 @@
 				23162BCD22DE89DF001A4D2D /* DownloadCSV.swift in Sources */,
 				23162BCF22DE9D04001A4D2D /* WelcomeScreenController.swift in Sources */,
 				2364EA2C22DA760000340B3A /* SettingsController.swift in Sources */,
-				23BAEAE922DF349D005E5F40 /* DaysOfTheWeek.swift in Sources */,
 				233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */,
+				23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */,
 				23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */,
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,
 				2364EA4722DA8BB500340B3A /* DownloadData.swift in Sources */,

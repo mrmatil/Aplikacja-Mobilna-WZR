@@ -19,7 +19,9 @@ class DownloadCSV{
     init(completionHandler: @escaping ()->Void, groupsArray:[String]) {
         self.groupsArray=groupsArray
         self.completionHandler=completionHandler
+        
         getCsvDataToDatabase()
+
     }
     
     func getCsvDataToDatabase(){
