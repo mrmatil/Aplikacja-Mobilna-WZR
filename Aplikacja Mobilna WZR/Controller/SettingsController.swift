@@ -10,8 +10,13 @@ import UIKit
 
 class SettingsController: UIViewController {
 
+    //zmienna dla userdefaults:
+    let defaults = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        guard let temp = defaults.array(forKey: "groupsList") else {return}
+        tempArray = temp as! [String]
         enablePickerView()
         // Do any additional setup after loading the view.
     }
@@ -21,7 +26,7 @@ class SettingsController: UIViewController {
     
     
     //variables:
-    var tempArray:[String] = ["aaa","bbb","ccc"]
+    var tempArray:[String] = []
     var pick:String?
 
     
@@ -64,6 +69,7 @@ extension SettingsController: UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pick=tempArray[row]
         print(pick!)
+        defaults.set(pick!, forKey: "currentGroup")
     }
     
 }

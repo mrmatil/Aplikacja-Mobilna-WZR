@@ -31,7 +31,7 @@ class ParseCSV{
 
         do {
             let csv = try CSVReader(string: csv, hasHeaderRow: true)
-            let headerRow = csv.headerRow!// header = ["Subject", "Start Date", "Start Time", "End Date", "End Time", "Description", "Location"]
+//            let headerRow = csv.headerRow!// header = ["Subject", "Start Date", "Start Time", "End Date", "End Time", "Description", "Location"]
             while let row = csv.next(){
                 // przesyłanie danych do do coreData
                 let group:String = groupName

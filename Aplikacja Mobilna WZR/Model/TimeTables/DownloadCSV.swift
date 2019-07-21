@@ -36,6 +36,9 @@ class DownloadCSV{
             
             
             //zrobić specjalny widok na pobieranie danych
+            
+            
         }
+        completionHandler()
     }
 }
