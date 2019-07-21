@@ -322,6 +322,7 @@
                         <viewLayoutGuide key="safeArea" id="IYR-Vr-LhS"/>
                     </view>
                     <connections>
+                        <outlet property="pleaseWaitLabel" destination="3Es-So-U9k" id="mS2-Jc-GcJ"/>
                         <segue destination="vQZ-5j-ZFF" kind="show" identifier="initialSegue" id="FBh-q4-7EB"/>
                     </connections>
                 </viewController>

@@ -15,8 +15,8 @@ class SettingsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let temp = defaults.array(forKey: "groupsList") else {return}
-        tempArray = temp as! [String]
+        guard let tempListOfGroups = defaults.array(forKey: "groupsList") else {return}
+        arrayOfAllGroupsString = tempListOfGroups as! [String]
         enablePickerView()
         // Do any additional setup after loading the view.
     }
@@ -26,7 +26,7 @@ class SettingsController: UIViewController {
     
     
     //variables:
-    var tempArray:[String] = []
+    var arrayOfAllGroupsString:[String] = []
     var pick:String?
 
     
@@ -59,17 +59,18 @@ extension SettingsController: UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return tempArray.count
+        return arrayOfAllGroupsString.count
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        return NSAttributedString(string: tempArray[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor.blue])
+        return NSAttributedString(string: arrayOfAllGroupsString[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor.blue])
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        pick=tempArray[row]
-        print(pick!)
-        defaults.set(pick!, forKey: "currentGroup")
+        pick=arrayOfAllGroupsString[row]
+//        print(pick!)
+        
+        defaults.set(pick!, forKey: "currentGroup") // sending current pick to userDefaults
     }
     
 }

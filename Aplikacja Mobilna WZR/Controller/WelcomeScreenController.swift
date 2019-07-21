@@ -10,30 +10,38 @@ import UIKit
 
 class WelcomeScreenController: UIViewController {
 
+    //variables
     let groupsList = UserDefaults.standard // zmienna do przechowywania danych w user defaults
-
+    
+    //IBOutlets:
+    @IBOutlet weak var pleaseWaitLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //zrobić funkcję czy jest internet
-        downloadsInitializer()
-        // Do any additional setup after loading the view.
+        
+        //checking if there is internet connection
+        if Reachability.isConnectedToNetwork(){
+            print("jest połączenie")
+            downloadsInitializer()
+        }
+        else{
+            print("nie ma połączenia")
+        }
+        
     }
     
     func downloadsInitializer(){
         Groups() { (tempArray:[String]) in
-            print(tempArray)
-            //przesyłanie tempArray do BazyDanych
-            self.groupsList.set(tempArray, forKey: "groupsList")
+            self.groupsList.set(tempArray, forKey: "groupsList") // sending list of all groups to UserDefaults
             
             
             
-            DownloadCSV(completionHandler: self.CSVDone, groupsArray: tempArray)
+            DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
         }
     }
     
-    func CSVDone(){
+    func initCompleted(){
         performSegue(withIdentifier: "initialSegue", sender: self)
     }
     

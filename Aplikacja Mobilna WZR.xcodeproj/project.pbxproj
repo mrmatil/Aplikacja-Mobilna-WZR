@@ -21,6 +21,7 @@
 		2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4422DA7B9D00340B3A /* TimeTableController.swift */; };
 		2364EA4722DA8BB500340B3A /* DownloadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4622DA8BB500340B3A /* DownloadData.swift */; };
 		23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */; };
+		23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBCB1422E4F69E00412350 /* CheckingConnection.swift */; };
 		36BBD2484C9C7AB8AE71FEEC /* Pods_Aplikacja_Mobilna_WZR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14D482D4A6BBC0752467BD61 /* Pods_Aplikacja_Mobilna_WZR.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		2364EA4422DA7B9D00340B3A /* TimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableController.swift; sourceTree = "<group>"; };
 		2364EA4622DA8BB500340B3A /* DownloadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadData.swift; sourceTree = "<group>"; };
 		23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingCsvUtil.swift; sourceTree = "<group>"; };
+		23CBCB1422E4F69E00412350 /* CheckingConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingConnection.swift; sourceTree = "<group>"; };
 		512F58E691B2510F01633AEB /* Pods-Aplikacja Mobilna WZR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aplikacja Mobilna WZR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR.debug.xcconfig"; sourceTree = "<group>"; };
 		6DF9A489728DB95CC77F354B /* Pods-Aplikacja Mobilna WZR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aplikacja Mobilna WZR.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,11 +141,20 @@
 		2364EA4122DA762600340B3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2364EA4622DA8BB500340B3A /* DownloadData.swift */,
+				23CBCB1622E4F75D00412350 /* Utilities */,
 				23162BCB22DE898F001A4D2D /* TimeTables */,
 				233577B222DAB2530043AE98 /* Groups */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		23CBCB1622E4F75D00412350 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2364EA4622DA8BB500340B3A /* DownloadData.swift */,
+				23CBCB1422E4F69E00412350 /* CheckingConnection.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		8B3D7BC3596FC83B208B2C81 /* Frameworks */ = {
@@ -284,6 +295,7 @@
 				23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */,
 				23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */,
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,
+				23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */,
 				2364EA4722DA8BB500340B3A /* DownloadData.swift in Sources */,
 				2364EA3222DA760000340B3A /* Aplikacja_Mobilna_WZR.xcdatamodeld in Sources */,
 				2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */,
