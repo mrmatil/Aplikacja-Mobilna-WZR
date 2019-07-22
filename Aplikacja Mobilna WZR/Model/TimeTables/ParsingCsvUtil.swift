@@ -60,4 +60,9 @@ class ParsingUtil{
             return ""
         }
     }
+    
+    static func dayPlusTwoWeeks(date:Date)->Date{
+        let datePlus2Weeks = date.addingTimeInterval(1209600)
+        return datePlus2Weeks
+    }
 }

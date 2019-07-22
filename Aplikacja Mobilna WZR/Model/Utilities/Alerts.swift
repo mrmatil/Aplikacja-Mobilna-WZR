@@ -21,7 +21,7 @@ class Alerts:NSObject{
     var option2title:String
     var option2Action:()->Void
     
-    //alert with two options initializer
+    //alert with two options
     init(view:UIViewController, title:String,message:String,option1title:String,option1Action:@escaping ()->Void, option2title:String, option2Action:@escaping ()->Void) {
         self.view = view
         self.title = title
@@ -32,21 +32,25 @@ class Alerts:NSObject{
         self.option2Action=option2Action
     }
     
-    
     func showAlertWithTwoOptions(){
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
+        
         alert.addAction(UIAlertAction(title: option1title,
                                       style: .default,
                                       handler: { (UIAlert) in
             self.option1Action()
         }))
+        
         alert.addAction(UIAlertAction(title: option2title,
                                       style: .default,
                                       handler: { (UIAlert) in
             self.option2Action()
         }))
+        
         view.present(alert, animated: true, completion: nil)
     }
+    
+    //alert with one option
 }

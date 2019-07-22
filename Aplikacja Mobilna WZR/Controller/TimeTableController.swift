@@ -11,7 +11,7 @@ import UIKit
 class TimeTableController: UIViewController {
 
     //variables:    
-    
+    let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class TimeTableController: UIViewController {
     
     //IBActions:
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
+        print(userDefaults.string(forKey: "currentGroup")!)
         performSegue(withIdentifier: "toSettings", sender: self)
     }
     

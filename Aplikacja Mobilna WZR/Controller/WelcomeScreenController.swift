@@ -11,7 +11,7 @@ import UIKit
 class WelcomeScreenController: UIViewController {
 
     //variables
-    let groupsList = UserDefaults.standard // zmienna do przechowywania danych w user defaults
+    let userDefaults = UserDefaults.standard // zmienna do przechowywania danych w user defaults
     
     //IBOutlets:
     @IBOutlet weak var pleaseWaitLabel: UILabel!
@@ -20,6 +20,9 @@ class WelcomeScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //checking if favorite group is set, if no is automaticly set to s11-01
+        checkingIfHasFavoriteGroup()
+        
         //checking if there is internet connection
         if Reachability.isConnectedToNetwork(){
             print("jest połączenie")
@@ -27,18 +30,18 @@ class WelcomeScreenController: UIViewController {
         }
         else{
             print("nie ma połączenia")
-            perform(#selector(showAlert), with: nil, afterDelay: 0)
+            perform(#selector(showAlert), with: nil, afterDelay: 0) // showing alert, after delay 0, because otherwise will be error in viewDidLoad
         }
         
     }
     
     func downloadsInitializer(){
-        Groups() { (tempArray:[String]) in
-            self.groupsList.set(tempArray, forKey: "groupsList") // sending list of all groups to UserDefaults
+        _ = Groups() { (tempArray:[String]) in
+            self.userDefaults.set(tempArray, forKey: "groupsList") // sending list of all groups to UserDefaults
             
             
             
-            DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
+            _=DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
         }
     }
     
@@ -47,7 +50,7 @@ class WelcomeScreenController: UIViewController {
     }
     
     
-    //functions for no connection:
+    //functions for if no connection:
     
     @objc func showAlert(){
         Alerts.init(view: self, title: "Brak połączenia", message: "sprawdź swoje połączenie internetowe", option1title: "Spróbuj ponownie", option1Action: tryAgain, option2title: "kontynuuj offilne", option2Action: goOffilne).showAlertWithTwoOptions()
@@ -57,5 +60,24 @@ class WelcomeScreenController: UIViewController {
     }
     func goOffilne(){
         performSegue(withIdentifier: "initialSegue", sender: self)
+    }
+    
+    //checking if has already data:
+    
+    func checkingIfHasFavoriteGroup(){
+        guard let favGroup = userDefaults.string(forKey: "currentGroup") else {
+            self.userDefaults.set("S11-01", forKey: "currentGroup")
+            return
+        }
+        print(favGroup)
+    }
+    
+    func checkingIfHasListOfGroups(){
+        
+    }
+    
+    func checkingIfHasClassData(){
+        
+        
     }
 }

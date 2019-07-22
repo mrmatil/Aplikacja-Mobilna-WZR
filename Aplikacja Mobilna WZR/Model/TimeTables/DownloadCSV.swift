@@ -25,10 +25,14 @@ class DownloadCSV{
     }
     
     func getCsvDataToDatabase(){
-        print(groupsArray)
+//        print(groupsArray)
+        
         for x in groupsArray{
             let url:String = baseURL1+x+baseURL2
-            ParseCSV(url: url, groupName: x)
+            _ = ParseCSV(url: url, groupName: x) { (tempArray) in
+                print(tempArray)
+            }
+            
             
             // wywołanie klasy parsującej csv-ki, przekazanie jej url + nazwę grupy
             // wyrzucenie z niej tablic z potrzebnymi rzeczmi
