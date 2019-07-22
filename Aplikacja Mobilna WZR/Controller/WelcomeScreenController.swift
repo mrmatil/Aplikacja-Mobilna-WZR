@@ -27,6 +27,7 @@ class WelcomeScreenController: UIViewController {
         }
         else{
             print("nie ma połączenia")
+            perform(#selector(showAlert), with: nil, afterDelay: 0)
         }
         
     }
@@ -46,4 +47,15 @@ class WelcomeScreenController: UIViewController {
     }
     
     
+    //functions for no connection:
+    
+    @objc func showAlert(){
+        Alerts.init(view: self, title: "Brak połączenia", message: "sprawdź swoje połączenie internetowe", option1title: "Spróbuj ponownie", option1Action: tryAgain, option2title: "kontynuuj offilne", option2Action: goOffilne).showAlertWithTwoOptions()
+    }
+    func tryAgain(){
+        viewDidLoad()
+    }
+    func goOffilne(){
+        performSegue(withIdentifier: "initialSegue", sender: self)
+    }
 }

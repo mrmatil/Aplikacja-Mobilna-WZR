@@ -105,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="1569.5652173913045" y="389.73214285714283"/>
         </scene>
-        <!--Plan-->
+        <!--Time Table Controller-->
         <scene sceneID="GW1-sk-mO6">
             <objects>
                 <viewController id="VVq-mu-vAo" customClass="TimeTableController" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target" sceneMemberID="viewController">
@@ -175,7 +175,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ekd-R9-TTl"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Plan" id="z6N-fU-did"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="z6N-fU-did"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSettings" id="0gH-k8-du5"/>
                     </connections>
@@ -184,7 +184,7 @@
             </objects>
             <point key="canvasLocation" x="741" y="390"/>
         </scene>
-        <!--Wykładowcy-->
+        <!--View Controller-->
         <scene sceneID="8dX-Zo-Xzz">
             <objects>
                 <viewController id="Gnl-vq-iI6" sceneMemberID="viewController">
@@ -264,13 +264,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uSR-qh-Rcp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Wykładowcy" id="6fH-tc-6rS"/>
+                    <tabBarItem key="tabBarItem" systemItem="featured" id="6fH-tc-6rS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uy9-b3-nTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="741" y="1131"/>
         </scene>
-        <!--Ogłoszenia-->
+        <!--View Controller-->
         <scene sceneID="0tO-Du-TX4">
             <objects>
                 <viewController id="RQ8-sy-ySj" sceneMemberID="viewController">
@@ -280,7 +280,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8Rj-fR-tOz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Ogłoszenia" id="BEz-zU-JtU"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="BEz-zU-JtU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QC8-Ei-0Of" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,12 +323,12 @@
                     </view>
                     <connections>
                         <outlet property="pleaseWaitLabel" destination="3Es-So-U9k" id="mS2-Jc-GcJ"/>
-                        <segue destination="vQZ-5j-ZFF" kind="show" identifier="initialSegue" id="FBh-q4-7EB"/>
+                        <segue destination="vQZ-5j-ZFF" kind="show" identifier="initialSegue" id="jOW-qm-Qe9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpM-zg-LLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1543" y="390"/>
+            <point key="canvasLocation" x="-1199" y="390"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ix3-eH-c5x">
@@ -340,6 +340,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="VVq-mu-vAo" kind="relationship" relationship="viewControllers" id="fch-Hn-pOa"/>
