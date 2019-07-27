@@ -19,6 +19,7 @@ class TimeTableController: UIViewController {
     var endHour = [String]()
     var className = [String]()
     var lecturer = [String]()
+    var classroom = [String]()
 
     
     override func viewDidLoad() {
@@ -31,6 +32,7 @@ class TimeTableController: UIViewController {
                     self.endHour.append(results[x].endHour!)
                     self.className.append(results[x].className!)
                     self.lecturer.append(results[x].lecturer!)
+                    self.classroom.append(results[x].classroom!)
                 }
             }
             self.SubjectsTableView.delegate=self
@@ -81,6 +83,7 @@ class TimeTableController: UIViewController {
         endHour = [String]()
         className = [String]()
         lecturer = [String]()
+        classroom = [String]()
         GetDataFromDatabase(group: userDefaults.string(forKey: "currentGroup")!, week: week, day: day) { (results) in
             print(results)
             if results.count>0{
@@ -89,6 +92,7 @@ class TimeTableController: UIViewController {
                     self.endHour.append(results[x].endHour!)
                     self.className.append(results[x].className!)
                     self.lecturer.append(results[x].lecturer!)
+                    self.classroom.append(results[x].classroom!)
                 }
             }
             }.getData()
@@ -119,6 +123,7 @@ extension TimeTableController: UITableViewDelegate, UITableViewDataSource{
         cell.endTime.text = endHour[indexPath.row]
         cell.lecturerName.text = lecturer[indexPath.row]
         cell.className.text = className[indexPath.row]
+        cell.locationName.text = classroom[indexPath.row]
         
         return cell
     }

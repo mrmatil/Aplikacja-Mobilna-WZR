@@ -66,7 +66,8 @@ class ParsingCsvUtil{
         return datePlus2Weeks
     }
     
-    static func classroom(location:String){
-        
+    static func classroom(location:String)->String{
+        var fullLocation = location.split(separator: ",")
+        return String(fullLocation[0])
     }
 }

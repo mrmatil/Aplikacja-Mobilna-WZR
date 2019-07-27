@@ -58,20 +58,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prof. Adam Kowalski-Nowak" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-ca-Lg7">
-                                        <rect key="frame" x="0.0" y="66" width="249" height="13.5"/>
+                                        <rect key="frame" x="0.0" y="54.5" width="249" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="U8p-J8-zou"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="UaA-Fe-QgG" firstAttribute="leading" secondItem="T8o-uf-YOh" secondAttribute="leading" id="LeV-V3-qNI"/>
-                                    <constraint firstAttribute="trailing" secondItem="PEd-ca-Lg7" secondAttribute="trailing" id="SdI-Yf-8K1"/>
-                                    <constraint firstItem="UaA-Fe-QgG" firstAttribute="top" secondItem="T8o-uf-YOh" secondAttribute="top" id="UFS-8K-dG3"/>
-                                    <constraint firstItem="PEd-ca-Lg7" firstAttribute="leading" secondItem="T8o-uf-YOh" secondAttribute="leading" id="WOJ-Lb-4Y5"/>
-                                    <constraint firstAttribute="bottom" secondItem="PEd-ca-Lg7" secondAttribute="bottom" id="dgR-kH-2MB"/>
-                                    <constraint firstItem="PEd-ca-Lg7" firstAttribute="top" secondItem="UaA-Fe-QgG" secondAttribute="bottom" id="ppq-8S-7Xk"/>
-                                    <constraint firstAttribute="trailing" secondItem="UaA-Fe-QgG" secondAttribute="trailing" id="xNA-se-gz6"/>
+                                    <constraint firstItem="UaA-Fe-QgG" firstAttribute="leading" secondItem="T8o-uf-YOh" secondAttribute="leading" id="4kq-ij-OKv"/>
+                                    <constraint firstAttribute="trailing" secondItem="UaA-Fe-QgG" secondAttribute="trailing" id="8s6-YW-Vd0"/>
+                                    <constraint firstAttribute="bottom" secondItem="PEd-ca-Lg7" secondAttribute="bottom" id="H13-8d-ZMO"/>
+                                    <constraint firstItem="PEd-ca-Lg7" firstAttribute="top" secondItem="UaA-Fe-QgG" secondAttribute="bottom" id="L7U-Tu-JPg"/>
+                                    <constraint firstAttribute="trailing" secondItem="PEd-ca-Lg7" secondAttribute="trailing" id="R4G-mY-Aa2"/>
+                                    <constraint firstItem="PEd-ca-Lg7" firstAttribute="leading" secondItem="T8o-uf-YOh" secondAttribute="leading" id="mlR-ej-uPJ"/>
+                                    <constraint firstItem="UaA-Fe-QgG" firstAttribute="top" secondItem="T8o-uf-YOh" secondAttribute="top" id="oJx-hp-Njd"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -92,7 +95,7 @@
                 <outlet property="locationName" destination="KUC-2S-1oo" id="4A6-sS-vEz"/>
                 <outlet property="startTime" destination="jzQ-4r-AGC" id="tdK-YK-6eC"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="141.96428571428569"/>
+            <point key="canvasLocation" x="131.8840579710145" y="141.29464285714286"/>
         </tableViewCell>
     </objects>
 </document>

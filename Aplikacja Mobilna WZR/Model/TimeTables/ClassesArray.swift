@@ -16,6 +16,7 @@ struct ClassesArray{
     let lecturer:String
     let startHour:String
     let endHour:String
+    let classroom:String
     let typeOfWeek:Int
     let nameOfTheDay:String
 }

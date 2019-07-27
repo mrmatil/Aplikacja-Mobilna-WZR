@@ -10,12 +10,13 @@ import Foundation
 import RealmSwift
 
 
-class TimeTablesDB:Object{
+class TimeTablesDataBase:Object{
     @objc dynamic var group:String?
     @objc dynamic var className:String?
     @objc dynamic var lecturer:String?
     @objc dynamic var startHour:String?
     @objc dynamic var endHour:String?
+    @objc dynamic var classroom:String?
     @objc dynamic var typeOfWeek:Int=0
     @objc dynamic var nameOfTheDay:String?
 }

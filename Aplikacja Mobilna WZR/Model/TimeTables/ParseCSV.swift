@@ -53,6 +53,7 @@ class ParseCSV{
                 let typeOfWeek:Int = ParsingCsvUtil.numberOfWeek(date: row[1], hour: row[2])
                 let nameOfTheDay:String = ParsingCsvUtil.nameOfTheDay(date: row[1], hour: row[2])
                 let currentDate = ParsingCsvUtil.changingStringToDate(date: row[1], hour: row[2])
+                let classroom = ParsingCsvUtil.classroom(location: row[6])
                 let dateplus = ParsingCsvUtil.dayPlusTwoWeeks(date: ParsingCsvUtil.changingStringToDate(date: row[1], hour: row[2]))
                 datePlus14Days.append(dateplus)
                 
@@ -69,6 +70,7 @@ class ParseCSV{
                                                  lecturer: lecturer,
                                                  startHour: startHour,
                                                  endHour: endHour,
+                                                 classroom: classroom,
                                                  typeOfWeek: typeOfWeek,
                                                  nameOfTheDay: nameOfTheDay))
                 }

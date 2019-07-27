@@ -45,12 +45,13 @@ class DownloadCSV{
 //        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
         for x in 0...temp.count-1{
             
-            let db = TimeTablesDB()
+            let db = TimeTablesDataBase()
             db.group=temp[x].group
             db.className=temp[x].className
             db.lecturer=temp[x].lecturer
             db.startHour=temp[x].startHour
             db.endHour=temp[x].endHour
+            db.classroom=temp[x].classroom
             db.typeOfWeek=temp[x].typeOfWeek
             db.nameOfTheDay=temp[x].nameOfTheDay
             
