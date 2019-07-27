@@ -123,6 +123,9 @@
                                             <segment title="Tydzień II"/>
                                         </segments>
                                         <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="weekPickerChanged:" destination="VVq-mu-vAo" eventType="valueChanged" id="c5h-VK-qNk"/>
+                                        </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBz-S3-OEL">
                                         <rect key="frame" x="364" y="0.0" width="30" height="30"/>
@@ -154,6 +157,9 @@
                                     <segment title="Pt"/>
                                 </segments>
                                 <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="dayPickerChanged:" destination="VVq-mu-vAo" eventType="valueChanged" id="cRG-re-vxs"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eeL-cA-IZX">
                                 <rect key="frame" x="0.0" y="130" width="414" height="675"/>
@@ -177,6 +183,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="z6N-fU-did"/>
                     <connections>
+                        <outlet property="SubjectsTableView" destination="eeL-cA-IZX" id="7ml-07-6Bl"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSettings" id="0gH-k8-du5"/>
                     </connections>
                 </viewController>

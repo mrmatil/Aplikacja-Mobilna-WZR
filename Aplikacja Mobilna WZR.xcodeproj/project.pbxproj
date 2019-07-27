@@ -12,14 +12,17 @@
 		23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23162BD022DEA301001A4D2D /* ParseCSV.swift */; };
 		23242B9B22DE453700C4F132 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23242B9A22DE453700C4F132 /* Groups.swift */; };
 		233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233577B022DA99E30043AE98 /* GroupsParser.swift */; };
-		2360E2E022EC91BD00FCF99F /* ClassesDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360E2DF22EC91BD00FCF99F /* ClassesDB.swift */; };
+		2360E2E022EC91BD00FCF99F /* TimeTablesDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360E2DF22EC91BD00FCF99F /* TimeTablesDB.swift */; };
+		2360E2E422ECACF100FCF99F /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360E2E222ECACF100FCF99F /* TimeTableCell.swift */; };
+		2360E2E522ECACF100FCF99F /* TimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2360E2E322ECACF100FCF99F /* TimeTableCell.xib */; };
+		2360E2E722ECBEF800FCF99F /* GetDataFromDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360E2E622ECBEF800FCF99F /* GetDataFromDatabase.swift */; };
 		2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2922DA760000340B3A /* AppDelegate.swift */; };
 		2364EA2C22DA760000340B3A /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2B22DA760000340B3A /* SettingsController.swift */; };
 		2364EA2F22DA760000340B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA2D22DA760000340B3A /* Main.storyboard */; };
 		2364EA3422DA760000340B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3322DA760000340B3A /* Assets.xcassets */; };
 		2364EA3722DA760000340B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3522DA760000340B3A /* LaunchScreen.storyboard */; };
 		2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4422DA7B9D00340B3A /* TimeTableController.swift */; };
-		2364EA4722DA8BB500340B3A /* DownloadData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4622DA8BB500340B3A /* DownloadData.swift */; };
+		2364EA4722DA8BB500340B3A /* WebDataDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4622DA8BB500340B3A /* WebDataDownload.swift */; };
 		23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */; };
 		23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBCB1422E4F69E00412350 /* CheckingConnection.swift */; };
 		23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF9AA22E5F75A0039C2AB /* Alerts.swift */; };
@@ -34,7 +37,10 @@
 		23162BD022DEA301001A4D2D /* ParseCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCSV.swift; sourceTree = "<group>"; };
 		23242B9A22DE453700C4F132 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		233577B022DA99E30043AE98 /* GroupsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsParser.swift; sourceTree = "<group>"; };
-		2360E2DF22EC91BD00FCF99F /* ClassesDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesDB.swift; sourceTree = "<group>"; };
+		2360E2DF22EC91BD00FCF99F /* TimeTablesDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTablesDB.swift; sourceTree = "<group>"; };
+		2360E2E222ECACF100FCF99F /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
+		2360E2E322ECACF100FCF99F /* TimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCell.xib; sourceTree = "<group>"; };
+		2360E2E622ECBEF800FCF99F /* GetDataFromDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetDataFromDatabase.swift; path = ../GetDataFromDatabase.swift; sourceTree = "<group>"; };
 		2364EA2622DA760000340B3A /* Aplikacja Mobilna WZR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aplikacja Mobilna WZR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2364EA2922DA760000340B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2364EA2B22DA760000340B3A /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
@@ -43,7 +49,7 @@
 		2364EA3622DA760000340B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2364EA3822DA760000340B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2364EA4422DA7B9D00340B3A /* TimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableController.swift; sourceTree = "<group>"; };
-		2364EA4622DA8BB500340B3A /* DownloadData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadData.swift; sourceTree = "<group>"; };
+		2364EA4622DA8BB500340B3A /* WebDataDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDataDownload.swift; sourceTree = "<group>"; };
 		23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingCsvUtil.swift; sourceTree = "<group>"; };
 		23CBCB1422E4F69E00412350 /* CheckingConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingConnection.swift; sourceTree = "<group>"; };
 		23EDF9AA22E5F75A0039C2AB /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
@@ -94,9 +100,18 @@
 		2360E2DE22EC918A00FCF99F /* RealmDatabases */ = {
 			isa = PBXGroup;
 			children = (
-				2360E2DF22EC91BD00FCF99F /* ClassesDB.swift */,
+				2360E2DF22EC91BD00FCF99F /* TimeTablesDB.swift */,
 			);
 			path = RealmDatabases;
+			sourceTree = "<group>";
+		};
+		2360E2E122ECACAD00FCF99F /* CustomTimeTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2360E2E222ECACF100FCF99F /* TimeTableCell.swift */,
+				2360E2E322ECACF100FCF99F /* TimeTableCell.xib */,
+			);
+			path = CustomTimeTableCell;
 			sourceTree = "<group>";
 		};
 		2364EA1D22DA760000340B3A = {
@@ -151,6 +166,7 @@
 		2364EA4022DA762400340B3A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2360E2E122ECACAD00FCF99F /* CustomTimeTableCell */,
 				2364EA2D22DA760000340B3A /* Main.storyboard */,
 				2364EA3522DA760000340B3A /* LaunchScreen.storyboard */,
 			);
@@ -172,7 +188,8 @@
 		23CBCB1622E4F75D00412350 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				2364EA4622DA8BB500340B3A /* DownloadData.swift */,
+				2364EA4622DA8BB500340B3A /* WebDataDownload.swift */,
+				2360E2E622ECBEF800FCF99F /* GetDataFromDatabase.swift */,
 				23CBCB1422E4F69E00412350 /* CheckingConnection.swift */,
 				23EDF9AA22E5F75A0039C2AB /* Alerts.swift */,
 			);
@@ -257,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2364EA3722DA760000340B3A /* LaunchScreen.storyboard in Resources */,
+				2360E2E522ECACF100FCF99F /* TimeTableCell.xib in Resources */,
 				2364EA3422DA760000340B3A /* Assets.xcassets in Resources */,
 				2364EA2F22DA760000340B3A /* Main.storyboard in Resources */,
 			);
@@ -321,11 +339,13 @@
 				233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */,
 				23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */,
 				23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */,
+				2360E2E722ECBEF800FCF99F /* GetDataFromDatabase.swift in Sources */,
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,
 				23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */,
 				23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */,
-				2364EA4722DA8BB500340B3A /* DownloadData.swift in Sources */,
-				2360E2E022EC91BD00FCF99F /* ClassesDB.swift in Sources */,
+				2364EA4722DA8BB500340B3A /* WebDataDownload.swift in Sources */,
+				2360E2E422ECACF100FCF99F /* TimeTableCell.swift in Sources */,
+				2360E2E022EC91BD00FCF99F /* TimeTablesDB.swift in Sources */,
 				2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */,
 				23242B9B22DE453700C4F132 /* Groups.swift in Sources */,
 			);

@@ -16,7 +16,7 @@ class DownloadCSV{
     let baseURL2:String = "&f2=4"
     var groupsArray:[String]
     var completionHandler: ()->Void
-    var loopsCount:Int=0
+    var loopsCount:Int=0 // służy do sprawdzania ile już grup zostało przesłanych do bazy danych (każda grupa to +1 do aktualnej wartości)
     
     init(completionHandler: @escaping ()->Void, groupsArray:[String]) {
         self.groupsArray=groupsArray
@@ -26,6 +26,7 @@ class DownloadCSV{
 
     }
     
+    //pobieranie danych z klasy ParseCSV dla każdej grupy
     func getCsvDataToDatabase(){
 //        print(groupsArray)
         for x in groupsArray{
@@ -34,25 +35,17 @@ class DownloadCSV{
             _ = ParseCSV(url: url, groupName: x) { (tempArray) in
                self.sendDataToDatabase(temp: tempArray)
             }
-            
-            
-            // wywołanie klasy parsującej csv-ki, przekazanie jej url + nazwę grupy
-            // wyrzucenie z niej tablic z potrzebnymi rzeczmi
-            // dodanie go do CoreData + dodanie "x" jako nazwa grupy
-            
-            
-            //zrobić specjalny widok na pobieranie danych
-            
-            
         }
-//        completionHandler()
+        
     }
     
+    //Przesyłanie danych jednej grupy do bazy danych w Realm
     func sendDataToDatabase(temp:[ClassesArray]){
         let realm = try! Realm()
-        print(Realm.Configuration.defaultConfiguration.fileURL)
+//        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
         for x in 0...temp.count-1{
-            var db = TimeTablesDB()
+            
+            let db = TimeTablesDB()
             db.group=temp[x].group
             db.className=temp[x].className
             db.lecturer=temp[x].lecturer
@@ -69,6 +62,7 @@ class DownloadCSV{
         ifEnd()
     }
     
+    // Funkcja służąca do wywołania completion handlera jeżeli ilość przesłanych grup = ilości całkowitej grup
     func ifEnd(){
         if loopsCount == groupsArray.count{
             completionHandler()

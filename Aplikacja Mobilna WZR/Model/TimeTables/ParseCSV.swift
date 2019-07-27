@@ -26,15 +26,19 @@ class ParseCSV{
         downloadData()
         }
     
+    
+    //funkcja pobierająca stringa csv-ki dla wskazanego url-a
     func downloadData(){
         _=WebDataDownload(url: url) { (stringCSV:String) in
             self.parsing(csv: stringCSV)
         }
     }
     
+    
+    //funkcja parsująca daną csv-kę (w tym określającą dzień tygodnia i numer tygodnia -> 1 lub 2
     func parsing(csv:String){
-
-        var datePlus14Days = [Date]()
+        
+        var datePlus14Days = [Date]() //
 
         do {
             let csv = try CSVReader(string: csv, hasHeaderRow: true)
@@ -54,7 +58,10 @@ class ParseCSV{
                 
                 
                 //appending array only with first two weeks of classes
-                if datePlus14Days.contains(currentDate){}
+                if datePlus14Days.contains(currentDate){
+                    completionHandler(classesArray)
+                    break
+                }
                 else{
 //                print("Grupa: \(group), nazwa: \(className), prowadzący: \(lecturer), godzina rozpoczęcia: \(startHour), godzina zakończenia:\(endHour), typ tygodnia: \(typeOfWeek), nazwa dnia tygodnia: \(nameOfTheDay)")
                 classesArray.append(ClassesArray(group: group,
@@ -69,8 +76,7 @@ class ParseCSV{
         } catch {
             print(error.localizedDescription)
         }
-        
-        completionHandler(classesArray)
+//        completionHandler(classesArray)
     }
     
 }

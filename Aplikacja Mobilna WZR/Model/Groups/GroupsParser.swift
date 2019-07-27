@@ -21,9 +21,7 @@ class GroupsParser{
         _=WebDataDownload.init(url: url, completionHandlerFunction: getData)
     }
     
-    
-    //functions:
-    
+        
     //funkcja "pobierająca" dane z "DownloadGroups":
     private func getData(Data:String){
         parseData(html: Data)
