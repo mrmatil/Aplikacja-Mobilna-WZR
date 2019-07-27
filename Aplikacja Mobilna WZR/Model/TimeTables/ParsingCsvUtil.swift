@@ -65,4 +65,8 @@ class ParsingCsvUtil{
         let datePlus2Weeks = date.addingTimeInterval(1209600) // two weeks in seconds
         return datePlus2Weeks
     }
+    
+    static func classroom(location:String){
+        
+    }
 }

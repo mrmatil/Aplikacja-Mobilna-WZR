@@ -36,7 +36,6 @@ class TimeTableController: UIViewController {
             self.SubjectsTableView.delegate=self
             self.SubjectsTableView.dataSource=self
             self.SubjectsTableView.register(UINib(nibName: "TimeTableCell", bundle: nil), forCellReuseIdentifier: "customSubjectsCell")
-            self.changeCellHeight()
         }.getData()
         // Do any additional setup after loading the view.
     }
@@ -102,12 +101,12 @@ class TimeTableController: UIViewController {
 
 extension TimeTableController: UITableViewDelegate, UITableViewDataSource{
     
-    func changeCellHeight(){
-        //        messagesTableView.rowHeight = UITableView.automaticDimension
-        //        messagesTableView.estimatedRowHeight = 120.0
-        SubjectsTableView.rowHeight = UITableView.automaticDimension
-        SubjectsTableView.estimatedRowHeight = 60.0
-    }
+//    func changeCellHeight(){
+//        //        messagesTableView.rowHeight = UITableView.automaticDimension
+//        //        messagesTableView.estimatedRowHeight = 120.0
+//        SubjectsTableView.rowHeight = UITableView.automaticDimension
+//        SubjectsTableView.estimatedRowHeight = 60.0
+//    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return startHour.count

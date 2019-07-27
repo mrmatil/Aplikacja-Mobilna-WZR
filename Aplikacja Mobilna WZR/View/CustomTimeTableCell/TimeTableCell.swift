@@ -15,6 +15,7 @@ class TimeTableCell: UITableViewCell {
     @IBOutlet weak var endTime: UILabel!
     @IBOutlet weak var className: UILabel!
     @IBOutlet weak var lecturerName: UILabel!
+    @IBOutlet weak var locationName: UILabel!
     
     
     
