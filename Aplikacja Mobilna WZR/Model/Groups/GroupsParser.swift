@@ -18,7 +18,7 @@ class GroupsParser{
     
     init(url:String, answerFunction: @escaping ([String])->Void) {
         self.answerFunction=answerFunction
-        WebDataDownload.init(url: url, completionHandlerFunction: getData)
+        _=WebDataDownload.init(url: url, completionHandlerFunction: getData)
     }
     
     
@@ -35,7 +35,7 @@ class GroupsParser{
             let doc: Document = try SwiftSoup.parse(html)
             let groups: Elements? = try doc.select("option")
             let x = try groups!.text()
-            returnArray(string: x)
+            _=returnArray(string: x)
         } catch {
             print(error.localizedDescription)
         }

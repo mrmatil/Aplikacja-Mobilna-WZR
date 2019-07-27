@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class WelcomeScreenController: UIViewController {
 
@@ -26,6 +27,10 @@ class WelcomeScreenController: UIViewController {
         //checking if there is internet connection
         if Reachability.isConnectedToNetwork(){
             print("jest połączenie")
+            let realm = try! Realm()
+            try! realm.write {
+                realm.deleteAll()
+            }
             downloadsInitializer()
         }
         else{
@@ -81,3 +86,4 @@ class WelcomeScreenController: UIViewController {
         
     }
 }
+

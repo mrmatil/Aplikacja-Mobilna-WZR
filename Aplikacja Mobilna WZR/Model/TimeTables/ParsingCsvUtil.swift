@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ParsingUtil{
+class ParsingCsvUtil{
     
     static func changingStringToDate(date:String, hour:String)->Date{
         let fullDate=date+"/"+hour
@@ -62,7 +62,7 @@ class ParsingUtil{
     }
     
     static func dayPlusTwoWeeks(date:Date)->Date{
-        let datePlus2Weeks = date.addingTimeInterval(1209600)
+        let datePlus2Weeks = date.addingTimeInterval(1209600) // two weeks in seconds
         return datePlus2Weeks
     }
 }

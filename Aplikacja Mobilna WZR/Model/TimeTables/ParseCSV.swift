@@ -17,10 +17,12 @@ class ParseCSV{
     var classesArray = [ClassesArray]()
     var completionHandler:([ClassesArray])->Void
     
+    
     init(url:String, groupName:String, completionHandler:@escaping ([ClassesArray])->Void) {
         self.url=url
         self.groupName=groupName
         self.completionHandler=completionHandler
+//        print(Realm.Configuration.defaultConfiguration.fileURL)
         downloadData()
         }
     
@@ -44,18 +46,24 @@ class ParseCSV{
                 let lecturer:String = row[5]
                 let startHour:String = row[2]
                 let endHour:String = row[4]
-                let typeOfWeek:Int = ParsingUtil.numberOfWeek(date: row[1], hour: row[2])
-                let nameOfTheDay:String = ParsingUtil.nameOfTheDay(date: row[1], hour: row[2])
-                let currentDate = ParsingUtil.changingStringToDate(date: row[1], hour: row[2])
-                let dateplus = ParsingUtil.dayPlusTwoWeeks(date: ParsingUtil.changingStringToDate(date: row[1], hour: row[2]))
+                let typeOfWeek:Int = ParsingCsvUtil.numberOfWeek(date: row[1], hour: row[2])
+                let nameOfTheDay:String = ParsingCsvUtil.nameOfTheDay(date: row[1], hour: row[2])
+                let currentDate = ParsingCsvUtil.changingStringToDate(date: row[1], hour: row[2])
+                let dateplus = ParsingCsvUtil.dayPlusTwoWeeks(date: ParsingCsvUtil.changingStringToDate(date: row[1], hour: row[2]))
                 datePlus14Days.append(dateplus)
                 
                 
-//                print("Grupa: \(group), nazwa: \(className), prowadzący: \(lecturer), godzina rozpoczęcia: \(startHour), godzina zakończenia:\(endHour), typ tygodnia: \(typeOfWeek), nazwa dnia tygodnia: \(nameOfTheDay)")
-                
+                //appending array only with first two weeks of classes
                 if datePlus14Days.contains(currentDate){}
                 else{
-                classesArray.append(ClassesArray(group: group, className: className, lecturer: lecturer, startHour: startHour, endHour: endHour, typeOfWeek: typeOfWeek, nameOfTheDay: nameOfTheDay))
+//                print("Grupa: \(group), nazwa: \(className), prowadzący: \(lecturer), godzina rozpoczęcia: \(startHour), godzina zakończenia:\(endHour), typ tygodnia: \(typeOfWeek), nazwa dnia tygodnia: \(nameOfTheDay)")
+                classesArray.append(ClassesArray(group: group,
+                                                 className: className,
+                                                 lecturer: lecturer,
+                                                 startHour: startHour,
+                                                 endHour: endHour,
+                                                 typeOfWeek: typeOfWeek,
+                                                 nameOfTheDay: nameOfTheDay))
                 }
             }
         } catch {

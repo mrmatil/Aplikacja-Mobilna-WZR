@@ -20,8 +20,8 @@ class Groups{
     
     init(completionHandler: @escaping ([String])->Void) {
         self.completionHandler = completionHandler
-        GroupsParser(url: URLAdresses["1 stopień"]!, answerFunction: bachelorListOfGroups)
-        GroupsParser(url: URLAdresses["2 stopień"]!, answerFunction: masterListOfGroups)
+        _=GroupsParser(url: URLAdresses["1 stopień"]!, answerFunction: bachelorListOfGroups)
+        _=GroupsParser(url: URLAdresses["2 stopień"]!, answerFunction: masterListOfGroups)
     }
     
     //funkcja przekazująca nazwy grup licencjackich do wspólnej tablicy

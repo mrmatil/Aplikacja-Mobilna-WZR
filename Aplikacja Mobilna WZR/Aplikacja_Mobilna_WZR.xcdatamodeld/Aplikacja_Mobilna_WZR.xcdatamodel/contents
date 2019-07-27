@@ -1,19 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.99" systemVersion="18F132" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Grupy" representedClassName="Grupy" syncable="YES" codeGenerationType="class">
-        <attribute name="nazwaGrupy" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <entity name="PlanZajec" representedClassName="PlanZajec" syncable="YES" codeGenerationType="class">
-        <attribute name="dataRozpoczecia" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="dataZakonczenia" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="godzinaRozpoczecia" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="godzinaZakonczenia" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="grupa" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="nazwa" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="prowadzacy" optional="YES" attributeType="String" syncable="YES"/>
-    </entity>
-    <elements>
-        <element name="Grupy" positionX="-886.37109375" positionY="-800.28125" width="220.21484375" height="58"/>
-        <element name="PlanZajec" positionX="-548.82421875" positionY="-808.0546875" width="128" height="150"/>
-    </elements>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G84" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <elements/>
 </model>

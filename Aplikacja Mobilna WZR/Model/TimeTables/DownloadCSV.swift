@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class DownloadCSV{
     
@@ -15,6 +16,7 @@ class DownloadCSV{
     let baseURL2:String = "&f2=4"
     var groupsArray:[String]
     var completionHandler: ()->Void
+    var loopsCount:Int=0
     
     init(completionHandler: @escaping ()->Void, groupsArray:[String]) {
         self.groupsArray=groupsArray
@@ -26,11 +28,11 @@ class DownloadCSV{
     
     func getCsvDataToDatabase(){
 //        print(groupsArray)
-        
         for x in groupsArray{
+            
             let url:String = baseURL1+x+baseURL2
             _ = ParseCSV(url: url, groupName: x) { (tempArray) in
-                print(tempArray)
+               self.sendDataToDatabase(temp: tempArray)
             }
             
             
@@ -43,6 +45,33 @@ class DownloadCSV{
             
             
         }
-        completionHandler()
+//        completionHandler()
+    }
+    
+    func sendDataToDatabase(temp:[ClassesArray]){
+        let realm = try! Realm()
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+        for x in 0...temp.count-1{
+            var db = TimeTablesDB()
+            db.group=temp[x].group
+            db.className=temp[x].className
+            db.lecturer=temp[x].lecturer
+            db.startHour=temp[x].startHour
+            db.endHour=temp[x].endHour
+            db.typeOfWeek=temp[x].typeOfWeek
+            db.nameOfTheDay=temp[x].nameOfTheDay
+            
+            try! realm.write {
+                realm.add(db)
+            }
+        }
+        loopsCount += 1
+        ifEnd()
+    }
+    
+    func ifEnd(){
+        if loopsCount == groupsArray.count{
+            completionHandler()
+        }
     }
 }
