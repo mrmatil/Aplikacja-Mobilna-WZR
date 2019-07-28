@@ -9,9 +9,11 @@
 import UIKit
 
 class SettingsController: UIViewController {
-
+    
     //zmienna dla userdefaults:
     let defaults = UserDefaults.standard
+    
+    var currentPick:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +30,15 @@ class SettingsController: UIViewController {
     //variables:
     var arrayOfAllGroupsString:[String] = []
     var pick:String?
-
+    
     
     //IBActions:
     @IBAction func okButtonPressed(_ sender: UIButton) {
-        // zapisywanie dodać
+        
+        if let x = currentPick{
+            defaults.set(x, forKey: "currentGroup")
+            print("Changed fav group to: \(x)")
+        }
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -40,7 +46,7 @@ class SettingsController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-
+    
 }
 
 
@@ -65,13 +71,15 @@ extension SettingsController: UIPickerViewDelegate, UIPickerViewDataSource{
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         return NSAttributedString(string: arrayOfAllGroupsString[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor.blue])
     }
-
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         pick=arrayOfAllGroupsString[row]
-//        print(pick!)
+        //        print(pick!)
+        currentPick=pick
         
-        defaults.set(pick!, forKey: "currentGroup") // sending current pick to userDefaults
+        //        defaults.set(pick!, forKey: "currentGroup") // sending current pick to userDefaults
     }
     
 }
+
 

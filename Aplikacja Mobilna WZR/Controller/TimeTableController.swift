@@ -96,7 +96,6 @@ class TimeTableController: UIViewController {
                 }
             }
             }.getData()
-        
     }
 }
 
