@@ -40,7 +40,7 @@
 		2360E2DF22EC91BD00FCF99F /* TimeTablesDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTablesDataBase.swift; sourceTree = "<group>"; };
 		2360E2E222ECACF100FCF99F /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		2360E2E322ECACF100FCF99F /* TimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCell.xib; sourceTree = "<group>"; };
-		2360E2E622ECBEF800FCF99F /* GetDataFromDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetDataFromDatabase.swift; path = ../GetDataFromDatabase.swift; sourceTree = "<group>"; };
+		2360E2E622ECBEF800FCF99F /* GetDataFromDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromDatabase.swift; sourceTree = "<group>"; };
 		2364EA2622DA760000340B3A /* Aplikacja Mobilna WZR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aplikacja Mobilna WZR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2364EA2922DA760000340B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2364EA2B22DA760000340B3A /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
@@ -188,8 +188,8 @@
 		23CBCB1622E4F75D00412350 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				2364EA4622DA8BB500340B3A /* WebDataDownload.swift */,
 				2360E2E622ECBEF800FCF99F /* GetDataFromDatabase.swift */,
+				2364EA4622DA8BB500340B3A /* WebDataDownload.swift */,
 				23CBCB1422E4F69E00412350 /* CheckingConnection.swift */,
 				23EDF9AA22E5F75A0039C2AB /* Alerts.swift */,
 			);

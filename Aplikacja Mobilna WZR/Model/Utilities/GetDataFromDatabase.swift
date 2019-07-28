@@ -15,12 +15,15 @@ class GetDataFromDatabase{
     var group:String
     var week:Int
     var day: String
+    var lecturer: String
     var completionHandler: (Results<TimeTablesDataBase>)->Void
     
+    //Dla Widoku Grup:
     init(group:String, week:Int, day:String, completionHandler: @escaping (Results<TimeTablesDataBase>)->Void) {
         self.group=group
         self.week=week
         self.day=day
+        self.lecturer = ""
         self.completionHandler=completionHandler
     }
     
@@ -35,6 +38,29 @@ class GetDataFromDatabase{
             
         }
     }
+    
+    //Dla Widoku Wykładowców:
+    
+    init(lecturer:String, week:Int, day:String, completionHandler: @escaping (Results<TimeTablesDataBase>)->Void ) {
+        self.lecturer=lecturer
+        self.week=week
+        self.day=day
+        self.group = ""
+        self.completionHandler=completionHandler
+    }
+    
+    func getDataLecturers(){
+        do {
+            let realm = try Realm()
+            let data = realm.objects(TimeTablesDataBase.self).filter("lecturer = '\(lecturer)' AND typeOfWeek = \(week) AND nameOfTheDay = '\(day)'")
+            completionHandler(data)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    
+    
     
     
     
