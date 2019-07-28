@@ -191,10 +191,10 @@
             </objects>
             <point key="canvasLocation" x="741" y="390"/>
         </scene>
-        <!--View Controller-->
+        <!--Lecturers Time Table Controller-->
         <scene sceneID="8dX-Zo-Xzz">
             <objects>
-                <viewController id="Gnl-vq-iI6" sceneMemberID="viewController">
+                <viewController id="Gnl-vq-iI6" customClass="LecturersTimeTableController" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dpE-BL-LCT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,6 +209,9 @@
                                             <segment title="Tydzień II"/>
                                         </segments>
                                         <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="weekPickerChanged:" destination="Gnl-vq-iI6" eventType="valueChanged" id="EaB-vW-9ca"/>
+                                        </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-TR-bDH">
                                         <rect key="frame" x="364" y="0.0" width="30" height="30"/>
@@ -240,6 +243,9 @@
                                     <segment title="Pt"/>
                                 </segments>
                                 <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="dayPickerChanged:" destination="Gnl-vq-iI6" eventType="valueChanged" id="jE0-fm-bSL"/>
+                                </connections>
                             </segmentedControl>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TWU-gK-xYF">
                                 <rect key="frame" x="0.0" y="130" width="414" height="56"/>
@@ -272,6 +278,10 @@
                         <viewLayoutGuide key="safeArea" id="uSR-qh-Rcp"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="featured" id="6fH-tc-6rS"/>
+                    <connections>
+                        <outlet property="lecturersTableView" destination="TMS-u2-iVH" id="6jl-ip-qsW"/>
+                        <outlet property="searchBar" destination="TWU-gK-xYF" id="QWM-Xf-wpm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uy9-b3-nTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
