@@ -59,6 +59,7 @@ class LecturersTimeTableController: UIViewController {
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         hideKeyboard()
         getCurrentLecturersData()
+        lecturersTableView.reloadData()
     }
     
     override func viewDidLoad() {

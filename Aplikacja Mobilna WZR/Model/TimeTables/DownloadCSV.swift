@@ -86,6 +86,7 @@ class DownloadCSV{
                 uniqueLecturersArray.append(temp)
             }
         }
+        uniqueLecturersArray = uniqueLecturersArray.sorted()
 //        print(uniqueLecturersArray)
         userDefaults.set(uniqueLecturersArray, forKey: "lecturersList")
     }
