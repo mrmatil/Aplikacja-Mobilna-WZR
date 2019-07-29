@@ -14,7 +14,9 @@ class DownloadCSV{
     //variables:
     let baseURL1:String = "https://wzr.ug.edu.pl/.csv/plan_st.php?f1="
     let baseURL2:String = "&f2=4"
+    let userDefaults = UserDefaults()
     var groupsArray:[String]
+    var lecturersArray = [String]()
     var completionHandler: ()->Void
     var loopsCount:Int=0 // służy do sprawdzania ile już grup zostało przesłanych do bazy danych (każda grupa to +1 do aktualnej wartości)
     
@@ -28,12 +30,14 @@ class DownloadCSV{
     
     //pobieranie danych z klasy ParseCSV dla każdej grupy
     func getCsvDataToDatabase(){
-//        print(groupsArray)
         for x in groupsArray{
             
             let url:String = baseURL1+x+baseURL2
             _ = ParseCSV(url: url, groupName: x) { (tempArray) in
-               self.sendDataToDatabase(temp: tempArray)
+//               self.sendDataToDatabase(temp: tempArray)
+                DispatchQueue.global(qos: .userInitiated).async {
+                    self.sendDataToDatabase(temp: tempArray)
+                }
             }
         }
         
@@ -57,6 +61,7 @@ class DownloadCSV{
             
             try! realm.write {
                 realm.add(db)
+                lecturersArray.append(db.lecturer ?? "")
             }
         }
         loopsCount += 1
@@ -66,7 +71,22 @@ class DownloadCSV{
     // Funkcja służąca do wywołania completion handlera jeżeli ilość przesłanych grup = ilości całkowitej grup
     func ifEnd(){
         if loopsCount == groupsArray.count{
+            sendLecturersToUserDefaults()
             completionHandler()
         }
+    }
+    
+    //Funkcja przesyłająca do UserDefaults tablicę z wykładowcami bez powtórzeń
+    func sendLecturersToUserDefaults(){
+        let tempArray = Array(Set(lecturersArray))
+        var uniqueLecturersArray = [String]()
+        for temp in tempArray{
+            if temp.contains(","){}
+            else{
+                uniqueLecturersArray.append(temp)
+            }
+        }
+        print(uniqueLecturersArray)
+        userDefaults.set(uniqueLecturersArray, forKey: "lecturersList")
     }
 }

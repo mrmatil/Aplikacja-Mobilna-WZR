@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LecturersTimeTableController: UIViewController {
 
+    //variables:
+//    var LecturersArray:[String]
+    
+    //IBOutlets:
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var lecturersTableView: UITableView!
     
     
     //UIActions:
@@ -18,18 +25,19 @@ class LecturersTimeTableController: UIViewController {
     @IBAction func dayPickerChanged(_ sender: UISegmentedControl) {
     }
     
-    //IBOutlets:
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var lecturersTableView: UITableView!
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func getLecturersList(){
+        do {
+            let realm = try Realm()
+            
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
 
