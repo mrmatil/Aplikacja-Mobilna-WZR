@@ -162,9 +162,15 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eeL-cA-IZX">
-                                <rect key="frame" x="0.0" y="130" width="414" height="675"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="653"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obecnie mamy poniedziałek 0 tygodnia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Oy-KE-abS">
+                                <rect key="frame" x="0.0" y="127" width="414" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.6875" green="0.10284368248352255" blue="0.0059398511711902177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -173,23 +179,27 @@
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="bottom" secondItem="eeL-cA-IZX" secondAttribute="bottom" constant="8" id="DZQ-9K-O1A"/>
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="TnL-JA-K8Q" secondAttribute="trailing" id="Erg-Ur-FWg"/>
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="eeL-cA-IZX" secondAttribute="trailing" id="M5g-pq-qTs"/>
+                            <constraint firstItem="4Oy-KE-abS" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" id="UFW-db-MPf"/>
+                            <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="4Oy-KE-abS" secondAttribute="trailing" id="UvL-vg-4Wi"/>
                             <constraint firstItem="u40-gT-mih" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" constant="10" id="VRj-XL-FzI"/>
                             <constraint firstItem="TnL-JA-K8Q" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" id="VTj-JU-8OZ"/>
-                            <constraint firstItem="eeL-cA-IZX" firstAttribute="top" secondItem="TnL-JA-K8Q" secondAttribute="bottom" constant="8" id="kt8-TH-qST"/>
                             <constraint firstItem="u40-gT-mih" firstAttribute="top" secondItem="Ekd-R9-TTl" secondAttribute="top" constant="5" id="q3a-oU-wfv"/>
                             <constraint firstItem="TnL-JA-K8Q" firstAttribute="top" secondItem="u40-gT-mih" secondAttribute="bottom" constant="15" id="uht-B5-VSX"/>
+                            <constraint firstItem="4Oy-KE-abS" firstAttribute="top" secondItem="TnL-JA-K8Q" secondAttribute="bottom" constant="5" id="xL0-i6-ygS"/>
+                            <constraint firstItem="eeL-cA-IZX" firstAttribute="top" secondItem="4Oy-KE-abS" secondAttribute="bottom" constant="5" id="xbh-1e-bTK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ekd-R9-TTl"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="z6N-fU-did"/>
                     <connections>
                         <outlet property="SubjectsTableView" destination="eeL-cA-IZX" id="7ml-07-6Bl"/>
+                        <outlet property="whatWeekLabel" destination="4Oy-KE-abS" id="k8j-km-Uew"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSettings" id="0gH-k8-du5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr7-2Y-A8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="741" y="390"/>
+            <point key="canvasLocation" x="740.57971014492762" y="389.73214285714283"/>
         </scene>
         <!--Lecturers Time Table Controller-->
         <scene sceneID="8dX-Zo-Xzz">

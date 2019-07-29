@@ -27,6 +27,8 @@
 		23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBCB1422E4F69E00412350 /* CheckingConnection.swift */; };
 		23D9AED722EF380800B4B876 /* LecturersCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9AED522EF380800B4B876 /* LecturersCustomCell.swift */; };
 		23D9AED822EF380800B4B876 /* LecturersCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D9AED622EF380800B4B876 /* LecturersCustomCell.xib */; };
+		23D9AEDA22EF62ED00B4B876 /* DownloadNoticeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9AED922EF62ED00B4B876 /* DownloadNoticeBoard.swift */; };
+		23D9AEDC22EF666C00B4B876 /* CurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9AEDB22EF666C00B4B876 /* CurrentDate.swift */; };
 		23DFFB7122EE19320045C626 /* LecturersTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */; };
 		23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF9AA22E5F75A0039C2AB /* Alerts.swift */; };
 		23EDF9AF22E60A3F0039C2AB /* ClassesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF9AE22E60A3F0039C2AB /* ClassesArray.swift */; };
@@ -57,6 +59,8 @@
 		23CBCB1422E4F69E00412350 /* CheckingConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingConnection.swift; sourceTree = "<group>"; };
 		23D9AED522EF380800B4B876 /* LecturersCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersCustomCell.swift; sourceTree = "<group>"; };
 		23D9AED622EF380800B4B876 /* LecturersCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturersCustomCell.xib; sourceTree = "<group>"; };
+		23D9AED922EF62ED00B4B876 /* DownloadNoticeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DownloadNoticeBoard.swift; path = "Aplikacja Mobilna WZR/View/CustomLecturersTimeTableCell/DownloadNoticeBoard.swift"; sourceTree = SOURCE_ROOT; };
+		23D9AEDB22EF666C00B4B876 /* CurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
 		23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersTimeTableController.swift; sourceTree = "<group>"; };
 		23EDF9AA22E5F75A0039C2AB /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		23EDF9AE22E60A3F0039C2AB /* ClassesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesArray.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		2360E2DD22EC8DDA00FCF99F /* NoticeBoard */ = {
 			isa = PBXGroup;
 			children = (
+				23D9AED922EF62ED00B4B876 /* DownloadNoticeBoard.swift */,
 			);
 			path = NoticeBoard;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				2364EA4622DA8BB500340B3A /* WebDataDownload.swift */,
 				23CBCB1422E4F69E00412350 /* CheckingConnection.swift */,
 				23EDF9AA22E5F75A0039C2AB /* Alerts.swift */,
+				23D9AEDB22EF666C00B4B876 /* CurrentDate.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -358,10 +364,12 @@
 				23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */,
 				23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */,
 				2360E2E722ECBEF800FCF99F /* GetDataFromDatabase.swift in Sources */,
+				23D9AEDA22EF62ED00B4B876 /* DownloadNoticeBoard.swift in Sources */,
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,
 				23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */,
 				23D9AED722EF380800B4B876 /* LecturersCustomCell.swift in Sources */,
 				23DFFB7122EE19320045C626 /* LecturersTimeTableController.swift in Sources */,
+				23D9AEDC22EF666C00B4B876 /* CurrentDate.swift in Sources */,
 				23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */,
 				2364EA4722DA8BB500340B3A /* WebDataDownload.swift in Sources */,
 				2360E2E422ECACF100FCF99F /* TimeTableCell.swift in Sources */,

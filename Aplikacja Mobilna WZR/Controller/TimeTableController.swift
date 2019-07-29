@@ -42,12 +42,14 @@ class TimeTableController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()) tygodnia"
         getCurrentData()
         SubjectsTableView.reloadData()
     }
     
     //IBOutlets:
     @IBOutlet weak var SubjectsTableView: UITableView!
+    @IBOutlet weak var whatWeekLabel: UILabel!
     
     //IBActions:
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
