@@ -52,7 +52,7 @@ class GetDataFromDatabase{
     func getDataLecturers(){
         do {
             let realm = try Realm()
-            let data = realm.objects(TimeTablesDataBase.self).filter("lecturer = '\(lecturer)' AND typeOfWeek = \(week) AND nameOfTheDay = '\(day)'")
+            let data = realm.objects(TimeTablesDataBase.self).filter("lecturer CONTAINS '\(lecturer)' AND typeOfWeek = \(week) AND nameOfTheDay = '\(day)'").sorted(byKeyPath: "startHour", ascending: true)
             completionHandler(data)
         } catch {
             print(error.localizedDescription)
