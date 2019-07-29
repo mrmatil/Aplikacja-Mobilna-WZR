@@ -64,7 +64,8 @@ class LecturersTimeTableController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LecturersArray = userDefaults.array(forKey: "lecturersList") as! [String] // pobieranie listy Wykładowców z UserDefaults
+        guard let tempArray = userDefaults.array(forKey: "lecturersList") else {return}// pobieranie listy Wykładowców z UserDefaults + obsługa błędów w razie gdyby nie było danych
+        LecturersArray = tempArray as! [String]
         enableLecturersPickerView()
         GetDataFromDatabase(lecturer: chosenLecturer, week: week, day: day) { results in
             print(results)

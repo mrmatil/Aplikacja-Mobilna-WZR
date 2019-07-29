@@ -25,7 +25,7 @@ class WelcomeScreenController: UIViewController {
         checkingIfHasFavoriteGroup()
         
         //checking if there is internet connection
-        if Reachability.isConnectedToNetwork(){
+        if Reachability.isConnectedToNetwork() {
             print("jest połączenie")
             let realm = try! Realm()
             try! realm.write {
