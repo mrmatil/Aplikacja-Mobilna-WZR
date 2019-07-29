@@ -10,6 +10,7 @@ import Foundation
 
 class CurrentDate{
     
+    
     static func getCurrentTypeOfWeek() -> Int {
         let date = Date()
         let calendar = Calendar.current
@@ -34,15 +35,15 @@ class CurrentDate{
         case 3:
             return "Wtorek"
         case 4:
-            return "Środa"
+            return "Środę"
         case 5:
             return "Czwartek"
         case 6:
             return "Piątek"
         case 7:
-            return "Sobota"
+            return "Sobotę"
         case 1:
-            return "Niedziela"
+            return "Niedzielę"
         
         default:
             return "Błąd"

@@ -328,14 +328,37 @@
                     <view key="view" contentMode="scaleToFill" id="lui-Ue-FVk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vsd-KX-3YC">
+                                <rect key="frame" x="20" y="49" width="374" height="29"/>
+                                <segments>
+                                    <segment title="I Stopień"/>
+                                    <segment title="II Stopień"/>
+                                </segments>
+                                <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IDj-fE-LCZ">
+                                <rect key="frame" x="0.0" y="87" width="414" height="718"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IDj-fE-LCZ" firstAttribute="top" secondItem="vsd-KX-3YC" secondAttribute="bottom" constant="10" id="C7A-bR-jVy"/>
+                            <constraint firstItem="8Rj-fR-tOz" firstAttribute="bottom" secondItem="IDj-fE-LCZ" secondAttribute="bottom" constant="8" id="cQ4-Yi-c6Q"/>
+                            <constraint firstItem="vsd-KX-3YC" firstAttribute="leading" secondItem="8Rj-fR-tOz" secondAttribute="leading" constant="20" id="jLI-dI-EX9"/>
+                            <constraint firstItem="8Rj-fR-tOz" firstAttribute="trailing" secondItem="IDj-fE-LCZ" secondAttribute="trailing" id="kzU-5Y-Khk"/>
+                            <constraint firstItem="8Rj-fR-tOz" firstAttribute="trailing" secondItem="vsd-KX-3YC" secondAttribute="trailing" constant="20" id="mUv-5L-hqQ"/>
+                            <constraint firstItem="vsd-KX-3YC" firstAttribute="top" secondItem="8Rj-fR-tOz" secondAttribute="top" constant="5" id="nyD-XM-iob"/>
+                            <constraint firstItem="IDj-fE-LCZ" firstAttribute="leading" secondItem="8Rj-fR-tOz" secondAttribute="leading" id="ys9-og-zKG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Rj-fR-tOz"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="BEz-zU-JtU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QC8-Ei-0Of" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171" y="1130"/>
+            <point key="canvasLocation" x="-171.01449275362319" y="1129.6875"/>
         </scene>
         <!--Welcome Screen Controller-->
         <scene sceneID="Agb-NA-W1H">
@@ -379,7 +402,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpM-zg-LLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1199" y="390"/>
+            <point key="canvasLocation" x="-1413" y="390"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ix3-eH-c5x">
