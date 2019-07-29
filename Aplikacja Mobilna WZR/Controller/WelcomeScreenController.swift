@@ -78,11 +78,11 @@ class WelcomeScreenController: UIViewController {
     }
     
     func checkingIfHasListOfGroups(){
-        
+        //code
     }
     
     func checkingIfHasClassData(){
-        
+        //code
         
     }
 }

@@ -21,7 +21,6 @@ class TimeTableController: UIViewController {
     var lecturer = [String]()
     var classroom = [String]()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         GetDataFromDatabase(group: userDefaults.string(forKey: "currentGroup")!, week: week, day: day) { (results) in
@@ -40,6 +39,11 @@ class TimeTableController: UIViewController {
             self.SubjectsTableView.register(UINib(nibName: "TimeTableCell", bundle: nil), forCellReuseIdentifier: "customSubjectsCell")
         }.getData()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getCurrentData()
+        SubjectsTableView.reloadData()
     }
     
     //IBOutlets:
