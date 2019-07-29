@@ -105,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="1569.5652173913045" y="389.73214285714283"/>
         </scene>
-        <!--Time Table Controller-->
+        <!--Plan Zajęć-->
         <scene sceneID="GW1-sk-mO6">
             <objects>
                 <viewController id="VVq-mu-vAo" customClass="TimeTableController" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target" sceneMemberID="viewController">
@@ -190,7 +190,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ekd-R9-TTl"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="z6N-fU-did"/>
+                    <tabBarItem key="tabBarItem" title="Plan Zajęć" image="timetable" id="z6N-fU-did"/>
                     <connections>
                         <outlet property="SubjectsTableView" destination="eeL-cA-IZX" id="7ml-07-6Bl"/>
                         <outlet property="whatWeekLabel" destination="4Oy-KE-abS" id="k8j-km-Uew"/>
@@ -201,7 +201,7 @@
             </objects>
             <point key="canvasLocation" x="740.57971014492762" y="389.73214285714283"/>
         </scene>
-        <!--Lecturers Time Table Controller-->
+        <!--Plan Wykładowców-->
         <scene sceneID="8dX-Zo-Xzz">
             <objects>
                 <viewController id="Gnl-vq-iI6" customClass="LecturersTimeTableController" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target" sceneMemberID="viewController">
@@ -311,7 +311,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uSR-qh-Rcp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="6fH-tc-6rS"/>
+                    <tabBarItem key="tabBarItem" title="Plan Wykładowców" image="lecturer" id="6fH-tc-6rS"/>
                     <connections>
                         <outlet property="lecturersTableView" destination="TMS-u2-iVH" id="6jl-ip-qsW"/>
                         <outlet property="searchTextField" destination="m9o-Vl-o14" id="Pva-B9-d1K"/>
@@ -321,7 +321,7 @@
             </objects>
             <point key="canvasLocation" x="741" y="1131"/>
         </scene>
-        <!--View Controller-->
+        <!--Ogłoszenia-->
         <scene sceneID="0tO-Du-TX4">
             <objects>
                 <viewController id="RQ8-sy-ySj" sceneMemberID="viewController">
@@ -354,7 +354,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Rj-fR-tOz"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="BEz-zU-JtU"/>
+                    <tabBarItem key="tabBarItem" title="Ogłoszenia" image="news" id="BEz-zU-JtU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QC8-Ei-0Of" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -428,6 +428,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="lecturer" width="25" height="25"/>
+        <image name="news" width="25" height="25"/>
         <image name="settings" width="170.5" height="170.5"/>
+        <image name="timetable" width="25" height="25"/>
     </resources>
 </document>
