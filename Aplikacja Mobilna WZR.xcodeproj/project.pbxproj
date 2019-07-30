@@ -17,7 +17,6 @@
 		2360E2E522ECACF100FCF99F /* TimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2360E2E322ECACF100FCF99F /* TimeTableCell.xib */; };
 		2360E2E722ECBEF800FCF99F /* GetDataFromDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360E2E622ECBEF800FCF99F /* GetDataFromDatabase.swift */; };
 		2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2922DA760000340B3A /* AppDelegate.swift */; };
-		2364EA2C22DA760000340B3A /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA2B22DA760000340B3A /* SettingsController.swift */; };
 		2364EA2F22DA760000340B3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA2D22DA760000340B3A /* Main.storyboard */; };
 		2364EA3422DA760000340B3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3322DA760000340B3A /* Assets.xcassets */; };
 		2364EA3722DA760000340B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3522DA760000340B3A /* LaunchScreen.storyboard */; };
@@ -48,7 +47,6 @@
 		2360E2E622ECBEF800FCF99F /* GetDataFromDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromDatabase.swift; sourceTree = "<group>"; };
 		2364EA2622DA760000340B3A /* Aplikacja Mobilna WZR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aplikacja Mobilna WZR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2364EA2922DA760000340B3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2364EA2B22DA760000340B3A /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		2364EA2E22DA760000340B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2364EA3322DA760000340B3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2364EA3622DA760000340B3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				2364EA2922DA760000340B3A /* AppDelegate.swift */,
-				2364EA2B22DA760000340B3A /* SettingsController.swift */,
 				23162BCE22DE9D04001A4D2D /* WelcomeScreenController.swift */,
 				2364EA4422DA7B9D00340B3A /* TimeTableController.swift */,
 				23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */,
@@ -359,7 +356,6 @@
 				23EDF9AF22E60A3F0039C2AB /* ClassesArray.swift in Sources */,
 				23162BCD22DE89DF001A4D2D /* DownloadCSV.swift in Sources */,
 				23162BCF22DE9D04001A4D2D /* WelcomeScreenController.swift in Sources */,
-				2364EA2C22DA760000340B3A /* SettingsController.swift in Sources */,
 				233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */,
 				23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */,
 				23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */,

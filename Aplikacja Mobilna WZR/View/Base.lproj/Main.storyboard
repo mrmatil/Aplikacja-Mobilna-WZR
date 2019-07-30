@@ -113,11 +113,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="u40-gT-mih" userLabel="Upper Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="u40-gT-mih" userLabel="Upper Stack View">
                                 <rect key="frame" x="10" y="49" width="394" height="30"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vAv-qg-fCR">
-                                        <rect key="frame" x="0.0" y="0.0" width="344" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="249.5" height="31"/>
                                         <segments>
                                             <segment title="Tydzień I"/>
                                             <segment title="Tydzień II"/>
@@ -127,21 +127,12 @@
                                             <action selector="weekPickerChanged:" destination="VVq-mu-vAo" eventType="valueChanged" id="c5h-VK-qNk"/>
                                         </connections>
                                     </segmentedControl>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBz-S3-OEL">
-                                        <rect key="frame" x="364" y="0.0" width="30" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="aH7-MA-iqE"/>
-                                            <constraint firstAttribute="width" constant="30" id="csy-aL-CbD"/>
-                                        </constraints>
-                                        <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" image="settings">
-                                            <color key="titleColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="settingsButtonPressed:" destination="VVq-mu-vAo" eventType="touchUpInside" id="g1S-3K-3tP"/>
-                                        </connections>
-                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="group" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7z0-1F-ws8">
+                                        <rect key="frame" x="269.5" y="0.0" width="124.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="K4z-dx-F4C"/>
@@ -193,6 +184,7 @@
                     <tabBarItem key="tabBarItem" title="Plan Zajęć" image="timetable" id="z6N-fU-did"/>
                     <connections>
                         <outlet property="SubjectsTableView" destination="eeL-cA-IZX" id="7ml-07-6Bl"/>
+                        <outlet property="groupTextField" destination="7z0-1F-ws8" id="HvS-XP-ksN"/>
                         <outlet property="whatWeekLabel" destination="4Oy-KE-abS" id="k8j-km-Uew"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSettings" id="0gH-k8-du5"/>
                     </connections>

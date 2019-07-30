@@ -13,6 +13,9 @@ class TimeTableController: UIViewController {
 
     //variables:    
     let userDefaults = UserDefaults.standard
+    var Pick:String? //current group pick
+    var tempPick:String? // temporary group pick
+    var arrayOfAllGroupsString:[String] = [] //array of all groups
     var week:Int = 1 // 1 -> pierwszy tydzień, 2 -> drugi tydzień
     var day: String =  "poniedziałek"
     var startHour = [String]()
@@ -21,8 +24,10 @@ class TimeTableController: UIViewController {
     var lecturer = [String]()
     var classroom = [String]()
 
+    //po załadowaniu się widoku:
     override func viewDidLoad() {
         super.viewDidLoad()
+        getGroupsData()
         GetDataFromDatabase(group: userDefaults.string(forKey: "currentGroup")!, week: week, day: day) { (results) in
             print(results)
             if results.count>0{
@@ -41,22 +46,19 @@ class TimeTableController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //po pojawieniu się widoku
     override func viewDidAppear(_ animated: Bool) {
         whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()) tygodnia"
-        getCurrentData()
-        SubjectsTableView.reloadData()
+//        getCurrentData()
+//        SubjectsTableView.reloadData()
     }
     
     //IBOutlets:
     @IBOutlet weak var SubjectsTableView: UITableView!
     @IBOutlet weak var whatWeekLabel: UILabel!
+    @IBOutlet weak var groupTextField: UITextField!
     
     //IBActions:
-    @IBAction func settingsButtonPressed(_ sender: UIButton) {
-        print(userDefaults.string(forKey: "currentGroup")!)
-        performSegue(withIdentifier: "toSettings", sender: self)
-        SubjectsTableView.reloadData()
-    }
     @IBAction func weekPickerChanged(_ sender: UISegmentedControl) {
         week = sender.selectedSegmentIndex+1
         print("week: \(week)")
@@ -103,12 +105,22 @@ class TimeTableController: UIViewController {
             }
             }.getData()
     }
+    
+    func getGroupsData(){
+        guard let tempListOfGroups = userDefaults.array(forKey: "groupsList") else {return}
+        arrayOfAllGroupsString = tempListOfGroups as! [String]
+        Pick = userDefaults.string(forKey: "currentGroup")
+        groupTextField.text = Pick
+        enablePickerView()
+    }
 }
 
 
 
 
-extension TimeTableController: UITableViewDelegate, UITableViewDataSource{
+extension TimeTableController: UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource{
+
+    //TableView:
     
 //    func changeCellHeight(){
 //        //        messagesTableView.rowHeight = UITableView.automaticDimension
@@ -134,6 +146,66 @@ extension TimeTableController: UITableViewDelegate, UITableViewDataSource{
     }
     
     
+    //PickerView:
+    
+    func enablePickerView(){
+        let groupPickerView = UIPickerView()
+        groupPickerView.delegate=self
+        groupPickerView.dataSource=self
+        groupTextField.inputView=groupPickerView
+        enableToolbar()
+    }
+    
+    func enableToolbar() {
+        let toolbar = UIToolbar()
+        
+        let okButton = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(okButtonPickerPressed))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Powrót" , style: .plain, target: self, action: #selector(cancelButtonPressed))
+        
+        toolbar.sizeToFit()
+        toolbar.setItems([cancelButton, spaceButton, okButton], animated: true)
+        toolbar.isUserInteractionEnabled = true
+        
+        groupTextField.inputAccessoryView = toolbar
+        
+    }
+    
+    @objc func okButtonPickerPressed(){
+        Pick = tempPick
+        if let pickDefault = Pick{
+            userDefaults.set(pickDefault ,forKey: "currentGroup")
+            getCurrentData()
+            groupTextField.text = pickDefault
+            SubjectsTableView.reloadData()
+            hide()
+        }else{hide()}
+    }
+    
+    @objc func cancelButtonPressed(){
+        hide()
+    }
+    
+    func hide(){
+        view.endEditing(true)
+    }
+    
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return arrayOfAllGroupsString.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: arrayOfAllGroupsString[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor.blue]) // do poprawienia kolor z RGB
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        tempPick = arrayOfAllGroupsString[row]
+    }
     
 }
 
