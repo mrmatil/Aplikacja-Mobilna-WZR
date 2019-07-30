@@ -22,6 +22,7 @@
 		2364EA3722DA760000340B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3522DA760000340B3A /* LaunchScreen.storyboard */; };
 		2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4422DA7B9D00340B3A /* TimeTableController.swift */; };
 		2364EA4722DA8BB500340B3A /* WebDataDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4622DA8BB500340B3A /* WebDataDownload.swift */; };
+		236B56AB22F0CE3100A63248 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236B56AA22F0CE3100A63248 /* SettingsController.swift */; };
 		23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */; };
 		23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBCB1422E4F69E00412350 /* CheckingConnection.swift */; };
 		23D9AED722EF380800B4B876 /* LecturersCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9AED522EF380800B4B876 /* LecturersCustomCell.swift */; };
@@ -53,6 +54,7 @@
 		2364EA3822DA760000340B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2364EA4422DA7B9D00340B3A /* TimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableController.swift; sourceTree = "<group>"; };
 		2364EA4622DA8BB500340B3A /* WebDataDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDataDownload.swift; sourceTree = "<group>"; };
+		236B56AA22F0CE3100A63248 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingCsvUtil.swift; sourceTree = "<group>"; };
 		23CBCB1422E4F69E00412350 /* CheckingConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingConnection.swift; sourceTree = "<group>"; };
 		23D9AED522EF380800B4B876 /* LecturersCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersCustomCell.swift; sourceTree = "<group>"; };
@@ -164,10 +166,9 @@
 		2364EA3F22DA762200340B3A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				236B56A822F0CA5600A63248 /* FullTimeControllers */,
+				236B56A922F0CBBA00A63248 /* PartTimeControllers */,
 				2364EA2922DA760000340B3A /* AppDelegate.swift */,
-				23162BCE22DE9D04001A4D2D /* WelcomeScreenController.swift */,
-				2364EA4422DA7B9D00340B3A /* TimeTableController.swift */,
-				23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +194,24 @@
 				2360E2DE22EC918A00FCF99F /* RealmDatabases */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		236B56A822F0CA5600A63248 /* FullTimeControllers */ = {
+			isa = PBXGroup;
+			children = (
+				23162BCE22DE9D04001A4D2D /* WelcomeScreenController.swift */,
+				2364EA4422DA7B9D00340B3A /* TimeTableController.swift */,
+				23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */,
+				236B56AA22F0CE3100A63248 /* SettingsController.swift */,
+			);
+			path = FullTimeControllers;
+			sourceTree = "<group>";
+		};
+		236B56A922F0CBBA00A63248 /* PartTimeControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PartTimeControllers;
 			sourceTree = "<group>";
 		};
 		23CBCB1622E4F75D00412350 /* Utilities */ = {
@@ -369,6 +388,7 @@
 				23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */,
 				2364EA4722DA8BB500340B3A /* WebDataDownload.swift in Sources */,
 				2360E2E422ECACF100FCF99F /* TimeTableCell.swift in Sources */,
+				236B56AB22F0CE3100A63248 /* SettingsController.swift in Sources */,
 				2360E2E022EC91BD00FCF99F /* TimeTablesDataBase.swift in Sources */,
 				2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */,
 				23242B9B22DE453700C4F132 /* Groups.swift in Sources */,

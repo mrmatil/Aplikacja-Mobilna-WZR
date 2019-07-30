@@ -20,6 +20,10 @@ class WelcomeScreenController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         
         //checking if favorite group is set, if no is automaticly set to s11-01
         checkingIfHasFavoriteGroup()
