@@ -49,4 +49,13 @@ class CurrentDate{
             return "Błąd"
         }
     }
+    
+    static func getCurrentDate() -> String{
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "CEST")
+        dateFormatter.dateFormat = "HH:mm dd-MM-yyyy"
+        let currentDate = dateFormatter.string(from: date)
+        return currentDate
+    }
 }

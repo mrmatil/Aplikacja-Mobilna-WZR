@@ -55,6 +55,7 @@ class WelcomeScreenController: UIViewController {
     }
     
     func initCompleted(){
+        userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshFullTime")
         performSegue(withIdentifier: "initialSegue", sender: self)
     }
     

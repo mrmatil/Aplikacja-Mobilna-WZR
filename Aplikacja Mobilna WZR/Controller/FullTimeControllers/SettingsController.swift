@@ -10,7 +10,8 @@ import UIKit
 
 class SettingsController: UIViewController {
 
-    
+    //userDefaults variable:
+    let userDefaults = UserDefaults()
     
     //IBOutlets:
     @IBOutlet weak var lastRefreshDate: UILabel!
@@ -32,8 +33,27 @@ class SettingsController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        refreshLastDate()
         // Do any additional setup after loading the view.
+    }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(true)
+//        guard let temp = userDefaults.string(forKey: "dateOfLastRefreshFullTime") else {
+//            lastRefreshDate.text = "Nigdy nie odświeżono"
+//            return
+//        }
+//        lastRefreshDate.text = temp
+//    }
+    
+    //functions:
+    
+    func refreshLastDate(){
+        guard let temp = userDefaults.string(forKey: "dateOfLastRefreshFullTime") else {
+            lastRefreshDate.text = "Nigdy nie odświeżono"
+            return
+        }
+        lastRefreshDate.text = temp
     }
     
 
