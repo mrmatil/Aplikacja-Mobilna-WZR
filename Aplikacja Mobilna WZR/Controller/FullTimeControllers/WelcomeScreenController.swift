@@ -18,10 +18,6 @@ class WelcomeScreenController: UIViewController {
     @IBOutlet weak var pleaseWaitLabel: UILabel!
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
@@ -32,7 +28,7 @@ class WelcomeScreenController: UIViewController {
         if Reachability.isConnectedToNetwork() {
             
             print("jest połączenie")
-            checkingIfNeedToReload() //checking if needed to download data
+            checkingIfNeedToReload() //checking if needed to download data and if needed proceeds to download it
             
         }
         else{
@@ -42,6 +38,7 @@ class WelcomeScreenController: UIViewController {
         
     }
     
+    // activated after checking in "checkingIfNeedToReload" if it should
     func downloadsInitializer(){
         
         let realm = try! Realm()
@@ -58,6 +55,7 @@ class WelcomeScreenController: UIViewController {
         }
     }
     
+    //performing segue after getting both Groups and Classes data:
     func initCompleted(){
         userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshFullTime")
         performSegue(withIdentifier: "initialSegue", sender: self)
@@ -92,11 +90,10 @@ class WelcomeScreenController: UIViewController {
         performSegue(withIdentifier: "initialSegue", sender: self)
     }
     
-    //checking if has already data:
-    
+    //checking if has already favorite group -> if not setting it to default value "S11-01" :
     func checkingIfHasFavoriteGroup(){
         guard let favGroup = userDefaults.string(forKey: "currentGroup") else {
-            self.userDefaults.set("S11-01", forKey: "currentGroup")
+            self.userDefaults.set("S11-01", forKey: "currentGroup") //POTENTIAL BUG IF SOMEONE WILL DELETE S11-01 GROUP !!!!
             return
         }
         print(favGroup)

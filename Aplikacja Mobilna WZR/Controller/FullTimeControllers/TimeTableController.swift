@@ -59,7 +59,7 @@ class TimeTableController: UIViewController {
     @IBAction func weekPickerChanged(_ sender: UISegmentedControl) {
         week = sender.selectedSegmentIndex+1
         print("week: \(week)")
-        getCurrentData()
+        getCurrentDataForClasses()
         SubjectsTableView.reloadData()
     }
     @IBAction func dayPickerChanged(_ sender: UISegmentedControl) {
@@ -77,7 +77,7 @@ class TimeTableController: UIViewController {
         default:
             day = "poniedziałek"
         }
-        getCurrentData()
+        getCurrentDataForClasses()
         print("day: \(day)")
         SubjectsTableView.reloadData()
     }
@@ -90,7 +90,7 @@ class TimeTableController: UIViewController {
     
     
     
-    func getCurrentData(){
+    func getCurrentDataForClasses(){
         startHour = [String]()
         endHour = [String]()
         className = [String]()
@@ -118,6 +118,7 @@ class TimeTableController: UIViewController {
         enablePickerView()
     }
     
+    
     //refreshes label with last refresh date
     func refreshLastDate(){
         guard let temp = userDefaults.string(forKey: "dateOfLastRefreshFullTime") else {
@@ -127,10 +128,11 @@ class TimeTableController: UIViewController {
         lastRefreshDayLabel.text = "Dane z dnia: \(temp)"
     }
     
-    //reloads everything
+    
+    //reloads everything <- handy with viewDidLoad/viewDidAppear 
     func reloadView(){
         whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()) tygodnia"
-        getCurrentData()
+        getCurrentDataForClasses()
         refreshLastDate()
         SubjectsTableView.reloadData()
     }
@@ -202,7 +204,7 @@ extension TimeTableController: UITableViewDelegate, UITableViewDataSource, UIPic
         Pick = tempPick
         if let pickDefault = Pick{
             userDefaults.set(pickDefault ,forKey: "currentGroup")
-            getCurrentData()
+            getCurrentDataForClasses()
             groupTextField.text = pickDefault
             SubjectsTableView.reloadData()
             hide()
