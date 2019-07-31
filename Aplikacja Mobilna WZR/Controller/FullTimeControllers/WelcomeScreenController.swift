@@ -28,17 +28,12 @@ class WelcomeScreenController: UIViewController {
         //checking if favorite group is set, if no is automaticly set to s11-01
         checkingIfHasFavoriteGroup()
         
-        //checking if needed to download data:
-        checkingIfNeedToReload()
-        
         //checking if there is internet connection
         if Reachability.isConnectedToNetwork() {
+            
             print("jest połączenie")
-            let realm = try! Realm()
-            try! realm.write {
-                realm.deleteAll()
-            }
-            downloadsInitializer()
+            checkingIfNeedToReload() //checking if needed to download data
+            
         }
         else{
             print("nie ma połączenia")
@@ -48,6 +43,12 @@ class WelcomeScreenController: UIViewController {
     }
     
     func downloadsInitializer(){
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.deleteAll() // deleting existing data
+        }
+        
         _ = Groups() { (tempArray:[String]) in
             self.userDefaults.set(tempArray, forKey: "groupsList") // sending list of all groups to UserDefaults
             
@@ -62,14 +63,21 @@ class WelcomeScreenController: UIViewController {
         performSegue(withIdentifier: "initialSegue", sender: self)
     }
     
+    
+    
+    //Utilities functions:
+    
+    
     //checking if needed to download data or just perform segue
     func checkingIfNeedToReload(){
         guard let _ = userDefaults.string(forKey: "isNeededToReloadFullTime") else{
             self.userDefaults.set("true", forKey: "isNeededToReloadFullTime")
+            downloadsInitializer()
             return
         }
         print("Dane już w pamięci")
         performSegue(withIdentifier: "initialSegue", sender: self)
+        
     }
     
     //functions for if no connection:
@@ -78,7 +86,7 @@ class WelcomeScreenController: UIViewController {
         Alerts.init(view: self, title: "Brak połączenia", message: "sprawdź swoje połączenie internetowe", option1title: "Spróbuj ponownie", option1Action: tryAgain, option2title: "kontynuuj offilne", option2Action: goOffilne).showAlertWithTwoOptions()
     }
     func tryAgain(){
-        viewDidLoad()
+        viewDidAppear(true)
     }
     func goOffilne(){
         performSegue(withIdentifier: "initialSegue", sender: self)
@@ -92,15 +100,6 @@ class WelcomeScreenController: UIViewController {
             return
         }
         print(favGroup)
-    }
-    
-    func checkingIfHasListOfGroups(){
-        //code
-    }
-    
-    func checkingIfHasClassData(){
-        //code
-        
     }
 }
 

@@ -39,19 +39,14 @@ class TimeTableController: UIViewController {
                     self.classroom.append(results[x].classroom!)
                 }
             }
-            self.SubjectsTableView.delegate=self
-            self.SubjectsTableView.dataSource=self
-            self.SubjectsTableView.register(UINib(nibName: "TimeTableCell", bundle: nil), forCellReuseIdentifier: "customSubjectsCell")
+            self.enableTableView()
         }.getData()
         // Do any additional setup after loading the view.
     }
     
     //po pojawieniu się widoku
     override func viewDidAppear(_ animated: Bool) {
-        whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()) tygodnia"
-        getCurrentData()
-        refreshLastDate()
-        SubjectsTableView.reloadData()
+        reloadView()
     }
     
     //IBOutlets:
@@ -131,6 +126,14 @@ class TimeTableController: UIViewController {
         }
         lastRefreshDayLabel.text = "Dane z dnia: \(temp)"
     }
+    
+    //reloads everything
+    func reloadView(){
+        whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()) tygodnia"
+        getCurrentData()
+        refreshLastDate()
+        SubjectsTableView.reloadData()
+    }
 }
 
 
@@ -146,6 +149,12 @@ extension TimeTableController: UITableViewDelegate, UITableViewDataSource, UIPic
 //        SubjectsTableView.rowHeight = UITableView.automaticDimension
 //        SubjectsTableView.estimatedRowHeight = 60.0
 //    }
+    
+    @objc func enableTableView(){
+        SubjectsTableView.delegate=self
+        SubjectsTableView.dataSource=self
+        SubjectsTableView.register(UINib(nibName: "TimeTableCell", bundle: nil), forCellReuseIdentifier: "customSubjectsCell")
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return startHour.count
