@@ -28,6 +28,9 @@ class WelcomeScreenController: UIViewController {
         //checking if favorite group is set, if no is automaticly set to s11-01
         checkingIfHasFavoriteGroup()
         
+        //checking if needed to download data:
+        checkingIfNeedToReload()
+        
         //checking if there is internet connection
         if Reachability.isConnectedToNetwork() {
             print("jest połączenie")
@@ -59,6 +62,15 @@ class WelcomeScreenController: UIViewController {
         performSegue(withIdentifier: "initialSegue", sender: self)
     }
     
+    //checking if needed to download data or just perform segue
+    func checkingIfNeedToReload(){
+        guard let _ = userDefaults.string(forKey: "isNeededToReloadFullTime") else{
+            self.userDefaults.set("true", forKey: "isNeededToReloadFullTime")
+            return
+        }
+        print("Dane już w pamięci")
+        performSegue(withIdentifier: "initialSegue", sender: self)
+    }
     
     //functions for if no connection:
     

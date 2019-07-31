@@ -49,14 +49,16 @@ class TimeTableController: UIViewController {
     //po pojawieniu się widoku
     override func viewDidAppear(_ animated: Bool) {
         whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()) tygodnia"
-//        getCurrentData()
-//        SubjectsTableView.reloadData()
+        getCurrentData()
+        refreshLastDate()
+        SubjectsTableView.reloadData()
     }
     
     //IBOutlets:
     @IBOutlet weak var SubjectsTableView: UITableView!
     @IBOutlet weak var whatWeekLabel: UILabel!
     @IBOutlet weak var groupTextField: UITextField!
+    @IBOutlet weak var lastRefreshDayLabel: UILabel!
     
     //IBActions:
     @IBAction func weekPickerChanged(_ sender: UISegmentedControl) {
@@ -85,6 +87,13 @@ class TimeTableController: UIViewController {
         SubjectsTableView.reloadData()
     }
     
+    @IBAction func refreshButtonClicked(_ sender: UIButton) {
+        userDefaults.removeObject(forKey: "isNeededToReloadFullTime")
+        print("pop to refresh")
+        self.view.window?.rootViewController?.presentedViewController!.dismiss(animated: true, completion: nil)
+    }
+    
+    
     
     func getCurrentData(){
         startHour = [String]()
@@ -112,6 +121,15 @@ class TimeTableController: UIViewController {
         Pick = userDefaults.string(forKey: "currentGroup")
         groupTextField.text = Pick
         enablePickerView()
+    }
+    
+    //refreshes label with last refresh date
+    func refreshLastDate(){
+        guard let temp = userDefaults.string(forKey: "dateOfLastRefreshFullTime") else {
+            lastRefreshDayLabel.text = "Nigdy nie odświeżono"
+            return
+        }
+        lastRefreshDayLabel.text = "Dane z dnia: \(temp)"
     }
 }
 
