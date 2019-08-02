@@ -26,9 +26,7 @@ class WelcomeScreenPartTimeController: UIViewController {
         // Do any additional setup after loading the view.
     }
  
-    func performSegueToTableView(){
-        performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
-    }
+
     
     
     
@@ -40,8 +38,7 @@ class WelcomeScreenPartTimeController: UIViewController {
         _=Groups(URLAdresses: AllURLs.partTimeGroups, groupsStartsWith: "N", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "partTimeGroupsList")
             
-            self.performSegueToTableView()
-//            self.performSegue(withIdentifier: "initialPartTimeSeguey", sender: self.self) //temporary
+            self.performSegue(withIdentifier: "PartTimeInitialSegue", sender: self.self) //temporary
         })
     }
     
@@ -59,8 +56,6 @@ class WelcomeScreenPartTimeController: UIViewController {
     }
     
     //checking connection
-    
-    //checking if device is connected to the internet
     func checkConnection(){
         
         if Reachability.isConnectedToNetwork(){

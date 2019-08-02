@@ -30,7 +30,7 @@ class Groups{
     private func bachelorListOfGroups(array:[String]){
         var tempArray:[String]=[]
         for x in array{
-            if x.starts(with: "S"){
+            if x.starts(with: "\(groupsStartsWith)"){
                 tempArray.append(x)
             }
             else{

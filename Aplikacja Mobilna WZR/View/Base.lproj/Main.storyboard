@@ -446,7 +446,7 @@
         <!--PartTimeTimeTable-->
         <scene sceneID="djj-O0-OC7">
             <objects>
-                <viewController title="PartTimeTimeTable" id="eXo-Ay-ela" sceneMemberID="viewController">
+                <viewController title="PartTimeTimeTable" id="eXo-Ay-ela" customClass="TimeTablePartTimeController" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D6C-qZ-DvE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,6 +457,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-oR-8To" userLabel="RefreshButton">
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
                                         <state key="normal" image="Refresh"/>
+                                        <connections>
+                                            <action selector="refreshButtonPressed:" destination="eXo-Ay-ela" eventType="touchUpInside" id="Ibd-ud-hB4"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Text Field" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L9f-V6-tB0">
                                         <rect key="frame" x="57" y="0.0" width="189" height="30"/>
@@ -506,6 +509,11 @@
                         <viewLayoutGuide key="safeArea" id="g8e-OW-hZ9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Plan Zajęć" image="timetable" id="WPD-cj-GoA"/>
+                    <connections>
+                        <outlet property="dateTextField" destination="L9f-V6-tB0" id="Z0d-NZ-C3U"/>
+                        <outlet property="groupsTextField" destination="yUX-oI-jLo" id="gC7-x3-mLT"/>
+                        <outlet property="lastRefreshLabel" destination="A2a-Pv-lSF" id="rHA-3q-XNw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWu-xt-Urb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
