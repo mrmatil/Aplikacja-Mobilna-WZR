@@ -437,7 +437,7 @@
                     </view>
                     <connections>
                         <outlet property="pleaseWaitLabel" destination="oCQ-3k-nV9" id="omZ-pi-bmP"/>
-                        <segue destination="naT-1o-WYJ" kind="show" id="UGK-Gj-geG"/>
+                        <segue destination="naT-1o-WYJ" kind="show" identifier="initialPartTimeSeguey" id="UGK-Gj-geG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KLz-mE-mAl" userLabel="First Responder" sceneMemberID="firstResponder"/>

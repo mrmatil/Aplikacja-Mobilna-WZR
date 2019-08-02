@@ -42,8 +42,9 @@ class WelcomeScreenController: UIViewController {
     func downloadsInitializer(){
         
         let realm = try! Realm()
+        let objects = realm.objects(TimeTablesDataBase.self)
         try! realm.write {
-            realm.deleteAll() // deleting existing data
+            realm.delete(objects) // deleting existing TimeTablesDataBase
         }
         
         _ = Groups() { (tempArray:[String]) in
