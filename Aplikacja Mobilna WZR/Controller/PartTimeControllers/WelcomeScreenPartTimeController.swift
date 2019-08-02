@@ -18,14 +18,17 @@ class WelcomeScreenPartTimeController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         checkIfHasFavoriteGroup()
         checkConnection()
         
-        
         // Do any additional setup after loading the view.
     }
  
+    func performSegueToTableView(){
+        performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
+    }
     
     
     
@@ -34,7 +37,12 @@ class WelcomeScreenPartTimeController: UIViewController {
         
         // smth to delete existing data
         
-        
+        _=Groups(URLAdresses: AllURLs.partTimeGroups, groupsStartsWith: "N", completionHandler: { (tempArray) in
+            self.userDefaults.set(tempArray, forKey: "partTimeGroupsList")
+            
+            self.performSegueToTableView()
+//            self.performSegue(withIdentifier: "initialPartTimeSeguey", sender: self.self) //temporary
+        })
     }
     
     
@@ -42,6 +50,7 @@ class WelcomeScreenPartTimeController: UIViewController {
     
     //checking if user previously set his favorite group, if not it automaticly sets to N11-01
     func checkIfHasFavoriteGroup(){
+        
         guard let favGroup = userDefaults.string(forKey: "currentGroupPartTime") else{
             userDefaults.set("N11-01", forKey: "currentGroupPartTime")
             return
@@ -66,10 +75,11 @@ class WelcomeScreenPartTimeController: UIViewController {
     func checkingIfNeedToReload(){
         
         guard let _ = userDefaults.string(forKey: "isNeededToReloadPartTime") else{
-            self.userDefaults.set("isSet", forKey: "isNeededToReloadPartTime")
+//            self.userDefaults.set("isSet", forKey: "isNeededToReloadPartTime")
             self.getGroupsData()
             return
         }
+        
         print("Dane już w pamięci")
         performSegue(withIdentifier: "initialPartTimeSeguey", sender: self)
     }

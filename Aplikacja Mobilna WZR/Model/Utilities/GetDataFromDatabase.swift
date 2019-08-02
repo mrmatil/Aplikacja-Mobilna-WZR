@@ -19,6 +19,7 @@ class GetDataFromDatabase{
     var completionHandler: (Results<TimeTablesDataBase>)->Void
     
     //Dla Widoku Grup:
+    //Stacjonarne
     init(group:String, week:Int, day:String, completionHandler: @escaping (Results<TimeTablesDataBase>)->Void) {
         self.group=group
         self.week=week
@@ -38,6 +39,8 @@ class GetDataFromDatabase{
             
         }
     }
+    
+    //Part-Time
     
     //Dla Widoku Wykładowców:
     

@@ -436,8 +436,7 @@
                         <viewLayoutGuide key="safeArea" id="p6W-PB-P2M"/>
                     </view>
                     <connections>
-                        <outlet property="pleaseWaitLabel" destination="oCQ-3k-nV9" id="omZ-pi-bmP"/>
-                        <segue destination="naT-1o-WYJ" kind="show" identifier="initialPartTimeSeguey" id="UGK-Gj-geG"/>
+                        <segue destination="naT-1o-WYJ" kind="show" identifier="PartTimeInitialSegue" id="Giu-BQ-llv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KLz-mE-mAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -458,9 +457,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISt-oR-8To" userLabel="RefreshButton">
                                         <rect key="frame" x="0.0" y="0.0" width="37" height="30"/>
                                         <state key="normal" image="Refresh"/>
-                                        <connections>
-                                            <action selector="refreshButtonClicked:" destination="eXo-Ay-ela" eventType="touchUpInside" id="en8-Bm-Wea"/>
-                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date Text Field" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L9f-V6-tB0">
                                         <rect key="frame" x="57" y="0.0" width="189" height="30"/>
@@ -510,11 +506,6 @@
                         <viewLayoutGuide key="safeArea" id="g8e-OW-hZ9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Plan Zajęć" image="timetable" id="WPD-cj-GoA"/>
-                    <connections>
-                        <outlet property="SubjectsTableView" destination="9s8-Ir-P9W" id="Mf2-ba-9fF"/>
-                        <outlet property="groupTextField" destination="yUX-oI-jLo" id="nfs-v5-fB1"/>
-                        <outlet property="lastRefreshDayLabel" destination="A2a-Pv-lSF" id="fMA-O8-yU8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWu-xt-Urb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -557,9 +548,6 @@
                                             <segment title="Tydzień II"/>
                                         </segments>
                                         <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="weekPickerChanged:" destination="eiA-aK-Nir" eventType="valueChanged" id="hR3-fD-Smd"/>
-                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <constraints>
@@ -576,9 +564,6 @@
                                     <segment title="Pt"/>
                                 </segments>
                                 <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="dayPickerChanged:" destination="eiA-aK-Nir" eventType="valueChanged" id="YbP-4z-xJa"/>
-                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BAA-Gb-JOB">
                                 <rect key="frame" x="0.0" y="162" width="414" height="643"/>
@@ -600,9 +585,6 @@
                                         <state key="normal" title="Szukaj">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
-                                        <connections>
-                                            <action selector="searchButtonPressed:" destination="eiA-aK-Nir" eventType="touchUpInside" id="27N-u5-lwM"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -635,10 +617,6 @@
                         <viewLayoutGuide key="safeArea" id="q4a-qE-bgd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Plan Wykładowców" image="lecturer" id="8l2-tV-UAf"/>
-                    <connections>
-                        <outlet property="lecturersTableView" destination="BAA-Gb-JOB" id="iKl-X1-Dvz"/>
-                        <outlet property="searchTextField" destination="o6Z-3B-Wy3" id="NKG-HX-MgI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxx-Gd-Vjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

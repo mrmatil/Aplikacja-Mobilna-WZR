@@ -47,13 +47,13 @@ class WelcomeScreenController: UIViewController {
             realm.delete(objects) // deleting existing TimeTablesDataBase
         }
         
-        _ = Groups() { (tempArray:[String]) in
+        _ = Groups(URLAdresses: AllURLs.fullTimeGroups, groupsStartsWith: "S", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "groupsList") // sending list of all groups to UserDefaults
             
             
             
             _=DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
-        }
+        })
     }
     
     //performing segue after getting both Groups and Classes data:
