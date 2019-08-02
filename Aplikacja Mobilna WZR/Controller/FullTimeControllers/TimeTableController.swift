@@ -129,7 +129,7 @@ class TimeTableController: UIViewController {
     }
     
     
-    //reloads everything <- handy with viewDidLoad/viewDidAppear 
+    //reloads everything <- handy with viewDidLoad/viewDidAppear
     func reloadView(){
         whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()) tygodnia"
         getCurrentDataForClasses()
@@ -137,6 +137,8 @@ class TimeTableController: UIViewController {
         SubjectsTableView.reloadData()
     }
 }
+
+
 
 
 
