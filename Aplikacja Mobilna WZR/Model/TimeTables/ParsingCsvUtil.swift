@@ -46,6 +46,8 @@ class ParsingCsvUtil{
         let numberOfWeek = myCalendar.component(.weekday, from: temp) // 2-poniedziałek, 3-wtorek, 4-środa, 5-czwartek, 6-piątek, 7-sobota, 1-niedziela
         
         switch numberOfWeek {
+        case 1:
+            return "niedziela"
         case 2:
             return "poniedziałek"
         case 3:
@@ -56,6 +58,8 @@ class ParsingCsvUtil{
             return "czwartek"
         case 6:
             return "piątek"
+        case 7:
+            return "sobota"
         default:
             return ""
         }
