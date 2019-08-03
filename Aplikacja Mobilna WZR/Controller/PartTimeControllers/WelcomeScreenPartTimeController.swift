@@ -38,7 +38,9 @@ class WelcomeScreenPartTimeController: UIViewController {
         _=Groups(URLAdresses: AllURLs.partTimeGroups, groupsStartsWith: "N", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "partTimeGroupsList")
             
-            self.performSegue(withIdentifier: "PartTimeInitialSegue", sender: self.self) //temporary
+            PartTimeDownloadCSV(groupsArray: tempArray, completionHandler: {
+                self.performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
+            }).getCSVDatatoDatabase()
         })
     }
     
@@ -76,7 +78,7 @@ class WelcomeScreenPartTimeController: UIViewController {
         }
         
         print("Dane już w pamięci")
-        performSegue(withIdentifier: "initialPartTimeSeguey", sender: self)
+        performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
     }
     
 

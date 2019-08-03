@@ -65,6 +65,20 @@ class ParsingCsvUtil{
         }
     }
     
+    static func changingStructureOfDate(date:String)->String{
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatterGet.dateFormat = "MM/dd/yyyy"
+        guard let dateFromString = dateFormatterGet.date(from: date) else {return ""}
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatterPrint.dateFormat = "dd-MM-yyyy"
+        let dateForPrint = dateFormatterPrint.string(from: dateFromString)
+        return dateForPrint
+    }
+    
+    
     static func dayPlusTwoWeeks(date:Date)->Date{
         let datePlus2Weeks = date.addingTimeInterval(1209600) // two weeks in seconds
         return datePlus2Weeks

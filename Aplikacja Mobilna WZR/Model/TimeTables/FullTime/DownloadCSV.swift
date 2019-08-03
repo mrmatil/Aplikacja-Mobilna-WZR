@@ -12,8 +12,8 @@ import RealmSwift
 class DownloadCSV{
     
     //variables:
-    let baseURL1:String = "https://wzr.ug.edu.pl/.csv/plan_st.php?f1="
-    let baseURL2:String = "&f2=4"
+    let baseURL1:String = AllURLs.fullTimeUrl[0]
+    let baseURL2:String = AllURLs.fullTimeUrl[1]
     let userDefaults = UserDefaults()
     var groupsArray:[String]
     var lecturersArray = [String]()
@@ -44,7 +44,7 @@ class DownloadCSV{
     }
     
     //Przesyłanie danych jednej grupy do bazy danych w Realm
-    func sendDataToDatabase(temp:[ClassesArray]){
+    private func sendDataToDatabase(temp:[ClassesArray]){
         let realm = try! Realm()
 //        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
         for x in 0...temp.count-1{
@@ -69,7 +69,7 @@ class DownloadCSV{
     }
     
     // Funkcja służąca do wywołania completion handlera jeżeli ilość przesłanych grup = ilości całkowitej grup
-    func ifEnd(){
+    private func ifEnd(){
         if loopsCount == groupsArray.count{
             sendLecturersToUserDefaults()
             completionHandler()
@@ -77,7 +77,7 @@ class DownloadCSV{
     }
     
     //Funkcja przesyłająca do UserDefaults tablicę z wykładowcami bez powtórzeń
-    func sendLecturersToUserDefaults(){
+    private func sendLecturersToUserDefaults(){
         let tempArray = Array(Set(lecturersArray))
         var uniqueLecturersArray = [String]()
         for temp in tempArray{
