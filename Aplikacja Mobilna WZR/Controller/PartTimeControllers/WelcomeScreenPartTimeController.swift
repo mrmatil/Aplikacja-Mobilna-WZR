@@ -16,14 +16,10 @@ class WelcomeScreenPartTimeController: UIViewController {
     let userDefaults = UserDefaults()
     let realm = try! Realm()
     
-    
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         checkIfHasFavoriteGroup()
         checkConnection()
-        
-        // Do any additional setup after loading the view.
     }
  
 
@@ -68,11 +64,23 @@ class WelcomeScreenPartTimeController: UIViewController {
         }
     }
     
+    //if no connection functions
+    @objc func showAlert(){
+        Alerts.init(view: self, title: "Brak połączenia", message: "sprawdź swoje połączenie internetowe", option1title: "Spróbuj ponownie", option1Action: tryAgain, option2title: "kontynuuj offilne", option2Action: goOffilne).showAlertWithTwoOptions()
+    }
+    func tryAgain(){
+        viewDidAppear(true)
+    }
+    func goOffilne(){
+        performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
+    }
+    
+    
     //checking if there is need to reload data -> is first time app is lounched or reload button was pressed
     func checkingIfNeedToReload(){
         
         guard let _ = userDefaults.string(forKey: "isNeededToReloadPartTime") else{
-//            self.userDefaults.set("isSet", forKey: "isNeededToReloadPartTime")
+            self.userDefaults.set("isSet", forKey: "isNeededToReloadPartTime")
             self.getGroupsData()
             return
         }
@@ -80,8 +88,5 @@ class WelcomeScreenPartTimeController: UIViewController {
         print("Dane już w pamięci")
         performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
     }
-    
-
-
     
 }

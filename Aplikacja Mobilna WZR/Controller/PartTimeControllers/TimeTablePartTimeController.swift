@@ -26,7 +26,9 @@ class TimeTablePartTimeController: UIViewController {
     
     //IBActions:
     @IBAction func refreshButtonPressed(_ sender: UIButton) {
-        
+        userDefaults.removeObject(forKey: "isNeededToReloadPartTime")
+        print("pop to refresh")
+        self.view.window?.rootViewController?.presentedViewController!.dismiss(animated: true, completion: nil)
     }
     
     
@@ -91,6 +93,8 @@ extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSou
     @objc func cancelGroupsButtonPressed(){
         hide()
     }
+    
+    //datePickerView:
     
     //both PickerViewFunctions:
     
