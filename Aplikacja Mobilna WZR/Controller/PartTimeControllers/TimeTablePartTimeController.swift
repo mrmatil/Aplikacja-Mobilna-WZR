@@ -15,7 +15,11 @@ class TimeTablePartTimeController: UIViewController {
     var pick:String? //current group pick
     var tempPick:String? // temporary group pick
     var arrayOfAllGroupsString:[String] = [] //array of all groups
+    var arrayOfAllDates:[String] = [] //array of all dates
+    var datePick:String?
+    var tempDatePick:String?
     var groupPickerView:UIPickerView! //groups pickerView
+    var datePickerView:UIPickerView! //dates pickerView
 
     
     
@@ -36,6 +40,7 @@ class TimeTablePartTimeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getGroupsData()
+        getDatesData()
         // Do any additional setup after loading the view.
     }
     
@@ -50,6 +55,13 @@ class TimeTablePartTimeController: UIViewController {
         pick = temp2
         groupsTextField.text=pick
         enableGroupsPickerView()
+    }
+    
+    func getDatesData(){
+        let temp = userDefaults.array(forKey: "datesList") as! [String]
+        arrayOfAllDates=temp
+        dateTextField.text=arrayOfAllDates[0]
+        enableDatePickerView()
     }
     
 
@@ -95,6 +107,41 @@ extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     //datePickerView:
+    func enableDatePickerView(){
+        datePickerView = UIPickerView()
+        datePickerView.delegate=self
+        datePickerView.dataSource=self
+        dateTextField.inputView=datePickerView
+        enableDatesToolbar()
+    }
+    
+    func enableDatesToolbar(){
+        let toolbar = UIToolbar()
+        
+        let okButton = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(okDatesButtonPressed))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Powrót" , style: .plain, target: self, action: #selector(cancelDatesButtonPressed))
+        
+        toolbar.sizeToFit()
+        toolbar.setItems([cancelButton, spaceButton, okButton], animated: true)
+        toolbar.isUserInteractionEnabled = true
+        
+        dateTextField.inputAccessoryView = toolbar
+    }
+    
+    @objc func okDatesButtonPressed(){
+        datePick=tempDatePick
+        dateTextField.text=datePick
+        hide()
+    }
+    
+    @objc func cancelDatesButtonPressed(){
+        hide()
+    }
+    
+    
+    
+    
     
     //both PickerViewFunctions:
     
@@ -105,6 +152,9 @@ extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSou
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == groupPickerView{
             return arrayOfAllGroupsString.count
+        }
+        else if pickerView == datePickerView{
+            return arrayOfAllDates.count
         }else{
             return 0
         }
@@ -113,7 +163,9 @@ extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSou
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == groupPickerView{
             return arrayOfAllGroupsString[row]
-        }else{
+        }else if pickerView == datePickerView{
+            return arrayOfAllDates[row]
+        } else{
             return ""
         }
     }
@@ -121,13 +173,17 @@ extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSou
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         if pickerView == groupPickerView{
             return NSAttributedString(string: arrayOfAllGroupsString[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor.blue]) // do poprawienia kolor z RGB
-        }else{
-            return NSAttributedString(string: arrayOfAllGroupsString[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor.blue]) // temporary
+        }else{ //for dates pickerView:
+            return NSAttributedString(string: arrayOfAllDates[row]+" ("+CurrentDate.nameOfTheDayPT(date: arrayOfAllDates[row])+")", attributes: [NSAttributedString.Key.foregroundColor:UIColor.blue])
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        tempPick=arrayOfAllGroupsString[row]
+        if pickerView == groupPickerView{
+            tempPick=arrayOfAllGroupsString[row]
+        } else{ //for dates pickerView:
+            tempDatePick=arrayOfAllDates[row]
+        }
     }
     
     func hide(){

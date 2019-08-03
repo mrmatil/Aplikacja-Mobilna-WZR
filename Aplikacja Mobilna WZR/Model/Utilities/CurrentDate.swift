@@ -58,4 +58,32 @@ class CurrentDate{
         let currentDate = dateFormatter.string(from: date)
         return currentDate
     }
+    
+    static func nameOfTheDayPT(date:String)->String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        guard let temp = dateFormatter.date(from: date) else {return ""}
+        let myCalendar = Calendar(identifier: .gregorian)
+        let numberOfWeek = myCalendar.component(.weekday, from: temp) // 2-poniedziałek, 3-wtorek, 4-środa, 5-czwartek, 6-piątek, 7-sobota, 1-niedziela
+        
+        switch numberOfWeek {
+        case 1:
+            return "niedziela"
+        case 2:
+            return "poniedziałek"
+        case 3:
+            return "wtorek"
+        case 4:
+            return "środa"
+        case 5:
+            return "czwartek"
+        case 6:
+            return "piątek"
+        case 7:
+            return "sobota"
+        default:
+            return ""
+        }
+    }
 }
