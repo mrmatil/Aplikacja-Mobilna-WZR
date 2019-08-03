@@ -15,6 +15,7 @@ class PartTimeDownloadCSV{
     let baseURL1:String = AllURLs.partTimeUrl[0]
     let baseURL2:String = AllURLs.partTimeUrl[1]
     let groupsArray:[String]
+    var datesArray = [String]()
     let userDefaults = UserDefaults()
     var loopsCount:Int=0
     let completionHandler: ()->Void
@@ -39,7 +40,7 @@ class PartTimeDownloadCSV{
     //sending one group to realm database
     private func sendDataToDatabase(temp:[PartTimeClassesArray]){
         let realm = try! Realm()
-        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
+//        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
         if temp.count>0{ // if in case that some groups may have no classes
             for x in 0...temp.count-1{
                 let ptdb = PartTimeTimeTablesDataBase()
@@ -54,6 +55,7 @@ class PartTimeDownloadCSV{
                 
                 try! realm.write {
                     realm.add(ptdb)
+                    datesArray.append(temp[x].date)
                 }
             }
         }
@@ -63,7 +65,18 @@ class PartTimeDownloadCSV{
     
     private func ifEnd(){
         if loopsCount == groupsArray.count{
+            sendDatesToUserDefaults()
             completionHandler()
         }
+    }
+    
+    private func sendDatesToUserDefaults(){
+        let temp = Array(Set(datesArray))
+        var uniqueDatesArray = [String]()
+        for x in temp{
+            uniqueDatesArray.append(x)
+        }
+        uniqueDatesArray = uniqueDatesArray.sorted()
+        userDefaults.set(uniqueDatesArray, forKey: "datesList")
     }
 }
