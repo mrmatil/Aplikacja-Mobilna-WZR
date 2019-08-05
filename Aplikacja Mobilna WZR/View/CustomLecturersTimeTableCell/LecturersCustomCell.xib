@@ -49,16 +49,13 @@
                         <rect key="frame" x="55" y="0.0" width="265" height="79.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nazwa Przedmiotu [w]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YG-cY-YJq">
-                                <rect key="frame" x="0.0" y="0.0" width="265" height="20.5"/>
+                                <rect key="frame" x="0.0" y="5" width="265" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WZ-Aula" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIL-zp-F01">
-                                <rect key="frame" x="0.0" y="49.5" width="265" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="qdf-i2-tru"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="WZ-Aula" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIL-zp-F01">
+                                <rect key="frame" x="0.0" y="56.5" width="265" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,12 +63,13 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="JIL-zp-F01" secondAttribute="trailing" id="0vX-tu-mQh"/>
-                            <constraint firstItem="JIL-zp-F01" firstAttribute="top" secondItem="5YG-cY-YJq" secondAttribute="bottom" id="72g-om-NzR"/>
+                            <constraint firstAttribute="bottom" secondItem="JIL-zp-F01" secondAttribute="bottom" constant="5" id="6dH-mQ-P2a"/>
                             <constraint firstItem="JIL-zp-F01" firstAttribute="leading" secondItem="xEi-5i-Xc1" secondAttribute="leading" id="Qgd-Dn-cma"/>
                             <constraint firstItem="5YG-cY-YJq" firstAttribute="leading" secondItem="xEi-5i-Xc1" secondAttribute="leading" id="SGQ-fi-Qjg"/>
                             <constraint firstAttribute="trailing" secondItem="5YG-cY-YJq" secondAttribute="trailing" id="SmR-nW-vzc"/>
-                            <constraint firstItem="5YG-cY-YJq" firstAttribute="top" secondItem="xEi-5i-Xc1" secondAttribute="top" id="jtW-rD-e9y"/>
-                            <constraint firstAttribute="bottom" secondItem="JIL-zp-F01" secondAttribute="bottom" id="zsm-im-Egg"/>
+                            <constraint firstItem="JIL-zp-F01" firstAttribute="top" secondItem="5YG-cY-YJq" secondAttribute="bottom" constant="35" id="VGS-zD-tiR"/>
+                            <constraint firstItem="5YG-cY-YJq" firstAttribute="top" secondItem="xEi-5i-Xc1" secondAttribute="top" constant="5" id="jtW-rD-e9y"/>
+                            <constraint firstAttribute="bottom" secondItem="JIL-zp-F01" secondAttribute="bottom" constant="5" id="zsm-im-Egg"/>
                         </constraints>
                     </stackView>
                 </subviews>

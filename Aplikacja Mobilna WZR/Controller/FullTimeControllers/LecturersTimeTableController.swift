@@ -108,6 +108,9 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
         let lecturersPicker=UIPickerView()
         lecturersPicker.delegate = self
         searchTextField.inputView = lecturersPicker
+        //for showing first lecturer from array default:
+        searchTextField.text=LecturersArray[0]
+        chosenLecturer=LecturersArray[0]
     }
     
     
@@ -138,6 +141,8 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
     func enableTableView(){
         lecturersTableView.delegate=self
         lecturersTableView.dataSource=self
+        lecturersTableView.estimatedRowHeight = 80.0
+        lecturersTableView.rowHeight = UITableView.automaticDimension
         lecturersTableView.register(UINib(nibName: "LecturersCustomCell", bundle: nil), forCellReuseIdentifier: "customLecturersCell")
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -154,6 +159,10 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
         cell.classroom.text = classroom[indexPath.row]
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

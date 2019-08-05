@@ -40,10 +40,7 @@ class LecturersPartTimeViewController: UIViewController {
         updateUI()
         endEditing()
     }
-    
-    
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -183,6 +180,8 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
     func enableTableView(){
         lecturersTableView.delegate=self
         lecturersTableView.dataSource=self
+        lecturersTableView.estimatedRowHeight = 80.0
+        lecturersTableView.rowHeight = UITableView.automaticDimension
         lecturersTableView.register(UINib(nibName: "LecturersCustomCell", bundle: nil), forCellReuseIdentifier: "customLecturersCell")
     }
     
@@ -201,13 +200,10 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
         
         return cell
     }
-    
-    
-    
-    
-    
-    
-    
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
     
     func endEditing(){

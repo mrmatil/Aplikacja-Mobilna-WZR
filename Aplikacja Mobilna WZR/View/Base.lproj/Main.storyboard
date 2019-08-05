@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr7-2Y-A8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171" y="-379"/>
+            <point key="canvasLocation" x="861" y="-379"/>
         </scene>
         <!--Plan Wykładowców-->
         <scene sceneID="8dX-Zo-Xzz">
@@ -217,7 +217,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uy9-b3-nTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="775" y="-379"/>
+            <point key="canvasLocation" x="1690" y="-379"/>
         </scene>
         <!--Ogłoszenia-->
         <scene sceneID="0tO-Du-TX4">
@@ -256,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QC8-Ei-0Of" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1690" y="-379"/>
+            <point key="canvasLocation" x="2533" y="-379"/>
         </scene>
         <!--Welcome Screen Controller-->
         <scene sceneID="Agb-NA-W1H">
@@ -528,7 +528,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CWu-xt-Urb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-94.20289855072464" y="2447.5446428571427"/>
+            <point key="canvasLocation" x="861" y="2448"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Y8I-JB-j9s">
@@ -562,7 +562,7 @@
                                 <rect key="frame" x="0.0" y="124" width="414" height="681"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Wqt-h9-PJU" userLabel="Upper Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Wqt-h9-PJU" userLabel="Upper Stack View">
                                 <rect key="frame" x="10" y="54" width="394" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-aN-QY2">
@@ -628,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxx-Gd-Vjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="2448"/>
+            <point key="canvasLocation" x="1690" y="2448"/>
         </scene>
     </scenes>
     <resources>

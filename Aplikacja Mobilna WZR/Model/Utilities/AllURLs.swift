@@ -26,4 +26,12 @@ class AllURLs{
     
     //PartTime
     static let partTimeUrl: [String] = ["https://wzr.ug.edu.pl/.csv/plan_st.php?f1=","&f2=4"]
+    
+    //NoticeBoards:
+    
+    //FullTime
+    static let fullTimeNoticeBoardsUrl:[String:String]=["1 stopień":"https://wzr.ug.edu.pl/studia/index.php?str=438",
+                                                        "2 stopień":"https://wzr.ug.edu.pl/studia/index.php?str=481"]
+    //PartTime
+     
 }
