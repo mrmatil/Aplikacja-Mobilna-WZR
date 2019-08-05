@@ -49,6 +49,9 @@ class LecturersPartTimeViewController: UIViewController {
         super.viewDidLoad()
         getLecturersArray()
         getDatesArray()
+        getCurrentLecturersData {
+            self.enableTableView()
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -93,12 +96,14 @@ class LecturersPartTimeViewController: UIViewController {
     func updateUI(){
         dateTextField.text=date
         lecturerTextField.text=chosenLecturer
+        lecturersTableView.reloadData()
     }
 
 }
 
 
-extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource{
+    
 
     //Lecturers Picker View:
     
@@ -174,7 +179,28 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
         }
     }
     
+    //Table View:
+    func enableTableView(){
+        lecturersTableView.delegate=self
+        lecturersTableView.dataSource=self
+        lecturersTableView.register(UINib(nibName: "LecturersCustomCell", bundle: nil), forCellReuseIdentifier: "customLecturersCell")
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return startHour.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "customLecturersCell", for: indexPath) as! LecturersCustomCell
+        
+        cell.startHour.text = startHour[indexPath.row]
+        cell.endHour.text = endHour[indexPath.row]
+        cell.group.text = group[indexPath.row]
+        cell.className.text = className[indexPath.row]
+        cell.classroom.text = classroom[indexPath.row]
+        
+        return cell
+    }
     
     
     

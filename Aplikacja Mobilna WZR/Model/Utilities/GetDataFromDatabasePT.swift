@@ -48,7 +48,7 @@ class GetDataFromDatabasePT{
     func getLecturersData(){
         do {
             let realm = try Realm()
-            let data = realm.objects(PartTimeTimeTablesDataBase.self).filter("lecturer = '\(lecturer)' AND date = '\(date)'")
+            let data = realm.objects(PartTimeTimeTablesDataBase.self).filter("lecturer CONTAINS '\(lecturer)' AND date = '\(date)'")
             completionHandler(data)
         } catch {
             print(error.localizedDescription)
