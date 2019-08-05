@@ -29,6 +29,7 @@
 		23B2B9BE22F5BF1B007C11CA /* PartTimeDownloadCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BD22F5BF1B007C11CA /* PartTimeDownloadCSV.swift */; };
 		23B2B9C022F5C24F007C11CA /* PartTimeParseCSv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BF22F5C24F007C11CA /* PartTimeParseCSv.swift */; };
 		23B2B9C222F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9C122F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift */; };
+		23B368DD22F85D5300F58E64 /* GetDataFromDatabasePT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B368DC22F85D5300F58E64 /* GetDataFromDatabasePT.swift */; };
 		23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */; };
 		23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBCB1422E4F69E00412350 /* CheckingConnection.swift */; };
 		23D9AED722EF380800B4B876 /* LecturersCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9AED522EF380800B4B876 /* LecturersCustomCell.swift */; };
@@ -67,6 +68,7 @@
 		23B2B9BD22F5BF1B007C11CA /* PartTimeDownloadCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeDownloadCSV.swift; sourceTree = "<group>"; };
 		23B2B9BF22F5C24F007C11CA /* PartTimeParseCSv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeParseCSv.swift; sourceTree = "<group>"; };
 		23B2B9C122F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeTimeTablesDataBase.swift; sourceTree = "<group>"; };
+		23B368DC22F85D5300F58E64 /* GetDataFromDatabasePT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromDatabasePT.swift; sourceTree = "<group>"; };
 		23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingCsvUtil.swift; sourceTree = "<group>"; };
 		23CBCB1422E4F69E00412350 /* CheckingConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingConnection.swift; sourceTree = "<group>"; };
 		23D9AED522EF380800B4B876 /* LecturersCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersCustomCell.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				2360E2E622ECBEF800FCF99F /* GetDataFromDatabase.swift */,
+				23B368DC22F85D5300F58E64 /* GetDataFromDatabasePT.swift */,
 				2364EA4622DA8BB500340B3A /* WebDataDownload.swift */,
 				23CBCB1422E4F69E00412350 /* CheckingConnection.swift */,
 				23EDF9AA22E5F75A0039C2AB /* Alerts.swift */,
@@ -416,6 +419,7 @@
 				2360E2E722ECBEF800FCF99F /* GetDataFromDatabase.swift in Sources */,
 				23B2B9C222F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift in Sources */,
 				2350A2E522F4E5D70020E7FC /* TimeTablePartTimeController.swift in Sources */,
+				23B368DD22F85D5300F58E64 /* GetDataFromDatabasePT.swift in Sources */,
 				2350A2DF22F4C2850020E7FC /* AllURLs.swift in Sources */,
 				23D9AEDA22EF62ED00B4B876 /* DownloadNoticeBoard.swift in Sources */,
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,

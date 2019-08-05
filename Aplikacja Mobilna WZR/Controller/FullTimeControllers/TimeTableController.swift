@@ -28,19 +28,9 @@ class TimeTableController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getGroupsData()
-        GetDataFromDatabase(group: userDefaults.string(forKey: "currentGroup")!, week: week, day: day) { (results) in
-            print(results)
-            if results.count>0{
-                for x in 0...results.count-1{
-                    self.startHour.append(results[x].startHour!)
-                    self.endHour.append(results[x].endHour!)
-                    self.className.append(results[x].className!)
-                    self.lecturer.append(results[x].lecturer!)
-                    self.classroom.append(results[x].classroom!)
-                }
-            }
+        getCurrentDataForClasses {
             self.enableTableView()
-        }.getData()
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -59,9 +49,10 @@ class TimeTableController: UIViewController {
     @IBAction func weekPickerChanged(_ sender: UISegmentedControl) {
         week = sender.selectedSegmentIndex+1
         print("week: \(week)")
-        getCurrentDataForClasses()
+        getCurrentDataForClasses {}
         SubjectsTableView.reloadData()
     }
+    
     @IBAction func dayPickerChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -77,7 +68,7 @@ class TimeTableController: UIViewController {
         default:
             day = "poniedziałek"
         }
-        getCurrentDataForClasses()
+        getCurrentDataForClasses{}
         print("day: \(day)")
         SubjectsTableView.reloadData()
     }
@@ -88,9 +79,8 @@ class TimeTableController: UIViewController {
         self.view.window?.rootViewController?.presentedViewController!.dismiss(animated: true, completion: nil)
     }
     
-    
-    
-    func getCurrentDataForClasses(){
+    //getting data for chosen day and week with possible completion handler for enabling table view (for viewDidLoad)
+    func getCurrentDataForClasses(completionHandler:@escaping ()->Void){
         startHour = [String]()
         endHour = [String]()
         className = [String]()
@@ -107,9 +97,11 @@ class TimeTableController: UIViewController {
                     self.classroom.append(results[x].classroom!)
                 }
             }
+            completionHandler()
             }.getData()
     }
     
+    //getting group list from user defaults
     func getGroupsData(){
         guard let tempListOfGroups = userDefaults.array(forKey: "groupsList") else {return}
         arrayOfAllGroupsString = tempListOfGroups as! [String]
@@ -132,7 +124,7 @@ class TimeTableController: UIViewController {
     //reloads everything <- handy with viewDidLoad/viewDidAppear
     func reloadView(){
         whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()) tygodnia"
-        getCurrentDataForClasses()
+        getCurrentDataForClasses{}
         refreshLastDate()
         SubjectsTableView.reloadData()
     }
@@ -206,7 +198,7 @@ extension TimeTableController: UITableViewDelegate, UITableViewDataSource, UIPic
         Pick = tempPick
         if let pickDefault = Pick{
             userDefaults.set(pickDefault ,forKey: "currentGroup")
-            getCurrentDataForClasses()
+            getCurrentDataForClasses{}
             groupTextField.text = pickDefault
             SubjectsTableView.reloadData()
             hide()
