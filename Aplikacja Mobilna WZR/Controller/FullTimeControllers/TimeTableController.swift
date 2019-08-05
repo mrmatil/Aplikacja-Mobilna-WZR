@@ -98,7 +98,7 @@ class TimeTableController: UIViewController {
                 }
             }
             completionHandler()
-            }.getData()
+        }.getData()
     }
     
     //getting group list from user defaults
@@ -150,6 +150,8 @@ extension TimeTableController: UITableViewDelegate, UITableViewDataSource, UIPic
         SubjectsTableView.delegate=self
         SubjectsTableView.dataSource=self
         SubjectsTableView.register(UINib(nibName: "TimeTableCell", bundle: nil), forCellReuseIdentifier: "customSubjectsCell")
+        SubjectsTableView.estimatedRowHeight = 80.0
+        SubjectsTableView.rowHeight = UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

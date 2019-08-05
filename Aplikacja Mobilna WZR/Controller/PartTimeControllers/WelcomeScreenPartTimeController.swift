@@ -30,11 +30,17 @@ class WelcomeScreenPartTimeController: UIViewController {
     func getGroupsData(){
         
         // smth to delete existing data
+        let realm = try! Realm()
+        let objects = realm.objects(PartTimeTimeTablesDataBase.self)
+        try! realm.write {
+            realm.delete(objects) // deleting existing PartTimeTimeTablesDataBase
+        }
         
         _=Groups(URLAdresses: AllURLs.partTimeGroups, groupsStartsWith: "N", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "partTimeGroupsList")
             
             PartTimeDownloadCSV(groupsArray: tempArray, completionHandler: {
+                self.userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshPartTime")
                 self.performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
             }).getCSVDatatoDatabase()
         })

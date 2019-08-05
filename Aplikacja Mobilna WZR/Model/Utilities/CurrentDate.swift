@@ -59,6 +59,15 @@ class CurrentDate{
         return currentDate
     }
     
+    static func getCurrentDateWithoutHoursAndMinutes() -> String{
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "CEST")
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let currentDate = dateFormatter.string(from: date)
+        return currentDate
+    }
+    
     static func nameOfTheDayPT(date:String)->String{
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")

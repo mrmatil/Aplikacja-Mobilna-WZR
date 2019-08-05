@@ -30,6 +30,7 @@
 		23B2B9C022F5C24F007C11CA /* PartTimeParseCSv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BF22F5C24F007C11CA /* PartTimeParseCSv.swift */; };
 		23B2B9C222F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9C122F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift */; };
 		23B368DD22F85D5300F58E64 /* GetDataFromDatabasePT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B368DC22F85D5300F58E64 /* GetDataFromDatabasePT.swift */; };
+		23B368DF22F881E200F58E64 /* LecturersPartTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B368DE22F881E100F58E64 /* LecturersPartTimeViewController.swift */; };
 		23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */; };
 		23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBCB1422E4F69E00412350 /* CheckingConnection.swift */; };
 		23D9AED722EF380800B4B876 /* LecturersCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9AED522EF380800B4B876 /* LecturersCustomCell.swift */; };
@@ -69,6 +70,7 @@
 		23B2B9BF22F5C24F007C11CA /* PartTimeParseCSv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeParseCSv.swift; sourceTree = "<group>"; };
 		23B2B9C122F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeTimeTablesDataBase.swift; sourceTree = "<group>"; };
 		23B368DC22F85D5300F58E64 /* GetDataFromDatabasePT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromDatabasePT.swift; sourceTree = "<group>"; };
+		23B368DE22F881E100F58E64 /* LecturersPartTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersPartTimeViewController.swift; sourceTree = "<group>"; };
 		23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingCsvUtil.swift; sourceTree = "<group>"; };
 		23CBCB1422E4F69E00412350 /* CheckingConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingConnection.swift; sourceTree = "<group>"; };
 		23D9AED522EF380800B4B876 /* LecturersCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersCustomCell.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 			children = (
 				2350A2E022F4CB230020E7FC /* WelcomeScreenPartTimeController.swift */,
 				2350A2E422F4E5D70020E7FC /* TimeTablePartTimeController.swift */,
+				23B368DE22F881E100F58E64 /* LecturersPartTimeViewController.swift */,
 			);
 			path = PartTimeControllers;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				23D9AEDC22EF666C00B4B876 /* CurrentDate.swift in Sources */,
 				23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */,
 				2364EA4722DA8BB500340B3A /* WebDataDownload.swift in Sources */,
+				23B368DF22F881E200F58E64 /* LecturersPartTimeViewController.swift in Sources */,
 				2350A2E122F4CB230020E7FC /* WelcomeScreenPartTimeController.swift in Sources */,
 				2360E2E422ECACF100FCF99F /* TimeTableCell.swift in Sources */,
 				2360E2E022EC91BD00FCF99F /* TimeTablesDataBase.swift in Sources */,
