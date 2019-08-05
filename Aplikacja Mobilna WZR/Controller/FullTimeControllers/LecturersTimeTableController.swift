@@ -33,7 +33,7 @@ class LecturersTimeTableController: UIViewController {
     @IBAction func weekPickerChanged(_ sender: UISegmentedControl) {
         week = sender.selectedSegmentIndex+1
         print("week: \(week)")
-        getCurrentLecturersData()
+        getCurrentLecturersData{}
         lecturersTableView.reloadData()
     }
     @IBAction func dayPickerChanged(_ sender: UISegmentedControl) {
@@ -52,13 +52,13 @@ class LecturersTimeTableController: UIViewController {
             day = "poniedziałek"
         }
         print("day: \(day)")
-        getCurrentLecturersData()
+        getCurrentLecturersData{}
         lecturersTableView.reloadData()
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         hideKeyboard()
-        getCurrentLecturersData()
+        getCurrentLecturersData{}
         lecturersTableView.reloadData()
     }
     
@@ -67,23 +67,14 @@ class LecturersTimeTableController: UIViewController {
         guard let tempArray = userDefaults.array(forKey: "lecturersList") else {return}// pobieranie listy Wykładowców z UserDefaults + obsługa błędów w razie gdyby nie było danych
         LecturersArray = tempArray as! [String]
         enableLecturersPickerView()
-        GetDataFromDatabase(lecturer: chosenLecturer, week: week, day: day) { results in
-            print(results)
-            if results.count>0{
-                for x in 0...results.count-1{
-                    self.startHour.append(results[x].startHour!)
-                    self.endHour.append(results[x].endHour!)
-                    self.className.append(results[x].className!)
-                    self.group.append(results[x].group!)
-                    self.classroom.append(results[x].classroom!)
-                }
-            }
-        }.getDataLecturers()
-        enableTableView()
+        getCurrentLecturersData {
+            self.enableTableView()
+        }
         // Do any additional setup after loading the view.
     }
     
-    func getCurrentLecturersData(){
+    
+    func getCurrentLecturersData(completionHandler:@escaping ()->Void){
         startHour = [String]()
         endHour = [String]()
         className = [String]()
@@ -100,6 +91,7 @@ class LecturersTimeTableController: UIViewController {
                     self.classroom.append(results[x].classroom!)
                 }
             }
+            completionHandler()
         }.getDataLecturers()
     }
 

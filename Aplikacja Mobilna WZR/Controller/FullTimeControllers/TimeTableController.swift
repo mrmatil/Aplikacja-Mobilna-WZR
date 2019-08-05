@@ -110,7 +110,6 @@ class TimeTableController: UIViewController {
         enablePickerView()
     }
     
-    
     //refreshes label with last refresh date
     func refreshLastDate(){
         guard let temp = userDefaults.string(forKey: "dateOfLastRefreshFullTime") else {
@@ -124,9 +123,7 @@ class TimeTableController: UIViewController {
     //reloads everything <- handy with viewDidLoad/viewDidAppear
     func reloadView(){
         whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()) tygodnia"
-        getCurrentDataForClasses{}
         refreshLastDate()
-        SubjectsTableView.reloadData()
     }
 }
 

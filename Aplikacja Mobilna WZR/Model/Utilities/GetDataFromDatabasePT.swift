@@ -37,4 +37,21 @@ class GetDataFromDatabasePT{
     }
     
     //lecturers Time table:
+    
+    init(lecturer:String,date:String,completionHandler:@escaping (Results<PartTimeTimeTablesDataBase>)->Void) {
+        self.group=""
+        self.date=date
+        self.lecturer=lecturer
+        self.completionHandler=completionHandler
+    }
+    
+    func getLecturersData(){
+        do {
+            let realm = try Realm()
+            let data = realm.objects(PartTimeTimeTablesDataBase.self).filter("lecturer = '\(lecturer)' AND date = '\(date)'")
+            completionHandler(data)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
