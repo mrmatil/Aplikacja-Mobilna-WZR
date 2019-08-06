@@ -52,7 +52,12 @@ class WelcomeScreenController: UIViewController {
             
             
             
-            _=DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
+//            _=DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
+            _=DownloadCSV(completionHandler: {
+                DownloadNoticeBoard(url: AllURLs.fullTimeNoticeBoardsUrl["1 stopień"]!, completionHandler: {
+                    self.initCompleted()
+                }).downloadWebsite()
+            }, groupsArray: tempArray)
         })
     }
     

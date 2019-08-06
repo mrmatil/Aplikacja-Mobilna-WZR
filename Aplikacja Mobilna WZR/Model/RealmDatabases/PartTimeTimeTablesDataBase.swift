@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+
 class PartTimeTimeTablesDataBase:Object{
     @objc dynamic var group:String?
     @objc dynamic var className:String?
