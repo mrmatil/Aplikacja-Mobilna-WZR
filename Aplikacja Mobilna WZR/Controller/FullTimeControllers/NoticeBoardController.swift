@@ -29,7 +29,9 @@ class NoticeBoardController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getNoticeBoardDataFromRealm {
+            self.enableTableView()
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -58,6 +60,9 @@ extension NoticeBoardController:UITableViewDataSource,UITableViewDelegate{
     func enableTableView(){
         noticeBoardTableView.delegate = self
         noticeBoardTableView.dataSource = self
+        noticeBoardTableView.register(UINib(nibName: "NoticeBoardCustomCell", bundle: nil), forCellReuseIdentifier: "CustomNoticeBoardCell")
+        noticeBoardTableView.estimatedRowHeight = 85.0
+        noticeBoardTableView.rowHeight = UITableView.automaticDimension
     }
     
     
@@ -66,7 +71,11 @@ extension NoticeBoardController:UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomNoticeBoardCell", for: indexPath) as! NoticeBoardCustomCell
+        cell.titleLabel.text = titles[indexPath.row]
+        cell.contentLabel.text=content[indexPath.row]
         
+        return cell
     }
     
     
