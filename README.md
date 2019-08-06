@@ -1,6 +1,6 @@
 # Aplikacja-Mobilna-WZR
 
-IOS App for students and lecturers of the Faculty of Management of the University of Gdańsk.
+IOS App for students and lecturers from Faculty of Management of the University of Gdańsk.
 ##### Project almost ready to launch in AppStore
 
 ## Features:
