@@ -25,6 +25,7 @@
 		2364EA3722DA760000340B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3522DA760000340B3A /* LaunchScreen.storyboard */; };
 		2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4422DA7B9D00340B3A /* TimeTableController.swift */; };
 		2364EA4722DA8BB500340B3A /* WebDataDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4622DA8BB500340B3A /* WebDataDownload.swift */; };
+		2378D64522F9C45A00190EB7 /* NoticeBoardsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378D64422F9C45A00190EB7 /* NoticeBoardsDataBase.swift */; };
 		23B2B9BC22F5BDCF007C11CA /* PartTimeClassesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BB22F5BDCF007C11CA /* PartTimeClassesArray.swift */; };
 		23B2B9BE22F5BF1B007C11CA /* PartTimeDownloadCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BD22F5BF1B007C11CA /* PartTimeDownloadCSV.swift */; };
 		23B2B9C022F5C24F007C11CA /* PartTimeParseCSv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BF22F5C24F007C11CA /* PartTimeParseCSv.swift */; };
@@ -67,6 +68,7 @@
 		2364EA3822DA760000340B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2364EA4422DA7B9D00340B3A /* TimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableController.swift; sourceTree = "<group>"; };
 		2364EA4622DA8BB500340B3A /* WebDataDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDataDownload.swift; sourceTree = "<group>"; };
+		2378D64422F9C45A00190EB7 /* NoticeBoardsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeBoardsDataBase.swift; sourceTree = "<group>"; };
 		23B2B9BB22F5BDCF007C11CA /* PartTimeClassesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeClassesArray.swift; sourceTree = "<group>"; };
 		23B2B9BD22F5BF1B007C11CA /* PartTimeDownloadCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeDownloadCSV.swift; sourceTree = "<group>"; };
 		23B2B9BF22F5C24F007C11CA /* PartTimeParseCSv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeParseCSv.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				2360E2DF22EC91BD00FCF99F /* TimeTablesDataBase.swift */,
 				23B2B9C122F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift */,
+				2378D64422F9C45A00190EB7 /* NoticeBoardsDataBase.swift */,
 			);
 			path = RealmDatabases;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				23B368E522F8EF9F00F58E64 /* SendNoticeBoardsToRealm.swift in Sources */,
 				2350A2E522F4E5D70020E7FC /* TimeTablePartTimeController.swift in Sources */,
 				23B368DD22F85D5300F58E64 /* GetDataFromDatabasePT.swift in Sources */,
+				2378D64522F9C45A00190EB7 /* NoticeBoardsDataBase.swift in Sources */,
 				2350A2DF22F4C2850020E7FC /* AllURLs.swift in Sources */,
 				23D9AEDA22EF62ED00B4B876 /* DownloadNoticeBoard.swift in Sources */,
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,

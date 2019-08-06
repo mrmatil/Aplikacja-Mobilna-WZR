@@ -11,4 +11,5 @@ import Foundation
 struct noticeBoardArray{
     var title:String
     var content:String
+    var level:Int
 }

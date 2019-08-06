@@ -43,8 +43,10 @@ class WelcomeScreenController: UIViewController {
         
         let realm = try! Realm()
         let objects = realm.objects(TimeTablesDataBase.self)
+        let objects2 = realm.objects(NoticeBoardsDataBase.self)
         try! realm.write {
             realm.delete(objects) // deleting existing TimeTablesDataBase
+            realm.delete(objects2.filter("FTorPT = 'FullTime' ")) // deleting existing NoticeBoardDataBase for FullTime Students
         }
         
         _ = Groups(URLAdresses: AllURLs.fullTimeGroups, groupsStartsWith: "S", completionHandler: { (tempArray) in
@@ -52,11 +54,12 @@ class WelcomeScreenController: UIViewController {
             
             
             
-//            _=DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
             _=DownloadCSV(completionHandler: {
-                DownloadNoticeBoard(url: AllURLs.fullTimeNoticeBoardsUrl["1 stopień"]!, completionHandler: {
+                
+                SendNoticeBoardsToRealm(urls: [AllURLs.fullTimeNoticeBoardsUrl["1 stopień"]!,AllURLs.fullTimeNoticeBoardsUrl["2 stopień"]!], FullTimeOrPartTime: "FullTime", completionHandler: {
                     self.initCompleted()
-                }).downloadWebsite()
+                }).sendToRealm()
+                
             }, groupsArray: tempArray)
         })
     }

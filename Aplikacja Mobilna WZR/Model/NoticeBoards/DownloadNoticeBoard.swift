@@ -13,12 +13,14 @@ class DownloadNoticeBoard{
     
     //variables:
     var url:String?
-    let completionHandler:([String],[String])->Void
+    let completionHandler:([noticeBoardArray])->Void
+    let level:Int
     
     
-    init(url:String, completionHandler:@escaping ([String],[String])->Void) {
+    init(url:String, level:Int, completionHandler:@escaping ([noticeBoardArray])->Void) {
         self.url=url
         self.completionHandler=completionHandler
+        self.level=level
     }
     
     
@@ -41,10 +43,19 @@ class DownloadNoticeBoard{
             for content:Element in contents.array(){
                 contentsArray.append(try content.text())
             }
-
-            print(titleArray)
-            print(contentsArray)
-            completionHandler(titleArray,contentsArray)
+            
+            var array = [noticeBoardArray]()
+            if contentsArray.count==titleArray.count && contentsArray.count != 0{
+                for x in 0...contentsArray.count-1{
+                    let temp = noticeBoardArray(title: titleArray[x],
+                                             content: contentsArray[x],
+                                             level: level)
+                    array.append(temp)
+                }
+            }
+            
+            print(array)
+            completionHandler(array)
         } catch {
             print(error.localizedDescription)
         }
