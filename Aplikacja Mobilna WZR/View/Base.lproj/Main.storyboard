@@ -222,7 +222,7 @@
         <!--Ogłoszenia-->
         <scene sceneID="0tO-Du-TX4">
             <objects>
-                <viewController id="RQ8-sy-ySj" sceneMemberID="viewController">
+                <viewController id="RQ8-sy-ySj" customClass="NoticeBoardController" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lui-Ue-FVk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,6 +234,9 @@
                                     <segment title="II Stopień"/>
                                 </segments>
                                 <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="levelSegmentedControlPressed:" destination="RQ8-sy-ySj" eventType="valueChanged" id="22g-PF-Ukc"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IDj-fE-LCZ">
                                 <rect key="frame" x="0.0" y="87" width="414" height="718"/>
@@ -253,6 +256,9 @@
                         <viewLayoutGuide key="safeArea" id="8Rj-fR-tOz"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ogłoszenia" image="news" id="BEz-zU-JtU"/>
+                    <connections>
+                        <outlet property="noticeBoardTableView" destination="IDj-fE-LCZ" id="GRH-Cy-3M7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QC8-Ei-0Of" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

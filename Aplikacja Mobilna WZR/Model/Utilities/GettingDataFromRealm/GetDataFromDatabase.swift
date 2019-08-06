@@ -61,9 +61,4 @@ class GetDataFromDatabase{
         }
     }
     
-    
-    
-    
-    
-    
 }

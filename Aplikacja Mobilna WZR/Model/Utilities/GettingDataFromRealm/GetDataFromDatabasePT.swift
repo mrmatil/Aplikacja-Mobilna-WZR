@@ -54,4 +54,5 @@ class GetDataFromDatabasePT{
             print(error.localizedDescription)
         }
     }
+    
 }
