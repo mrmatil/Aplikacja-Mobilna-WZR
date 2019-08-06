@@ -33,12 +33,13 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="iIf-e0-XGa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HS2-3F-Oz6"/>
                     <constraint firstAttribute="trailing" secondItem="XR8-v9-GdM" secondAttribute="trailing" id="RQW-RK-V4k"/>
                     <constraint firstItem="XR8-v9-GdM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dWP-25-dNH"/>
-                    <constraint firstAttribute="trailing" secondItem="iIf-e0-XGa" secondAttribute="trailing" id="ep4-2U-QZL"/>
-                    <constraint firstItem="iIf-e0-XGa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lUe-nA-XYD"/>
+                    <constraint firstAttribute="bottom" secondItem="iIf-e0-XGa" secondAttribute="bottom" constant="15" id="fzX-a6-fHt"/>
+                    <constraint firstItem="iIf-e0-XGa" firstAttribute="top" secondItem="XR8-v9-GdM" secondAttribute="bottom" constant="30" id="m1k-uY-eoo"/>
                     <constraint firstItem="XR8-v9-GdM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vnc-La-rfm"/>
-                    <constraint firstItem="iIf-e0-XGa" firstAttribute="top" secondItem="XR8-v9-GdM" secondAttribute="bottom" constant="30" id="xUe-cG-faH"/>
+                    <constraint firstAttribute="trailing" secondItem="iIf-e0-XGa" secondAttribute="trailing" id="wLt-Qj-Xxj"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

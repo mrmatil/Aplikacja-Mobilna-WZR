@@ -23,6 +23,16 @@ class NoticeBoardController: UIViewController {
     
     //IBActions:
     @IBAction func levelSegmentedControlPressed(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0{
+            level=1
+            getNoticeBoardDataFromRealm{}
+            noticeBoardTableView.reloadData()
+        }else{
+            level=2
+            getNoticeBoardDataFromRealm{}
+            noticeBoardTableView.reloadData()
+            print("dupa")
+        }
     }
     
     
