@@ -19,27 +19,56 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="84.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tytuł Ogłoszenia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XR8-v9-GdM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="21.5"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                        <color key="textColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treść Ogłoszenia Gocha raz dwa trzy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIf-e0-XGa">
-                        <rect key="frame" x="0.0" y="51.5" width="320" height="18"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSd-h8-bp0">
+                        <rect key="frame" x="5" y="5" width="310" height="74.5"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6di-93-alv">
+                                <rect key="frame" x="3" y="3" width="304" height="68.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tytuł Ogłoszenia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XR8-v9-GdM">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="37.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treść Ogłoszenia Gocha raz dwa trzy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIf-e0-XGa">
+                                        <rect key="frame" x="0.0" y="37.5" width="304" height="31"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XR8-v9-GdM" secondAttribute="trailing" id="9Uu-kL-75F"/>
+                                    <constraint firstAttribute="trailing" secondItem="iIf-e0-XGa" secondAttribute="trailing" id="Kdq-Rt-eUo"/>
+                                    <constraint firstItem="iIf-e0-XGa" firstAttribute="leading" secondItem="6di-93-alv" secondAttribute="leading" id="iHd-GQ-11z"/>
+                                    <constraint firstItem="XR8-v9-GdM" firstAttribute="leading" secondItem="6di-93-alv" secondAttribute="leading" id="lvJ-dl-FJs"/>
+                                    <constraint firstAttribute="bottom" secondItem="iIf-e0-XGa" secondAttribute="bottom" id="qhb-6H-dxv"/>
+                                    <constraint firstItem="XR8-v9-GdM" firstAttribute="top" secondItem="6di-93-alv" secondAttribute="top" id="tLM-JV-T2Q"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6di-93-alv" firstAttribute="top" secondItem="bSd-h8-bp0" secondAttribute="top" constant="3" id="E9R-oe-sqv"/>
+                            <constraint firstAttribute="trailing" secondItem="6di-93-alv" secondAttribute="trailing" constant="3" id="Tt0-pg-57s"/>
+                            <constraint firstItem="6di-93-alv" firstAttribute="leading" secondItem="bSd-h8-bp0" secondAttribute="leading" constant="3" id="o9r-QQ-U4n"/>
+                            <constraint firstAttribute="bottom" secondItem="6di-93-alv" secondAttribute="bottom" constant="3" id="yVm-WF-f7p"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="iIf-e0-XGa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="HS2-3F-Oz6"/>
-                    <constraint firstAttribute="trailing" secondItem="XR8-v9-GdM" secondAttribute="trailing" id="RQW-RK-V4k"/>
-                    <constraint firstItem="XR8-v9-GdM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dWP-25-dNH"/>
-                    <constraint firstAttribute="bottom" secondItem="iIf-e0-XGa" secondAttribute="bottom" constant="15" id="fzX-a6-fHt"/>
-                    <constraint firstItem="iIf-e0-XGa" firstAttribute="top" secondItem="XR8-v9-GdM" secondAttribute="bottom" constant="30" id="m1k-uY-eoo"/>
-                    <constraint firstItem="XR8-v9-GdM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vnc-La-rfm"/>
-                    <constraint firstAttribute="trailing" secondItem="iIf-e0-XGa" secondAttribute="trailing" id="wLt-Qj-Xxj"/>
+                    <constraint firstItem="bSd-h8-bp0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="3ck-RZ-a3f"/>
+                    <constraint firstAttribute="bottom" secondItem="bSd-h8-bp0" secondAttribute="bottom" constant="5" id="Wxq-YT-yOy"/>
+                    <constraint firstItem="bSd-h8-bp0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="hBJ-ar-aXE"/>
+                    <constraint firstAttribute="trailing" secondItem="bSd-h8-bp0" secondAttribute="trailing" constant="5" id="t3S-gI-oJd"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
