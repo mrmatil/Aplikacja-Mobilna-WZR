@@ -11,7 +11,7 @@ IOS App for students and lecturers from Faculty of Management of the University 
 * supports timetables for both Full Time and Part Time Students
 
 ## Used Technologies:
-* Swift 4.2
+* Swift 5
 * Apple Storyboards (for App Views)
 * Realm Swift (for Database)
 * SwiftSoup (for scrapping data from websites)
