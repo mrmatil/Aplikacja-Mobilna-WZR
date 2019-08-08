@@ -149,6 +149,7 @@ extension TimeTableController: UITableViewDelegate, UITableViewDataSource, UIPic
         SubjectsTableView.register(UINib(nibName: "TimeTableCell", bundle: nil), forCellReuseIdentifier: "customSubjectsCell")
         SubjectsTableView.estimatedRowHeight = 80.0
         SubjectsTableView.rowHeight = UITableView.automaticDimension
+        SubjectsTableView.separatorStyle = .none
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

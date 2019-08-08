@@ -136,6 +136,7 @@ extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSou
         subjectsTableView.register(UINib(nibName: "TimeTableCell", bundle: nil), forCellReuseIdentifier: "customSubjectsCell")
         subjectsTableView.estimatedRowHeight = 80.0
         subjectsTableView.rowHeight = UITableView.automaticDimension
+        subjectsTableView.separatorStyle = .none
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
