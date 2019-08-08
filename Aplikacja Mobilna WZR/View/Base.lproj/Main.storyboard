@@ -51,7 +51,7 @@
                                 </constraints>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TnL-JA-K8Q">
-                                <rect key="frame" x="0.0" y="94" width="414" height="29"/>
+                                <rect key="frame" x="10" y="94" width="394" height="29"/>
                                 <segments>
                                     <segment title="Pon."/>
                                     <segment title="Wt."/>
@@ -86,13 +86,13 @@
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="u40-gT-mih" secondAttribute="trailing" constant="10" id="07G-h9-h7O"/>
                             <constraint firstItem="eeL-cA-IZX" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" id="2LR-Hh-RDq"/>
                             <constraint firstItem="01J-kE-2mO" firstAttribute="top" secondItem="eeL-cA-IZX" secondAttribute="bottom" constant="5" id="Cdi-xI-WR6"/>
-                            <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="TnL-JA-K8Q" secondAttribute="trailing" id="Erg-Ur-FWg"/>
+                            <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="TnL-JA-K8Q" secondAttribute="trailing" constant="10" id="Erg-Ur-FWg"/>
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="bottom" secondItem="01J-kE-2mO" secondAttribute="bottom" constant="5" id="Jko-Y2-8un"/>
                             <constraint firstItem="01J-kE-2mO" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" id="Rad-GK-uGV"/>
                             <constraint firstItem="4Oy-KE-abS" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" id="UFW-db-MPf"/>
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="4Oy-KE-abS" secondAttribute="trailing" id="UvL-vg-4Wi"/>
                             <constraint firstItem="u40-gT-mih" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" constant="10" id="VRj-XL-FzI"/>
-                            <constraint firstItem="TnL-JA-K8Q" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" id="VTj-JU-8OZ"/>
+                            <constraint firstItem="TnL-JA-K8Q" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" constant="10" id="VTj-JU-8OZ"/>
                             <constraint firstItem="eeL-cA-IZX" firstAttribute="trailing" secondItem="Ekd-R9-TTl" secondAttribute="trailing" id="kU1-xF-hnB"/>
                             <constraint firstItem="u40-gT-mih" firstAttribute="top" secondItem="Ekd-R9-TTl" secondAttribute="top" constant="5" id="q3a-oU-wfv"/>
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="01J-kE-2mO" secondAttribute="trailing" id="srP-vA-5vJ"/>
@@ -142,7 +142,7 @@
                                 </constraints>
                             </stackView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="43s-fe-LzB">
-                                <rect key="frame" x="0.0" y="94" width="414" height="29"/>
+                                <rect key="frame" x="10" y="94" width="394" height="29"/>
                                 <segments>
                                     <segment title="Pon."/>
                                     <segment title="Wt."/>
@@ -193,10 +193,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="DFo-7H-1H9" firstAttribute="leading" secondItem="uSR-qh-Rcp" secondAttribute="leading" constant="10" id="3d8-pk-dO3"/>
-                            <constraint firstItem="43s-fe-LzB" firstAttribute="leading" secondItem="uSR-qh-Rcp" secondAttribute="leading" id="4Be-Ac-vBm"/>
+                            <constraint firstItem="43s-fe-LzB" firstAttribute="leading" secondItem="uSR-qh-Rcp" secondAttribute="leading" constant="10" id="4Be-Ac-vBm"/>
                             <constraint firstItem="uSR-qh-Rcp" firstAttribute="trailing" secondItem="TMS-u2-iVH" secondAttribute="trailing" id="7vl-JC-jEz"/>
                             <constraint firstItem="fQc-Fu-omt" firstAttribute="leading" secondItem="uSR-qh-Rcp" secondAttribute="leading" constant="10" id="FAQ-hF-8vU"/>
-                            <constraint firstItem="43s-fe-LzB" firstAttribute="trailing" secondItem="uSR-qh-Rcp" secondAttribute="trailing" id="FO6-Bq-nuW"/>
+                            <constraint firstItem="43s-fe-LzB" firstAttribute="trailing" secondItem="uSR-qh-Rcp" secondAttribute="trailing" constant="-10" id="FO6-Bq-nuW"/>
                             <constraint firstItem="fQc-Fu-omt" firstAttribute="top" secondItem="uSR-qh-Rcp" secondAttribute="top" constant="5" id="G00-qP-deJ"/>
                             <constraint firstItem="TMS-u2-iVH" firstAttribute="leading" secondItem="uSR-qh-Rcp" secondAttribute="leading" id="KuJ-mO-oeZ"/>
                             <constraint firstItem="uSR-qh-Rcp" firstAttribute="trailing" secondItem="DFo-7H-1H9" secondAttribute="trailing" constant="10" id="PhE-V1-YJN"/>
@@ -228,7 +228,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vsd-KX-3YC">
-                                <rect key="frame" x="20" y="49" width="374" height="29"/>
+                                <rect key="frame" x="10" y="49" width="394" height="29"/>
                                 <segments>
                                     <segment title="I Stopień"/>
                                     <segment title="II Stopień"/>
@@ -247,9 +247,9 @@
                         <constraints>
                             <constraint firstItem="IDj-fE-LCZ" firstAttribute="top" secondItem="vsd-KX-3YC" secondAttribute="bottom" constant="10" id="C7A-bR-jVy"/>
                             <constraint firstItem="8Rj-fR-tOz" firstAttribute="bottom" secondItem="IDj-fE-LCZ" secondAttribute="bottom" constant="8" id="cQ4-Yi-c6Q"/>
-                            <constraint firstItem="vsd-KX-3YC" firstAttribute="leading" secondItem="8Rj-fR-tOz" secondAttribute="leading" constant="20" id="jLI-dI-EX9"/>
+                            <constraint firstItem="vsd-KX-3YC" firstAttribute="leading" secondItem="8Rj-fR-tOz" secondAttribute="leading" constant="10" id="jLI-dI-EX9"/>
                             <constraint firstItem="8Rj-fR-tOz" firstAttribute="trailing" secondItem="IDj-fE-LCZ" secondAttribute="trailing" id="kzU-5Y-Khk"/>
-                            <constraint firstItem="8Rj-fR-tOz" firstAttribute="trailing" secondItem="vsd-KX-3YC" secondAttribute="trailing" constant="20" id="mUv-5L-hqQ"/>
+                            <constraint firstItem="8Rj-fR-tOz" firstAttribute="trailing" secondItem="vsd-KX-3YC" secondAttribute="trailing" constant="10" id="mUv-5L-hqQ"/>
                             <constraint firstItem="vsd-KX-3YC" firstAttribute="top" secondItem="8Rj-fR-tOz" secondAttribute="top" constant="5" id="nyD-XM-iob"/>
                             <constraint firstItem="IDj-fE-LCZ" firstAttribute="leading" secondItem="8Rj-fR-tOz" secondAttribute="leading" id="ys9-og-zKG"/>
                         </constraints>
@@ -282,7 +282,7 @@
                                 </constraints>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trwa Pobieranie Danych..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-So-U9k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proszę Czekać..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-So-U9k">
                                 <rect key="frame" x="10" y="741" width="394" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -354,6 +354,12 @@
                                         <state key="normal" title="Stacjonarne">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="9Tb-gS-dur" kind="show" id="Jri-cc-sz3"/>
                                         </connections>
@@ -365,6 +371,12 @@
                                         <state key="normal" title="Niestacjonarne">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="NJC-P1-fv2" kind="show" id="kMK-8F-UC0"/>
                                         </connections>
