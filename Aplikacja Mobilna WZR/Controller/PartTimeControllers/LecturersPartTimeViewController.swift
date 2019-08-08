@@ -183,6 +183,7 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
         lecturersTableView.estimatedRowHeight = 80.0
         lecturersTableView.rowHeight = UITableView.automaticDimension
         lecturersTableView.register(UINib(nibName: "LecturersCustomCell", bundle: nil), forCellReuseIdentifier: "customLecturersCell")
+        lecturersTableView.separatorStyle = .none
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

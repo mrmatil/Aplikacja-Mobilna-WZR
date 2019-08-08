@@ -144,6 +144,7 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
         lecturersTableView.estimatedRowHeight = 80.0
         lecturersTableView.rowHeight = UITableView.automaticDimension
         lecturersTableView.register(UINib(nibName: "LecturersCustomCell", bundle: nil), forCellReuseIdentifier: "customLecturersCell")
+        lecturersTableView.separatorStyle = .none
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return startHour.count

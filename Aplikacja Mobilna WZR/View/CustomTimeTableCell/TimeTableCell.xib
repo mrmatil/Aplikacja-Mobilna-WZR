@@ -20,28 +20,28 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-KO-r32">
-                        <rect key="frame" x="3" y="3" width="314" height="73.5"/>
+                        <rect key="frame" x="5" y="5" width="310" height="69.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fxg-se-3je">
-                                <rect key="frame" x="2" y="2" width="310" height="69.5"/>
+                                <rect key="frame" x="2" y="2" width="306" height="65.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="o7c-1X-iC8">
-                                        <rect key="frame" x="0.0" y="0.0" width="70" height="69.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="65.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX:XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzQ-4r-AGC">
-                                                <rect key="frame" x="0.0" y="0.0" width="70" height="20"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XX:XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndY-HF-1kC">
-                                                <rect key="frame" x="0.0" y="25" width="70" height="19.5"/>
+                                                <rect key="frame" x="0.0" y="23.5" width="70" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A-XX" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUC-2S-1oo">
-                                                <rect key="frame" x="0.0" y="49.5" width="70" height="20"/>
+                                                <rect key="frame" x="0.0" y="47" width="70" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -52,16 +52,16 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="zah-uX-zs9">
-                                        <rect key="frame" x="80" y="0.0" width="230" height="69.5"/>
+                                        <rect key="frame" x="80" y="0.0" width="226" height="65.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nazwa Przedmiotu [w] " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaA-Fe-QgG">
-                                                <rect key="frame" x="0.0" y="0.0" width="230" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="226" height="39.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="prof. Adam Kowalski-Nowak" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEd-ca-Lg7">
-                                                <rect key="frame" x="0.0" y="42" width="230" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="39.5" width="226" height="26"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -87,10 +87,10 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="Fdk-KO-r32" secondAttribute="trailing" constant="3" id="2cV-f0-H48"/>
-                    <constraint firstItem="Fdk-KO-r32" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="P32-KW-PlN"/>
-                    <constraint firstItem="Fdk-KO-r32" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="Ut2-Rt-wAa"/>
-                    <constraint firstAttribute="bottom" secondItem="Fdk-KO-r32" secondAttribute="bottom" constant="3" id="vjr-mF-voX"/>
+                    <constraint firstAttribute="trailing" secondItem="Fdk-KO-r32" secondAttribute="trailing" constant="5" id="2cV-f0-H48"/>
+                    <constraint firstItem="Fdk-KO-r32" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="P32-KW-PlN"/>
+                    <constraint firstItem="Fdk-KO-r32" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Ut2-Rt-wAa"/>
+                    <constraint firstAttribute="bottom" secondItem="Fdk-KO-r32" secondAttribute="bottom" constant="5" id="vjr-mF-voX"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
