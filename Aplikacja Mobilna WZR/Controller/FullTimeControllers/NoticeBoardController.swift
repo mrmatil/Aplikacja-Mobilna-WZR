@@ -39,10 +39,9 @@ class NoticeBoardController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getNoticeBoardDataFromRealm {
-//            self.enableTableView()
-//        }
-        temporaryData()
+        getNoticeBoardDataFromRealm {
+            self.enableTableView()
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -62,12 +61,6 @@ class NoticeBoardController: UIViewController {
             }
         }.getNoticeBoardsData()
         
-    }
-    
-    func temporaryData(){
-        titles=["Tytuł pierwszego ogłoszenia","Tytuł Drugiego ogłoszenia"]
-        content=["Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tatio","Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tatio"]
-        enableTableView()
     }
 
 }
