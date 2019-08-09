@@ -105,8 +105,10 @@
                     <tabBarItem key="tabBarItem" title="Plan Zajęć" image="timetable" id="z6N-fU-did"/>
                     <connections>
                         <outlet property="SubjectsTableView" destination="eeL-cA-IZX" id="7ml-07-6Bl"/>
+                        <outlet property="dayPicker" destination="TnL-JA-K8Q" id="FwA-lO-6yF"/>
                         <outlet property="groupTextField" destination="7z0-1F-ws8" id="HvS-XP-ksN"/>
                         <outlet property="lastRefreshDayLabel" destination="01J-kE-2mO" id="fq7-IY-cex"/>
+                        <outlet property="weekPicker" destination="vAv-qg-fCR" id="W2p-p3-obX"/>
                         <outlet property="whatWeekLabel" destination="4Oy-KE-abS" id="k8j-km-Uew"/>
                     </connections>
                 </viewController>

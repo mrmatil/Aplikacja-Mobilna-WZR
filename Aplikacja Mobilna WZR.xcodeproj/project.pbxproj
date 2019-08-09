@@ -12,6 +12,8 @@
 		23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23162BD022DEA301001A4D2D /* ParseCSV.swift */; };
 		23242B9B22DE453700C4F132 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23242B9A22DE453700C4F132 /* Groups.swift */; };
 		233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233577B022DA99E30043AE98 /* GroupsParser.swift */; };
+		233760C322FCE53E00056354 /* GesturesUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233760C222FCE53E00056354 /* GesturesUtil.swift */; };
+		233760C622FCE6C900056354 /* GesturesClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233760C522FCE6C900056354 /* GesturesClass.swift */; };
 		2350A2DF22F4C2850020E7FC /* AllURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2350A2DE22F4C2850020E7FC /* AllURLs.swift */; };
 		2350A2E122F4CB230020E7FC /* WelcomeScreenPartTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2350A2E022F4CB230020E7FC /* WelcomeScreenPartTimeController.swift */; };
 		2350A2E522F4E5D70020E7FC /* TimeTablePartTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2350A2E422F4E5D70020E7FC /* TimeTablePartTimeController.swift */; };
@@ -57,6 +59,8 @@
 		23162BD022DEA301001A4D2D /* ParseCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCSV.swift; sourceTree = "<group>"; };
 		23242B9A22DE453700C4F132 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		233577B022DA99E30043AE98 /* GroupsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsParser.swift; sourceTree = "<group>"; };
+		233760C222FCE53E00056354 /* GesturesUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesUtil.swift; sourceTree = "<group>"; };
+		233760C522FCE6C900056354 /* GesturesClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesClass.swift; sourceTree = "<group>"; };
 		2350A2DE22F4C2850020E7FC /* AllURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllURLs.swift; sourceTree = "<group>"; };
 		2350A2E022F4CB230020E7FC /* WelcomeScreenPartTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenPartTimeController.swift; sourceTree = "<group>"; };
 		2350A2E422F4E5D70020E7FC /* TimeTablePartTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTablePartTimeController.swift; sourceTree = "<group>"; };
@@ -127,6 +131,15 @@
 				23242B9A22DE453700C4F132 /* Groups.swift */,
 			);
 			path = Groups;
+			sourceTree = "<group>";
+		};
+		233760C422FCE6A300056354 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				233760C522FCE6C900056354 /* GesturesClass.swift */,
+				233760C222FCE53E00056354 /* GesturesUtil.swift */,
+			);
+			path = Gestures;
 			sourceTree = "<group>";
 		};
 		2360E2DE22EC918A00FCF99F /* RealmDatabases */ = {
@@ -293,6 +306,7 @@
 		23CBCB1622E4F75D00412350 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				233760C422FCE6A300056354 /* Gestures */,
 				2378D64822F9E57200190EB7 /* GettingDataFromRealm */,
 				2364EA4622DA8BB500340B3A /* WebDataDownload.swift */,
 				23CBCB1422E4F69E00412350 /* CheckingConnection.swift */,
@@ -456,6 +470,7 @@
 				23B2B9C022F5C24F007C11CA /* PartTimeParseCSv.swift in Sources */,
 				2378D64722F9D37E00190EB7 /* NoticeBoardController.swift in Sources */,
 				233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */,
+				233760C622FCE6C900056354 /* GesturesClass.swift in Sources */,
 				23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */,
 				23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */,
 				2360E2E722ECBEF800FCF99F /* GetDataFromDatabase.swift in Sources */,
@@ -470,6 +485,7 @@
 				2364EA2A22DA760000340B3A /* AppDelegate.swift in Sources */,
 				23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */,
 				23D9AED722EF380800B4B876 /* LecturersCustomCell.swift in Sources */,
+				233760C322FCE53E00056354 /* GesturesUtil.swift in Sources */,
 				23B368E322F8D0B000F58E64 /* NoticeBoardArray.swift in Sources */,
 				23B2B9BC22F5BDCF007C11CA /* PartTimeClassesArray.swift in Sources */,
 				23B2B9BE22F5BF1B007C11CA /* PartTimeDownloadCSV.swift in Sources */,

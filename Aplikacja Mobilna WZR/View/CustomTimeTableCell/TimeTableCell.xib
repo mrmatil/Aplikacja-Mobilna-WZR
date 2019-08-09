@@ -48,6 +48,7 @@
                                             </label>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="D1z-SF-B4S"/>
                                             <constraint firstAttribute="width" constant="70" id="LDP-NI-art"/>
                                         </constraints>
                                     </stackView>
