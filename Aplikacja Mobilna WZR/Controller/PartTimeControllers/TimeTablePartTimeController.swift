@@ -166,6 +166,7 @@ class TimeTablePartTimeController: UIViewController {
             }
         }
     }
+    
 }
 
 extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource{

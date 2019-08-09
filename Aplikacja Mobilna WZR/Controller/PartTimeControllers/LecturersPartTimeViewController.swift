@@ -48,6 +48,7 @@ class LecturersPartTimeViewController: UIViewController {
         getDatesArray()
         getCurrentLecturersData {
             self.enableTableView()
+            self.addLeftRight()
         }
         // Do any additional setup after loading the view.
     }
@@ -94,6 +95,48 @@ class LecturersPartTimeViewController: UIViewController {
         dateTextField.text=date
         lecturerTextField.text=chosenLecturer
         lecturersTableView.reloadData()
+    }
+    
+    //addingGestures:
+    func addLeftRight(){
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(actionAfterGesture) )
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(actionAfterGesture) )
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.left
+        view.addGestureRecognizer(swipeLeft)
+    }
+    
+    @objc func actionAfterGesture(gesture: UIGestureRecognizer){
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer{
+            switch swipeGesture.direction{
+                
+            case UISwipeGestureRecognizer.Direction.right:
+                print("Swiped Right")
+                
+                let swipedRight = GesturesUtil.gesturesForPartTimeTimeTablesDecreasing(data: GesturesClassPartTime(allDates: datesArray, currentDate: date))
+                date = swipedRight
+                dateTextField.text=date
+                
+                getCurrentLecturersData {}
+                lecturersTableView.reloadData()
+                
+            case UISwipeGestureRecognizer.Direction.left:
+                print("Swiped Left")
+                
+                let swipedLeft = GesturesUtil.gesturesForPartTimeTimeTablesIncreasing(data: GesturesClassPartTime(allDates: datesArray, currentDate: date))
+                date=swipedLeft
+                dateTextField.text=date
+                
+                getCurrentLecturersData {}
+                lecturersTableView.reloadData()
+                
+            default:
+                break
+            }
+        }
     }
 
 }
