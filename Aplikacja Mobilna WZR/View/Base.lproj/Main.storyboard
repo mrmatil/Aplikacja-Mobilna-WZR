@@ -158,11 +158,11 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TMS-u2-iVH">
-                                <rect key="frame" x="0.0" y="162" width="414" height="643"/>
+                                <rect key="frame" x="0.0" y="172" width="414" height="633"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DFo-7H-1H9">
-                                <rect key="frame" x="10" y="127" width="394" height="30"/>
+                                <rect key="frame" x="10" y="137" width="394" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wykładowca" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m9o-Vl-o14">
                                         <rect key="frame" x="0.0" y="0.0" width="339" height="30"/>
@@ -212,15 +212,17 @@
                             <constraint firstItem="TMS-u2-iVH" firstAttribute="top" secondItem="DFo-7H-1H9" secondAttribute="bottom" constant="5" id="ZmS-Ez-vFM"/>
                             <constraint firstItem="uSR-qh-Rcp" firstAttribute="bottom" secondItem="TMS-u2-iVH" secondAttribute="bottom" constant="8" id="hUa-9F-vUZ"/>
                             <constraint firstItem="43s-fe-LzB" firstAttribute="top" secondItem="fQc-Fu-omt" secondAttribute="bottom" constant="15" id="qrv-H5-hs9"/>
-                            <constraint firstItem="DFo-7H-1H9" firstAttribute="top" secondItem="43s-fe-LzB" secondAttribute="bottom" constant="5" id="rga-sr-p1E"/>
+                            <constraint firstItem="DFo-7H-1H9" firstAttribute="top" secondItem="43s-fe-LzB" secondAttribute="bottom" constant="15" id="rga-sr-p1E"/>
                             <constraint firstItem="43s-fe-LzB" firstAttribute="top" secondItem="fQc-Fu-omt" secondAttribute="bottom" constant="15" id="sCK-wy-9Gd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uSR-qh-Rcp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Plan Wykładowców" image="lecturer" id="6fH-tc-6rS"/>
                     <connections>
+                        <outlet property="dayPicker" destination="43s-fe-LzB" id="AZo-7T-4NJ"/>
                         <outlet property="lecturersTableView" destination="TMS-u2-iVH" id="6jl-ip-qsW"/>
                         <outlet property="searchTextField" destination="m9o-Vl-o14" id="Pva-B9-d1K"/>
+                        <outlet property="weekPicker" destination="37L-N6-lM8" id="4TX-La-lMZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uy9-b3-nTY" userLabel="First Responder" sceneMemberID="firstResponder"/>

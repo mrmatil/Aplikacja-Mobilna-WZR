@@ -27,6 +27,8 @@ class LecturersTimeTableController: UIViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var lecturersTableView: UITableView!
+    @IBOutlet weak var weekPicker: UISegmentedControl!
+    @IBOutlet weak var dayPicker: UISegmentedControl!
     
     
     //UIActions:
@@ -70,6 +72,7 @@ class LecturersTimeTableController: UIViewController {
         getCurrentLecturersData {
             self.enableTableView()
         }
+        addLeftRight()
         // Do any additional setup after loading the view.
     }
     
@@ -95,6 +98,48 @@ class LecturersTimeTableController: UIViewController {
         }.getDataLecturers()
     }
 
+    
+    //addingGestures:
+    func addLeftRight(){
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(actionAfterGesture) )
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(actionAfterGesture) )
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.left
+        view.addGestureRecognizer(swipeLeft)
+    }
+    
+    @objc func actionAfterGesture(gesture: UIGestureRecognizer){
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer{
+            switch swipeGesture.direction{
+                
+            case UISwipeGestureRecognizer.Direction.right:
+                print("Swiped right")
+                let swipedRight = GesturesUtil.gesturesForFullTImeTablesDecreasing(data: GesturesClass(week: week, day: day, weekForPicker: weekPicker.selectedSegmentIndex, dayForPicker: dayPicker.selectedSegmentIndex))
+                week = swipedRight.week
+                day = swipedRight.day
+                weekPicker.selectedSegmentIndex = swipedRight.weekForPicker
+                dayPicker.selectedSegmentIndex = swipedRight.dayForPicker
+                getCurrentLecturersData{}
+                lecturersTableView.reloadData()
+                
+            case UISwipeGestureRecognizer.Direction.left:
+                print("Swiped left")
+                let swipedLeft = GesturesUtil.gesturesForFullTimeTimeTablesAdding(data: GesturesClass(week: week, day: day, weekForPicker: weekPicker.selectedSegmentIndex, dayForPicker: dayPicker.selectedSegmentIndex))
+                week = swipedLeft.week
+                day = swipedLeft.day
+                weekPicker.selectedSegmentIndex = swipedLeft.weekForPicker
+                dayPicker.selectedSegmentIndex = swipedLeft.dayForPicker
+                getCurrentLecturersData{}
+                lecturersTableView.reloadData()
+                
+            default:
+                break
+            }
+        }
+    }
 
 }
 
