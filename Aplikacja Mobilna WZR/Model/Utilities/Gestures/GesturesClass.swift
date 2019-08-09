@@ -14,3 +14,8 @@ struct GesturesClass{
     var weekForPicker:Int
     var dayForPicker:Int
 }
+
+struct GesturesClassPartTime {
+    var allDates:[String]
+    var currentDate:String
+}

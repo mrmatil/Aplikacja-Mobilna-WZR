@@ -52,6 +52,7 @@ class TimeTablePartTimeController: UIViewController {
         getDatesData()
         getCurrentDataForClasses {
             self.enableTableView()
+            self.addLeftRight()
         }
         // Do any additional setup after loading the view.
     }
@@ -124,6 +125,47 @@ class TimeTablePartTimeController: UIViewController {
     }
     
 
+    //addingGestures:
+    func addLeftRight(){
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(actionAfterGesture) )
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        view.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(actionAfterGesture) )
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.left
+        view.addGestureRecognizer(swipeLeft)
+    }
+    
+    @objc func actionAfterGesture(gesture: UIGestureRecognizer){
+        
+        if let swipeGesture = gesture as? UISwipeGestureRecognizer{
+            switch swipeGesture.direction{
+                
+            case UISwipeGestureRecognizer.Direction.right:
+                print("Swiped Right")
+            
+                let swipedRight = GesturesUtil.gesturesForPartTimeTimeTablesDecreasing(data: GesturesClassPartTime(allDates: arrayOfAllDates, currentDate: datePick ?? ""))
+                datePick = swipedRight
+                dateTextField.text=datePick!
+                
+                getCurrentDataForClasses {}
+                subjectsTableView.reloadData()
+                
+            case UISwipeGestureRecognizer.Direction.left:
+                print("Swiped Left")
+            
+                let swipedLeft = GesturesUtil.gesturesForPartTimeTimeTablesIncreasing(data: GesturesClassPartTime(allDates: arrayOfAllDates, currentDate: datePick ?? ""))
+                datePick=swipedLeft
+                dateTextField.text=datePick!
+                
+                getCurrentDataForClasses {}
+                subjectsTableView.reloadData()
+                
+            default:
+                break
+            }
+        }
+    }
 }
 
 extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource{
