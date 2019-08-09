@@ -49,6 +49,7 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="mpS-dh-Dnj"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="63" id="rCJ-He-E9J"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="xEi-5i-Xc1" userLabel="Right Stack View">
