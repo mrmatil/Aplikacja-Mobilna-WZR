@@ -13,7 +13,7 @@ class WelcomeScreenController: UIViewController {
 
     //variables
     let userDefaults = UserDefaults.standard // zmienna do przechowywania danych w user defaults
-    let pleaseWaitLabelTexts = ["Trwa sprawdzanie połączenia...","Trwa usuwanie istniejących danych...","Trwa pobieranie danych...",]
+    let pleaseWaitLabelTexts = ["Trwa sprawdzanie połączenia...","Trwa usuwanie istniejących danych...","Trwa pobieranie danych... \n Może to potrwać kilkanaście sekund",]
     
     //IBOutlets:
     @IBOutlet weak var pleaseWaitLabel: UILabel!

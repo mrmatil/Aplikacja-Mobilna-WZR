@@ -15,9 +15,13 @@ class WelcomeScreenPartTimeController: UIViewController {
     //variables
     let userDefaults = UserDefaults()
     let realm = try! Realm()
+    let pleaseWaitLabelTexts = ["Trwa sprawdzanie połączenia...","Trwa usuwanie istniejących danych...","Trwa pobieranie danych... \n Może to potrwać kilkanaście sekund",]
+    @IBOutlet weak var pleaseWaitLabel: UILabel!
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        changeLabel(number: 0)
         checkIfHasFavoriteGroup()
         checkConnection()
     }
@@ -29,6 +33,8 @@ class WelcomeScreenPartTimeController: UIViewController {
     //Download Functions
     func getGroupsData(){
         
+        changeLabel(number: 1)
+
         // smth to delete existing data
         let realm = try! Realm()
         let objects = realm.objects(PartTimeTimeTablesDataBase.self)
@@ -39,6 +45,8 @@ class WelcomeScreenPartTimeController: UIViewController {
             realm.delete(objects2.filter("FTorPT = 'PartTime' ")) // deleting existing NoticeBoardDataBase for PartTime Students
             realm.delete(objects3) // deleting existing lecturers database
         }
+        
+        changeLabel(number: 2)
         
         _=Groups(URLAdresses: AllURLs.partTimeGroups, groupsStartsWith: "N", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "partTimeGroupsList")
@@ -105,6 +113,12 @@ class WelcomeScreenPartTimeController: UIViewController {
         
         print("Dane już w pamięci")
         performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
+    }
+    
+    //function for change label:
+    
+    func changeLabel(number:Int){
+        pleaseWaitLabel.text=pleaseWaitLabelTexts[number]
     }
     
 }
