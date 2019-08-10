@@ -33,5 +33,9 @@ class AllURLs{
     static let fullTimeNoticeBoardsUrl:[String:String]=["1 stopień":"https://wzr.ug.edu.pl/studia/index.php?str=438",
                                                         "2 stopień":"https://wzr.ug.edu.pl/studia/index.php?str=481"]
     //PartTime
+    
+    
+    //LecturersInfo:
+    static let lecturersInfoUrl:String = "https://wzr.ug.edu.pl/wydzial/index.php?str=121"
      
 }

@@ -49,9 +49,11 @@ class WelcomeScreenController: UIViewController {
         let realm = try! Realm()
         let objects = realm.objects(TimeTablesDataBase.self)
         let objects2 = realm.objects(NoticeBoardsDataBase.self)
+        let objects3 = realm.objects(LecturersDataBase.self)
         try! realm.write {
             realm.delete(objects) // deleting existing TimeTablesDataBase
             realm.delete(objects2.filter("FTorPT = 'FullTime' ")) // deleting existing NoticeBoardDataBase for FullTime Students
+            realm.delete(objects3) // deleting existing lecturers database
         }
         
         changeLabel(number: 2)
@@ -63,7 +65,10 @@ class WelcomeScreenController: UIViewController {
                 
                 SendNoticeBoardsToRealm(urls: [AllURLs.fullTimeNoticeBoardsUrl["1 stopień"]!,AllURLs.fullTimeNoticeBoardsUrl["2 stopień"]!], FullTimeOrPartTime: "FullTime", completionHandler: {
                     
-                    self.initCompleted()
+                    SendLecturersToRealm(completionHandler: {
+                        self.initCompleted()
+                    }).sendToRealm()
+                    
                 }).sendToRealm()
                 
             }, groupsArray: tempArray)
