@@ -29,7 +29,7 @@ class GetDataFromDatabasePT{
     func getData(){
         do {
             let realm = try Realm()
-            let data = realm.objects(PartTimeTimeTablesDataBase.self).filter("group = '\(group)' AND date = '\(date)'")
+            let data = realm.objects(PartTimeTimeTablesDataBase.self).filter("group = '\(group)' AND date = '\(date)'").sorted(byKeyPath: "startHour", ascending: true)
             completionHandler(data)
         } catch {
             print(error.localizedDescription)
@@ -48,7 +48,7 @@ class GetDataFromDatabasePT{
     func getLecturersData(){
         do {
             let realm = try Realm()
-            let data = realm.objects(PartTimeTimeTablesDataBase.self).filter("lecturer CONTAINS '\(lecturer)' AND date = '\(date)'")
+            let data = realm.objects(PartTimeTimeTablesDataBase.self).filter("lecturer CONTAINS '\(lecturer)' AND date = '\(date)'").sorted(byKeyPath: "startHour", ascending: true)
             completionHandler(data)
         } catch {
             print(error.localizedDescription)

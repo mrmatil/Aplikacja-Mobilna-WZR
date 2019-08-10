@@ -7,21 +7,28 @@
 //
 
 import UIKit
-import RealmSwift
 
 class LecturersTimeTableController: UIViewController {
 
     //variables:
-    var LecturersArray = [String]()
     var chosenLecturer:String = ""
     var week:Int = 1 // 1 -> pierwszy tydzień, 2 -> drugi tydzień
     var day: String =  "poniedziałek"
+    
+    //Realm Timetable variables:
     var startHour = [String]()
     var endHour = [String]()
     var className = [String]()
     var classroom = [String]()
     var group = [String]()
-    let userDefaults=UserDefaults()
+    //------------------------
+    
+    //Realm Lecturers variables:
+    var lecturersNames = [String]()
+    var emails = [String]()
+    var info = [String]()
+    //-------------------------
+    
     
     //IBOutlets:
     
@@ -66,8 +73,7 @@ class LecturersTimeTableController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let tempArray = userDefaults.array(forKey: "lecturersList") else {return}// pobieranie listy Wykładowców z UserDefaults + obsługa błędów w razie gdyby nie było danych
-        LecturersArray = tempArray as! [String]
+        getLecturersListAndInfo()
         enableLecturersPickerView()
         getCurrentLecturersData {
             self.enableTableView()
@@ -76,6 +82,16 @@ class LecturersTimeTableController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func getLecturersListAndInfo(){
+        let temp = GetDataFromDatabaseLecturers.getData()
+        if temp.count>0{
+            for x in 0...temp.count-1{
+                lecturersNames.append(temp[x].name!)
+                emails.append(temp[x].email!)
+                info.append(temp[x].info!)
+            }
+        }
+    }
     
     func getCurrentLecturersData(completionHandler:@escaping ()->Void){
         startHour = [String]()
@@ -154,8 +170,8 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
         lecturersPicker.delegate = self
         searchTextField.inputView = lecturersPicker
         //for showing first lecturer from array default:
-        searchTextField.text=LecturersArray[0]
-        chosenLecturer=LecturersArray[0]
+        searchTextField.text=lecturersNames[0]
+        chosenLecturer=lecturersNames[0]
     }
     
     
@@ -164,15 +180,15 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return LecturersArray.count
+        return lecturersNames.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return LecturersArray[row]
+        return lecturersNames[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        chosenLecturer = LecturersArray[row]
+        chosenLecturer = lecturersNames[row]
         searchTextField.text = chosenLecturer
     }
     

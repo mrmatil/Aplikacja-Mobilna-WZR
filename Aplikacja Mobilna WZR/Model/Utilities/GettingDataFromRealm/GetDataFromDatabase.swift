@@ -31,7 +31,7 @@ class GetDataFromDatabase{
     func getData(){
         do {
             let realm = try Realm()
-            let data = realm.objects(TimeTablesDataBase.self).filter("group = '\(group)' AND typeOfWeek = \(week) AND nameOfTheDay = '\(day)'")
+            let data = realm.objects(TimeTablesDataBase.self).filter("group = '\(group)' AND typeOfWeek = \(week) AND nameOfTheDay = '\(day)'").sorted(byKeyPath: "startHour", ascending: true)
             completionHandler(data)
             
         } catch {

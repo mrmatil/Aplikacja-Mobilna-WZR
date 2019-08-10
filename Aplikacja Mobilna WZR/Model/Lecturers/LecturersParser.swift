@@ -64,6 +64,10 @@ class LecturersParser{
                     if namesArray[x].contains(","){
                         let oneNameArray = namesArray[x].components(separatedBy: ", ")
                         namesArray[x] = oneNameArray[1] + ", " + oneNameArray[0]
+                        if namesArray[x].contains("nadzw."){
+                            let anotherOneNameArray = namesArray[x].components(separatedBy: "nadzw.")
+                            namesArray[x] = anotherOneNameArray[0] + "nadz" + anotherOneNameArray[1]
+                        }
                     }
                     let temp = LecturersArray(name: namesArray[x], email: emailsArray[x], info: infoArray[x])
                     dataArray.append(temp)

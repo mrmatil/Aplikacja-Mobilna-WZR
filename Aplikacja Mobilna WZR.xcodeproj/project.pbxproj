@@ -21,6 +21,7 @@
 		235665BB22FF2D9500DAE54A /* LecturersArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235665BA22FF2D9500DAE54A /* LecturersArray.swift */; };
 		235665BD22FF466500DAE54A /* SendLecturersToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235665BC22FF466500DAE54A /* SendLecturersToRealm.swift */; };
 		235665BF22FF481200DAE54A /* lecturersDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235665BE22FF481200DAE54A /* lecturersDataBase.swift */; };
+		235665C122FF5E7600DAE54A /* GetDataFromDatabaseLecturers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235665C022FF5E7600DAE54A /* GetDataFromDatabaseLecturers.swift */; };
 		2360E2E022EC91BD00FCF99F /* TimeTablesDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360E2DF22EC91BD00FCF99F /* TimeTablesDataBase.swift */; };
 		2360E2E422ECACF100FCF99F /* TimeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2360E2E222ECACF100FCF99F /* TimeTableCell.swift */; };
 		2360E2E522ECACF100FCF99F /* TimeTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2360E2E322ECACF100FCF99F /* TimeTableCell.xib */; };
@@ -72,6 +73,7 @@
 		235665BA22FF2D9500DAE54A /* LecturersArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersArray.swift; sourceTree = "<group>"; };
 		235665BC22FF466500DAE54A /* SendLecturersToRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLecturersToRealm.swift; sourceTree = "<group>"; };
 		235665BE22FF481200DAE54A /* lecturersDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lecturersDataBase.swift; sourceTree = "<group>"; };
+		235665C022FF5E7600DAE54A /* GetDataFromDatabaseLecturers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromDatabaseLecturers.swift; sourceTree = "<group>"; };
 		2360E2DF22EC91BD00FCF99F /* TimeTablesDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTablesDataBase.swift; sourceTree = "<group>"; };
 		2360E2E222ECACF100FCF99F /* TimeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCell.swift; sourceTree = "<group>"; };
 		2360E2E322ECACF100FCF99F /* TimeTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCell.xib; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 				2360E2E622ECBEF800FCF99F /* GetDataFromDatabase.swift */,
 				23B368DC22F85D5300F58E64 /* GetDataFromDatabasePT.swift */,
 				2378D64922F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift */,
+				235665C022FF5E7600DAE54A /* GetDataFromDatabaseLecturers.swift */,
 			);
 			path = GettingDataFromRealm;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				2360E2E422ECACF100FCF99F /* TimeTableCell.swift in Sources */,
 				2360E2E022EC91BD00FCF99F /* TimeTablesDataBase.swift in Sources */,
 				235665B922FF047E00DAE54A /* LecturersParser.swift in Sources */,
+				235665C122FF5E7600DAE54A /* GetDataFromDatabaseLecturers.swift in Sources */,
 				2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */,
 				23242B9B22DE453700C4F132 /* Groups.swift in Sources */,
 			);

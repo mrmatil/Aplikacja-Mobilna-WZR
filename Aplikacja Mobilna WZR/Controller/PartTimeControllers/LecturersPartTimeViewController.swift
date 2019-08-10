@@ -11,20 +11,29 @@ import UIKit
 class LecturersPartTimeViewController: UIViewController {
 
     //variables
-    var lecturersArray = [String]()
     var datesArray = [String]()
     var chosenLecturer:String = ""
     var tempLecturer:String = ""
     var date:String=""
     var tempDate:String=""
+    
+    //Realm Timetable variables:
     var startHour = [String]()
     var endHour = [String]()
     var className = [String]()
     var classroom = [String]()
     var group = [String]()
+    //------------------------
+    
     let userDefaults=UserDefaults()
     var lecturersPickerView: UIPickerView!
     var datesPickerView: UIPickerView!
+    
+    //Realm Lecturers variables:
+    var lecturersNames = [String]()
+    var emails = [String]()
+    var info = [String]()
+    //-------------------------
     
     
     //IBOutlets:
@@ -57,8 +66,15 @@ class LecturersPartTimeViewController: UIViewController {
     //getting data functions:
     
     func getLecturersArray(){
-        lecturersArray = userDefaults.array(forKey: "lecturersList") as! [String]
-        chosenLecturer=lecturersArray[0]
+        let temp = GetDataFromDatabaseLecturers.getData()
+        if temp.count>0{
+            for x in 0...temp.count-1{
+                lecturersNames.append(temp[x].name!)
+                emails.append(temp[x].email!)
+                info.append(temp[x].info!)
+            }
+        }
+        chosenLecturer=lecturersNames[0]
         lecturerTextField.text=chosenLecturer
         enableLecturersPickerView()
     }
@@ -197,7 +213,7 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == lecturersPickerView{
-            return lecturersArray.count
+            return lecturersNames.count
         }else{
             return datesArray.count
         }
@@ -205,7 +221,7 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == lecturersPickerView{
-            return lecturersArray[row]
+            return lecturersNames[row]
         }else{
             return datesArray[row]+" ("+CurrentDate.nameOfTheDayPT(date: datesArray[row])+")"
         }
@@ -213,7 +229,7 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == lecturersPickerView{
-            tempLecturer = lecturersArray[row]
+            tempLecturer = lecturersNames[row]
         }else{
             tempDate=datesArray[row]
         }

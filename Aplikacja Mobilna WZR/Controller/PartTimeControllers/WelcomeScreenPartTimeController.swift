@@ -32,18 +32,30 @@ class WelcomeScreenPartTimeController: UIViewController {
         // smth to delete existing data
         let realm = try! Realm()
         let objects = realm.objects(PartTimeTimeTablesDataBase.self)
+        let objects2 = realm.objects(NoticeBoardsDataBase.self)
+        let objects3 = realm.objects(LecturersDataBase.self)
         try! realm.write {
             realm.delete(objects) // deleting existing PartTimeTimeTablesDataBase
+            realm.delete(objects2.filter("FTorPT = 'PartTime' ")) // deleting existing NoticeBoardDataBase for PartTime Students
+            realm.delete(objects3) // deleting existing lecturers database
         }
         
         _=Groups(URLAdresses: AllURLs.partTimeGroups, groupsStartsWith: "N", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "partTimeGroupsList")
             
             PartTimeDownloadCSV(groupsArray: tempArray, completionHandler: {
-                self.userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshPartTime")
-                self.performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
+                
+                SendLecturersToRealm(completionHandler: {
+                    
+                    self.userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshPartTime")
+                    self.performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
+                    
+                }).sendToRealm()
+                
             }).getCSVDatatoDatabase()
+            
         })
+        
     }
     
     
