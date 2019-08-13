@@ -87,6 +87,7 @@ class WelcomeScreenPartTimeController: UIViewController {
             checkingIfNeedToReload()
         }else{
             print("Nie ma Połączenia")
+            perform(#selector(showAlert), with: nil, afterDelay: 0) // showing alert, after delay 0, because otherwise will be error in viewDidLoad
         }
     }
     

@@ -81,9 +81,11 @@ class LecturersTimeTableController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getLecturersListAndInfo()
-        enableLecturersPickerView()
-        getCurrentLecturersData {
-            self.enableTableView()
+        if lecturersNames.count > 0{
+            enableLecturersPickerView()
+            getCurrentLecturersData {
+                self.enableTableView()
+            }
         }
         addLeftRight()
         // Do any additional setup after loading the view.
@@ -185,6 +187,7 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
         let lecturersPicker=UIPickerView()
         lecturersPicker.delegate = self
         searchTextField.inputView = lecturersPicker
+
         //for showing first lecturer from array default:
         searchTextField.text=lecturersNames[0]
         chosenLecturer=lecturersNames[0]

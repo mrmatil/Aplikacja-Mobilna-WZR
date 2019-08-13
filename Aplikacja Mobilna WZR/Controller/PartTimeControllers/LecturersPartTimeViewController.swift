@@ -65,9 +65,11 @@ class LecturersPartTimeViewController: UIViewController {
         super.viewDidLoad()
         getLecturersArray()
         getDatesArray()
-        getCurrentLecturersData {
-            self.enableTableView()
-            self.addLeftRight()
+        if datesArray.count>0{
+            getCurrentLecturersData {
+                self.enableTableView()
+                self.addLeftRight()
+            }
         }
         // Do any additional setup after loading the view.
     }
@@ -92,16 +94,17 @@ class LecturersPartTimeViewController: UIViewController {
                 emails.append(temp[x].email!)
                 info.append(temp[x].info!)
             }
+            chosenLecturer=lecturersNames[0]
+            chosenLecturerEmail=emails[0]
+            chosenLecturerInfo=info[0]
+            lecturerTextField.text=chosenLecturer
+            enableLecturersPickerView()
         }
-        chosenLecturer=lecturersNames[0]
-        chosenLecturerEmail=emails[0]
-        chosenLecturerInfo=info[0]
-        lecturerTextField.text=chosenLecturer
-        enableLecturersPickerView()
     }
     
     func getDatesArray(){
-        datesArray = userDefaults.array(forKey: "datesList") as! [String]
+        guard let temp = userDefaults.array(forKey: "datesList") as? [String] else{return}
+        datesArray = temp
         date = datesArray[0]
         dateTextField.text=date
         enableDatesPickerView()

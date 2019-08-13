@@ -50,9 +50,11 @@ class TimeTablePartTimeController: UIViewController {
         super.viewDidLoad()
         getGroupsData()
         getDatesData()
-        getCurrentDataForClasses {
-            self.enableTableView()
-            self.addLeftRight()
+        if arrayOfAllDates.count>0{
+            getCurrentDataForClasses {
+                self.enableTableView()
+                self.addLeftRight()
+            }
         }
         // Do any additional setup after loading the view.
     }
@@ -86,7 +88,7 @@ class TimeTablePartTimeController: UIViewController {
     
     //getting from user defaults array of all groups and favorite group
     func getGroupsData(){
-        let temp = userDefaults.array(forKey: "partTimeGroupsList") as! [String]
+        guard let temp = userDefaults.array(forKey: "partTimeGroupsList") as? [String] else {return}
         let temp2 = userDefaults.string(forKey: "currentGroupPartTime")
         arrayOfAllGroupsString = temp
         pick = temp2
@@ -95,7 +97,7 @@ class TimeTablePartTimeController: UIViewController {
     }
     
     func getDatesData(){
-        let temp = userDefaults.array(forKey: "datesList") as! [String]
+        guard let temp = userDefaults.array(forKey: "datesList") as? [String] else {return}
         arrayOfAllDates=temp
         dateTextField.text=arrayOfAllDates[0]
         enableDatePickerView()

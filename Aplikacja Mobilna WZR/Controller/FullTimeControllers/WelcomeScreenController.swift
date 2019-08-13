@@ -31,7 +31,6 @@ class WelcomeScreenController: UIViewController {
         
         //checking if there is internet connection
         if Reachability.isConnectedToNetwork() {
-            
             print("jest połączenie")
             checkingIfNeedToReload() //checking if needed to download data and if needed proceeds to download it
             
