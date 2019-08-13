@@ -74,7 +74,7 @@ class LecturersParser{
                 }
             }
             
-            print(dataArray)
+            print("Lecturers Array Downloaded Successfully")
             completionHandler(dataArray)
             
         } catch {

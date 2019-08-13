@@ -60,6 +60,8 @@ class PartTimeParseCSV{
             print(error.localizedDescription)
         }
 //        print(partTimeClassessArray)
+        print("TimeTables Downloaded Successfully")
+        
         completionHandler(partTimeClassessArray)
     }
 }

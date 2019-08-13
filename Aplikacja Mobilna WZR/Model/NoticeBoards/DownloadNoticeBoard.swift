@@ -54,7 +54,8 @@ class DownloadNoticeBoard{
                 }
             }
             
-            print(array)
+            print("NoticeBoard Downloaded Successfully")
+            
             completionHandler(array)
         } catch {
             print(error.localizedDescription)

@@ -14,6 +14,7 @@ class WelcomeScreenController: UIViewController {
     //variables
     let userDefaults = UserDefaults.standard // zmienna do przechowywania danych w user defaults
     let pleaseWaitLabelTexts = ["Trwa sprawdzanie połączenia...","Trwa usuwanie istniejących danych...","Trwa pobieranie danych... \n Może to potrwać kilkanaście sekund",]
+    var loop=0
     
     //IBOutlets:
     @IBOutlet weak var pleaseWaitLabel: UILabel!
@@ -23,6 +24,7 @@ class WelcomeScreenController: UIViewController {
         super.viewDidAppear(true)
         
         changeLabel(number: 0)
+        loop=0
         
         //checking if favorite group is set, if no is automaticly set to s11-01
         checkingIfHasFavoriteGroup()
@@ -57,28 +59,31 @@ class WelcomeScreenController: UIViewController {
         }
         
         changeLabel(number: 2)
+
+        //Getting data from web
         
-        _ = Groups(URLAdresses: AllURLs.fullTimeGroups, groupsStartsWith: "S", completionHandler: { (tempArray) in
+        _=Groups(URLAdresses: AllURLs.fullTimeGroups, groupsStartsWith: "S", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "groupsList") // sending list of all groups to UserDefaults
             
-            _=DownloadCSV(completionHandler: {
-                
-                SendNoticeBoardsToRealm(urls: [AllURLs.fullTimeNoticeBoardsUrl["1 stopień"]!,AllURLs.fullTimeNoticeBoardsUrl["2 stopień"]!], FullTimeOrPartTime: "FullTime", completionHandler: {
-                    
-                    SendLecturersToRealm(completionHandler: {
-                        self.initCompleted()
-                    }).sendToRealm()
-                    
-                }).sendToRealm()
-                
-            }, groupsArray: tempArray)
+            _=DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
         })
+        
+        SendNoticeBoardsToRealm(urls:  [AllURLs.fullTimeNoticeBoardsUrl["1 stopień"]!,AllURLs.fullTimeNoticeBoardsUrl["2 stopień"]!] , FullTimeOrPartTime: "FullTime", completionHandler: initCompleted).sendToRealm()
+        
+        SendLecturersToRealm(completionHandler: initCompleted).sendToRealm()
+        
+        //-----------------------
+        
     }
     
-    //performing segue after getting both Groups and Classes data:
+    //performing segue after checking if all things is downloaded
     func initCompleted(){
-        userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshFullTime")
-        performSegue(withIdentifier: "initialSegue", sender: self)
+        loop+=1
+        if loop==3{
+            userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshFullTime")
+            performSegue(withIdentifier: "initialSegue", sender: self)
+        }
+
     }
     
     

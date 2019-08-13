@@ -46,7 +46,7 @@ class DownloadCSV{
     //Przesyłanie danych jednej grupy do bazy danych w Realm
     private func sendDataToDatabase(temp:[ClassesArray]){
         let realm = try! Realm()
-        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
+//        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
         for x in 0...temp.count-1{
             
             let db = TimeTablesDataBase()

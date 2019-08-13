@@ -60,6 +60,7 @@ class ParseCSV{
                 
                 //appending array only with first two weeks of classes
                 if datePlus14Days.contains(currentDate){
+                    print("TimeTables Downloaded Successfully")
                     completionHandler(classesArray)
                     break
                 }
@@ -78,7 +79,6 @@ class ParseCSV{
         } catch {
             print(error.localizedDescription)
         }
-//        completionHandler(classesArray)
     }
     
 }

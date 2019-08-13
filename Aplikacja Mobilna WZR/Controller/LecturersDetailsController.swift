@@ -11,8 +11,8 @@ import UIKit
 class LecturersDetailsController: UIViewController {
 
     //Variables:
-    var titles:[String] = ["Imię i Nazwisko:","E-mail:","Informacje:"]
-    var detailsArray:[String?] = []
+    var titles:[String] = ["Imię i Nazwisko:","E-mail:","Informacje:"] //titles for cells in table view
+    var detailsArray:[String?] = [] //array of name, email and info 
     
     //IBOutlets
     @IBOutlet weak var lecturersInfoTableView: UITableView!
