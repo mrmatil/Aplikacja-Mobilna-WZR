@@ -34,10 +34,10 @@ IOS App for students and lecturers from Faculty of Management of the University 
   Lecturers TimeTable views for Full time and Part time students
 </p>
 
-![Aplikacja-Mobilna-WZR](https://qmxh3q.bl.files.1drv.com/y4mow5CdPAplaOOYV-EhFlTOuCvKTtD9B0GtQlVfQ4G8dAKo7Oc1ytfmhogXVPnwj_tQZbduY0YKw0mIXoKIE0awfs4RIWV1rr6lk1iOgFS2pTAD3uK1fU_Q1fXC0SUEjest8twG3-coJAwAsB_H8_QTAjoExOKdA-nJt6l_StIakHXVv3jKwiwBGmj2LKYzuQcTR54IsbTrplLLzfDFsiKuQ?width=414&height=896&cropmode=none) ![Aplikacja-Mobilna-WZR](https://q2xa3q.bl.files.1drv.com/y4m3mNVT-mvf5DASnzSlrsF6oPGyMqsmr2aDmiL793ADnnOW0EcbD_E58r4ooBY5CsRL8RmUUuHwKdetfIIEHoI8gC3vSmoQvCghyXC3GVcPiC9O0JQX3zLbBlhtfguOp7MtfA9ZE0RM_E9_XNp6T1wE2DKWpqrYwu7HJhj_RT9UfDbK6mhmjlaQCy9iPzlXMVTRN0JWKSafyxl-p1Zon4kpQ?width=414&height=896&cropmode=none)
+![Aplikacja-Mobilna-WZR](https://qmxb3q.bl.files.1drv.com/y4mcljXhZWP-hKOCPNxMVY1HG41m9lnrXhHhI-tTvvJKi_fZLb-hNPzHc3qZYGJYWKOxEwSBdtrlWIOnWNwLXFZcj-RF0Nzf6dyY6TrTrRtk7RYaehkKhTtJwcSPHiNpiDvE-Mi3UcwelB_uReV0pu9dQY4RDPBF0D7Moas5iHApVWMzpmSPWgHSZb_Jfc2NVLQzrenZDRuikSQpbGRMQChuw?width=414&height=896&cropmode=none) ![Aplikacja-Mobilna-WZR](https://qmxc3q.bl.files.1drv.com/y4mM--FNsFoTfYYW4JzfxSgIaWuuAh9VZ6o1zZhA-kqxbjYwshk-8bdzYrS52VKP9vKwWUZMLFsbyPDOXtiY2oC6iU89FneVGAQcGycnwCnmJjUpVyi71YilY_n-Wlq6RppReWsNnwW0yUsvto03ybzSxIjVQObXzE6K7y1zyBJPUeCAzrqWRL8nQlwj8D9CRVvj6FyGOZ_9tMx1lBS0qt6QA?width=414&height=896&cropmode=none)
 
 <p align="center">
-  News from wzr.pl for Full Time Students 
+  News from wzr.pl for Full Time Students and Lecturers Detailed view for both Full Time and Part Time students
 </p>
 
-![Aplikacja-Mobilna-WZR](https://qmxe3q.bl.files.1drv.com/y4mhOYTkOdaxV1ARR1tKJNgWdtVSKD095Eg2G48sJp1xHZ4OJmyBQaUjMMYjd6ctTnTexP6m8fxXZcblBORvo9QwnLPR-EPKw2RRdqRFqB87_ENgRR50FlSUtLWFvmriMfqiUTL0-g-Ok8nRYX23SBtopxmDSnM8WzWVNLaSc6TqAqR4GBIXHE1yHozluiuBFoVPwjq71GOkgxLD653cSFhUQ?width=414&height=896&cropmode=none)
+![Aplikacja-Mobilna-WZR](https://qmxe3q.bl.files.1drv.com/y4mhOYTkOdaxV1ARR1tKJNgWdtVSKD095Eg2G48sJp1xHZ4OJmyBQaUjMMYjd6ctTnTexP6m8fxXZcblBORvo9QwnLPR-EPKw2RRdqRFqB87_ENgRR50FlSUtLWFvmriMfqiUTL0-g-Ok8nRYX23SBtopxmDSnM8WzWVNLaSc6TqAqR4GBIXHE1yHozluiuBFoVPwjq71GOkgxLD653cSFhUQ?width=414&height=896&cropmode=none) ![Aplikacja-Mobilna-WZR](https://qmxd3q.bl.files.1drv.com/y4mM5FXHjNKX-f3ib4j5DGyy8yjtwRVsHA2ifqKNTYJeL4zsgKL9diV6iR5QWDCGy-Iartknq7nJ2yueNTJIpCQNbcsYQLoFt99UvpH3oCQjd-GwpItWFHwnaEAIKYcoPouLJdmaXFRq4rzTg3BfaSNZjvkMVhzsYxHZQhZjPFpwhWedtuh-5_JJggXEedvLZ6vYbxIkYjo6oXLaSyyF9pRQw?width=414&height=896&cropmode=none)
