@@ -6,7 +6,7 @@ IOS App for students and lecturers from Faculty of Management of the University 
 ## Features:
 * Browse timetables, that are downloaded and stored locally on the device,
 * Your choices are saved (for ex. last viewed group are also saved, so next time user will launch app, he will see his last picked group by default) 
-* Browse lecturer's timetables (also stored locally)
+* Browse lecturer's timetables, tutorship hours and emails (also stored locally)
 * check last news from website (also stored locally)
 * supports timetables for both Full Time and Part Time Students
 
