@@ -124,11 +124,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fQc-Fu-omt" userLabel="Upper Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fQc-Fu-omt" userLabel="Upper Stack View">
                                 <rect key="frame" x="10" y="49" width="394" height="30"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sy-FE-whw">
+                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="30"/>
+                                        <state key="normal" image="info"/>
+                                        <connections>
+                                            <action selector="detailsButtonPressed:" destination="Gnl-vq-iI6" eventType="touchUpInside" id="OOM-Is-tZK"/>
+                                        </connections>
+                                    </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="37L-N6-lM8">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="31"/>
+                                        <rect key="frame" x="61.5" y="0.0" width="332.5" height="31"/>
                                         <segments>
                                             <segment title="Tydzień I"/>
                                             <segment title="Tydzień II"/>
@@ -223,6 +230,7 @@
                         <outlet property="lecturersTableView" destination="TMS-u2-iVH" id="6jl-ip-qsW"/>
                         <outlet property="searchTextField" destination="m9o-Vl-o14" id="Pva-B9-d1K"/>
                         <outlet property="weekPicker" destination="37L-N6-lM8" id="4TX-La-lMZ"/>
+                        <segue destination="iLu-8P-2yf" kind="show" identifier="FTLecturersDetails" id="JYo-l7-XTT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uy9-b3-nTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -339,6 +347,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5P-Kq-M4C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-170" y="390"/>
+        </scene>
+        <!--Szczegóły-->
+        <scene sceneID="Su3-jT-fCR">
+            <objects>
+                <viewController id="iLu-8P-2yf" customClass="LecturersDetailsController" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VCI-8l-Yjo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ldl-4f-Wgv">
+                                <rect key="frame" x="0.0" y="73.5" width="414" height="788.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Szczegóły" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvR-Kd-TEM">
+                                <rect key="frame" x="158.5" y="44" width="97" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyP-j3-9VK">
+                                <rect key="frame" x="10" y="43.5" width="25" height="25"/>
+                                <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="iLu-8P-2yf" eventType="touchUpInside" id="hwt-v1-3b5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ldl-4f-Wgv" firstAttribute="leading" secondItem="5UT-1X-UkD" secondAttribute="leading" id="7rw-NX-k7f"/>
+                            <constraint firstItem="ldl-4f-Wgv" firstAttribute="trailing" secondItem="5UT-1X-UkD" secondAttribute="trailing" id="9a7-Gy-oeU"/>
+                            <constraint firstItem="hvR-Kd-TEM" firstAttribute="centerY" secondItem="ZyP-j3-9VK" secondAttribute="centerY" id="G5d-OC-GlT"/>
+                            <constraint firstItem="ldl-4f-Wgv" firstAttribute="bottom" secondItem="5UT-1X-UkD" secondAttribute="bottom" id="M5c-Ya-9RH"/>
+                            <constraint firstItem="hvR-Kd-TEM" firstAttribute="top" secondItem="5UT-1X-UkD" secondAttribute="top" id="S2H-Fc-fz4"/>
+                            <constraint firstItem="ldl-4f-Wgv" firstAttribute="top" secondItem="ZyP-j3-9VK" secondAttribute="bottom" constant="5" id="b4t-lH-cLG"/>
+                            <constraint firstItem="hvR-Kd-TEM" firstAttribute="centerX" secondItem="VCI-8l-Yjo" secondAttribute="centerX" id="oji-0y-JGw"/>
+                            <constraint firstItem="ZyP-j3-9VK" firstAttribute="leading" secondItem="5UT-1X-UkD" secondAttribute="leading" constant="10" id="tFc-yP-BoD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5UT-1X-UkD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Szczegóły" id="NTk-oZ-fga">
+                        <barButtonItem key="leftBarButtonItem" title="Powrót" id="2d4-q0-gyS">
+                            <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lecturersInfoTableView" destination="ldl-4f-Wgv" id="HDR-rF-orN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxg-zN-crT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689.8550724637682" y="1110.9375"/>
         </scene>
         <!--InitialViewController-->
         <scene sceneID="x6h-xV-23K">
@@ -594,8 +655,18 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Wqt-h9-PJU" userLabel="Upper Stack View">
                                 <rect key="frame" x="10" y="54" width="394" height="30"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYd-kB-Bm0">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Cow-IL-BF5"/>
+                                        </constraints>
+                                        <state key="normal" image="info"/>
+                                        <connections>
+                                            <action selector="detailsButtonPressed:" destination="eiA-aK-Nir" eventType="touchUpInside" id="DZu-B3-NpD"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Data" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-aN-QY2">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
+                                        <rect key="frame" x="60" y="0.0" width="334" height="30"/>
                                         <color key="textColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -659,6 +730,7 @@
                         <outlet property="dateTextField" destination="nKy-aN-QY2" id="3oR-hZ-2kQ"/>
                         <outlet property="lecturerTextField" destination="o6Z-3B-Wy3" id="SjB-Gg-b8I"/>
                         <outlet property="lecturersTableView" destination="BAA-Gb-JOB" id="sTc-03-1S3"/>
+                        <segue destination="iLu-8P-2yf" kind="show" identifier="PTLecturersDetails" id="zet-SD-Dsh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxx-Gd-Vjl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -668,8 +740,13 @@
     </scenes>
     <resources>
         <image name="Refresh" width="25" height="25"/>
+        <image name="back" width="25" height="25"/>
+        <image name="info" width="25" height="25"/>
         <image name="lecturer" width="25" height="25"/>
         <image name="news" width="25" height="25"/>
         <image name="timetable" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="zet-SD-Dsh"/>
+    </inferredMetricsTieBreakers>
 </document>

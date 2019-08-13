@@ -13,7 +13,11 @@ class LecturersPartTimeViewController: UIViewController {
     //variables
     var datesArray = [String]()
     var chosenLecturer:String = ""
+    var chosenLecturerEmail:String = ""
+    var chosenLecturerInfo:String = ""
     var tempLecturer:String = ""
+    var tempLecturerEmail:String = ""
+    var tempLecturerInfo:String = ""
     var date:String=""
     var tempDate:String=""
     
@@ -45,9 +49,15 @@ class LecturersPartTimeViewController: UIViewController {
     //IBActions
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         chosenLecturer=tempLecturer
+        chosenLecturerEmail=tempLecturerEmail
+        chosenLecturerInfo=tempLecturerInfo
         getCurrentLecturersData{}
         updateUI()
         endEditing()
+    }
+    
+    @IBAction func detailsButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "PTLecturersDetails", sender: self)
     }
 
     
@@ -60,6 +70,15 @@ class LecturersPartTimeViewController: UIViewController {
             self.addLeftRight()
         }
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PTLecturersDetails"{
+            let vc = segue.destination as! LecturersDetailsController
+            vc.detailsArray.append(chosenLecturer)
+            vc.detailsArray.append(chosenLecturerEmail)
+            vc.detailsArray.append(chosenLecturerInfo)
+        }
     }
     
     
@@ -75,6 +94,8 @@ class LecturersPartTimeViewController: UIViewController {
             }
         }
         chosenLecturer=lecturersNames[0]
+        chosenLecturerEmail=emails[0]
+        chosenLecturerInfo=info[0]
         lecturerTextField.text=chosenLecturer
         enableLecturersPickerView()
     }
@@ -230,6 +251,8 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView == lecturersPickerView{
             tempLecturer = lecturersNames[row]
+            tempLecturerEmail = emails[row]
+            tempLecturerInfo = info[row]
         }else{
             tempDate=datesArray[row]
         }

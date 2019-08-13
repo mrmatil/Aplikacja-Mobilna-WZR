@@ -12,6 +12,8 @@ class LecturersTimeTableController: UIViewController {
 
     //variables:
     var chosenLecturer:String = ""
+    var chosenLecturerEmail:String = ""
+    var chosenLecturerInfo:String = ""
     var week:Int = 1 // 1 -> pierwszy tydzień, 2 -> drugi tydzień
     var day: String =  "poniedziałek"
     
@@ -71,6 +73,11 @@ class LecturersTimeTableController: UIViewController {
         lecturersTableView.reloadData()
     }
     
+    @IBAction func detailsButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "FTLecturersDetails", sender: self)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getLecturersListAndInfo()
@@ -80,6 +87,15 @@ class LecturersTimeTableController: UIViewController {
         }
         addLeftRight()
         // Do any additional setup after loading the view.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "FTLecturersDetails"{
+            let vc = segue.destination as! LecturersDetailsController
+            vc.detailsArray.append(chosenLecturer)
+            vc.detailsArray.append(chosenLecturerEmail)
+            vc.detailsArray.append(chosenLecturerInfo)
+        }
     }
     
     func getLecturersListAndInfo(){
@@ -172,6 +188,8 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
         //for showing first lecturer from array default:
         searchTextField.text=lecturersNames[0]
         chosenLecturer=lecturersNames[0]
+        chosenLecturerEmail=emails[0]
+        chosenLecturerInfo=info[0]
     }
     
     
@@ -189,6 +207,8 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         chosenLecturer = lecturersNames[row]
+        chosenLecturerEmail = emails[row]
+        chosenLecturerInfo = info[row]
         searchTextField.text = chosenLecturer
     }
     
