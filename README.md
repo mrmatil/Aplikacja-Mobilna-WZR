@@ -28,13 +28,13 @@ IOS App for students and lecturers from Faculty of Management of the University 
   TimeTable views for Full time and Part time students
 </p>
 
-![Aplikacja-Mobilna WZR](https://q2xp3q.bl.files.1drv.com/y4mToKmA9EQRMADGBS0U2trvwwdRAL9di33_CycvoVJTrhBnPjyDyaMCu2LqlEg6fcE94VDUrwUIR8nOFSvl8lRgX5DZRKhTyJGdXOz4im5FCFyE7xhQ5FRTgRQEZB0UPLhMNn4Kq9pWHV8ceEQ8379KujtOUl3FeSPraAvrEwK1rypyOXOEDeu7zVgZddnURHmnsixV_N9FJqT9s1GbaLTQA?width=414&height=896&cropmode=none) ![Aplikacja-Mobilna-WZR](https://qmxg3q.bl.files.1drv.com/y4mYcOvKbVQ1YIOECxc2W8C987eOA1eKzwEQyGmVeXUn6IYnoqxyaXQoiwqMQTjbbHgP6Za9-64dFzy0FmzwwSZarlcAnUxWX_9t9ZUJG4kjhh4GXpDfwVZrcxn0KmBBibNSsHmpI6Ab81lHrH27eEFERxhFylCQZkH2NhNbZ9QPiPSeqzN-s21UPvHrtg73nOYNwAeS1HwcUS_1G29i7Yy7Q?width=414&height=896&cropmode=none)
+![Aplikacja-Mobilna WZR](https://qmxo3q.bl.files.1drv.com/y4mtkseXn2xlGhpZNcz__8C27Sr28khmsXp4HIuPj91wsayu8nq0ihvomeJs75IJdtqydfSmjiteEdZwUFNiqDFP0qLtWSEboNFx8JN1H7LislkqvpHeGUhRXZ5pNOvantC2gjQjvKcRTM0xkTFsK3Pw3ii0AIxKTN9eccytzzGgN-7Mn6ZGFompZAojQamTiIC5qA-U3RjgVOmAU1G3WI-ow?width=414&height=896&cropmode=none) ![Aplikacja-Mobilna-WZR](https://qmxg3q.bl.files.1drv.com/y4mYcOvKbVQ1YIOECxc2W8C987eOA1eKzwEQyGmVeXUn6IYnoqxyaXQoiwqMQTjbbHgP6Za9-64dFzy0FmzwwSZarlcAnUxWX_9t9ZUJG4kjhh4GXpDfwVZrcxn0KmBBibNSsHmpI6Ab81lHrH27eEFERxhFylCQZkH2NhNbZ9QPiPSeqzN-s21UPvHrtg73nOYNwAeS1HwcUS_1G29i7Yy7Q?width=414&height=896&cropmode=none)
 
 <p align="center">
   Lecturers TimeTable views for Full time and Part time students
 </p>
 
-![Aplikacja-Mobilna-WZR](https://qmxb3q.bl.files.1drv.com/y4mcljXhZWP-hKOCPNxMVY1HG41m9lnrXhHhI-tTvvJKi_fZLb-hNPzHc3qZYGJYWKOxEwSBdtrlWIOnWNwLXFZcj-RF0Nzf6dyY6TrTrRtk7RYaehkKhTtJwcSPHiNpiDvE-Mi3UcwelB_uReV0pu9dQY4RDPBF0D7Moas5iHApVWMzpmSPWgHSZb_Jfc2NVLQzrenZDRuikSQpbGRMQChuw?width=414&height=896&cropmode=none) ![Aplikacja-Mobilna-WZR](https://qmxc3q.bl.files.1drv.com/y4mM--FNsFoTfYYW4JzfxSgIaWuuAh9VZ6o1zZhA-kqxbjYwshk-8bdzYrS52VKP9vKwWUZMLFsbyPDOXtiY2oC6iU89FneVGAQcGycnwCnmJjUpVyi71YilY_n-Wlq6RppReWsNnwW0yUsvto03ybzSxIjVQObXzE6K7y1zyBJPUeCAzrqWRL8nQlwj8D9CRVvj6FyGOZ_9tMx1lBS0qt6QA?width=414&height=896&cropmode=none)
+![Aplikacja-Mobilna-WZR](https://qmxp3q.bl.files.1drv.com/y4mAyXRqqfZlYe44A5ZxB11HXgw-ieC3wPOGeDYkoogxBI2hDnP_A2SPzHkJLApAUXU2LsQAcK8GoNM8zlBB7DvxZp_D3_fM1dSiQgCI8ANSHKHidVERVrkQc78R1gbS7_Vp4V7QyjV7HEf53a8ZIpE1evOXw88GwTcDflyPVwcb6kP-RGREl9ikGcPJuUNhn7y1yG_SZndYueBmK4til7s5w?width=414&height=896&cropmode=none) ![Aplikacja-Mobilna-WZR](https://qmxc3q.bl.files.1drv.com/y4mM--FNsFoTfYYW4JzfxSgIaWuuAh9VZ6o1zZhA-kqxbjYwshk-8bdzYrS52VKP9vKwWUZMLFsbyPDOXtiY2oC6iU89FneVGAQcGycnwCnmJjUpVyi71YilY_n-Wlq6RppReWsNnwW0yUsvto03ybzSxIjVQObXzE6K7y1zyBJPUeCAzrqWRL8nQlwj8D9CRVvj6FyGOZ_9tMx1lBS0qt6QA?width=414&height=896&cropmode=none)
 
 <p align="center">
   News from wzr.pl for Full Time Students and Lecturers Detailed view for both Full Time and Part Time students
