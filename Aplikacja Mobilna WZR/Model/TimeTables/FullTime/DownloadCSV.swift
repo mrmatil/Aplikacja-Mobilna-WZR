@@ -47,17 +47,22 @@ class DownloadCSV{
     private func sendDataToDatabase(temp:[ClassesArray]){
         let realm = try! Realm()
 //        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
-        for x in 0...temp.count-1{
+        
+        //removing duplicates from classes array -> if two next lessons are the same and have no break between them it merges it into one lesson
+        let data = RemoveDuplicates.removeFT(data: temp)
+        
+        
+        for x in 0...data.count-1{
             
             let db = TimeTablesDataBase()
-            db.group=temp[x].group
-            db.className=temp[x].className
-            db.lecturer=temp[x].lecturer
-            db.startHour=temp[x].startHour
-            db.endHour=temp[x].endHour
-            db.classroom=temp[x].classroom
-            db.typeOfWeek=temp[x].typeOfWeek
-            db.nameOfTheDay=temp[x].nameOfTheDay
+            db.group=data[x].group
+            db.className=data[x].className
+            db.lecturer=data[x].lecturer
+            db.startHour=data[x].startHour
+            db.endHour=data[x].endHour
+            db.classroom=data[x].classroom
+            db.typeOfWeek=data[x].typeOfWeek
+            db.nameOfTheDay=data[x].nameOfTheDay
             
             try! realm.write {
                 realm.add(db)
