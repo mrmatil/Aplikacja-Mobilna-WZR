@@ -16,6 +16,7 @@ class LecturersTimeTableController: UIViewController {
     var chosenLecturerInfo:String = ""
     var week:Int = 1 // 1 -> pierwszy tydzień, 2 -> drugi tydzień
     var day: String =  "poniedziałek"
+    let userDefaults = UserDefaults()
     
     //Realm Timetable variables:
     var startHour = [String]()
@@ -38,6 +39,7 @@ class LecturersTimeTableController: UIViewController {
     @IBOutlet weak var lecturersTableView: UITableView!
     @IBOutlet weak var weekPicker: UISegmentedControl!
     @IBOutlet weak var dayPicker: UISegmentedControl!
+    @IBOutlet weak var lastRefreshLabel: UILabel!
     
     
     //UIActions:
@@ -77,6 +79,12 @@ class LecturersTimeTableController: UIViewController {
         performSegue(withIdentifier: "FTLecturersDetails", sender: self)
     }
     
+    @IBAction func refreshButtonPressed(_ sender: UIButton) {
+        userDefaults.removeObject(forKey: "isNeededToReloadFullTime")
+        print("pop to refresh")
+        self.view.window?.rootViewController?.presentedViewController!.dismiss(animated: true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +96,7 @@ class LecturersTimeTableController: UIViewController {
             }
         }
         addLeftRight()
+        refreshLastDate()
         // Do any additional setup after loading the view.
     }
     
@@ -130,6 +139,15 @@ class LecturersTimeTableController: UIViewController {
             }
             completionHandler()
         }.getDataLecturers()
+    }
+    
+    //refreshes label with last refresh date
+    func refreshLastDate(){
+        guard let temp = userDefaults.string(forKey: "dateOfLastRefreshFullTime") else {
+            lastRefreshLabel.text = "Nigdy nie odświeżono"
+            return
+        }
+        lastRefreshLabel.text = "Dane z dnia: \(temp)"
     }
 
     

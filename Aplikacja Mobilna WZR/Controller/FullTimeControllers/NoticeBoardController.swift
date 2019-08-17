@@ -15,9 +15,11 @@ class NoticeBoardController: UIViewController {
     var level:Int=1
     var titles = [String]()
     var content = [String]()
+    let userDefaults = UserDefaults()
     
     //IBOutlets:
     @IBOutlet weak var noticeBoardTableView: UITableView!
+    @IBOutlet weak var lastRefreshLabel: UILabel!
     
     
     
@@ -31,10 +33,14 @@ class NoticeBoardController: UIViewController {
             level=2
             getNoticeBoardDataFromRealm{}
             noticeBoardTableView.reloadData()
-            print("dupa")
         }
     }
     
+    @IBAction func refreshButtonPressed(_ sender: UIButton) {
+        userDefaults.removeObject(forKey: "isNeededToReloadFullTime")
+        print("pop to refresh")
+        self.view.window?.rootViewController?.presentedViewController!.dismiss(animated: true, completion: nil)
+    }
     
     
     override func viewDidLoad() {
@@ -42,6 +48,7 @@ class NoticeBoardController: UIViewController {
         getNoticeBoardDataFromRealm {
             self.enableTableView()
         }
+        refreshLastDate()
         // Do any additional setup after loading the view.
     }
     
@@ -61,6 +68,14 @@ class NoticeBoardController: UIViewController {
             }
         }.getNoticeBoardsData()
         
+    }
+    
+    func refreshLastDate(){
+        guard let temp = userDefaults.string(forKey: "dateOfLastRefreshFullTime") else {
+            lastRefreshLabel.text = "Nigdy nie odświeżono"
+            return
+        }
+        lastRefreshLabel.text = "Dane z dnia: \(temp)"
     }
 
 }
