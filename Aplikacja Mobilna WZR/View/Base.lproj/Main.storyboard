@@ -124,20 +124,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fQc-Fu-omt" userLabel="Upper Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fQc-Fu-omt" userLabel="Upper Stack View">
                                 <rect key="frame" x="10" y="49" width="394" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Hf-AB-qHu">
-                                        <rect key="frame" x="0.0" y="0.0" width="48" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="30"/>
                                         <state key="normal" image="Refresh">
                                             <color key="titleColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="refreshButtonPressed:" destination="Gnl-vq-iI6" eventType="touchUpInside" id="qnn-SO-sO7"/>
+                                            <action selector="refreshButtonPressed:" destination="Gnl-vq-iI6" eventType="touchUpInside" id="q7f-8M-OnZ"/>
                                         </connections>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="37L-N6-lM8">
-                                        <rect key="frame" x="53" y="0.0" width="278.5" height="31"/>
+                                        <rect key="frame" x="62" y="0.0" width="243" height="31"/>
                                         <segments>
                                             <segment title="Tydzień I"/>
                                             <segment title="Tydzień II"/>
@@ -148,7 +148,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Sy-FE-whw" userLabel="info Button ">
-                                        <rect key="frame" x="336.5" y="0.0" width="57.5" height="30"/>
+                                        <rect key="frame" x="325" y="0.0" width="69" height="30"/>
                                         <state key="normal" image="info"/>
                                         <connections>
                                             <action selector="detailsButtonPressed:" destination="Gnl-vq-iI6" eventType="touchUpInside" id="OOM-Is-tZK"/>
@@ -267,11 +267,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="YLR-8F-5LG">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YLR-8F-5LG">
                                 <rect key="frame" x="10" y="49" width="394" height="28"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kg2-m6-NDx">
-                                        <rect key="frame" x="0.0" y="0.0" width="58.5" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="28"/>
                                         <state key="normal" image="Refresh">
                                             <color key="titleColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -280,7 +280,7 @@
                                         </connections>
                                     </button>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vsd-KX-3YC">
-                                        <rect key="frame" x="58.5" y="0.0" width="335.5" height="29"/>
+                                        <rect key="frame" x="72.5" y="0.0" width="321.5" height="29"/>
                                         <segments>
                                             <segment title="I Stopień"/>
                                             <segment title="II Stopień"/>

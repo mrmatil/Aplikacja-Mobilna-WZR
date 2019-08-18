@@ -13,4 +13,5 @@ class LecturersDataBase:Object{
     @objc dynamic var name:String?
     @objc dynamic var email:String?
     @objc dynamic var info:String?
+    @objc dynamic var website:String?
 }

@@ -12,4 +12,5 @@ struct LecturersArray{
     var name:String
     var email:String
     var info:String
+    var website:String
 }

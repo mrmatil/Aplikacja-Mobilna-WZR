@@ -58,8 +58,26 @@ class LecturersParser{
 //            print("Info count:" + "\(infoArray.count)")
 //            print(infoArray)
             
+            //Lecturers Websites:
+            var websitesArray = [String]()
+            let basicWebsite:String = "https://wzr.ug.edu.pl"
+            for website:Element in names.array(){
+                var temp = try website.select("a").attr("href")
+                if temp.hasPrefix(".."){
+                    let x = temp.components(separatedBy: "..")
+                    temp = basicWebsite + x[1]
+                    websitesArray.append(temp)
+                }else{
+                    websitesArray.append(basicWebsite+temp)
+                }
+            }
+//            print("Websites:")
+//            print("Websites count:" + "\(websitesArray.count)")
+//            print(websitesArray)
+            
+            
             var dataArray = [LecturersArray]()
-            if namesArray.count == emailsArray.count && emailsArray.count == infoArray.count && infoArray.count > 0{
+            if namesArray.count == emailsArray.count && emailsArray.count == infoArray.count && infoArray.count == websitesArray.count && infoArray.count > 0{
                 for x in 0...namesArray.count-1{
                     if namesArray[x].contains(","){
                         let oneNameArray = namesArray[x].components(separatedBy: ", ")
@@ -69,7 +87,7 @@ class LecturersParser{
                             namesArray[x] = anotherOneNameArray[0] + "nadz" + anotherOneNameArray[1]
                         }
                     }
-                    let temp = LecturersArray(name: namesArray[x], email: emailsArray[x], info: infoArray[x])
+                    let temp = LecturersArray(name: namesArray[x], email: emailsArray[x], info: infoArray[x],website: websitesArray[x])
                     dataArray.append(temp)
                 }
             }

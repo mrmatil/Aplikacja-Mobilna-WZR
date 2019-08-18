@@ -46,7 +46,7 @@ class DownloadCSV{
     //Przesyłanie danych jednej grupy do bazy danych w Realm
     private func sendDataToDatabase(temp:[ClassesArray]){
         let realm = try! Realm()
-//        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
+        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
         
         //removing duplicates from classes array -> if two next lessons are the same and have no break between them it merges it into one lesson
         let data = RemoveDuplicates.removeFT(data: temp)

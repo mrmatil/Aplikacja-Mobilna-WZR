@@ -28,6 +28,7 @@ class SendLecturersToRealm{
                 db.name=x.name
                 db.email=x.email
                 db.info=x.info
+                db.website=x.website
                 
                 try! realm.write {
                     realm.add(db)
