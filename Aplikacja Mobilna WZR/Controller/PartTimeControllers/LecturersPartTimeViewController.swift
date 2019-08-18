@@ -47,6 +47,7 @@ class LecturersPartTimeViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var lecturerTextField: UITextField!
     @IBOutlet weak var lecturersTableView: UITableView!
+    @IBOutlet weak var lastRefreshDateLabel: UILabel!
     
     
     //IBActions
@@ -64,9 +65,15 @@ class LecturersPartTimeViewController: UIViewController {
         performSegue(withIdentifier: "PTLecturersDetails", sender: self)
     }
 
+    @IBAction func refreshButtonPressed(_ sender: UIButton) {
+        userDefaults.removeObject(forKey: "isNeededToReloadPartTime")
+        print("pop to refresh")
+        self.view.window?.rootViewController?.presentedViewController!.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshLastDate()
         getLecturersArray()
         getDatesArray()
         if datesArray.count>0{
@@ -142,6 +149,14 @@ class LecturersPartTimeViewController: UIViewController {
         dateTextField.text=date
         lecturerTextField.text=chosenLecturer
         lecturersTableView.reloadData()
+    }
+    
+    func refreshLastDate(){
+        guard let temp = userDefaults.string(forKey: "dateOfLastRefreshPartTime") else {
+            lastRefreshDateLabel.text = "Nigdy nie odświeżono"
+            return
+        }
+        lastRefreshDateLabel.text = "Dane z dnia: \(temp)"
     }
     
     //addingGestures:

@@ -15,6 +15,7 @@
 		233760C322FCE53E00056354 /* GesturesUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233760C222FCE53E00056354 /* GesturesUtil.swift */; };
 		233760C622FCE6C900056354 /* GesturesClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233760C522FCE6C900056354 /* GesturesClass.swift */; };
 		233F62892306AEE7007EEA52 /* RemoveDuplicates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233F62882306AEE7007EEA52 /* RemoveDuplicates.swift */; };
+		2341834F2309A6AD001D370B /* NoticeBoardPartTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2341834E2309A6AD001D370B /* NoticeBoardPartTimeController.swift */; };
 		2350A2DF22F4C2850020E7FC /* AllURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2350A2DE22F4C2850020E7FC /* AllURLs.swift */; };
 		2350A2E122F4CB230020E7FC /* WelcomeScreenPartTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2350A2E022F4CB230020E7FC /* WelcomeScreenPartTimeController.swift */; };
 		2350A2E522F4E5D70020E7FC /* TimeTablePartTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2350A2E422F4E5D70020E7FC /* TimeTablePartTimeController.swift */; };
@@ -71,6 +72,7 @@
 		233760C222FCE53E00056354 /* GesturesUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesUtil.swift; sourceTree = "<group>"; };
 		233760C522FCE6C900056354 /* GesturesClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesClass.swift; sourceTree = "<group>"; };
 		233F62882306AEE7007EEA52 /* RemoveDuplicates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveDuplicates.swift; sourceTree = "<group>"; };
+		2341834E2309A6AD001D370B /* NoticeBoardPartTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeBoardPartTimeController.swift; sourceTree = "<group>"; };
 		2350A2DE22F4C2850020E7FC /* AllURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllURLs.swift; sourceTree = "<group>"; };
 		2350A2E022F4CB230020E7FC /* WelcomeScreenPartTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenPartTimeController.swift; sourceTree = "<group>"; };
 		2350A2E422F4E5D70020E7FC /* TimeTablePartTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTablePartTimeController.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				2350A2E022F4CB230020E7FC /* WelcomeScreenPartTimeController.swift */,
 				2350A2E422F4E5D70020E7FC /* TimeTablePartTimeController.swift */,
 				23B368DE22F881E100F58E64 /* LecturersPartTimeViewController.swift */,
+				2341834E2309A6AD001D370B /* NoticeBoardPartTimeController.swift */,
 			);
 			path = PartTimeControllers;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				2360E2E422ECACF100FCF99F /* TimeTableCell.swift in Sources */,
 				2360E2E022EC91BD00FCF99F /* TimeTablesDataBase.swift in Sources */,
 				235665B922FF047E00DAE54A /* LecturersParser.swift in Sources */,
+				2341834F2309A6AD001D370B /* NoticeBoardPartTimeController.swift in Sources */,
 				235665C122FF5E7600DAE54A /* GetDataFromDatabaseLecturers.swift in Sources */,
 				2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */,
 				23242B9B22DE453700C4F132 /* Groups.swift in Sources */,

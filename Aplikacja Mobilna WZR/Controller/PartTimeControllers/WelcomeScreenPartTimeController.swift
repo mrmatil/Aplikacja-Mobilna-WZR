@@ -16,11 +16,13 @@ class WelcomeScreenPartTimeController: UIViewController {
     let userDefaults = UserDefaults()
     let realm = try! Realm()
     let pleaseWaitLabelTexts = ["Trwa sprawdzanie połączenia...","Trwa usuwanie istniejących danych...","Trwa pobieranie danych... \n Może to potrwać kilkanaście sekund",]
+    var loop=0
     @IBOutlet weak var pleaseWaitLabel: UILabel!
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        loop=0
         changeLabel(number: 0)
         checkIfHasFavoriteGroup()
         checkConnection()
@@ -48,21 +50,27 @@ class WelcomeScreenPartTimeController: UIViewController {
         
         changeLabel(number: 2)
         
+        //Getting data from web
+
         _=Groups(URLAdresses: AllURLs.partTimeGroups, groupsStartsWith: "N", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "partTimeGroupsList")
             
-            PartTimeDownloadCSV(groupsArray: tempArray, completionHandler: {
-                
-                SendLecturersToRealm(completionHandler: {
-                    
-                    self.userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshPartTime")
-                    self.performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
-                    
-                }).sendToRealm()
-                
-            }).getCSVDatatoDatabase()
-            
+            PartTimeDownloadCSV(groupsArray: tempArray, completionHandler: self.initCompleted).getCSVDatatoDatabase()
         })
+        
+        SendNoticeBoardsToRealm(urls: [AllURLs.partTimeNoticeBoardsUrl["1 stopień"]!,AllURLs.partTimeNoticeBoardsUrl["2 stopień"]!], FullTimeOrPartTime: "PartTime", completionHandler: initCompleted).sendToRealm()
+        
+        SendLecturersToRealm(completionHandler: initCompleted).sendToRealm()
+        
+        //-------------------------
+    }
+    
+    func initCompleted(){
+        loop+=1
+        if loop==3{
+            userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshPartTime")
+            performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
+        }
         
     }
     

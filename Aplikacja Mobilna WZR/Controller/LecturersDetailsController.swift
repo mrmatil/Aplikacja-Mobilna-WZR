@@ -34,6 +34,7 @@ class LecturersDetailsController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print(detailsArray)
+        print(website)
         enableTableView()
         addSwipeGestures()
     }
