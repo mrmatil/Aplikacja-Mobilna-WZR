@@ -84,6 +84,7 @@ class LecturersPartTimeViewController: UIViewController {
             vc.detailsArray.append(chosenLecturer)
             vc.detailsArray.append(chosenLecturerEmail)
             vc.detailsArray.append(chosenLecturerInfo)
+            vc.website = chosenLecturerWebsite
         }
     }
     

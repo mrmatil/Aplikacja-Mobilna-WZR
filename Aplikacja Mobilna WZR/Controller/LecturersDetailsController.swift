@@ -24,7 +24,7 @@ class LecturersDetailsController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func moreButtonPressed(_ sender: UIButton) {
-        let svc = SFSafariViewController(url: URL(string: website)!)
+        let svc = SFSafariViewController(url: URL(string: website) ?? URL(string: "https://wzr.ug.edu.pl/glowna/")!)
         present(svc, animated: true, completion: nil)
     }
     
@@ -35,8 +35,20 @@ class LecturersDetailsController: UIViewController {
         // Do any additional setup after loading the view.
         print(detailsArray)
         enableTableView()
+        addSwipeGestures()
     }
     
+    //Swipe Gestures:
+    func addSwipeGestures(){
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(actionAfterGesture) )
+        swipeRight.direction = UISwipeGestureRecognizer.Direction.right
+        view.addGestureRecognizer(swipeRight)
+    }
+    
+    @objc func actionAfterGesture(gesture: UIGestureRecognizer){
+        print("Swiped Right")
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }
 
