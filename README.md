@@ -37,7 +37,14 @@ IOS App for students and lecturers from Faculty of Management of the University 
 ![Aplikacja-Mobilna-WZR](https://qmxp3q.bl.files.1drv.com/y4mAyXRqqfZlYe44A5ZxB11HXgw-ieC3wPOGeDYkoogxBI2hDnP_A2SPzHkJLApAUXU2LsQAcK8GoNM8zlBB7DvxZp_D3_fM1dSiQgCI8ANSHKHidVERVrkQc78R1gbS7_Vp4V7QyjV7HEf53a8ZIpE1evOXw88GwTcDflyPVwcb6kP-RGREl9ikGcPJuUNhn7y1yG_SZndYueBmK4til7s5w?width=414&height=896&cropmode=none) ![Aplikacja-Mobilna-WZR](https://qmxc3q.bl.files.1drv.com/y4mM--FNsFoTfYYW4JzfxSgIaWuuAh9VZ6o1zZhA-kqxbjYwshk-8bdzYrS52VKP9vKwWUZMLFsbyPDOXtiY2oC6iU89FneVGAQcGycnwCnmJjUpVyi71YilY_n-Wlq6RppReWsNnwW0yUsvto03ybzSxIjVQObXzE6K7y1zyBJPUeCAzrqWRL8nQlwj8D9CRVvj6FyGOZ_9tMx1lBS0qt6QA?width=414&height=896&cropmode=none)
 
 <p align="center">
-  News from wzr.pl for Full Time Students and Lecturers Detailed view for both Full Time and Part Time students
+  Lecturers Detailed view for both Full Time and Part Time students and safari view for more info directly from website
 </p>
 
-![Aplikacja-Mobilna-WZR](https://qwxh3q.bl.files.1drv.com/y4mLIlr7I00cYT4wBlB-Ay_d8Zb7rcYKQGXD5wJrcdKdeqRxtzJOMhTFiu6LV22AY_GDrdQ7e-2CqSVqp_hk96XJLT82s3jbomVHXDDvN_WBbCjjXwmR2314gwsWaM7OAlTQBWw9V2z7lfhafFjdO6KGzhfaj_ol_mEE79JabXNdCAB77lv7jkzwHFgLCBvh7hlOuyiyN3guPiFuEj_otf4DA?width=414&height=896&cropmode=none) ![Aplikacja-Mobilna-WZR](https://qmxd3q.bl.files.1drv.com/y4mM5FXHjNKX-f3ib4j5DGyy8yjtwRVsHA2ifqKNTYJeL4zsgKL9diV6iR5QWDCGy-Iartknq7nJ2yueNTJIpCQNbcsYQLoFt99UvpH3oCQjd-GwpItWFHwnaEAIKYcoPouLJdmaXFRq4rzTg3BfaSNZjvkMVhzsYxHZQhZjPFpwhWedtuh-5_JJggXEedvLZ6vYbxIkYjo6oXLaSyyF9pRQw?width=414&height=896&cropmode=none)
+![Aplikacja-Mobilna-WZR](https://qwxf3q.bl.files.1drv.com/y4mKFLMrpWrR8afMwABkIUgeGKJ4Pe_S8t8W2sJuwfBqMKP9m0QhIFPfDWI58K3Oe1s7JEP6Al1gFrzLpB1hU6OkiIO9rUzVv-H0bVNbgEEaalSQ5bkRPlEtezY18ZtWBPJCvRaNmGu92CXvtBKvMZxHpM4EhAeCB4VD-IZDq5Pa2_wgCTvN3MB5azoBFeA4ItLrLhmDyAZ0KF50STmY6LNfQ?width=414&height=896&cropmode=none)![Aplikacja-Mobilna-WZR](https://qwxe3q.bl.files.1drv.com/y4mbtE2b82rsS1K319X4SeHzWDLJCMpgUaRoX3Wmt4GEWHM1VAL3FLZ_6XgBLL-Hrqa_hcjJricoMhxT71G0wf6Fu8opeYW4sYNJeKdduMax3cB3-UYV93ONgrDAKs8jt1Tf1ZZ7nxpulVeYwyGlHwff-pbiIeUgnfd-GQ05PL_7Y1vuYbfacTfnW30C0JvzojnlB0Ml9VdBh4iSoZ02pLxsg?width=414&height=896&cropmode=none)
+
+<p align="center">
+  News from wzr.pl for Full Time Students 
+</p>
+
+![Aplikacja-Mobilna-WZR](https://qwxh3q.bl.files.1drv.com/y4mLIlr7I00cYT4wBlB-Ay_d8Zb7rcYKQGXD5wJrcdKdeqRxtzJOMhTFiu6LV22AY_GDrdQ7e-2CqSVqp_hk96XJLT82s3jbomVHXDDvN_WBbCjjXwmR2314gwsWaM7OAlTQBWw9V2z7lfhafFjdO6KGzhfaj_ol_mEE79JabXNdCAB77lv7jkzwHFgLCBvh7hlOuyiyN3guPiFuEj_otf4DA?width=414&height=896&cropmode=none) 
+
