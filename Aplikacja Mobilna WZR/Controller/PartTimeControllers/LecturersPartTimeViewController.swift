@@ -15,9 +15,11 @@ class LecturersPartTimeViewController: UIViewController {
     var chosenLecturer:String = ""
     var chosenLecturerEmail:String = ""
     var chosenLecturerInfo:String = ""
+    var chosenLecturerWebsite:String = ""
     var tempLecturer:String = ""
     var tempLecturerEmail:String = ""
     var tempLecturerInfo:String = ""
+    var tempLecturerWebsite:String = ""
     var date:String=""
     var tempDate:String=""
     
@@ -37,6 +39,7 @@ class LecturersPartTimeViewController: UIViewController {
     var lecturersNames = [String]()
     var emails = [String]()
     var info = [String]()
+    var websites = [String]()
     //-------------------------
     
     
@@ -51,6 +54,7 @@ class LecturersPartTimeViewController: UIViewController {
         chosenLecturer=tempLecturer
         chosenLecturerEmail=tempLecturerEmail
         chosenLecturerInfo=tempLecturerInfo
+        chosenLecturerWebsite=tempLecturerWebsite
         getCurrentLecturersData{}
         updateUI()
         endEditing()
@@ -93,10 +97,12 @@ class LecturersPartTimeViewController: UIViewController {
                 lecturersNames.append(temp[x].name!)
                 emails.append(temp[x].email!)
                 info.append(temp[x].info!)
+                websites.append(temp[x].website!)
             }
             chosenLecturer=lecturersNames[0]
             chosenLecturerEmail=emails[0]
             chosenLecturerInfo=info[0]
+            chosenLecturerWebsite=websites[0]
             lecturerTextField.text=chosenLecturer
             enableLecturersPickerView()
         }
@@ -256,6 +262,7 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
             tempLecturer = lecturersNames[row]
             tempLecturerEmail = emails[row]
             tempLecturerInfo = info[row]
+            tempLecturerWebsite = websites[row]
         }else{
             tempDate=datesArray[row]
         }

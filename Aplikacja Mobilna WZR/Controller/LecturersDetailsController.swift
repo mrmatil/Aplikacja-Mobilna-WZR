@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import SafariServices
 
 class LecturersDetailsController: UIViewController {
 
     //Variables:
     var titles:[String] = ["Imię i Nazwisko:","E-mail:","Informacje:"] //titles for cells in table view
-    var detailsArray:[String?] = [] //array of name, email and info 
+    var detailsArray:[String?] = [] //array of name, email and info
+    var website:String = ""
     
     //IBOutlets
     @IBOutlet weak var lecturersInfoTableView: UITableView!
@@ -20,6 +22,10 @@ class LecturersDetailsController: UIViewController {
     //IBFunctions
     @IBAction func backButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func moreButtonPressed(_ sender: UIButton) {
+        let svc = SFSafariViewController(url: URL(string: website)!)
+        present(svc, animated: true, completion: nil)
     }
     
     

@@ -420,6 +420,22 @@
                                     <action selector="backButtonPressed:" destination="iLu-8P-2yf" eventType="touchUpInside" id="hwt-v1-3b5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H20-5g-EBI">
+                                <rect key="frame" x="357" y="41" width="47" height="30"/>
+                                <color key="backgroundColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Więcej">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moreButtonPressed:" destination="iLu-8P-2yf" eventType="touchUpInside" id="ubh-zK-fES"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -429,7 +445,9 @@
                             <constraint firstItem="ldl-4f-Wgv" firstAttribute="bottom" secondItem="5UT-1X-UkD" secondAttribute="bottom" id="M5c-Ya-9RH"/>
                             <constraint firstItem="hvR-Kd-TEM" firstAttribute="top" secondItem="5UT-1X-UkD" secondAttribute="top" id="S2H-Fc-fz4"/>
                             <constraint firstItem="ldl-4f-Wgv" firstAttribute="top" secondItem="ZyP-j3-9VK" secondAttribute="bottom" constant="5" id="b4t-lH-cLG"/>
+                            <constraint firstItem="H20-5g-EBI" firstAttribute="centerY" secondItem="hvR-Kd-TEM" secondAttribute="centerY" id="jbO-79-GgD"/>
                             <constraint firstItem="hvR-Kd-TEM" firstAttribute="centerX" secondItem="VCI-8l-Yjo" secondAttribute="centerX" id="oji-0y-JGw"/>
+                            <constraint firstItem="5UT-1X-UkD" firstAttribute="trailing" secondItem="H20-5g-EBI" secondAttribute="trailing" constant="10" id="rnK-Ly-fEU"/>
                             <constraint firstItem="ZyP-j3-9VK" firstAttribute="leading" secondItem="5UT-1X-UkD" secondAttribute="leading" constant="10" id="tFc-yP-BoD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5UT-1X-UkD"/>

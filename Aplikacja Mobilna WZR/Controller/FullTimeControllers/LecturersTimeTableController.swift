@@ -14,6 +14,7 @@ class LecturersTimeTableController: UIViewController {
     var chosenLecturer:String = ""
     var chosenLecturerEmail:String = ""
     var chosenLecturerInfo:String = ""
+    var chosenLecturerWebsite:String = ""
     var week:Int = 1 // 1 -> pierwszy tydzień, 2 -> drugi tydzień
     var day: String =  "poniedziałek"
     let userDefaults = UserDefaults()
@@ -30,6 +31,7 @@ class LecturersTimeTableController: UIViewController {
     var lecturersNames = [String]()
     var emails = [String]()
     var info = [String]()
+    var websites = [String]()
     //-------------------------
     
     
@@ -106,6 +108,7 @@ class LecturersTimeTableController: UIViewController {
             vc.detailsArray.append(chosenLecturer)
             vc.detailsArray.append(chosenLecturerEmail)
             vc.detailsArray.append(chosenLecturerInfo)
+            vc.website = chosenLecturerWebsite
         }
     }
     
@@ -116,6 +119,7 @@ class LecturersTimeTableController: UIViewController {
                 lecturersNames.append(temp[x].name!)
                 emails.append(temp[x].email!)
                 info.append(temp[x].info!)
+                websites.append(temp[x].website!)
             }
         }
     }
@@ -211,6 +215,7 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
         chosenLecturer=lecturersNames[0]
         chosenLecturerEmail=emails[0]
         chosenLecturerInfo=info[0]
+        chosenLecturerWebsite = websites[0]
     }
     
     
@@ -230,6 +235,7 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
         chosenLecturer = lecturersNames[row]
         chosenLecturerEmail = emails[row]
         chosenLecturerInfo = info[row]
+        chosenLecturerWebsite = websites[row]
         searchTextField.text = chosenLecturer
     }
     
