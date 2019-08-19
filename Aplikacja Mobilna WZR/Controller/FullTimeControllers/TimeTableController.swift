@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import BetterSegmentedControl
 
 class TimeTableController: UIViewController {
 
@@ -24,7 +25,7 @@ class TimeTableController: UIViewController {
     var lecturer = [String]()
     var classroom = [String]()
 
-    //po załadowaniu się widoku:
+
     override func viewDidLoad() {
         super.viewDidLoad()
         getGroupsData()
@@ -32,10 +33,12 @@ class TimeTableController: UIViewController {
             self.enableTableView()
         }
         addLeftRight()
+        enablePickerView()
+        enableSegmentControl()
         // Do any additional setup after loading the view.
     }
     
-    //po pojawieniu się widoku
+
     override func viewDidAppear(_ animated: Bool) {
         reloadView()
     }
@@ -45,19 +48,20 @@ class TimeTableController: UIViewController {
     @IBOutlet weak var whatWeekLabel: UILabel!
     @IBOutlet weak var groupTextField: UITextField!
     @IBOutlet weak var lastRefreshDayLabel: UILabel!
-    @IBOutlet weak var weekPicker: UISegmentedControl!
-    @IBOutlet weak var dayPicker: UISegmentedControl!
+    @IBOutlet weak var weekPicker: BetterSegmentedControl!
+    @IBOutlet weak var dayPicker: BetterSegmentedControl!
     
     //IBActions:
-    @IBAction func weekPickerChanged(_ sender: UISegmentedControl) {
-        week = sender.selectedSegmentIndex+1
+    
+    @IBAction func weekPickerChanged(_ sender: BetterSegmentedControl) {
+        week = Int(sender.index+1)
         print("week: \(week)")
         getCurrentDataForClasses {}
         SubjectsTableView.reloadData()
     }
     
-    @IBAction func dayPickerChanged(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
+    @IBAction func dayPickerChanged(_ sender: BetterSegmentedControl) {
+        switch sender.index {
         case 0:
             day = "poniedziałek"
         case 1:
@@ -82,6 +86,8 @@ class TimeTableController: UIViewController {
         self.view.window?.rootViewController?.presentedViewController!.dismiss(animated: true, completion: nil)
     }
     
+    //Functions:
+    
     //getting data for chosen day and week with possible completion handler for enabling table view (for viewDidLoad)
     func getCurrentDataForClasses(completionHandler:@escaping ()->Void){
         startHour = [String]()
@@ -103,6 +109,13 @@ class TimeTableController: UIViewController {
             completionHandler()
         }.getData()
     }
+    
+    //enabling segment controls
+    func enableSegmentControl(){
+        weekPicker = segmentControlUtils.getColours(array: ["Tydzień I","Tydzień II"], segmentControl: weekPicker)
+        dayPicker = segmentControlUtils.getColours(array: ["Pon.","Wt.","Śr.","Czw.","Pt."], segmentControl: dayPicker)
+    }
+    
     
     //getting group list from user defaults
     func getGroupsData(){
@@ -129,6 +142,7 @@ class TimeTableController: UIViewController {
         refreshLastDate()
     }
     
+    
     //addingGestures:
     func addLeftRight(){
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(actionAfterGesture) )
@@ -147,21 +161,21 @@ class TimeTableController: UIViewController {
                 
             case UISwipeGestureRecognizer.Direction.right:
                 print("Swiped right")
-                let swipedRight = GesturesUtil.gesturesForFullTImeTablesDecreasing(data: GesturesClass(week: week, day: day, weekForPicker: weekPicker.selectedSegmentIndex, dayForPicker: dayPicker.selectedSegmentIndex))
+                let swipedRight = GesturesUtil.gesturesForFullTImeTablesDecreasing(data: GesturesClass(week: week, day: day, weekForPicker: Int(weekPicker!.index), dayForPicker: Int(dayPicker!.index)))
                 week = swipedRight.week
                 day = swipedRight.day
-                weekPicker.selectedSegmentIndex = swipedRight.weekForPicker
-                dayPicker.selectedSegmentIndex = swipedRight.dayForPicker
+                weekPicker.setIndex(UInt(swipedRight.weekForPicker))
+                dayPicker.setIndex(UInt(swipedRight.dayForPicker))
                 getCurrentDataForClasses {}
                 SubjectsTableView.reloadData()
                 
             case UISwipeGestureRecognizer.Direction.left:
                 print("Swiped left")
-                let swipedLeft = GesturesUtil.gesturesForFullTimeTimeTablesAdding(data: GesturesClass(week: week, day: day, weekForPicker: weekPicker.selectedSegmentIndex, dayForPicker: dayPicker.selectedSegmentIndex))
+                let swipedLeft = GesturesUtil.gesturesForFullTimeTimeTablesAdding(data: GesturesClass(week: week, day: day, weekForPicker: Int(weekPicker!.index), dayForPicker: Int(dayPicker!.index)))
                 week = swipedLeft.week
                 day = swipedLeft.day
-                weekPicker.selectedSegmentIndex = swipedLeft.weekForPicker
-                dayPicker.selectedSegmentIndex = swipedLeft.dayForPicker
+                weekPicker.setIndex(UInt(swipedLeft.weekForPicker))
+                dayPicker.setIndex(UInt(swipedLeft.dayForPicker))
                 getCurrentDataForClasses {}
                 SubjectsTableView.reloadData()
             default:

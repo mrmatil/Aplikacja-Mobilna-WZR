@@ -39,6 +39,7 @@
 		2378D64A22F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378D64922F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift */; };
 		2378D64E22F9EB3500190EB7 /* NoticeBoardCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378D64C22F9EB3500190EB7 /* NoticeBoardCustomCell.swift */; };
 		2378D64F22F9EB3500190EB7 /* NoticeBoardCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2378D64D22F9EB3500190EB7 /* NoticeBoardCustomCell.xib */; };
+		238FE468230B1B8100AF5FA0 /* segmentControlUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238FE467230B1B8100AF5FA0 /* segmentControlUtils.swift */; };
 		2390859F230A9FBE004E5502 /* 398-snap-loader-white.json in Resources */ = {isa = PBXBuildFile; fileRef = 2390859E230A9FBE004E5502 /* 398-snap-loader-white.json */; };
 		23B2B9BC22F5BDCF007C11CA /* PartTimeClassesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BB22F5BDCF007C11CA /* PartTimeClassesArray.swift */; };
 		23B2B9BE22F5BF1B007C11CA /* PartTimeDownloadCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BD22F5BF1B007C11CA /* PartTimeDownloadCSV.swift */; };
@@ -99,6 +100,7 @@
 		2378D64922F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromDatabaseNoticeBoard.swift; sourceTree = "<group>"; };
 		2378D64C22F9EB3500190EB7 /* NoticeBoardCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeBoardCustomCell.swift; sourceTree = "<group>"; };
 		2378D64D22F9EB3500190EB7 /* NoticeBoardCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeBoardCustomCell.xib; sourceTree = "<group>"; };
+		238FE467230B1B8100AF5FA0 /* segmentControlUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segmentControlUtils.swift; sourceTree = "<group>"; };
 		2390859E230A9FBE004E5502 /* 398-snap-loader-white.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "398-snap-loader-white.json"; sourceTree = "<group>"; };
 		23B2B9BB22F5BDCF007C11CA /* PartTimeClassesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeClassesArray.swift; sourceTree = "<group>"; };
 		23B2B9BD22F5BF1B007C11CA /* PartTimeDownloadCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeDownloadCSV.swift; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				233760C422FCE6A300056354 /* Gestures */,
 				2378D64822F9E57200190EB7 /* GettingDataFromRealm */,
 				2364EA4622DA8BB500340B3A /* WebDataDownload.swift */,
+				238FE467230B1B8100AF5FA0 /* segmentControlUtils.swift */,
 				23CBCB1422E4F69E00412350 /* CheckingConnection.swift */,
 				23EDF9AA22E5F75A0039C2AB /* Alerts.swift */,
 				23D9AEDB22EF666C00B4B876 /* CurrentDate.swift */,
@@ -499,6 +502,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Aplikacja Mobilna WZR/Pods-Aplikacja Mobilna WZR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BetterSegmentedControl/BetterSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
@@ -507,6 +511,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BetterSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSV.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
@@ -540,6 +545,7 @@
 				23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */,
 				2360E2E722ECBEF800FCF99F /* GetDataFromDatabase.swift in Sources */,
 				235665BD22FF466500DAE54A /* SendLecturersToRealm.swift in Sources */,
+				238FE468230B1B8100AF5FA0 /* segmentControlUtils.swift in Sources */,
 				23B2B9C222F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift in Sources */,
 				23B368E522F8EF9F00F58E64 /* SendNoticeBoardsToRealm.swift in Sources */,
 				2350A2E522F4E5D70020E7FC /* TimeTablePartTimeController.swift in Sources */,

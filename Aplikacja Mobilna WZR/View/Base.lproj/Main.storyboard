@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="u40-gT-mih" userLabel="Upper Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u40-gT-mih" userLabel="Upper Stack View">
                                 <rect key="frame" x="10" y="49" width="394" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFl-oz-n8e" userLabel="RefreshButton">
@@ -31,48 +31,37 @@
                                             <action selector="refreshButtonClicked:" destination="VVq-mu-vAo" eventType="touchUpInside" id="T5w-rt-e4m"/>
                                         </connections>
                                     </button>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vAv-qg-fCR">
-                                        <rect key="frame" x="60" y="0.0" width="208.5" height="31"/>
-                                        <segments>
-                                            <segment title="Tydzień I"/>
-                                            <segment title="Tydzień II"/>
-                                        </segments>
-                                        <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tx9-AE-vC0" customClass="BetterSegmentedControl" customModule="BetterSegmentedControl">
+                                        <rect key="frame" x="50" y="0.0" width="254" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="999" constant="100" id="Qkn-Un-Fll"/>
+                                        </constraints>
                                         <connections>
-                                            <action selector="weekPickerChanged:" destination="VVq-mu-vAo" eventType="valueChanged" id="c5h-VK-qNk"/>
+                                            <action selector="weekPickerChanged:" destination="VVq-mu-vAo" eventType="valueChanged" id="1IH-eE-32D"/>
                                         </connections>
-                                    </segmentedControl>
+                                    </view>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="group" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7z0-1F-ws8">
-                                        <rect key="frame" x="288.5" y="0.0" width="105.5" height="30"/>
+                                        <rect key="frame" x="314" y="0.0" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Ri1-Te-G15"/>
+                                        </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7z0-1F-ws8" secondAttribute="trailing" id="JC0-1t-IBB"/>
                                     <constraint firstAttribute="height" constant="30" id="K4z-dx-F4C"/>
                                 </constraints>
                             </stackView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TnL-JA-K8Q">
-                                <rect key="frame" x="10" y="94" width="394" height="29"/>
-                                <segments>
-                                    <segment title="Pon."/>
-                                    <segment title="Wt."/>
-                                    <segment title="Śr."/>
-                                    <segment title="Czw."/>
-                                    <segment title="Pt"/>
-                                </segments>
-                                <color key="tintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <action selector="dayPickerChanged:" destination="VVq-mu-vAo" eventType="valueChanged" id="cRG-re-vxs"/>
-                                </connections>
-                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eeL-cA-IZX">
-                                <rect key="frame" x="0.0" y="152" width="414" height="634"/>
+                                <rect key="frame" x="0.0" y="164" width="414" height="622"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Obecnie mamy poniedziałek 0 tygodnia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Oy-KE-abS">
-                                <rect key="frame" x="0.0" y="127" width="414" height="20"/>
+                                <rect key="frame" x="0.0" y="139" width="414" height="20"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.6875" green="0.10284368248352255" blue="0.0059398511711902177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -83,24 +72,34 @@
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sjs-G1-3K4" customClass="BetterSegmentedControl" customModule="BetterSegmentedControl">
+                                <rect key="frame" x="10" y="94" width="394" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="c8p-JV-tnT"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="dayPickerChanged:" destination="VVq-mu-vAo" eventType="valueChanged" id="6va-mS-4sO"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="u40-gT-mih" secondAttribute="trailing" constant="10" id="07G-h9-h7O"/>
                             <constraint firstItem="eeL-cA-IZX" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" id="2LR-Hh-RDq"/>
+                            <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="Sjs-G1-3K4" secondAttribute="trailing" constant="10" id="2ra-h1-cy7"/>
                             <constraint firstItem="01J-kE-2mO" firstAttribute="top" secondItem="eeL-cA-IZX" secondAttribute="bottom" constant="5" id="Cdi-xI-WR6"/>
-                            <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="TnL-JA-K8Q" secondAttribute="trailing" constant="10" id="Erg-Ur-FWg"/>
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="bottom" secondItem="01J-kE-2mO" secondAttribute="bottom" constant="5" id="Jko-Y2-8un"/>
                             <constraint firstItem="01J-kE-2mO" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" id="Rad-GK-uGV"/>
                             <constraint firstItem="4Oy-KE-abS" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" id="UFW-db-MPf"/>
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="4Oy-KE-abS" secondAttribute="trailing" id="UvL-vg-4Wi"/>
                             <constraint firstItem="u40-gT-mih" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" constant="10" id="VRj-XL-FzI"/>
-                            <constraint firstItem="TnL-JA-K8Q" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" constant="10" id="VTj-JU-8OZ"/>
+                            <constraint firstItem="Sjs-G1-3K4" firstAttribute="top" secondItem="u40-gT-mih" secondAttribute="bottom" constant="15" id="hud-zY-wgS"/>
                             <constraint firstItem="eeL-cA-IZX" firstAttribute="trailing" secondItem="Ekd-R9-TTl" secondAttribute="trailing" id="kU1-xF-hnB"/>
                             <constraint firstItem="u40-gT-mih" firstAttribute="top" secondItem="Ekd-R9-TTl" secondAttribute="top" constant="5" id="q3a-oU-wfv"/>
+                            <constraint firstItem="4Oy-KE-abS" firstAttribute="top" secondItem="Sjs-G1-3K4" secondAttribute="bottom" constant="15" id="q9L-pO-5Yh"/>
+                            <constraint firstItem="Sjs-G1-3K4" firstAttribute="leading" secondItem="Ekd-R9-TTl" secondAttribute="leading" constant="10" id="s2M-Br-zGG"/>
                             <constraint firstItem="Ekd-R9-TTl" firstAttribute="trailing" secondItem="01J-kE-2mO" secondAttribute="trailing" id="srP-vA-5vJ"/>
-                            <constraint firstItem="TnL-JA-K8Q" firstAttribute="top" secondItem="u40-gT-mih" secondAttribute="bottom" constant="15" id="uht-B5-VSX"/>
-                            <constraint firstItem="4Oy-KE-abS" firstAttribute="top" secondItem="TnL-JA-K8Q" secondAttribute="bottom" constant="5" id="xL0-i6-ygS"/>
                             <constraint firstItem="eeL-cA-IZX" firstAttribute="top" secondItem="4Oy-KE-abS" secondAttribute="bottom" constant="5" id="y1L-xT-3LG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ekd-R9-TTl"/>
@@ -108,16 +107,16 @@
                     <tabBarItem key="tabBarItem" title="Plan Zajęć" image="timetable" id="z6N-fU-did"/>
                     <connections>
                         <outlet property="SubjectsTableView" destination="eeL-cA-IZX" id="7ml-07-6Bl"/>
-                        <outlet property="dayPicker" destination="TnL-JA-K8Q" id="FwA-lO-6yF"/>
+                        <outlet property="dayPicker" destination="Sjs-G1-3K4" id="UUB-ow-Jyp"/>
                         <outlet property="groupTextField" destination="7z0-1F-ws8" id="HvS-XP-ksN"/>
                         <outlet property="lastRefreshDayLabel" destination="01J-kE-2mO" id="fq7-IY-cex"/>
-                        <outlet property="weekPicker" destination="vAv-qg-fCR" id="W2p-p3-obX"/>
+                        <outlet property="weekPicker" destination="tx9-AE-vC0" id="sQ2-px-mrN"/>
                         <outlet property="whatWeekLabel" destination="4Oy-KE-abS" id="k8j-km-Uew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr7-2Y-A8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="-379"/>
+            <point key="canvasLocation" x="860.86956521739137" y="-379.01785714285711"/>
         </scene>
         <!--Plan Wykładowców-->
         <scene sceneID="8dX-Zo-Xzz">
