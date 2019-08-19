@@ -345,41 +345,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="PEc-bo-5RD">
-                                <rect key="frame" x="182" y="423" width="50" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="8wD-XA-8s4"/>
-                                    <constraint firstAttribute="width" constant="50" id="B3D-Tt-iCk"/>
-                                </constraints>
-                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proszę Czekać..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Es-So-U9k">
                                 <rect key="frame" x="10" y="741.5" width="394" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uL3-UN-euz" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="B42-MV-ead"/>
+                                    <constraint firstAttribute="height" constant="100" id="IWL-Pg-wI4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="uL3-UN-euz" firstAttribute="centerY" secondItem="94M-i9-Or5" secondAttribute="centerY" id="4fW-Cw-RxV"/>
                             <constraint firstItem="IYR-Vr-LhS" firstAttribute="bottom" secondItem="3Es-So-U9k" secondAttribute="bottom" constant="100" id="4nm-KK-zOT"/>
+                            <constraint firstItem="uL3-UN-euz" firstAttribute="centerX" secondItem="94M-i9-Or5" secondAttribute="centerX" id="ClX-gh-seu"/>
                             <constraint firstItem="3Es-So-U9k" firstAttribute="leading" secondItem="IYR-Vr-LhS" secondAttribute="leading" constant="10" id="oUa-mo-TP5"/>
-                            <constraint firstItem="PEc-bo-5RD" firstAttribute="centerY" secondItem="94M-i9-Or5" secondAttribute="centerY" id="p5y-bH-o9L"/>
                             <constraint firstItem="IYR-Vr-LhS" firstAttribute="trailing" secondItem="3Es-So-U9k" secondAttribute="trailing" constant="10" id="tWk-74-ych"/>
-                            <constraint firstItem="PEc-bo-5RD" firstAttribute="centerX" secondItem="94M-i9-Or5" secondAttribute="centerX" id="z4W-fq-er4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IYR-Vr-LhS"/>
                     </view>
                     <connections>
                         <outlet property="pleaseWaitLabel" destination="3Es-So-U9k" id="mS2-Jc-GcJ"/>
+                        <outlet property="waitAnimationView" destination="uL3-UN-euz" id="2KM-Wg-EAm"/>
                         <segue destination="vQZ-5j-ZFF" kind="show" identifier="initialSegue" id="jOW-qm-Qe9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpM-zg-LLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1413" y="390"/>
+            <point key="canvasLocation" x="-1413.0434782608697" y="389.73214285714283"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ix3-eH-c5x">
@@ -390,7 +389,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eUi-Q5-i5S">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
@@ -570,35 +568,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="z6J-Xl-JUU">
-                                <rect key="frame" x="182" y="423" width="50" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ENc-6Q-y7m"/>
-                                    <constraint firstAttribute="width" constant="50" id="ulx-qR-edi"/>
-                                </constraints>
-                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proszę Czekać..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCQ-3k-nV9">
                                 <rect key="frame" x="10" y="741.5" width="394" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j3W-xV-h56" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="157" y="398" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="lGW-sw-VMk"/>
+                                    <constraint firstAttribute="height" constant="100" id="pi3-uX-kHs"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="j3W-xV-h56" firstAttribute="centerX" secondItem="CII-A7-iiB" secondAttribute="centerX" id="AnG-C2-BIP"/>
                             <constraint firstItem="oCQ-3k-nV9" firstAttribute="leading" secondItem="p6W-PB-P2M" secondAttribute="leading" constant="10" id="EqH-yT-756"/>
                             <constraint firstItem="p6W-PB-P2M" firstAttribute="bottom" secondItem="oCQ-3k-nV9" secondAttribute="bottom" constant="100" id="LkG-cw-YZu"/>
-                            <constraint firstItem="z6J-Xl-JUU" firstAttribute="centerY" secondItem="CII-A7-iiB" secondAttribute="centerY" id="SEa-oz-nLC"/>
-                            <constraint firstItem="z6J-Xl-JUU" firstAttribute="centerX" secondItem="CII-A7-iiB" secondAttribute="centerX" id="qYO-4c-8Os"/>
+                            <constraint firstItem="j3W-xV-h56" firstAttribute="centerY" secondItem="CII-A7-iiB" secondAttribute="centerY" id="hZs-ce-6zs"/>
                             <constraint firstItem="p6W-PB-P2M" firstAttribute="trailing" secondItem="oCQ-3k-nV9" secondAttribute="trailing" constant="10" id="wy8-ou-pH1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="p6W-PB-P2M"/>
                     </view>
                     <connections>
                         <outlet property="pleaseWaitLabel" destination="oCQ-3k-nV9" id="Qgk-3B-lTQ"/>
+                        <outlet property="waitAnimationView" destination="j3W-xV-h56" id="Bbt-sy-xiX"/>
                         <segue destination="naT-1o-WYJ" kind="show" identifier="PartTimeInitialSegue" id="Giu-BQ-llv"/>
                     </connections>
                 </viewController>

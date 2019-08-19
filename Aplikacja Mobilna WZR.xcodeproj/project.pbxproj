@@ -39,6 +39,7 @@
 		2378D64A22F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378D64922F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift */; };
 		2378D64E22F9EB3500190EB7 /* NoticeBoardCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378D64C22F9EB3500190EB7 /* NoticeBoardCustomCell.swift */; };
 		2378D64F22F9EB3500190EB7 /* NoticeBoardCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2378D64D22F9EB3500190EB7 /* NoticeBoardCustomCell.xib */; };
+		2390859F230A9FBE004E5502 /* 398-snap-loader-white.json in Resources */ = {isa = PBXBuildFile; fileRef = 2390859E230A9FBE004E5502 /* 398-snap-loader-white.json */; };
 		23B2B9BC22F5BDCF007C11CA /* PartTimeClassesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BB22F5BDCF007C11CA /* PartTimeClassesArray.swift */; };
 		23B2B9BE22F5BF1B007C11CA /* PartTimeDownloadCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BD22F5BF1B007C11CA /* PartTimeDownloadCSV.swift */; };
 		23B2B9C022F5C24F007C11CA /* PartTimeParseCSv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2B9BF22F5C24F007C11CA /* PartTimeParseCSv.swift */; };
@@ -98,6 +99,7 @@
 		2378D64922F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromDatabaseNoticeBoard.swift; sourceTree = "<group>"; };
 		2378D64C22F9EB3500190EB7 /* NoticeBoardCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeBoardCustomCell.swift; sourceTree = "<group>"; };
 		2378D64D22F9EB3500190EB7 /* NoticeBoardCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeBoardCustomCell.xib; sourceTree = "<group>"; };
+		2390859E230A9FBE004E5502 /* 398-snap-loader-white.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "398-snap-loader-white.json"; sourceTree = "<group>"; };
 		23B2B9BB22F5BDCF007C11CA /* PartTimeClassesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeClassesArray.swift; sourceTree = "<group>"; };
 		23B2B9BD22F5BF1B007C11CA /* PartTimeDownloadCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeDownloadCSV.swift; sourceTree = "<group>"; };
 		23B2B9BF22F5C24F007C11CA /* PartTimeParseCSv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartTimeParseCSv.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		2364EA4122DA762600340B3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2390859D230A9E7C004E5502 /* Animations */,
 				23CBCB1622E4F75D00412350 /* Utilities */,
 				23162BCB22DE898F001A4D2D /* TimeTables */,
 				233577B222DAB2530043AE98 /* Groups */,
@@ -308,6 +311,14 @@
 				2378D64D22F9EB3500190EB7 /* NoticeBoardCustomCell.xib */,
 			);
 			path = CustomNoticeBoardCell;
+			sourceTree = "<group>";
+		};
+		2390859D230A9E7C004E5502 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				2390859E230A9FBE004E5502 /* 398-snap-loader-white.json */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		23A3A1DC22F8FD9500291438 /* NoticeBoards */ = {
@@ -456,6 +467,7 @@
 				2378D64F22F9EB3500190EB7 /* NoticeBoardCustomCell.xib in Resources */,
 				2364EA3422DA760000340B3A /* Assets.xcassets in Resources */,
 				2364EA2F22DA760000340B3A /* Main.storyboard in Resources */,
+				2390859F230A9FBE004E5502 /* 398-snap-loader-white.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +503,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -498,6 +511,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

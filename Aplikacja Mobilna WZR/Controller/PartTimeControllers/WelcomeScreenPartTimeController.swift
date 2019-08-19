@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Lottie
 
 class WelcomeScreenPartTimeController: UIViewController {
 
@@ -18,10 +19,16 @@ class WelcomeScreenPartTimeController: UIViewController {
     let pleaseWaitLabelTexts = ["Trwa sprawdzanie połączenia...","Trwa usuwanie istniejących danych...","Trwa pobieranie danych... \n Może to potrwać kilkanaście sekund",]
     var loop=0
     @IBOutlet weak var pleaseWaitLabel: UILabel!
+    @IBOutlet weak var waitAnimationView: AnimationView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        startAnimation()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        startAnimation()
         loop=0
         changeLabel(number: 0)
         checkIfHasFavoriteGroup()
@@ -128,6 +135,15 @@ class WelcomeScreenPartTimeController: UIViewController {
     
     func changeLabel(number:Int){
         pleaseWaitLabel.text=pleaseWaitLabelTexts[number]
+    }
+    
+    //function for animations:
+    
+    func startAnimation(){
+        waitAnimationView.animation = Animation.named("398-snap-loader-white")
+        waitAnimationView.loopMode = .loop
+        waitAnimationView.contentMode = .scaleAspectFit
+        waitAnimationView.play()
     }
     
 }

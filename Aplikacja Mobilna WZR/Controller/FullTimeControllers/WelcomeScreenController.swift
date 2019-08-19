@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Lottie
 
 class WelcomeScreenController: UIViewController {
 
@@ -18,11 +19,16 @@ class WelcomeScreenController: UIViewController {
     
     //IBOutlets:
     @IBOutlet weak var pleaseWaitLabel: UILabel!
+    @IBOutlet weak var waitAnimationView: AnimationView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        startAnimation()
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        
+        startAnimation()
         changeLabel(number: 0)
         loop=0
         
@@ -128,6 +134,15 @@ class WelcomeScreenController: UIViewController {
     
     func changeLabel(number:Int){
         pleaseWaitLabel.text=pleaseWaitLabelTexts[number]
+    }
+    
+    //function for animations:
+    
+    func startAnimation(){
+        waitAnimationView.animation = Animation.named("398-snap-loader-white")
+        waitAnimationView.loopMode = .loop
+        waitAnimationView.contentMode = .scaleAspectFit
+        waitAnimationView.play()
     }
 }
 
