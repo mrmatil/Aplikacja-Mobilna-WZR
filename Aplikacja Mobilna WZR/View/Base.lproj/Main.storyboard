@@ -377,10 +377,10 @@
             </objects>
             <point key="canvasLocation" x="-1413.0434782608697" y="389.73214285714283"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--SwipableTB Controller-->
         <scene sceneID="Ix3-eH-c5x">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vQZ-5j-ZFF" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vQZ-5j-ZFF" customClass="SwipableTBController" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="TJD-aJ-8GJ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eUi-Q5-i5S">
@@ -691,10 +691,10 @@
             </objects>
             <point key="canvasLocation" x="861" y="2448"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--SwipableTB Controller-->
         <scene sceneID="Y8I-JB-j9s">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="naT-1o-WYJ" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="naT-1o-WYJ" customClass="SwipableTBController" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O3n-Ce-c0P">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

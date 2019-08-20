@@ -55,6 +55,7 @@
 		23D9AED822EF380800B4B876 /* LecturersCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D9AED622EF380800B4B876 /* LecturersCustomCell.xib */; };
 		23D9AEDA22EF62ED00B4B876 /* DownloadNoticeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9AED922EF62ED00B4B876 /* DownloadNoticeBoard.swift */; };
 		23D9AEDC22EF666C00B4B876 /* CurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9AEDB22EF666C00B4B876 /* CurrentDate.swift */; };
+		23DE32B3230C392F007AE3CD /* SwipableTBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DE32B2230C392F007AE3CD /* SwipableTBController.swift */; };
 		23DFFB7122EE19320045C626 /* LecturersTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */; };
 		23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF9AA22E5F75A0039C2AB /* Alerts.swift */; };
 		23EDF9AF22E60A3F0039C2AB /* ClassesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF9AE22E60A3F0039C2AB /* ClassesArray.swift */; };
@@ -116,6 +117,7 @@
 		23D9AED622EF380800B4B876 /* LecturersCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturersCustomCell.xib; sourceTree = "<group>"; };
 		23D9AED922EF62ED00B4B876 /* DownloadNoticeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DownloadNoticeBoard.swift; path = "Aplikacja Mobilna WZR/Model/NoticeBoards/DownloadNoticeBoard.swift"; sourceTree = SOURCE_ROOT; };
 		23D9AEDB22EF666C00B4B876 /* CurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
+		23DE32B2230C392F007AE3CD /* SwipableTBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableTBController.swift; sourceTree = "<group>"; };
 		23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersTimeTableController.swift; sourceTree = "<group>"; };
 		23EDF9AA22E5F75A0039C2AB /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		23EDF9AE22E60A3F0039C2AB /* ClassesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassesArray.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 				236B56A922F0CBBA00A63248 /* PartTimeControllers */,
 				2364EA2922DA760000340B3A /* AppDelegate.swift */,
 				23F40DB22302B69800E96D72 /* LecturersDetailsController.swift */,
+				23DE32B2230C392F007AE3CD /* SwipableTBController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+				"${BUILT_PRODUCTS_DIR}/SwipeableTabBarController/SwipeableTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -516,6 +520,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeableTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -543,6 +548,7 @@
 				235665BF22FF481200DAE54A /* lecturersDataBase.swift in Sources */,
 				23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */,
 				23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */,
+				23DE32B3230C392F007AE3CD /* SwipableTBController.swift in Sources */,
 				2360E2E722ECBEF800FCF99F /* GetDataFromDatabase.swift in Sources */,
 				235665BD22FF466500DAE54A /* SendLecturersToRealm.swift in Sources */,
 				238FE468230B1B8100AF5FA0 /* segmentControlUtils.swift in Sources */,
