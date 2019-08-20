@@ -244,8 +244,10 @@ extension TimeTableController: UITableViewDelegate, UITableViewDataSource, UIPic
         let toolbar = UIToolbar()
         
         let okButton = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(okButtonPickerPressed))
+        okButton.tintColor = UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Powrót" , style: .plain, target: self, action: #selector(cancelButtonPressed))
+        cancelButton.tintColor = UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)
         
         toolbar.sizeToFit()
         toolbar.setItems([cancelButton, spaceButton, okButton], animated: true)
@@ -284,7 +286,7 @@ extension TimeTableController: UITableViewDelegate, UITableViewDataSource, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-        return NSAttributedString(string: arrayOfAllGroupsString[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor.blue]) // do poprawienia kolor z RGB
+        return NSAttributedString(string: arrayOfAllGroupsString[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)])
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

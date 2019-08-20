@@ -220,8 +220,10 @@ extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSou
         let toolbar = UIToolbar()
         
         let okButton = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(okGroupsButtonPressed))
+        okButton.tintColor = UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Powrót" , style: .plain, target: self, action: #selector(cancelGroupsButtonPressed))
+        cancelButton.tintColor = UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)
         
         toolbar.sizeToFit()
         toolbar.setItems([cancelButton, spaceButton, okButton], animated: true)
@@ -257,8 +259,10 @@ extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSou
         let toolbar = UIToolbar()
         
         let okButton = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(okDatesButtonPressed))
+        okButton.tintColor = UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Powrót" , style: .plain, target: self, action: #selector(cancelDatesButtonPressed))
+        cancelButton.tintColor = UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)
         
         toolbar.sizeToFit()
         toolbar.setItems([cancelButton, spaceButton, okButton], animated: true)
@@ -308,9 +312,9 @@ extension TimeTablePartTimeController: UIPickerViewDelegate, UIPickerViewDataSou
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         if pickerView == groupPickerView{
-            return NSAttributedString(string: arrayOfAllGroupsString[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor.blue]) // do poprawienia kolor z RGB
+            return NSAttributedString(string: arrayOfAllGroupsString[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)])
         }else{ //for dates pickerView:
-            return NSAttributedString(string: arrayOfAllDates[row]+" ("+CurrentDate.nameOfTheDayPT(date: arrayOfAllDates[row])+")", attributes: [NSAttributedString.Key.foregroundColor:UIColor.blue])
+            return NSAttributedString(string: arrayOfAllDates[row]+" ("+CurrentDate.nameOfTheDayPT(date: arrayOfAllDates[row])+")", attributes: [NSAttributedString.Key.foregroundColor:UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)])
         }
     }
     

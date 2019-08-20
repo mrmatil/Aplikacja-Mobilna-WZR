@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import BetterSegmentedControl
 
 class NoticeBoardController: UIViewController {
 
@@ -20,12 +21,14 @@ class NoticeBoardController: UIViewController {
     //IBOutlets:
     @IBOutlet weak var noticeBoardTableView: UITableView!
     @IBOutlet weak var lastRefreshLabel: UILabel!
+    @IBOutlet weak var levelSegmentedControl: BetterSegmentedControl!
     
     
     
     //IBActions:
-    @IBAction func levelSegmentedControlPressed(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0{
+    
+    @IBAction func levelChanged(_ sender: BetterSegmentedControl) {
+        if sender.index == 0{
             level=1
             getNoticeBoardDataFromRealm{}
             noticeBoardTableView.reloadData()
@@ -35,6 +38,7 @@ class NoticeBoardController: UIViewController {
             noticeBoardTableView.reloadData()
         }
     }
+
     
     @IBAction func refreshButtonPressed(_ sender: UIButton) {
         userDefaults.removeObject(forKey: "isNeededToReloadFullTime")
@@ -48,6 +52,7 @@ class NoticeBoardController: UIViewController {
         getNoticeBoardDataFromRealm {
             self.enableTableView()
         }
+        enableSegmentedControl()
         refreshLastDate()
         // Do any additional setup after loading the view.
     }
@@ -76,6 +81,10 @@ class NoticeBoardController: UIViewController {
             return
         }
         lastRefreshLabel.text = "Dane z dnia: \(temp)"
+    }
+    
+    func enableSegmentedControl(){
+        levelSegmentedControl = segmentControlUtils.getColours(array: ["I Stopień","II Stopień"], segmentControl: levelSegmentedControl)
     }
 
 }

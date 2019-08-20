@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BetterSegmentedControl
 
 class LecturersTimeTableController: UIViewController {
 
@@ -39,20 +40,22 @@ class LecturersTimeTableController: UIViewController {
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var lecturersTableView: UITableView!
-    @IBOutlet weak var weekPicker: UISegmentedControl!
-    @IBOutlet weak var dayPicker: UISegmentedControl!
+    @IBOutlet weak var weekPicker: BetterSegmentedControl!
+    @IBOutlet weak var dayPicker: BetterSegmentedControl!
     @IBOutlet weak var lastRefreshLabel: UILabel!
     
     
     //UIActions:
-    @IBAction func weekPickerChanged(_ sender: UISegmentedControl) {
-        week = sender.selectedSegmentIndex+1
+    
+    @IBAction func weekPickerChanged(_ sender: BetterSegmentedControl) {
+        week = Int(sender.index+1)
         print("week: \(week)")
         getCurrentLecturersData{}
         lecturersTableView.reloadData()
     }
-    @IBAction func dayPickerChanged(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
+    
+    @IBAction func dayPickerChanged(_ sender: BetterSegmentedControl) {
+        switch sender.index {
         case 0:
             day = "poniedziałek"
         case 1:
@@ -69,6 +72,7 @@ class LecturersTimeTableController: UIViewController {
         print("day: \(day)")
         getCurrentLecturersData{}
         lecturersTableView.reloadData()
+
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
@@ -98,6 +102,7 @@ class LecturersTimeTableController: UIViewController {
             }
         }
         addLeftRight()
+        enableSegmentControl()
         refreshLastDate()
         // Do any additional setup after loading the view.
     }
@@ -110,6 +115,11 @@ class LecturersTimeTableController: UIViewController {
             vc.detailsArray.append(chosenLecturerInfo)
             vc.website = chosenLecturerWebsite
         }
+    }
+    
+    func enableSegmentControl(){
+        weekPicker = segmentControlUtils.getColours(array: ["Tydzień I","Tydzień II"], segmentControl: weekPicker)
+        dayPicker = segmentControlUtils.getColours(array: ["Pon.","Wt.","Śr.","Czw.","Pt."], segmentControl: dayPicker)
     }
     
     func getLecturersListAndInfo(){
@@ -173,21 +183,21 @@ class LecturersTimeTableController: UIViewController {
                 
             case UISwipeGestureRecognizer.Direction.right:
                 print("Swiped right")
-                let swipedRight = GesturesUtil.gesturesForFullTImeTablesDecreasing(data: GesturesClass(week: week, day: day, weekForPicker: weekPicker.selectedSegmentIndex, dayForPicker: dayPicker.selectedSegmentIndex))
+                let swipedRight = GesturesUtil.gesturesForFullTImeTablesDecreasing(data: GesturesClass(week: week, day: day, weekForPicker: Int(weekPicker.index), dayForPicker: Int(dayPicker.index)))
                 week = swipedRight.week
                 day = swipedRight.day
-                weekPicker.selectedSegmentIndex = swipedRight.weekForPicker
-                dayPicker.selectedSegmentIndex = swipedRight.dayForPicker
+                weekPicker.setIndex(UInt(swipedRight.weekForPicker))
+                dayPicker.setIndex(UInt(swipedRight.dayForPicker))
                 getCurrentLecturersData{}
                 lecturersTableView.reloadData()
                 
             case UISwipeGestureRecognizer.Direction.left:
                 print("Swiped left")
-                let swipedLeft = GesturesUtil.gesturesForFullTimeTimeTablesAdding(data: GesturesClass(week: week, day: day, weekForPicker: weekPicker.selectedSegmentIndex, dayForPicker: dayPicker.selectedSegmentIndex))
+                let swipedLeft = GesturesUtil.gesturesForFullTimeTimeTablesAdding(data: GesturesClass(week: week, day: day, weekForPicker: Int(weekPicker.index), dayForPicker: Int(dayPicker.index)))
                 week = swipedLeft.week
                 day = swipedLeft.day
-                weekPicker.selectedSegmentIndex = swipedLeft.weekForPicker
-                dayPicker.selectedSegmentIndex = swipedLeft.dayForPicker
+                weekPicker.setIndex(UInt(swipedLeft.weekForPicker))
+                dayPicker.setIndex(UInt(swipedLeft.dayForPicker))
                 getCurrentLecturersData{}
                 lecturersTableView.reloadData()
                 
@@ -229,6 +239,9 @@ extension LecturersTimeTableController:UIPickerViewDelegate,UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return lecturersNames[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: lecturersNames[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)])
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

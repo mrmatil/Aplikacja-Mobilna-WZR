@@ -229,8 +229,10 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
         let toolbar = UIToolbar()
         
         let okButton = UIBarButtonItem(title: "OK", style: .done, target: self, action: #selector(okDatesButtonPressed))
+        okButton.tintColor = UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Powrót" , style: .plain, target: self, action: #selector(cancelDatesButtonPressed))
+        cancelButton.tintColor = UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)
         
         toolbar.sizeToFit()
         toolbar.setItems([cancelButton, spaceButton, okButton], animated: true)
@@ -264,12 +266,11 @@ extension LecturersPartTimeViewController: UIPickerViewDelegate, UIPickerViewDat
             return datesArray.count
         }
     }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         if pickerView == lecturersPickerView{
-            return lecturersNames[row]
+            return NSAttributedString(string: lecturersNames[row], attributes: [NSAttributedString.Key.foregroundColor:UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)])
         }else{
-            return datesArray[row]+" ("+CurrentDate.nameOfTheDayPT(date: datesArray[row])+")"
+            return NSAttributedString(string: datesArray[row]+" ("+CurrentDate.nameOfTheDayPT(date: datesArray[row])+")", attributes: [NSAttributedString.Key.foregroundColor:UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)])
         }
     }
     

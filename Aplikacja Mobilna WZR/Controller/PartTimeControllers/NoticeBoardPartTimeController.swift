@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BetterSegmentedControl
 
 class NoticeBoardPartTimeController: UIViewController {
     
@@ -20,11 +21,12 @@ class NoticeBoardPartTimeController: UIViewController {
     //IBOutlets:
     @IBOutlet weak var lastRefreshDateLabel: UILabel!
     @IBOutlet weak var noticeBoardTableView: UITableView!
+    @IBOutlet weak var levelSegmentedControl: BetterSegmentedControl!
     
     
     //IBActions:
-    @IBAction func levelSegmentedControlPressed(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0{
+    @IBAction func levelChanged(_ sender: BetterSegmentedControl) {
+        if sender.index == 0{
             level=1
             getNoticeBoardDataFromRealm{}
             noticeBoardTableView.reloadData()
@@ -49,6 +51,7 @@ class NoticeBoardPartTimeController: UIViewController {
         getNoticeBoardDataFromRealm {
             self.enableTableView()
         }
+        enableSegmentedControl()
         refreshLastDate()
         // Do any additional setup after loading the view.
     }
@@ -75,6 +78,9 @@ class NoticeBoardPartTimeController: UIViewController {
             }.getNoticeBoardsData()
     }
     
+    func enableSegmentedControl(){
+        levelSegmentedControl = segmentControlUtils.getColours(array: ["I Stopień","II Stopień"], segmentControl: levelSegmentedControl)
+    }
 }
 
 extension NoticeBoardPartTimeController:UITableViewDelegate, UITableViewDataSource{
