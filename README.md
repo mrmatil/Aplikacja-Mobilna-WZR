@@ -27,29 +27,24 @@ IOS App for students and lecturers from Faculty of Management of the University 
 * SwipeableTabBarController (for tab bar controller animations) 
 
 ## Screenshots:
- 
-<table>
- <th></th>
- <th>Full Time</th>
- <th></th>
-<tr>
-<th>Timetable View</th>
-<th>Lecturers Timetable View</th>
-<th>News View</th>
-</tr>
-<tr>
-<td><img src="Gifs/TimeTablesFT.gif"/></td>
-<td><img src="Gifs/LecturersFT.gif"/></td>
-<td><img src="Gifs/InfoFT.gif"/></td>
-</tr>
- <th></th>
- <th>Part Time</th>
- <th></th>
- <tr>
-<td><img src="Gifs/TimeTablesPT.gif"/></td>
-<td><img src="Gifs/LecturersPT.gif"/></td>
-</tr>
-</table>
+
+<p align="left">
+Timetable views (for Full time and Part Time students)
+</p>
+
+![](./Gifs/TimeTablesFT.gif) ![](./Gifs/TimeTablesPT.gif)
+
+<p align="left">
+Lecturers views (for Full time and Part Time students)
+</p>
+
+![](./Gifs/LecturersFT.gif) ![](./Gifs/LecturersPT.gif)
+
+<p align="left">
+News views (same for Full time and Part Time students)
+</p>
+
+![](./Gifs/InfoFT.gif) 
 
 <p align="center">
 Project started: July 2019
