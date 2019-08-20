@@ -1,0 +1,102 @@
+
+/* Class = "UILabel"; text = "Z dnia:"; ObjectID = "01J-kE-2mO"; */
+"01J-kE-2mO.text" = "Z dnia:";
+
+/* Class = "UIButton"; normalTitle = "Szukaj"; ObjectID = "0Sz-Ps-7Ng"; */
+"0Sz-Ps-7Ng.normalTitle" = "Szukaj";
+
+/* Class = "UIBarButtonItem"; title = "Powrót"; ObjectID = "2d4-q0-gyS"; */
+"2d4-q0-gyS.title" = "Powrót";
+
+/* Class = "UILabel"; text = "Proszę Czekać..."; ObjectID = "3Es-So-U9k"; */
+"3Es-So-U9k.text" = "Proszę Czekać...";
+
+/* Class = "UILabel"; text = "Obecnie mamy poniedziałek 0 tygodnia"; ObjectID = "4Oy-KE-abS"; */
+"4Oy-KE-abS.text" = "Obecnie mamy poniedziałek 0 tygodnia";
+
+/* Class = "UILabel"; text = "Aktualna data: 00-00-0000"; ObjectID = "4ZA-wW-fLJ"; */
+"4ZA-wW-fLJ.text" = "Aktualna data: 00-00-0000";
+
+/* Class = "UITabBarItem"; title = "Plan Wykładowców"; ObjectID = "6fH-tc-6rS"; */
+"6fH-tc-6rS.title" = "Plan Wykładowców";
+
+/* Class = "UITextField"; placeholder = "group"; ObjectID = "7z0-1F-ws8"; */
+"7z0-1F-ws8.placeholder" = "group";
+
+/* Class = "UITabBarItem"; title = "Plan Wykładowców"; ObjectID = "8l2-tV-UAf"; */
+"8l2-tV-UAf.title" = "Plan Wykładowców";
+
+/* Class = "UILabel"; text = "Z dnia:"; ObjectID = "A2a-Pv-lSF"; */
+"A2a-Pv-lSF.text" = "Z dnia:";
+
+/* Class = "UITabBarItem"; title = "Ogłoszenia"; ObjectID = "BEz-zU-JtU"; */
+"BEz-zU-JtU.title" = "Ogłoszenia";
+
+/* Class = "UILabel"; text = "Z dnia:"; ObjectID = "CF6-Bo-vFs"; */
+"CF6-Bo-vFs.text" = "Z dnia:";
+
+/* Class = "UIButton"; normalTitle = "Więcej"; ObjectID = "H20-5g-EBI"; */
+"H20-5g-EBI.normalTitle" = "Więcej";
+
+/* Class = "UIButton"; normalTitle = "Stacjonarne"; ObjectID = "JXV-PW-F8Y"; */
+"JXV-PW-F8Y.normalTitle" = "Stacjonarne";
+
+/* Class = "UITextField"; placeholder = "Date Text Field"; ObjectID = "L9f-V6-tB0"; */
+"L9f-V6-tB0.placeholder" = "Date Text Field";
+
+/* Class = "UIViewController"; title = "InitialViewController"; ObjectID = "NHy-2j-9hC"; */
+"NHy-2j-9hC.title" = "InitialViewController";
+
+/* Class = "UINavigationItem"; title = "Szczegóły"; ObjectID = "NTk-oZ-fga"; */
+"NTk-oZ-fga.title" = "Szczegóły";
+
+/* Class = "UITabBarItem"; title = "Ogłoszenia"; ObjectID = "Ram-r7-9PP"; */
+"Ram-r7-9PP.title" = "Ogłoszenia";
+
+/* Class = "UITabBarItem"; title = "Plan Zajęć"; ObjectID = "WPD-cj-GoA"; */
+"WPD-cj-GoA.title" = "Plan Zajęć";
+
+/* Class = "UILabel"; text = "Made with ♥︎ by Mateusz Łukasiński"; ObjectID = "auA-8b-QFH"; */
+"auA-8b-QFH.text" = "Made with ♥︎ by Mateusz Łukasiński";
+
+/* Class = "UIViewController"; title = "PartTimeTimeTable"; ObjectID = "eXo-Ay-ela"; */
+"eXo-Ay-ela.title" = "PartTimeTimeTable";
+
+/* Class = "UILabel"; text = "Z dnia:"; ObjectID = "hYK-bz-Nd5"; */
+"hYK-bz-Nd5.text" = "Z dnia:";
+
+/* Class = "UILabel"; text = "Szczegóły"; ObjectID = "hvR-Kd-TEM"; */
+"hvR-Kd-TEM.text" = "Szczegóły";
+
+/* Class = "UILabel"; text = "Z dnia:"; ObjectID = "l7U-or-pEa"; */
+"l7U-or-pEa.text" = "Z dnia:";
+
+/* Class = "UITextField"; placeholder = "Wykładowca"; ObjectID = "m9o-Vl-o14"; */
+"m9o-Vl-o14.placeholder" = "Wykładowca";
+
+/* Class = "UITextField"; placeholder = "Data"; ObjectID = "nKy-aN-QY2"; */
+"nKy-aN-QY2.placeholder" = "Data";
+
+/* Class = "UITextField"; placeholder = "Wykładowca"; ObjectID = "o6Z-3B-Wy3"; */
+"o6Z-3B-Wy3.placeholder" = "Wykładowca";
+
+/* Class = "UILabel"; text = "Proszę Czekać..."; ObjectID = "oCQ-3k-nV9"; */
+"oCQ-3k-nV9.text" = "Proszę Czekać...";
+
+/* Class = "UILabel"; text = "Z dnia:"; ObjectID = "qKO-J9-pUV"; */
+"qKO-J9-pUV.text" = "Z dnia:";
+
+/* Class = "UILabel"; text = "Wybierz Tryb:"; ObjectID = "qz6-wB-aQ2"; */
+"qz6-wB-aQ2.text" = "Wybierz Tryb:";
+
+/* Class = "UITextField"; placeholder = "Groups"; ObjectID = "yUX-oI-jLo"; */
+"yUX-oI-jLo.placeholder" = "Groups";
+
+/* Class = "UIButton"; normalTitle = "Niestacjonarne"; ObjectID = "yWU-wC-k7a"; */
+"yWU-wC-k7a.normalTitle" = "Niestacjonarne";
+
+/* Class = "UITabBarItem"; title = "Plan Zajęć"; ObjectID = "z6N-fU-did"; */
+"z6N-fU-did.title" = "Plan Zajęć";
+
+/* Class = "UIButton"; normalTitle = "Szukaj"; ObjectID = "ztb-Kx-DEU"; */
+"ztb-Kx-DEU.normalTitle" = "Szukaj";
