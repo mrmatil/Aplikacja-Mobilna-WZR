@@ -1,16 +1,20 @@
 # Aplikacja-Mobilna-WZR
 
+<p align="center">
 IOS App for students and lecturers from Faculty of Management of the University of Gdańsk.
-##### Project almost ready to launch in AppStore
+</p>
+
+##### Project ready to launch in AppStore
 
 ##### Author: Mateusz Łukasiński
 
 ## Features:
 * Browse timetables, that are downloaded and stored locally on the device,
-* Your choices are saved (for ex. last viewed group are also saved, so next time user will launch app, he will see his last picked group by default) 
-* Browse lecturer's timetables, tutorship hours and emails (also stored locally) 
-* check last news from website (also stored locally)
-* supports timetables for both Full Time and Part Time Students
+* Saving user choices (group that user choose will be his default)
+* Browse lecturer's timetables, tutorship hours and emails that are stored locally 
+* Instant access to lecturer's site on wzr.ug.edu.pl for more info (internet connection required)
+* check last news from website that also are stored later on the device 
+* all features are avaliable for both full time and part time students 
 
 ## Used Technologies:
 * Swift 5
@@ -18,6 +22,9 @@ IOS App for students and lecturers from Faculty of Management of the University 
 * Realm Swift (for Database)
 * SwiftSoup (for scrapping data from websites)
 * CSV.swift (for parsing CSV data) 
+* Lottie (for animations)
+* BetterSegmentedControl (for smoother segment control)
+* SwipeableTabBarController (for tab bar controller animations) 
 
 ## Screenshots:
 <p align="center">
