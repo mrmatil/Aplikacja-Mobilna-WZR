@@ -26,6 +26,21 @@ IOS App for students and lecturers from Faculty of Management of the University 
 * BetterSegmentedControl (for smoother segment control)
 * SwipeableTabBarController (for tab bar controller animations) 
 
-## Gifs:
+## Screenshots:
+ 
+<table>
+<tr>
+<th>Timetable View</th>
+<th>Lecturers Timetable View</th>
+<th>News View</th>
+</tr>
+<tr>
+<td><img src="Gifs/TimeTablesFT.gif"/></td>
+<td><img src="Gifs/LecturersFT.gif"/></td>
+<td><img src="Gifs/InfoFT.gif"/></td>
+</tr>
+</table>
 
-![](./Gifs/TimeTablesFT.gif) ![](./Gifs/LecturersFT.gif) ![](./Gifs/InfoFT.gif)
+<p align="center">
+Project started: July 2019
+</p>
