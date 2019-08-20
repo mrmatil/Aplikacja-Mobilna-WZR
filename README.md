@@ -29,6 +29,9 @@ IOS App for students and lecturers from Faculty of Management of the University 
 ## Screenshots:
  
 <table>
+ <th></th>
+ <th>Full Time</th>
+ <th></th>
 <tr>
 <th>Timetable View</th>
 <th>Lecturers Timetable View</th>
@@ -38,6 +41,13 @@ IOS App for students and lecturers from Faculty of Management of the University 
 <td><img src="Gifs/TimeTablesFT.gif"/></td>
 <td><img src="Gifs/LecturersFT.gif"/></td>
 <td><img src="Gifs/InfoFT.gif"/></td>
+</tr>
+ <th></th>
+ <th>Part Time</th>
+ <th></th>
+ <tr>
+<td><img src="Gifs/TimeTablesPT.gif"/></td>
+<td><img src="Gifs/LecturersPT.gif"/></td>
 </tr>
 </table>
 
