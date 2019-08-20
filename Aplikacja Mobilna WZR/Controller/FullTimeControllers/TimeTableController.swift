@@ -164,8 +164,8 @@ class TimeTableController: UIViewController {
                 let swipedRight = GesturesUtil.gesturesForFullTImeTablesDecreasing(data: GesturesClass(week: week, day: day, weekForPicker: Int(weekPicker!.index), dayForPicker: Int(dayPicker!.index)))
                 week = swipedRight.week
                 day = swipedRight.day
-                weekPicker.setIndex(UInt(swipedRight.weekForPicker))
-                dayPicker.setIndex(UInt(swipedRight.dayForPicker))
+                weekPicker.setIndex(swipedRight.weekForPicker)
+                dayPicker.setIndex(swipedRight.dayForPicker)
                 getCurrentDataForClasses {}
                 SubjectsTableView.reloadData()
                 
@@ -174,8 +174,8 @@ class TimeTableController: UIViewController {
                 let swipedLeft = GesturesUtil.gesturesForFullTimeTimeTablesAdding(data: GesturesClass(week: week, day: day, weekForPicker: Int(weekPicker!.index), dayForPicker: Int(dayPicker!.index)))
                 week = swipedLeft.week
                 day = swipedLeft.day
-                weekPicker.setIndex(UInt(swipedLeft.weekForPicker))
-                dayPicker.setIndex(UInt(swipedLeft.dayForPicker))
+                weekPicker.setIndex(swipedLeft.weekForPicker)
+                dayPicker.setIndex(swipedLeft.dayForPicker)
                 getCurrentDataForClasses {}
                 SubjectsTableView.reloadData()
             default:

@@ -1,0 +1,42 @@
+PODS:
+  - BetterSegmentedControl (1.2.1)
+  - CSV.swift (2.4.2)
+  - lottie-ios (3.1.2)
+  - Realm (3.17.3):
+    - Realm/Headers (= 3.17.3)
+  - Realm/Headers (3.17.3)
+  - RealmSwift (3.17.3):
+    - Realm (= 3.17.3)
+  - SwiftSoup (2.2.0)
+  - SwipeableTabBarController (2.1.1)
+
+DEPENDENCIES:
+  - BetterSegmentedControl (~> 1.2)
+  - CSV.swift
+  - lottie-ios
+  - RealmSwift
+  - SwiftSoup
+  - SwipeableTabBarController
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - BetterSegmentedControl
+    - CSV.swift
+    - lottie-ios
+    - Realm
+    - RealmSwift
+    - SwiftSoup
+    - SwipeableTabBarController
+
+SPEC CHECKSUMS:
+  BetterSegmentedControl: b27bddbdff29b6cae988678d6cd106858986cd03
+  CSV.swift: 9670cc1b3e3f01e9eebb1aeb603b17b4459e7493
+  lottie-ios: 49cd85b1f24f61a7708ad7ec76a523ab2d0e3100
+  Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
+  RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
+  SwiftSoup: 230991361c5ba249d140161860a3864a28b63860
+  SwipeableTabBarController: 8f7f04275f510c5babb630f7be1161b5f28567e0
+
+PODFILE CHECKSUM: e4edbf37e5806c33eca8a9345d36918071ee564f
+
+COCOAPODS: 1.5.2
