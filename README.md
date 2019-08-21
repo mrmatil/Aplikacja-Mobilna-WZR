@@ -28,24 +28,47 @@ IOS App for students and lecturers from Faculty of Management of the University 
 
 ## Screenshots:
 
-<p align="left">
-Timetable views (for Full time and Part Time students)
+<p align="center">
+Pick between full time and part time:
 </p>
 
-![](./Gifs/TimeTablesFT.gif) ![](./Gifs/TimeTablesPT.gif)
-
-<p align="left">
-Lecturers views (for Full time and Part Time students)
-</p>
-
-![](./Gifs/LecturersFT.gif) ![](./Gifs/LecturersPT.gif)
-
-<p align="left">
-News views (same for Full time and Part Time students)
-</p>
-
-![](./Gifs/InfoFT.gif) 
+![](./Screenshots/6.png)
 
 <p align="center">
-Project started: July 2019
+Timetable view:
 </p>
+
+![](./Screenshots/1.png)
+
+<p align="center">
+Lecturers timetable view:
+</p>
+
+![](./Screenshots/2.png)
+
+<p align="center">
+Lecturer details view:
+</p>
+
+![](./Screenshots/3.png)
+
+<p align="center">
+Web lecturers view:
+</p>
+
+![](./Screenshots/4.png)
+
+<p align="center">
+News view:
+</p>
+
+![](./Screenshots/5.png)
+
+
+## Gifs:
+
+![](./Gifs/TimeTablesFT.gif) ![](./Gifs/TimeTablesPT.gif)
+<br>
+![](./Gifs/LecturersFT.gif) ![](./Gifs/LecturersPT.gif)
+<br>
+![](./Gifs/InfoFT.gif) 
