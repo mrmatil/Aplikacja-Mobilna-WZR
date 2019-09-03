@@ -4,7 +4,7 @@
 IOS App for students and lecturers from Faculty of Management of the University of Gdańsk.
 </p>
 
-##### Project ready to launch in AppStore
+##### Project currently is under App Store Review
 
 ##### Author: Mateusz Łukasiński
 
