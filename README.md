@@ -1,10 +1,9 @@
 # Aplikacja-Mobilna-WZR
 
-<p align="center">
-IOS App for students and lecturers from Faculty of Management of the University of Gdańsk.
-</p>
+### IOS App for students and lecturers from Faculty of Management of the University of Gdańsk.
 
-##### Project ready to launch in AppStore
+
+##### Project currently is under App Store Review
 
 ##### Author: Mateusz Łukasiński
 
