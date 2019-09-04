@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2303DCDF232030C100B23C4B /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303DCDE232030C100B23C4B /* InitialViewController.swift */; };
 		23162BCD22DE89DF001A4D2D /* DownloadCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23162BCC22DE89DF001A4D2D /* DownloadCSV.swift */; };
 		23162BCF22DE9D04001A4D2D /* WelcomeScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23162BCE22DE9D04001A4D2D /* WelcomeScreenController.swift */; };
 		23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23162BD022DEA301001A4D2D /* ParseCSV.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		14D482D4A6BBC0752467BD61 /* Pods_Aplikacja_Mobilna_WZR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aplikacja_Mobilna_WZR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2303DCDE232030C100B23C4B /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		23162BCC22DE89DF001A4D2D /* DownloadCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadCSV.swift; sourceTree = "<group>"; };
 		23162BCE22DE9D04001A4D2D /* WelcomeScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenController.swift; sourceTree = "<group>"; };
 		23162BD022DEA301001A4D2D /* ParseCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseCSV.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		2364EA3F22DA762200340B3A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2303DCDE232030C100B23C4B /* InitialViewController.swift */,
 				236B56A822F0CA5600A63248 /* FullTimeControllers */,
 				236B56A922F0CBBA00A63248 /* PartTimeControllers */,
 				2364EA2922DA760000340B3A /* AppDelegate.swift */,
@@ -553,6 +556,7 @@
 				23162BD122DEA301001A4D2D /* ParseCSV.swift in Sources */,
 				23DE32B3230C392F007AE3CD /* SwipableTBController.swift in Sources */,
 				2360E2E722ECBEF800FCF99F /* GetDataFromDatabase.swift in Sources */,
+				2303DCDF232030C100B23C4B /* InitialViewController.swift in Sources */,
 				235665BD22FF466500DAE54A /* SendLecturersToRealm.swift in Sources */,
 				238FE468230B1B8100AF5FA0 /* segmentControlUtils.swift in Sources */,
 				23B2B9C222F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift in Sources */,
