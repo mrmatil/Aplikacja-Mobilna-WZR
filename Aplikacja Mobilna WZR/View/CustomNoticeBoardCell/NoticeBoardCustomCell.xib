@@ -22,31 +22,36 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSd-h8-bp0">
                         <rect key="frame" x="5" y="5" width="310" height="89.5"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6di-93-alv">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6di-93-alv">
                                 <rect key="frame" x="3" y="3" width="304" height="83.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tytuł Ogłoszenia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XR8-v9-GdM">
-                                        <rect key="frame" x="0.0" y="0.0" width="304" height="45.5"/>
+                                        <rect key="frame" x="0.0" y="3" width="304" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Lul-9O-ksF"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Treść Ogłoszenia Gocha raz dwa trzy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIf-e0-XGa">
-                                        <rect key="frame" x="0.0" y="45.5" width="304" height="38"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Treść Ogłoszenia Gocha raz dwa trzy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIf-e0-XGa">
+                                        <rect key="frame" x="0.0" y="53" width="304" height="18"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XR8-v9-GdM" secondAttribute="trailing" id="76P-2m-fsR"/>
                                     <constraint firstAttribute="trailing" secondItem="XR8-v9-GdM" secondAttribute="trailing" id="9Uu-kL-75F"/>
                                     <constraint firstAttribute="trailing" secondItem="iIf-e0-XGa" secondAttribute="trailing" id="Kdq-Rt-eUo"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="XUV-bl-glm"/>
-                                    <constraint firstItem="iIf-e0-XGa" firstAttribute="leading" secondItem="6di-93-alv" secondAttribute="leading" id="iHd-GQ-11z"/>
-                                    <constraint firstAttribute="bottom" secondItem="iIf-e0-XGa" secondAttribute="bottom" id="it3-lj-4d7"/>
+                                    <constraint firstAttribute="bottom" secondItem="iIf-e0-XGa" secondAttribute="bottom" constant="3" id="it3-lj-4d7"/>
+                                    <constraint firstItem="iIf-e0-XGa" firstAttribute="top" secondItem="XR8-v9-GdM" secondAttribute="bottom" id="jtC-FL-Hby"/>
                                     <constraint firstItem="XR8-v9-GdM" firstAttribute="leading" secondItem="6di-93-alv" secondAttribute="leading" id="lvJ-dl-FJs"/>
-                                    <constraint firstAttribute="bottom" secondItem="iIf-e0-XGa" secondAttribute="bottom" id="qhb-6H-dxv"/>
-                                    <constraint firstItem="XR8-v9-GdM" firstAttribute="top" secondItem="6di-93-alv" secondAttribute="top" id="tLM-JV-T2Q"/>
+                                    <constraint firstItem="XR8-v9-GdM" firstAttribute="leading" secondItem="6di-93-alv" secondAttribute="leading" id="oVS-Ak-JTa"/>
+                                    <constraint firstItem="XR8-v9-GdM" firstAttribute="top" secondItem="6di-93-alv" secondAttribute="top" constant="3" id="tLM-JV-T2Q"/>
+                                    <constraint firstItem="iIf-e0-XGa" firstAttribute="leading" secondItem="6di-93-alv" secondAttribute="leading" id="zNI-Xm-jg7"/>
                                 </constraints>
                             </stackView>
                         </subviews>
