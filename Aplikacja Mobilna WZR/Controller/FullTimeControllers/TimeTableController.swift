@@ -114,6 +114,7 @@ class TimeTableController: UIViewController {
     func enableSegmentControl(){
         weekPicker = segmentControlUtils.getColours(array: ["Tydzień I","Tydzień II"], segmentControl: weekPicker)
         dayPicker = segmentControlUtils.getColours(array: ["Pon.","Wt.","Śr.","Czw.","Pt."], segmentControl: dayPicker)
+        print(dayPicker.debugDescription)
     }
     
     
@@ -138,7 +139,7 @@ class TimeTableController: UIViewController {
     
     //reloads everything <- handy with viewDidLoad/viewDidAppear
     func reloadView(){
-        whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()) tygodnia"
+        whatWeekLabel.text = "Obecnie mamy \(CurrentDate.getDayOfTheWeek()) \(CurrentDate.getCurrentTypeOfWeek()). tygodnia"
         refreshLastDate()
     }
     

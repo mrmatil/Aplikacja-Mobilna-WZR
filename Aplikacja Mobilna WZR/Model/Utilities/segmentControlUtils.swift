@@ -21,6 +21,8 @@ class segmentControlUtils{
                                                               selectedTextColor: .white)
         segmentControl.cornerRadius = 15.0
         
+        segmentControl.indicatorViewInset = 0.0
+        
         return segmentControl
     }
 }
