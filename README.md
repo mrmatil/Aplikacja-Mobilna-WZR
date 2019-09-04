@@ -2,7 +2,7 @@
 
 ### IOS App for students and lecturers from Faculty of Management of the University of Gdańsk.
 
-<a href="https://geo.itunes.apple.com/pl/app/enumerek-warszawa/id1478738152">
+<a href="https://geo.itunes.apple.com/pl/app/id1478738152">
     <img src="http://i.imgur.com/GX20WoH.png?1?4716" alt="app-store-badge" width="200" height="63" />
 </a>
 
