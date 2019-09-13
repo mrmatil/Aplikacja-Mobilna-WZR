@@ -100,6 +100,7 @@ class TimeTablePartTimeController: UIViewController {
         guard let temp = userDefaults.array(forKey: "datesList") as? [String] else {return}
         arrayOfAllDates=temp
         dateTextField.text=arrayOfAllDates[0]
+        datePick = arrayOfAllDates[0]
         enableDatePickerView()
     }
     
