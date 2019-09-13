@@ -12,46 +12,44 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomNoticeBoardCell" rowHeight="270" id="KGk-i7-Jjw" customClass="NoticeBoardCustomCell" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomNoticeBoardCell" rowHeight="81" id="KGk-i7-Jjw" customClass="NoticeBoardCustomCell" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="269.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSd-h8-bp0">
-                        <rect key="frame" x="5" y="5" width="310" height="259.5"/>
+                        <rect key="frame" x="5" y="5" width="310" height="70.5"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="6di-93-alv">
-                                <rect key="frame" x="3" y="3" width="304" height="253.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tytuł Ogłoszenia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XR8-v9-GdM">
-                                        <rect key="frame" x="0.0" y="0.0" width="304" height="138"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Treść Ogłoszenia Gocha raz dwa trzy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIf-e0-XGa">
-                                        <rect key="frame" x="0.0" y="138" width="304" height="115.5"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tytuł Ogłoszenia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XR8-v9-GdM">
+                                <rect key="frame" x="3" y="5" width="304" height="37.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="iIf-e0-XGa" secondAttribute="trailing" id="Kdq-Rt-eUo"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="XUV-bl-glm"/>
-                                    <constraint firstAttribute="bottom" secondItem="iIf-e0-XGa" secondAttribute="bottom" constant="5" id="it3-lj-4d7"/>
-                                    <constraint firstItem="iIf-e0-XGa" firstAttribute="leading" secondItem="6di-93-alv" secondAttribute="leading" id="zNI-Xm-jg7"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="RgY-5a-OPl"/>
                                 </constraints>
-                            </stackView>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Treść Ogłoszenia Gocha raz dwa trzy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIf-e0-XGa">
+                                <rect key="frame" x="3" y="47.5" width="304" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="NfE-CM-CHo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.019385289399999998" green="0.24137771129999999" blue="0.46999841930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="6di-93-alv" secondAttribute="bottom" constant="3" id="50c-zF-ZSY"/>
-                            <constraint firstAttribute="trailing" secondItem="6di-93-alv" secondAttribute="trailing" constant="3" id="A6r-yr-u7m"/>
-                            <constraint firstItem="6di-93-alv" firstAttribute="leading" secondItem="bSd-h8-bp0" secondAttribute="leading" constant="3" id="azx-0N-MEz"/>
-                            <constraint firstItem="6di-93-alv" firstAttribute="top" secondItem="bSd-h8-bp0" secondAttribute="top" constant="3" id="dC0-Ej-a0x"/>
+                            <constraint firstItem="iIf-e0-XGa" firstAttribute="leading" secondItem="bSd-h8-bp0" secondAttribute="leading" constant="3" id="M7O-6s-d1Y"/>
+                            <constraint firstAttribute="trailing" secondItem="iIf-e0-XGa" secondAttribute="trailing" constant="3" id="RNc-k2-yZr"/>
+                            <constraint firstItem="XR8-v9-GdM" firstAttribute="top" secondItem="bSd-h8-bp0" secondAttribute="top" constant="5" id="VB6-UB-KSs"/>
+                            <constraint firstAttribute="trailing" secondItem="XR8-v9-GdM" secondAttribute="trailing" constant="3" id="a47-x4-OiK"/>
+                            <constraint firstItem="XR8-v9-GdM" firstAttribute="leading" secondItem="bSd-h8-bp0" secondAttribute="leading" constant="3" id="efV-R8-87Z"/>
+                            <constraint firstItem="iIf-e0-XGa" firstAttribute="top" secondItem="XR8-v9-GdM" secondAttribute="bottom" constant="5" id="t6N-ZZ-FQy"/>
+                            <constraint firstAttribute="bottom" secondItem="iIf-e0-XGa" secondAttribute="bottom" constant="5" id="voG-ai-816"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
@@ -74,7 +72,7 @@
                 <outlet property="contentLabel" destination="iIf-e0-XGa" id="qxR-Rt-S7F"/>
                 <outlet property="titleLabel" destination="XR8-v9-GdM" id="wb9-Af-4kW"/>
             </connections>
-            <point key="canvasLocation" x="131.8840579710145" y="203.57142857142856"/>
+            <point key="canvasLocation" x="131.8840579710145" y="140.29017857142856"/>
         </tableViewCell>
     </objects>
 </document>
