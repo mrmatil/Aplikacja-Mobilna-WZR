@@ -95,4 +95,28 @@ class CurrentDate{
             return ""
         }
     }
+    
+    static func getDatesInOrder(dates:[String])->[String]{
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        
+        var datesArray = [Date]()
+        
+        for temp in dates{
+            guard let temp2 = dateFormatter.date(from: temp) else {continue}
+            datesArray.append(temp2)
+        }
+        
+        datesArray = datesArray.sorted()
+        
+        var stringSortedDates = [String]()
+        
+        for x in datesArray{
+            stringSortedDates.append(dateFormatter.string(from: x))
+        }
+                
+        return stringSortedDates
+    }
 }

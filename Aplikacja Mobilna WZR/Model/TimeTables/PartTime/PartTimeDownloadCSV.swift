@@ -41,21 +41,24 @@ class PartTimeDownloadCSV{
     private func sendDataToDatabase(temp:[PartTimeClassesArray]){
         let realm = try! Realm()
 //        print(Realm.Configuration.defaultConfiguration.fileURL) //printowanie ścieżki do bazy danych realm
-        if temp.count>0{ // if in case that some groups may have no classes
-            for x in 0...temp.count-1{
+        
+        let data = RemoveDuplicates.removePT(data: temp)
+        
+        if data.count>0{ // if in case that some groups may have no classes
+            for x in 0...data.count-1{
                 let ptdb = PartTimeTimeTablesDataBase()
-                ptdb.group=temp[x].group
-                ptdb.className=temp[x].className
-                ptdb.lecturer=temp[x].lecturer
-                ptdb.startHour=temp[x].startHour
-                ptdb.endHour=temp[x].endHour
-                ptdb.classroom=temp[x].classroom
-                ptdb.date=temp[x].date
-                ptdb.nameOfTheDay=temp[x].nameOfTheDay
+                ptdb.group=data[x].group
+                ptdb.className=data[x].className
+                ptdb.lecturer=data[x].lecturer
+                ptdb.startHour=data[x].startHour
+                ptdb.endHour=data[x].endHour
+                ptdb.classroom=data[x].classroom
+                ptdb.date=data[x].date
+                ptdb.nameOfTheDay=data[x].nameOfTheDay
                 
                 try! realm.write {
                     realm.add(ptdb)
-                    datesArray.append(temp[x].date)
+                    datesArray.append(data[x].date)
                 }
             }
         }
@@ -76,7 +79,8 @@ class PartTimeDownloadCSV{
         for x in temp{
             uniqueDatesArray.append(x)
         }
-        uniqueDatesArray = uniqueDatesArray.sorted()
+        uniqueDatesArray = CurrentDate.getDatesInOrder(dates: uniqueDatesArray)
+//        uniqueDatesArray = uniqueDatesArray.sorted()
         userDefaults.set(uniqueDatesArray, forKey: "datesList")
     }
 }

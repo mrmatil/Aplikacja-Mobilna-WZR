@@ -71,4 +71,66 @@ class RemoveDuplicates{
         
         return dataWithoutDuplicates
     }
+    
+    
+    static func removePT(data:[PartTimeClassesArray])->[PartTimeClassesArray]{
+        
+        var days = [String]()
+        var dataWithoutDuplicates = [PartTimeClassesArray]()
+        
+        for temp in data{
+            if days.contains(temp.date){
+                continue
+            }else{
+                days.append(temp.date)
+            }
+        }
+        
+        
+        for temp in days{
+            var tempArray = [PartTimeClassesArray]()
+            
+            for x in data{
+                if x.date == temp{
+                    tempArray.append(x)
+                }
+            }
+            
+            if tempArray.count == 1{
+                dataWithoutDuplicates.append(tempArray[0])
+            }
+            
+            else if tempArray.count>1{
+                var temp:PartTimeClassesArray = tempArray[0]
+                for y in 0...tempArray.count-2{
+                    if tempArray[y+1].className == temp.className && tempArray[y+1].classroom == temp.classroom && tempArray[y+1].lecturer == temp.lecturer{
+                        
+                        temp = PartTimeClassesArray(group: tempArray[y+1].group,
+                                            className: tempArray[y+1].className,
+                                            lecturer: tempArray[y+1].lecturer,
+                                            startHour: temp.startHour,
+                                            endHour: tempArray[y+1].endHour,
+                                            classroom: tempArray[y+1].classroom,
+                                            date: tempArray[y+1].date,
+                                            nameOfTheDay: tempArray[y+1].nameOfTheDay)
+                        
+                    }
+                    else{
+                        
+                        dataWithoutDuplicates.append(temp)
+                        temp = tempArray[y+1]
+                        
+                    }
+                    
+                }
+                
+                dataWithoutDuplicates.append(temp)
+                
+            }
+            
+        }
+        
+        
+        return dataWithoutDuplicates
+    }
 }
