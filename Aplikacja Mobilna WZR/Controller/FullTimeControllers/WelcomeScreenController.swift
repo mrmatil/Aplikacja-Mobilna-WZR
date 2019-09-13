@@ -85,8 +85,10 @@ class WelcomeScreenController: UIViewController {
     func initCompleted(){
         loop+=1
         if loop==3{
-            userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshFullTime")
-            performSegue(withIdentifier: "initialSegue", sender: self)
+            DispatchQueue.main.async {
+                self.userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshFullTime")
+                self.performSegue(withIdentifier: "initialSegue", sender: self)
+            }
         }
 
     }

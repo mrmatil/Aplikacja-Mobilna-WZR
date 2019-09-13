@@ -75,8 +75,10 @@ class WelcomeScreenPartTimeController: UIViewController {
     func initCompleted(){
         loop+=1
         if loop==3{
-            userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshPartTime")
-            performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
+            DispatchQueue.main.async {
+                self.userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshPartTime")
+                self.performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)
+            }
         }
         
     }
