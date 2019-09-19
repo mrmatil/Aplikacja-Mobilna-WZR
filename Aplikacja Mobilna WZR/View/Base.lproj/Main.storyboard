@@ -705,6 +705,7 @@
                         <segue destination="eXo-Ay-ela" kind="relationship" relationship="viewControllers" id="3Fk-xV-t2e"/>
                         <segue destination="eiA-aK-Nir" kind="relationship" relationship="viewControllers" id="I75-hR-LxS"/>
                         <segue destination="0nP-lL-VLc" kind="relationship" relationship="viewControllers" id="esu-Gi-0p9"/>
+                        <segue destination="I7O-V9-uCm" kind="relationship" relationship="viewControllers" id="map-O8-gWa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKf-JI-qWp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -910,6 +911,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yy6-hr-wcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2530" y="2448"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="zGT-54-uyg">
+            <objects>
+                <viewController id="I7O-V9-uCm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ck1-Lq-CbQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="FR1-p1-emg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="fkv-6f-YMK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7UE-4O-r5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3429" y="2448"/>
         </scene>
     </scenes>
     <resources>

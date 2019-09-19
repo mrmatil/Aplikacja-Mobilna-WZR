@@ -40,5 +40,13 @@ class AllURLs{
     
     //LecturersInfo:
     static let lecturersInfoUrl:String = "https://wzr.ug.edu.pl/wydzial/index.php?str=121"
+    
+    //Exams:
+    
+    //FullTime
+    static let fullTimeExam:String = "https://wzr.ug.edu.pl/studia/index.php?str=432"
+    
+    //PartTime
+    static let partTimeExam:String = "https://wzr.ug.edu.pl/studia/index.php?str=747"
      
 }

@@ -58,6 +58,7 @@ class Groups{
         
         arrayOfAll += tempArray
         completionHandler(arrayOfAll)
+        
     }
 
 
