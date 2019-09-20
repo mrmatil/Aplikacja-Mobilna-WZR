@@ -35,6 +35,11 @@
 		2364EA3722DA760000340B3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2364EA3522DA760000340B3A /* LaunchScreen.storyboard */; };
 		2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4422DA7B9D00340B3A /* TimeTableController.swift */; };
 		2364EA4722DA8BB500340B3A /* WebDataDownload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2364EA4622DA8BB500340B3A /* WebDataDownload.swift */; };
+		236D429D2333CBD600346542 /* ExamsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D429C2333CBD600346542 /* ExamsArray.swift */; };
+		236D429F2333CC5600346542 /* ExamsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D429E2333CC5600346542 /* ExamsParser.swift */; };
+		236D42A12333DC4600346542 /* ExamsParseUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D42A02333DC4600346542 /* ExamsParseUtil.swift */; };
+		236D42A32333E64600346542 /* ExamsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D42A22333E64600346542 /* ExamsDataBase.swift */; };
+		236D42A52333E77400346542 /* SendExamsToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D42A42333E77400346542 /* SendExamsToRealm.swift */; };
 		2378D64522F9C45A00190EB7 /* NoticeBoardsDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378D64422F9C45A00190EB7 /* NoticeBoardsDataBase.swift */; };
 		2378D64722F9D37E00190EB7 /* NoticeBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378D64622F9D37E00190EB7 /* NoticeBoardController.swift */; };
 		2378D64A22F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2378D64922F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift */; };
@@ -58,6 +63,12 @@
 		23D9AEDC22EF666C00B4B876 /* CurrentDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9AEDB22EF666C00B4B876 /* CurrentDate.swift */; };
 		23DE32B3230C392F007AE3CD /* SwipableTBController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DE32B2230C392F007AE3CD /* SwipableTBController.swift */; };
 		23DFFB7122EE19320045C626 /* LecturersTimeTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */; };
+		23E3B2B7233432830027A34D /* ExamsPartTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3B2B6233432830027A34D /* ExamsPartTimeViewController.swift */; };
+		23E3B2B9233433D40027A34D /* GetDataFromRealmExams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3B2B8233433D40027A34D /* GetDataFromRealmExams.swift */; };
+		23E3B2BB2334403C0027A34D /* ExamsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3B2BA2334403C0027A34D /* ExamsInfoViewController.swift */; };
+		23E3B2BF233445510027A34D /* ExamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3B2BD233445510027A34D /* ExamsTableViewCell.swift */; };
+		23E3B2C0233445510027A34D /* ExamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E3B2BE233445510027A34D /* ExamsTableViewCell.xib */; };
+		23E3B2C223344FE00027A34D /* ExamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3B2C123344FE00027A34D /* ExamsViewController.swift */; };
 		23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF9AA22E5F75A0039C2AB /* Alerts.swift */; };
 		23EDF9AF22E60A3F0039C2AB /* ClassesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF9AE22E60A3F0039C2AB /* ClassesArray.swift */; };
 		23F40DB32302B69800E96D72 /* LecturersDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F40DB22302B69800E96D72 /* LecturersDetailsController.swift */; };
@@ -98,6 +109,11 @@
 		2364EA3822DA760000340B3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2364EA4422DA7B9D00340B3A /* TimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableController.swift; sourceTree = "<group>"; };
 		2364EA4622DA8BB500340B3A /* WebDataDownload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebDataDownload.swift; sourceTree = "<group>"; };
+		236D429C2333CBD600346542 /* ExamsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsArray.swift; sourceTree = "<group>"; };
+		236D429E2333CC5600346542 /* ExamsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsParser.swift; sourceTree = "<group>"; };
+		236D42A02333DC4600346542 /* ExamsParseUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsParseUtil.swift; sourceTree = "<group>"; };
+		236D42A22333E64600346542 /* ExamsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsDataBase.swift; sourceTree = "<group>"; };
+		236D42A42333E77400346542 /* SendExamsToRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendExamsToRealm.swift; sourceTree = "<group>"; };
 		2378D64422F9C45A00190EB7 /* NoticeBoardsDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeBoardsDataBase.swift; sourceTree = "<group>"; };
 		2378D64622F9D37E00190EB7 /* NoticeBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeBoardController.swift; sourceTree = "<group>"; };
 		2378D64922F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromDatabaseNoticeBoard.swift; sourceTree = "<group>"; };
@@ -121,6 +137,12 @@
 		23D9AEDB22EF666C00B4B876 /* CurrentDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDate.swift; sourceTree = "<group>"; };
 		23DE32B2230C392F007AE3CD /* SwipableTBController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipableTBController.swift; sourceTree = "<group>"; };
 		23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersTimeTableController.swift; sourceTree = "<group>"; };
+		23E3B2B6233432830027A34D /* ExamsPartTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsPartTimeViewController.swift; sourceTree = "<group>"; };
+		23E3B2B8233433D40027A34D /* GetDataFromRealmExams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataFromRealmExams.swift; sourceTree = "<group>"; };
+		23E3B2BA2334403C0027A34D /* ExamsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsInfoViewController.swift; sourceTree = "<group>"; };
+		23E3B2BD233445510027A34D /* ExamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsTableViewCell.swift; sourceTree = "<group>"; };
+		23E3B2BE233445510027A34D /* ExamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamsTableViewCell.xib; sourceTree = "<group>"; };
+		23E3B2C123344FE00027A34D /* ExamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsViewController.swift; sourceTree = "<group>"; };
 		23E4E51B230C680200FA0BAE /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		23E4E51C230C680200FA0BAE /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		23EDF9AA22E5F75A0039C2AB /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
@@ -190,6 +212,7 @@
 				23B2B9C122F5CEA2007C11CA /* PartTimeTimeTablesDataBase.swift */,
 				235665BE22FF481200DAE54A /* lecturersDataBase.swift */,
 				2378D64422F9C45A00190EB7 /* NoticeBoardsDataBase.swift */,
+				236D42A22333E64600346542 /* ExamsDataBase.swift */,
 			);
 			path = RealmDatabases;
 			sourceTree = "<group>";
@@ -250,6 +273,7 @@
 				2364EA2922DA760000340B3A /* AppDelegate.swift */,
 				23F40DB22302B69800E96D72 /* LecturersDetailsController.swift */,
 				23DE32B2230C392F007AE3CD /* SwipableTBController.swift */,
+				23E3B2BA2334403C0027A34D /* ExamsInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +281,7 @@
 		2364EA4022DA762400340B3A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				23E3B2BC233445320027A34D /* CustomExamsCell */,
 				23F40DB42302CDAA00E96D72 /* CustomLecturersDetailsCell */,
 				2378D64B22F9EADE00190EB7 /* CustomNoticeBoardCell */,
 				23D9AED422EF37DA00B4B876 /* CustomLecturersTimeTableCell */,
@@ -276,6 +301,7 @@
 				233577B222DAB2530043AE98 /* Groups */,
 				235665B622FEF79400DAE54A /* Lecturers */,
 				23A3A1DC22F8FD9500291438 /* NoticeBoards */,
+				236D429B2333CBB800346542 /* Exams */,
 				2360E2DE22EC918A00FCF99F /* RealmDatabases */,
 			);
 			path = Model;
@@ -288,6 +314,7 @@
 				2364EA4422DA7B9D00340B3A /* TimeTableController.swift */,
 				23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */,
 				2378D64622F9D37E00190EB7 /* NoticeBoardController.swift */,
+				23E3B2C123344FE00027A34D /* ExamsViewController.swift */,
 			);
 			path = FullTimeControllers;
 			sourceTree = "<group>";
@@ -299,8 +326,20 @@
 				2350A2E422F4E5D70020E7FC /* TimeTablePartTimeController.swift */,
 				23B368DE22F881E100F58E64 /* LecturersPartTimeViewController.swift */,
 				2341834E2309A6AD001D370B /* NoticeBoardPartTimeController.swift */,
+				23E3B2B6233432830027A34D /* ExamsPartTimeViewController.swift */,
 			);
 			path = PartTimeControllers;
+			sourceTree = "<group>";
+		};
+		236D429B2333CBB800346542 /* Exams */ = {
+			isa = PBXGroup;
+			children = (
+				236D429C2333CBD600346542 /* ExamsArray.swift */,
+				236D429E2333CC5600346542 /* ExamsParser.swift */,
+				236D42A02333DC4600346542 /* ExamsParseUtil.swift */,
+				236D42A42333E77400346542 /* SendExamsToRealm.swift */,
+			);
+			path = Exams;
 			sourceTree = "<group>";
 		};
 		2378D64822F9E57200190EB7 /* GettingDataFromRealm */ = {
@@ -310,6 +349,7 @@
 				23B368DC22F85D5300F58E64 /* GetDataFromDatabasePT.swift */,
 				2378D64922F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift */,
 				235665C022FF5E7600DAE54A /* GetDataFromDatabaseLecturers.swift */,
+				23E3B2B8233433D40027A34D /* GetDataFromRealmExams.swift */,
 			);
 			path = GettingDataFromRealm;
 			sourceTree = "<group>";
@@ -383,6 +423,15 @@
 				23D9AED622EF380800B4B876 /* LecturersCustomCell.xib */,
 			);
 			path = CustomLecturersTimeTableCell;
+			sourceTree = "<group>";
+		};
+		23E3B2BC233445320027A34D /* CustomExamsCell */ = {
+			isa = PBXGroup;
+			children = (
+				23E3B2BD233445510027A34D /* ExamsTableViewCell.swift */,
+				23E3B2BE233445510027A34D /* ExamsTableViewCell.xib */,
+			);
+			path = CustomExamsCell;
 			sourceTree = "<group>";
 		};
 		23F40DB42302CDAA00E96D72 /* CustomLecturersDetailsCell */ = {
@@ -473,6 +522,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2364EA3722DA760000340B3A /* LaunchScreen.storyboard in Resources */,
+				23E3B2C0233445510027A34D /* ExamsTableViewCell.xib in Resources */,
 				23F40DB82302CDD800E96D72 /* LecturersDetailsCell.xib in Resources */,
 				23D9AED822EF380800B4B876 /* LecturersCustomCell.xib in Resources */,
 				2360E2E522ECACF100FCF99F /* TimeTableCell.xib in Resources */,
@@ -542,6 +592,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23EDF9AF22E60A3F0039C2AB /* ClassesArray.swift in Sources */,
+				23E3B2BB2334403C0027A34D /* ExamsInfoViewController.swift in Sources */,
 				23162BCD22DE89DF001A4D2D /* DownloadCSV.swift in Sources */,
 				23162BCF22DE9D04001A4D2D /* WelcomeScreenController.swift in Sources */,
 				23B2B9C022F5C24F007C11CA /* PartTimeParseCSv.swift in Sources */,
@@ -549,7 +600,9 @@
 				233F62892306AEE7007EEA52 /* RemoveDuplicates.swift in Sources */,
 				233577B122DA99E30043AE98 /* GroupsParser.swift in Sources */,
 				23F40DB32302B69800E96D72 /* LecturersDetailsController.swift in Sources */,
+				236D42A12333DC4600346542 /* ExamsParseUtil.swift in Sources */,
 				233760C622FCE6C900056354 /* GesturesClass.swift in Sources */,
+				23E3B2BF233445510027A34D /* ExamsTableViewCell.swift in Sources */,
 				235665BB22FF2D9500DAE54A /* LecturersArray.swift in Sources */,
 				235665BF22FF481200DAE54A /* lecturersDataBase.swift in Sources */,
 				23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */,
@@ -563,6 +616,7 @@
 				23B368E522F8EF9F00F58E64 /* SendNoticeBoardsToRealm.swift in Sources */,
 				2350A2E522F4E5D70020E7FC /* TimeTablePartTimeController.swift in Sources */,
 				23B368DD22F85D5300F58E64 /* GetDataFromDatabasePT.swift in Sources */,
+				23E3B2B9233433D40027A34D /* GetDataFromRealmExams.swift in Sources */,
 				2378D64522F9C45A00190EB7 /* NoticeBoardsDataBase.swift in Sources */,
 				2350A2DF22F4C2850020E7FC /* AllURLs.swift in Sources */,
 				2378D64A22F9E5CC00190EB7 /* GetDataFromDatabaseNoticeBoard.swift in Sources */,
@@ -573,9 +627,13 @@
 				233760C322FCE53E00056354 /* GesturesUtil.swift in Sources */,
 				23B368E322F8D0B000F58E64 /* NoticeBoardArray.swift in Sources */,
 				23B2B9BC22F5BDCF007C11CA /* PartTimeClassesArray.swift in Sources */,
+				236D429D2333CBD600346542 /* ExamsArray.swift in Sources */,
 				23B2B9BE22F5BF1B007C11CA /* PartTimeDownloadCSV.swift in Sources */,
 				23DFFB7122EE19320045C626 /* LecturersTimeTableController.swift in Sources */,
 				23D9AEDC22EF666C00B4B876 /* CurrentDate.swift in Sources */,
+				236D42A32333E64600346542 /* ExamsDataBase.swift in Sources */,
+				23E3B2C223344FE00027A34D /* ExamsViewController.swift in Sources */,
+				236D42A52333E77400346542 /* SendExamsToRealm.swift in Sources */,
 				23F40DB72302CDD800E96D72 /* LecturersDetailsCell.swift in Sources */,
 				23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */,
 				2364EA4722DA8BB500340B3A /* WebDataDownload.swift in Sources */,
@@ -583,8 +641,10 @@
 				23B368DF22F881E200F58E64 /* LecturersPartTimeViewController.swift in Sources */,
 				2350A2E122F4CB230020E7FC /* WelcomeScreenPartTimeController.swift in Sources */,
 				2360E2E422ECACF100FCF99F /* TimeTableCell.swift in Sources */,
+				236D429F2333CC5600346542 /* ExamsParser.swift in Sources */,
 				2360E2E022EC91BD00FCF99F /* TimeTablesDataBase.swift in Sources */,
 				235665B922FF047E00DAE54A /* LecturersParser.swift in Sources */,
+				23E3B2B7233432830027A34D /* ExamsPartTimeViewController.swift in Sources */,
 				2341834F2309A6AD001D370B /* NoticeBoardPartTimeController.swift in Sources */,
 				235665C122FF5E7600DAE54A /* GetDataFromDatabaseLecturers.swift in Sources */,
 				2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */,

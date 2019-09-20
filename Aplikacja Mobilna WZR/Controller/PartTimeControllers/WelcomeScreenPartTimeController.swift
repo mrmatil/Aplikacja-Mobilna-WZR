@@ -49,10 +49,12 @@ class WelcomeScreenPartTimeController: UIViewController {
         let objects = realm.objects(PartTimeTimeTablesDataBase.self)
         let objects2 = realm.objects(NoticeBoardsDataBase.self)
         let objects3 = realm.objects(LecturersDataBase.self)
+        let objects4 = realm.objects(ExamsDataBase.self)
         try! realm.write {
             realm.delete(objects) // deleting existing PartTimeTimeTablesDataBase
             realm.delete(objects2.filter("FTorPT = 'PartTime' ")) // deleting existing NoticeBoardDataBase for PartTime Students
             realm.delete(objects3) // deleting existing lecturers database
+            realm.delete(objects4.filter("group CONTAINS 'N' ")) // deleting exams database
         }
         
         changeLabel(number: 2)
@@ -69,12 +71,14 @@ class WelcomeScreenPartTimeController: UIViewController {
         
         SendLecturersToRealm(completionHandler: initCompleted).sendToRealm()
         
+        SendExamsToRealm(url: AllURLs.partTimeExam, completionHandler: initCompleted).sendToRealm()
+        
         //-------------------------
     }
     
     func initCompleted(){
         loop+=1
-        if loop==3{
+        if loop==4{
             DispatchQueue.main.async {
                 self.userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshPartTime")
                 self.performSegue(withIdentifier: "PartTimeInitialSegue", sender: self)

@@ -57,10 +57,13 @@ class WelcomeScreenController: UIViewController {
         let objects = realm.objects(TimeTablesDataBase.self)
         let objects2 = realm.objects(NoticeBoardsDataBase.self)
         let objects3 = realm.objects(LecturersDataBase.self)
+        let objects4 = realm.objects(ExamsDataBase.self)
         try! realm.write {
             realm.delete(objects) // deleting existing TimeTablesDataBase
             realm.delete(objects2.filter("FTorPT = 'FullTime' ")) // deleting existing NoticeBoardDataBase for FullTime Students
             realm.delete(objects3) // deleting existing lecturers database
+            realm.delete(objects4.filter("group CONTAINS 'S' ")) // deleting exams database
+
         }
         
         changeLabel(number: 2)
@@ -77,6 +80,9 @@ class WelcomeScreenController: UIViewController {
         
         SendLecturersToRealm(completionHandler: initCompleted).sendToRealm()
         
+        SendExamsToRealm(url: AllURLs.fullTimeExam, completionHandler: initCompleted).sendToRealm()
+
+        
         //-----------------------
         
     }
@@ -84,7 +90,7 @@ class WelcomeScreenController: UIViewController {
     //performing segue after checking if all things is downloaded
     func initCompleted(){
         loop+=1
-        if loop==3{
+        if loop==4{ //change to 4 !!!!!!! 
             DispatchQueue.main.async {
                 self.userDefaults.set(CurrentDate.getCurrentDate(), forKey: "dateOfLastRefreshFullTime")
                 self.performSegue(withIdentifier: "initialSegue", sender: self)
