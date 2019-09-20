@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customExamsCell" rowHeight="172" id="KGk-i7-Jjw" customClass="ExamsTableViewCell" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="171.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XEZ-ms-8JW">
+                        <rect key="frame" x="5" y="5" width="310" height="161.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nazwa Zajęć" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4a-v1-LmT">
+                                <rect key="frame" x="3" y="5" width="304" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grupa S12-32" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMU-RS-L6H">
+                                <rect key="frame" x="3" y="31.5" width="84.5" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sala WZ-Aula" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9A0-lL-DRh">
+                                <rect key="frame" x="3" y="50.5" width="82" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poniedziałek 27.05.2019" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9T-4L-HBl">
+                                <rect key="frame" x="3" y="69.5" width="146" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="godz.: 11.30-12.15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMu-Wf-zaR">
+                                <rect key="frame" x="3" y="88.5" width="110" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="termin pierwszy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SU-i1-QxL">
+                                <rect key="frame" x="3" y="107.5" width="97" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wykładowca" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kCv-wN-o6T">
+                                <rect key="frame" x="3" y="128.5" width="304" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1422823668" green="0.23006340859999999" blue="0.49848979710000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OMu-Wf-zaR" firstAttribute="top" secondItem="e9T-4L-HBl" secondAttribute="bottom" constant="3" id="90K-8R-mLO"/>
+                            <constraint firstItem="e9T-4L-HBl" firstAttribute="top" secondItem="9A0-lL-DRh" secondAttribute="bottom" constant="3" id="BZc-0F-Nw2"/>
+                            <constraint firstItem="kCv-wN-o6T" firstAttribute="leading" secondItem="XEZ-ms-8JW" secondAttribute="leading" constant="3" id="BsG-MI-xPd"/>
+                            <constraint firstAttribute="bottom" secondItem="kCv-wN-o6T" secondAttribute="bottom" constant="15" id="Hgj-j8-zXH"/>
+                            <constraint firstItem="dMU-RS-L6H" firstAttribute="top" secondItem="a4a-v1-LmT" secondAttribute="bottom" constant="5" id="NQ5-Y4-9wB"/>
+                            <constraint firstItem="6SU-i1-QxL" firstAttribute="top" secondItem="OMu-Wf-zaR" secondAttribute="bottom" constant="3" id="OIl-gG-bXH"/>
+                            <constraint firstItem="kCv-wN-o6T" firstAttribute="top" secondItem="6SU-i1-QxL" secondAttribute="bottom" constant="5" id="ReD-5P-uDw"/>
+                            <constraint firstAttribute="trailing" secondItem="kCv-wN-o6T" secondAttribute="trailing" constant="3" id="Ru6-Gf-0RM"/>
+                            <constraint firstItem="9A0-lL-DRh" firstAttribute="leading" secondItem="XEZ-ms-8JW" secondAttribute="leading" constant="3" id="UGw-Gi-i0e"/>
+                            <constraint firstItem="6SU-i1-QxL" firstAttribute="leading" secondItem="XEZ-ms-8JW" secondAttribute="leading" constant="3" id="ZR0-5E-Nvz"/>
+                            <constraint firstAttribute="trailing" secondItem="a4a-v1-LmT" secondAttribute="trailing" constant="3" id="ZpW-KX-wM8"/>
+                            <constraint firstItem="e9T-4L-HBl" firstAttribute="leading" secondItem="XEZ-ms-8JW" secondAttribute="leading" constant="3" id="bAb-kx-lnJ"/>
+                            <constraint firstItem="OMu-Wf-zaR" firstAttribute="leading" secondItem="XEZ-ms-8JW" secondAttribute="leading" constant="3" id="gQ4-En-ump"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="161" id="lCx-SL-Xtq"/>
+                            <constraint firstItem="a4a-v1-LmT" firstAttribute="leading" secondItem="XEZ-ms-8JW" secondAttribute="leading" constant="3" id="lvO-dt-TDG"/>
+                            <constraint firstItem="a4a-v1-LmT" firstAttribute="top" secondItem="XEZ-ms-8JW" secondAttribute="top" constant="5" id="r1Q-Tm-mPr"/>
+                            <constraint firstItem="dMU-RS-L6H" firstAttribute="leading" secondItem="XEZ-ms-8JW" secondAttribute="leading" constant="3" id="rqP-aK-wPb"/>
+                            <constraint firstItem="9A0-lL-DRh" firstAttribute="top" secondItem="dMU-RS-L6H" secondAttribute="bottom" constant="3" id="wWR-Vl-h0S"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XEZ-ms-8JW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="GqF-vX-Fzu"/>
+                    <constraint firstItem="XEZ-ms-8JW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="cYu-au-D8L"/>
+                    <constraint firstAttribute="bottom" secondItem="XEZ-ms-8JW" secondAttribute="bottom" constant="5" id="tbp-Wk-NZE"/>
+                    <constraint firstAttribute="trailing" secondItem="XEZ-ms-8JW" secondAttribute="trailing" constant="5" id="vmq-YV-BgZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="classroom" destination="9A0-lL-DRh" id="9tU-5G-QSx"/>
+                <outlet property="date" destination="e9T-4L-HBl" id="Mdm-Eb-Ice"/>
+                <outlet property="group" destination="dMU-RS-L6H" id="FOQ-zH-ndC"/>
+                <outlet property="hour" destination="OMu-Wf-zaR" id="Q2L-Sb-Dhm"/>
+                <outlet property="lecturer" destination="kCv-wN-o6T" id="bkL-YD-Wh4"/>
+                <outlet property="number" destination="6SU-i1-QxL" id="QKx-04-00u"/>
+                <outlet property="subject" destination="a4a-v1-LmT" id="W4r-2u-L3K"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="180.80357142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
