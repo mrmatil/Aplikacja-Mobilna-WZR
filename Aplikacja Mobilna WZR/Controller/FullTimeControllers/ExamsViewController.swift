@@ -1,5 +1,5 @@
 //
-//  ExamsPartTimeViewController.swift
+//  ExamsViewController.swift
 //  Aplikacja Mobilna WZR
 //
 //  Created by Mateusz Łukasiński on 20/09/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ExamsPartTimeViewController: UIViewController {
+class ExamsViewController: UIViewController {
 
     //variables
     var groups = [String]()
@@ -33,13 +33,13 @@ class ExamsPartTimeViewController: UIViewController {
     
     //IBActions
     @IBAction func searchButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "PTExam", sender: self)
+        performSegue(withIdentifier: "FTExam", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! ExamsInfoViewController
         
-        let temp = GetDataFromRealmExams.getFromRealm(FullTimeorPartTime: "N", group: group, lecturer: lecturer, subject: subject)
+        let temp = GetDataFromRealmExams.getFromRealm(FullTimeorPartTime: "S", group: group, lecturer: lecturer, subject: subject)
         for x in temp{
             vc.classroom.append(x.classroom!)
             vc.date.append(x.date!)
@@ -49,9 +49,9 @@ class ExamsPartTimeViewController: UIViewController {
             vc.number.append(x.number!)
             vc.subject.append(x.subject!)
         }
-
+        
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +65,7 @@ class ExamsPartTimeViewController: UIViewController {
     func getGroupsData(){
         let ud = UserDefaults()
         groups = [" "]
-        groups.append(contentsOf: ud.array(forKey: "partTimeGroupsList") as! [String])
+        groups.append(contentsOf: ud.array(forKey: "groupsList") as! [String])
         enableGroupsPickerView()
     }
     
@@ -83,7 +83,7 @@ class ExamsPartTimeViewController: UIViewController {
     
 }
 
-extension ExamsPartTimeViewController:UIPickerViewDelegate,UIPickerViewDataSource{
+extension ExamsViewController:UIPickerViewDelegate,UIPickerViewDataSource{
     
     func enableGroupsPickerView(){
         groupsPV.delegate=self
@@ -182,7 +182,7 @@ extension ExamsPartTimeViewController:UIPickerViewDelegate,UIPickerViewDataSourc
         case subjectsPV:
             text = subjects[row]
         default:
-             text = ""
+            text = ""
         }
         
         return NSAttributedString(string: text, attributes: [NSAttributedString.Key.foregroundColor:UIColor(red: 24.0/255.0, green: 62.0/255.0, blue: 116.0/255.0, alpha: 1.0)])
@@ -203,3 +203,4 @@ extension ExamsPartTimeViewController:UIPickerViewDelegate,UIPickerViewDataSourc
     
     
 }
+

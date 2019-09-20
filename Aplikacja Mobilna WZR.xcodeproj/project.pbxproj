@@ -68,6 +68,7 @@
 		23E3B2BB2334403C0027A34D /* ExamsInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3B2BA2334403C0027A34D /* ExamsInfoViewController.swift */; };
 		23E3B2BF233445510027A34D /* ExamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3B2BD233445510027A34D /* ExamsTableViewCell.swift */; };
 		23E3B2C0233445510027A34D /* ExamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23E3B2BE233445510027A34D /* ExamsTableViewCell.xib */; };
+		23E3B2C223344FE00027A34D /* ExamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E3B2C123344FE00027A34D /* ExamsViewController.swift */; };
 		23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF9AA22E5F75A0039C2AB /* Alerts.swift */; };
 		23EDF9AF22E60A3F0039C2AB /* ClassesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EDF9AE22E60A3F0039C2AB /* ClassesArray.swift */; };
 		23F40DB32302B69800E96D72 /* LecturersDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F40DB22302B69800E96D72 /* LecturersDetailsController.swift */; };
@@ -141,6 +142,7 @@
 		23E3B2BA2334403C0027A34D /* ExamsInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsInfoViewController.swift; sourceTree = "<group>"; };
 		23E3B2BD233445510027A34D /* ExamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsTableViewCell.swift; sourceTree = "<group>"; };
 		23E3B2BE233445510027A34D /* ExamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExamsTableViewCell.xib; sourceTree = "<group>"; };
+		23E3B2C123344FE00027A34D /* ExamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamsViewController.swift; sourceTree = "<group>"; };
 		23E4E51B230C680200FA0BAE /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Main.strings; sourceTree = "<group>"; };
 		23E4E51C230C680200FA0BAE /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		23EDF9AA22E5F75A0039C2AB /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				2364EA4422DA7B9D00340B3A /* TimeTableController.swift */,
 				23DFFB7022EE19320045C626 /* LecturersTimeTableController.swift */,
 				2378D64622F9D37E00190EB7 /* NoticeBoardController.swift */,
+				23E3B2C123344FE00027A34D /* ExamsViewController.swift */,
 			);
 			path = FullTimeControllers;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				23DFFB7122EE19320045C626 /* LecturersTimeTableController.swift in Sources */,
 				23D9AEDC22EF666C00B4B876 /* CurrentDate.swift in Sources */,
 				236D42A32333E64600346542 /* ExamsDataBase.swift in Sources */,
+				23E3B2C223344FE00027A34D /* ExamsViewController.swift in Sources */,
 				236D42A52333E77400346542 /* SendExamsToRealm.swift in Sources */,
 				23F40DB72302CDD800E96D72 /* LecturersDetailsCell.swift in Sources */,
 				23EDF9AB22E5F75A0039C2AB /* Alerts.swift in Sources */,

@@ -37,24 +37,22 @@ class GetDataFromRealmExams{
         return Array(Set(subjects))
     }
     
-    static func getFromRealm(group:String,lecturer:String,subject:String)->Results<ExamsDataBase>{
+    static func getFromRealm(FullTimeorPartTime:String,group:String,lecturer:String,subject:String)->Results<ExamsDataBase>{
         
         var temp = ""
         
         
         if group != " " && group != ""{
             temp = temp + "group CONTAINS '\(group)'"
+        } else{
+            temp = temp + "group CONTAINS '\(FullTimeorPartTime)'"
         }
         if lecturer != " " && lecturer != ""{
-            if group != " " && group != ""{
-                temp = temp + " AND "
-            }
+            temp = temp + " AND "
             temp = temp + "lecturer CONTAINS '\(lecturer)'"
         }
         if subject != " " && subject != ""{
-            if group != " " && group != "" || lecturer != " " && lecturer != "" {
-                temp = temp + " AND "
-            }
+            temp = temp + " AND "
             temp = temp + "subject CONTAINS '\(subject)'"
         }
         
@@ -66,7 +64,7 @@ class GetDataFromRealmExams{
             let data = realm.objects(ExamsDataBase.self).filter(temp).sorted(byKeyPath: "subject", ascending: true)
             return data
         } else {
-            let data = realm.objects(ExamsDataBase.self).sorted(byKeyPath: "lecturer", ascending: true)
+            let data = realm.objects(ExamsDataBase.self).sorted(byKeyPath: "lecturer", ascending: true).filter("group CONTAINS '\(FullTimeorPartTime)'")
             return data
         }
     }
