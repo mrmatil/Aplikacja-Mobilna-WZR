@@ -1089,7 +1089,7 @@
         <scene sceneID="9ox-OO-FLl">
             <objects>
                 <viewController id="dFI-Cx-Hl1" customClass="ExamsViewController" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PEG-kV-bip" customClass="ExamsTableViewCell" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="PEG-kV-bip" customClass="view" customModule="Aplikacja_Mobilna_WZR" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

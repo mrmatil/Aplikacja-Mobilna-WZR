@@ -12,7 +12,7 @@ import SafariServices
 class LecturersDetailsController: UIViewController {
 
     //Variables:
-    var titles:[String] = ["Imię i Nazwisko:","E-mail:","Informacje:"] //titles for cells in table view
+    var titles:[String] = ["Imię i Nazwisko:","E-mail:","Konsultacje:"] //titles for cells in table view
     var detailsArray:[String?] = [] //array of name, email and info
     var website:String = ""
     
