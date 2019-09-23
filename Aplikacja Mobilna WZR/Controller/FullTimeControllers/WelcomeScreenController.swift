@@ -72,15 +72,18 @@ class WelcomeScreenController: UIViewController {
         
         _=Groups(URLAdresses: AllURLs.fullTimeGroups, groupsStartsWith: "S", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "groupsList") // sending list of all groups to UserDefaults
-            
-            _=DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
+            if tempArray == []{
+                self.initCompleted()
+            }else{
+                _=DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
+            }
         })
         
         SendNoticeBoardsToRealm(urls:  [AllURLs.fullTimeNoticeBoardsUrl["1 stopień"]!,AllURLs.fullTimeNoticeBoardsUrl["2 stopień"]!] , FullTimeOrPartTime: "FullTime", completionHandler: initCompleted).sendToRealm()
         
         SendLecturersToRealm(completionHandler: initCompleted).sendToRealm()
         
-        SendExamsToRealm(url: AllURLs.fullTimeExam, completionHandler: initCompleted).sendToRealm()
+        SendExamsToRealm(url: [AllURLs.fullTimeExam1,AllURLs.fullTimeExam2], completionHandler: initCompleted).sendToRealm()
 
         
         //-----------------------

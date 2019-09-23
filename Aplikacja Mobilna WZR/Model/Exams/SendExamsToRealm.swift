@@ -11,22 +11,29 @@ import RealmSwift
 
 class SendExamsToRealm{
     
-    let url:String
+    let url:[String]
     let completionHandler:()->Void
     var loop = 0
+    var loopComplete = 0
     
-    init(url:String,completionHandler: @escaping ()->Void) {
+    init(url:[String],completionHandler: @escaping ()->Void) {
         self.url=url
         self.completionHandler=completionHandler
     }
     
     func sendToRealm(){
-        ExamsParser.init(url: url) { (examsArray) in
+        for temp in url{
+            sendOneToRealm(urlForOne: temp)
+        }
+    }
+    
+    private func sendOneToRealm(urlForOne:String){
+        ExamsParser.init(url: urlForOne) { (examsArray) in
             for x in examsArray{
                 let realm = try! Realm()
                 let db = ExamsDataBase()
                 
-                print(Realm.Configuration.defaultConfiguration.fileURL)
+//                print(Realm.Configuration.defaultConfiguration.fileURL)
                 
                 
                 db.lecturer=x.lecturer
@@ -45,10 +52,19 @@ class SendExamsToRealm{
                 self.loop += 1
                 
                 if self.loop == examsArray.count{
-                    self.completionHandler()
+                    self.checkIfCompleted()
                 }
             }
-        }.getData()
+            }.getData()
+    }
+    
+    private func checkIfCompleted(){
+        if loopComplete == url.count-1{
+            self.completionHandler()
+            print("Exams Downloaded Successfully")
+        } else{
+            loopComplete += 1
+        }
     }
     
 }

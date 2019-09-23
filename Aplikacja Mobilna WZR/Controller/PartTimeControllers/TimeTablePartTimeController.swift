@@ -80,7 +80,7 @@ class TimeTablePartTimeController: UIViewController {
     
     func refreshCurrentDate(){
         let temp = CurrentDate.getDayOfTheWeek() + " " +  CurrentDate.getCurrentDateWithoutHoursAndMinutes()
-        currentDateLabel.text = "Obecnie jest " + temp
+        currentDateLabel.text = "Obecnie mamy " + temp
     }
     
     

@@ -63,15 +63,18 @@ class WelcomeScreenPartTimeController: UIViewController {
 
         _=Groups(URLAdresses: AllURLs.partTimeGroups, groupsStartsWith: "N", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "partTimeGroupsList")
-            
-            PartTimeDownloadCSV(groupsArray: tempArray, completionHandler: self.initCompleted).getCSVDatatoDatabase()
+            if tempArray == []{
+                self.initCompleted()
+            }else{
+                PartTimeDownloadCSV(groupsArray: tempArray, completionHandler: self.initCompleted).getCSVDatatoDatabase()
+            }
         })
         
         SendNoticeBoardsToRealm(urls: [AllURLs.partTimeNoticeBoardsUrl["1 stopień"]!,AllURLs.partTimeNoticeBoardsUrl["2 stopień"]!], FullTimeOrPartTime: "PartTime", completionHandler: initCompleted).sendToRealm()
         
         SendLecturersToRealm(completionHandler: initCompleted).sendToRealm()
         
-        SendExamsToRealm(url: AllURLs.partTimeExam, completionHandler: initCompleted).sendToRealm()
+        SendExamsToRealm(url: [AllURLs.partTimeExam1,AllURLs.partTimeExam2], completionHandler: initCompleted).sendToRealm()
         
         //-------------------------
     }

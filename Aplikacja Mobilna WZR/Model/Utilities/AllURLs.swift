@@ -44,9 +44,12 @@ class AllURLs{
     //Exams:
     
     //FullTime
-    static let fullTimeExam:String = "https://wzr.ug.edu.pl/studia/index.php?str=432"
+    static let fullTimeExam1:String = "https://wzr.ug.edu.pl/studia/index.php?str=432"
+    static let fullTimeExam2:String = "https://wzr.ug.edu.pl/studia/index.php?str=748"
     
     //PartTime
-    static let partTimeExam:String = "https://wzr.ug.edu.pl/studia/index.php?str=747"
+    static let partTimeExam1:String = "https://wzr.ug.edu.pl/studia/index.php?str=747"
+    static let partTimeExam2:String = "https://wzr.ug.edu.pl/studia/index.php?str=749"
+
      
 }
