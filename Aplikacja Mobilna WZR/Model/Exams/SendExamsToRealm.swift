@@ -13,7 +13,6 @@ class SendExamsToRealm{
     
     let url:[String]
     let completionHandler:()->Void
-    var loop = 0
     var loopComplete = 0
     
     init(url:[String],completionHandler: @escaping ()->Void) {
@@ -29,12 +28,17 @@ class SendExamsToRealm{
     
     private func sendOneToRealm(urlForOne:String){
         ExamsParser.init(url: urlForOne) { (examsArray) in
+            
+            var loop = 0
+
             for x in examsArray{
                 let realm = try! Realm()
                 let db = ExamsDataBase()
                 
 //                print(Realm.Configuration.defaultConfiguration.fileURL)
 //                print(x.group)
+//                print(examsArray)
+                print("\(loop) / \(examsArray.count)")
                 
                 
                 db.lecturer=x.lecturer
@@ -50,9 +54,10 @@ class SendExamsToRealm{
                     realm.add(db)
                 }
                 
-                self.loop += 1
+                loop += 1
                 
-                if self.loop == examsArray.count{
+                if loop == examsArray.count{
+                    print("Exams Downloaded Successfully")
                     self.checkIfCompleted()
                 }
             }
@@ -61,10 +66,7 @@ class SendExamsToRealm{
     
     private func checkIfCompleted(){
         if loopComplete == url.count-1{
-            DispatchQueue.main.async {
-                self.completionHandler()
-                print("Exams Downloaded Successfully")
-            }
+            self.completionHandler()
         } else{
             loopComplete += 1
         }

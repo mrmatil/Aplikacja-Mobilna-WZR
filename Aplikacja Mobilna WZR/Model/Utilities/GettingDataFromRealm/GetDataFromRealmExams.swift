@@ -21,7 +21,7 @@ class GetDataFromRealmExams{
             lecturers.append(x.lecturer!)
         }
         
-        return Array(Set(lecturers))
+        return Array(Set(lecturers)).sorted()
     }
     
     static func getSubjects()->[String]{
@@ -34,7 +34,7 @@ class GetDataFromRealmExams{
             subjects.append(x.subject!)
         }
         
-        return Array(Set(subjects))
+        return Array(Set(subjects)).sorted()
     }
     
     static func getFromRealm(FullTimeorPartTime:String,group:String,lecturer:String,subject:String)->Results<ExamsDataBase>{
