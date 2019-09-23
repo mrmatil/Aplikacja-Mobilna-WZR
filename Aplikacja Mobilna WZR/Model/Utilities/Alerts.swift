@@ -53,4 +53,19 @@ class Alerts:NSObject{
     }
     
     //alert with one option
+    
+    func showAlertWithOneOption(){
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: option1title,
+                                      style: .default,
+                                      handler: { (UIAlert) in
+                                        self.option1Action()
+        }))
+        
+        view.present(alert, animated: true, completion: nil)
+
+    }
 }

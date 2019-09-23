@@ -34,6 +34,7 @@ class SendExamsToRealm{
                 let db = ExamsDataBase()
                 
 //                print(Realm.Configuration.defaultConfiguration.fileURL)
+//                print(x.group)
                 
                 
                 db.lecturer=x.lecturer
@@ -60,8 +61,10 @@ class SendExamsToRealm{
     
     private func checkIfCompleted(){
         if loopComplete == url.count-1{
-            self.completionHandler()
-            print("Exams Downloaded Successfully")
+            DispatchQueue.main.async {
+                self.completionHandler()
+                print("Exams Downloaded Successfully")
+            }
         } else{
             loopComplete += 1
         }

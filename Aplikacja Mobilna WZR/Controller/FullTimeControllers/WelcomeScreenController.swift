@@ -73,7 +73,7 @@ class WelcomeScreenController: UIViewController {
         _=Groups(URLAdresses: AllURLs.fullTimeGroups, groupsStartsWith: "S", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "groupsList") // sending list of all groups to UserDefaults
             if tempArray == []{
-                self.initCompleted()
+                self.showAlertNoGroups()
             }else{
                 _=DownloadCSV(completionHandler: self.initCompleted, groupsArray: tempArray)
             }
@@ -155,5 +155,17 @@ class WelcomeScreenController: UIViewController {
         waitAnimationView.contentMode = .scaleAspectFit
         waitAnimationView.play()
     }
+    
+    //function if no plan
+    func showAlertNoGroups(){
+        Alerts.init(view: self,
+                    title: "Brak Planu na stronie",
+                    message: "Część funkcjonalności nie będzie dostępna",
+                    option1title: "OK",
+                    option1Action: initCompleted,
+                    option2title: "",
+                    option2Action: initCompleted).showAlertWithOneOption()
+    }
+
 }
 

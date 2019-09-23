@@ -64,7 +64,7 @@ class WelcomeScreenPartTimeController: UIViewController {
         _=Groups(URLAdresses: AllURLs.partTimeGroups, groupsStartsWith: "N", completionHandler: { (tempArray) in
             self.userDefaults.set(tempArray, forKey: "partTimeGroupsList")
             if tempArray == []{
-                self.initCompleted()
+                self.showAlertNoGroups()
             }else{
                 PartTimeDownloadCSV(groupsArray: tempArray, completionHandler: self.initCompleted).getCSVDatatoDatabase()
             }
@@ -153,6 +153,17 @@ class WelcomeScreenPartTimeController: UIViewController {
         waitAnimationView.loopMode = .loop
         waitAnimationView.contentMode = .scaleAspectFit
         waitAnimationView.play()
+    }
+    
+    //function if no plan
+    func showAlertNoGroups(){
+        Alerts.init(view: self,
+                    title: "Brak Planu na stronie",
+                    message: "Część funkcjonalności nie będzie dostępna",
+                    option1title: "OK",
+                    option1Action: initCompleted,
+                    option2title: "",
+                    option2Action: initCompleted).showAlertWithOneOption()
     }
     
 }
