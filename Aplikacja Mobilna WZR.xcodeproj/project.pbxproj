@@ -56,6 +56,7 @@
 		23B368E322F8D0B000F58E64 /* NoticeBoardArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B368E222F8D0B000F58E64 /* NoticeBoardArray.swift */; };
 		23B368E522F8EF9F00F58E64 /* SendNoticeBoardsToRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B368E422F8EF9F00F58E64 /* SendNoticeBoardsToRealm.swift */; };
 		23BAEAEB22DF8E18005E5F40 /* ParsingCsvUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */; };
+		23C6BCC72346714A00331CE8 /* LecturersUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C6BCC62346714A00331CE8 /* LecturersUtil.swift */; };
 		23CBCB1522E4F69E00412350 /* CheckingConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CBCB1422E4F69E00412350 /* CheckingConnection.swift */; };
 		23D9AED722EF380800B4B876 /* LecturersCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D9AED522EF380800B4B876 /* LecturersCustomCell.swift */; };
 		23D9AED822EF380800B4B876 /* LecturersCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23D9AED622EF380800B4B876 /* LecturersCustomCell.xib */; };
@@ -130,6 +131,7 @@
 		23B368E222F8D0B000F58E64 /* NoticeBoardArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NoticeBoardArray.swift; path = "Aplikacja Mobilna WZR/Model/NoticeBoards/NoticeBoardArray.swift"; sourceTree = SOURCE_ROOT; };
 		23B368E422F8EF9F00F58E64 /* SendNoticeBoardsToRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SendNoticeBoardsToRealm.swift; path = "Aplikacja Mobilna WZR/Model/NoticeBoards/SendNoticeBoardsToRealm.swift"; sourceTree = SOURCE_ROOT; };
 		23BAEAEA22DF8E18005E5F40 /* ParsingCsvUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingCsvUtil.swift; sourceTree = "<group>"; };
+		23C6BCC62346714A00331CE8 /* LecturersUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersUtil.swift; sourceTree = "<group>"; };
 		23CBCB1422E4F69E00412350 /* CheckingConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckingConnection.swift; sourceTree = "<group>"; };
 		23D9AED522EF380800B4B876 /* LecturersCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LecturersCustomCell.swift; sourceTree = "<group>"; };
 		23D9AED622EF380800B4B876 /* LecturersCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LecturersCustomCell.xib; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				235665BA22FF2D9500DAE54A /* LecturersArray.swift */,
 				235665B822FF047E00DAE54A /* LecturersParser.swift */,
 				235665BC22FF466500DAE54A /* SendLecturersToRealm.swift */,
+				23C6BCC62346714A00331CE8 /* LecturersUtil.swift */,
 			);
 			path = Lecturers;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 				235665B922FF047E00DAE54A /* LecturersParser.swift in Sources */,
 				23E3B2B7233432830027A34D /* ExamsPartTimeViewController.swift in Sources */,
 				2341834F2309A6AD001D370B /* NoticeBoardPartTimeController.swift in Sources */,
+				23C6BCC72346714A00331CE8 /* LecturersUtil.swift in Sources */,
 				235665C122FF5E7600DAE54A /* GetDataFromDatabaseLecturers.swift in Sources */,
 				2364EA4522DA7B9D00340B3A /* TimeTableController.swift in Sources */,
 				23242B9B22DE453700C4F132 /* Groups.swift in Sources */,
@@ -800,12 +804,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.9.0;
 				DEVELOPMENT_TEAM = 7CS6N8JRT4;
 				INFOPLIST_FILE = "Aplikacja Mobilna WZR/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mateusz.Lukasinski.Aplikacja-Mobilna-WZR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -819,12 +826,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.9.0;
 				DEVELOPMENT_TEAM = 7CS6N8JRT4;
 				INFOPLIST_FILE = "Aplikacja Mobilna WZR/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mateusz.Lukasinski.Aplikacja-Mobilna-WZR";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

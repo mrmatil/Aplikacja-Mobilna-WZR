@@ -92,6 +92,7 @@ class WelcomeScreenController: UIViewController {
     
     //performing segue after checking if all things is downloaded
     func initCompleted(){
+        
         loop+=1
         if loop==4{ //change to 4 !!!!!!! 
             DispatchQueue.main.async {

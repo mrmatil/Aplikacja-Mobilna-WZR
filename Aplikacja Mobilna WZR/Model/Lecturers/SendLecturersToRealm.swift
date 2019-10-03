@@ -22,6 +22,8 @@ class SendLecturersToRealm{
     func sendToRealm(){
 
         LecturersParser(url: url) { (array) in
+            print(array)
+            
             for x in array{
                 let realm = try! Realm()
                 let db = LecturersDataBase()
