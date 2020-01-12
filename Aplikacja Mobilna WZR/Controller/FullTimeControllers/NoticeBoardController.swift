@@ -16,6 +16,7 @@ class NoticeBoardController: UIViewController {
     var level:Int=1
     var titles = [String]()
     var content = [String]()
+
     let userDefaults = UserDefaults()
     
     //IBOutlets:
@@ -30,13 +31,18 @@ class NoticeBoardController: UIViewController {
     @IBAction func levelChanged(_ sender: BetterSegmentedControl) {
         if sender.index == 0{
             level=1
-            getNoticeBoardDataFromRealm{}
-            noticeBoardTableView.reloadData()
         }else{
             level=2
-            getNoticeBoardDataFromRealm{}
-            noticeBoardTableView.reloadData()
         }
+        //Start Some Reload Animation
+        getNoticeBoardDirectlyFromWeb {
+            DispatchQueue.main.async {
+                self.noticeBoardTableView.reloadData()
+            }
+        }
+
+                
+
     }
 
     
@@ -49,8 +55,10 @@ class NoticeBoardController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getNoticeBoardDataFromRealm {
-            self.enableTableView()
+        getNoticeBoardDirectlyFromWeb {
+            DispatchQueue.main.async {
+                self.enableTableView()
+            }
         }
         enableSegmentedControl()
         refreshLastDate()
@@ -59,6 +67,10 @@ class NoticeBoardController: UIViewController {
     
     
 //    GettingData:
+    
+    func tempKurwa(){
+        noticeBoardTableView.reloadData()
+    }
     
     func getNoticeBoardDataFromRealm(completionHandler:@escaping ()->Void){
         titles=[String]()
@@ -73,6 +85,32 @@ class NoticeBoardController: UIViewController {
             }
         }.getNoticeBoardsData()
         
+    }
+    
+    func getNoticeBoardDirectlyFromWeb(completionHandler:@escaping ()->Void){
+        if !Reachability.isConnectedToNetwork(){
+            //Some alert idk
+        } else{
+            titles=[String]()
+            content=[String]()
+            var temp = ""
+            if level==1{
+                temp = AllURLs.fullTimeNoticeBoardsUrl["1 stopień"]!
+            } else{
+                temp = AllURLs.fullTimeNoticeBoardsUrl["2 stopień"]!
+            }
+            DownloadNoticeBoard(url: temp, level: level) { (noticeBoardArray) in
+                if noticeBoardArray.count>0{
+                    for x in noticeBoardArray{
+                        self.titles.append(x.title)
+                        self.content.append(x.content)
+                    }
+                    completionHandler()
+                }
+
+            }.downloadWebsite()
+        }
+
     }
     
     func refreshLastDate(){
